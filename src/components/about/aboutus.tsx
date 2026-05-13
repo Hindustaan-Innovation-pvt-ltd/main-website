@@ -387,10 +387,30 @@ function OurValues() {
 
 const FOUNDERS = [
   {
+    name: "Dineshwer Singh",
+    role: "Founding Mentor",
+    image: "/ff.jpeg",
+    bio: "Their guidance, discipline, and lifelong support played a major role in shaping the vision and values of the company. They continue to inspire the team through integrity, hard work, and dedication",
+    linkedin: "https://www.linkedin.com/",
+    badge: "Founder",
+    badgeColor: "from-amber-500/20 to-orange-500/10 border-amber-500/30 text-amber-400",
+    glowColor: "bg-amber-500/5 group-hover:bg-amber-500/10",
+  },
+  {
     name: "Prashant kumar Singh",
     role: "Founder & CEO",
     image: "/Prashant.jpeg",
-    bio: "Visionary entrepreneur behind Hindustaan Innovations. Prashant drives the mission to make intelligent digital systems accessible to every Indian business, from early-stage companies to established enterprises.",
+    bio: "Visionary entrepreneur behind Hindustaan Innovations. Prashant drives the mission to make intelligent digital systems accessible to every Indian business.",
+    linkedin: "https://www.linkedin.com/",
+    badge: "Founder",
+    badgeColor: "from-amber-500/20 to-orange-500/10 border-amber-500/30 text-amber-400",
+    glowColor: "bg-amber-500/5 group-hover:bg-amber-500/10",
+  },
+  {
+    name: "Renu Devi",
+    role: "Cultural Advisor",
+    image: "/fff.jpeg",
+    bio: "Their encouragement, positivity, and unwavering belief have been a constant source of motivation behind the company’s journey. They represent the care, values, and strength that drive our culture",
     linkedin: "https://www.linkedin.com/",
     badge: "Founder",
     badgeColor: "from-amber-500/20 to-orange-500/10 border-amber-500/30 text-amber-400",
@@ -400,7 +420,7 @@ const FOUNDERS = [
     name: "Aryan Patel",
     role: "Co-founder & CTO",
     image: "/Aryan.jpeg",
-    bio: "Full-stack engineer and tech architect. Aryan builds the digital backbone of Hindustaan Innovations, leading all technical development from web apps to AI systems and cloud infrastructure.",
+    bio: "Full-stack engineer and tech architect. Aryan builds the digital backbone of Hindustaan Innovations, leading all technical development.",
     linkedin: "https://www.linkedin.com/in/ghostxaryan/",
     badge: "Co-founder",
     badgeColor: "from-blue-500/20 to-indigo-500/10 border-blue-500/30 text-blue-400",
@@ -410,7 +430,7 @@ const FOUNDERS = [
     name: "Siddhant Supkar",
     role: "Co-founder & CMO",
     image: "/Shiddant.jpeg",
-    bio: "Growth strategist and brand builder. Siddhant spearheads marketing, client acquisition, and partnerships — crafting data-driven strategies that help clients reach and scale their target audience.",
+    bio: "Growth strategist and brand builder. Siddhant spearheads marketing, client acquisition, and partnerships.",
     linkedin: "https://www.linkedin.com/in/siddhantsupkar/",
     badge: "Co-founder",
     badgeColor: "from-violet-500/20 to-purple-500/10 border-violet-500/30 text-violet-400",
@@ -419,6 +439,9 @@ const FOUNDERS = [
 ];
 
 function OurFounders() {
+  const topLevel = FOUNDERS.filter((f) => f.badge === "Founder");
+  const coFounders = FOUNDERS.filter((f) => f.badge === "Co-founder");
+
   return (
     <section className="relative z-10 px-4 py-24 w-full max-w-6xl mx-auto">
       <SectionHeader
@@ -426,71 +449,100 @@ function OurFounders() {
         pill="Meet the Founders"
         heading="The Minds"
         italic="Behind It."
-        sub="Three passionate builders united by one mission — to power India's next generation of businesses through technology."
+        sub="A team of visionary leaders and passionate builders united by one mission — to power India's next generation of businesses through technology."
       />
 
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.1 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
-      >
-        {FOUNDERS.map((founder) => (
-          <motion.div
-            variants={fadeUp}
-            key={founder.name}
-            className="group relative flex flex-col items-center text-center gap-5 bg-black rounded-3xl border-t-2 border-white/25 outline outline-white/10 px-7 py-10 transition-all duration-300 hover:bg-zinc-900/60 overflow-hidden"
-          >
-            {/* Glow bg */}
-            <div className={`absolute -top-20 -right-20 w-56 h-56 rounded-full blur-3xl transition-all duration-700 pointer-events-none ${founder.glowColor}`} />
-            <div className={`absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-3xl transition-all duration-700 pointer-events-none ${founder.glowColor}`} />
+      <div className="flex flex-col gap-12 mt-16">
+        {/* Row 1: Founders & Directors */}
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {topLevel.map((founder) => (
+            <FounderCard key={founder.name} founder={founder} />
+          ))}
+        </motion.div>
 
-            {/* Avatar */}
-            <div className="relative shrink-0">
-              <div className="w-45 h-45 rounded-full overflow-hidden border-2 border-white/15 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
-                <Image
-                  src={founder.image}
-                  alt={founder.name}
-                  width={180}
-                  height={180}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              {/* Online dot */}
-              <div className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-500/90 rounded-full border-2 border-black shadow-[0_0_8px_rgba(74,222,128,0.7)]" />
+        {/* Row 2: Co-founders */}
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+          className="flex flex-wrap justify-center gap-8"
+        >
+          {coFounders.map((founder) => (
+            <div key={founder.name} className="w-full md:w-[calc(33.333%-1.33rem)]">
+              <FounderCard founder={founder} />
             </div>
-
-            {/* Badge */}
-            <span className={`px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase border bg-gradient-to-r ${founder.badgeColor}`}>
-              {founder.badge}
-            </span>
-
-            {/* Info */}
-            <div className="space-y-1">
-              <h3 className="text-lg font-bold text-zinc-100">{founder.name}</h3>
-              <p className="text-xs font-medium text-zinc-500 tracking-wide">{founder.role}</p>
-            </div>
-
-            {/* Bio */}
-            <p className="text-zinc-400 text-sm leading-relaxed flex-1">{founder.bio}</p>
-
-            {/* LinkedIn Button */}
-            <a
-              href={founder.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative z-10 flex items-center gap-2 bg-zinc-900/60 hover:bg-[#0A66C2]/20 border border-white/10 hover:border-[#0A66C2]/40 text-zinc-400 hover:text-[#0A66C2] px-5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 w-full justify-center"
-            >
-              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-              Connect on LinkedIn
-            </a>
-          </motion.div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
+  );
+}
+
+function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
+  return (
+    <motion.div
+      variants={fadeUp}
+      className="group relative flex flex-col items-center text-center gap-5 bg-black rounded-3xl border-t-2 border-white/25 outline outline-white/10 px-7 py-10 transition-all duration-300 hover:bg-zinc-900/60 overflow-hidden h-full"
+    >
+      {/* Glow bg */}
+      <div
+        className={`absolute -top-20 -right-20 w-56 h-56 rounded-full blur-3xl transition-all duration-700 pointer-events-none ${founder.glowColor}`}
+      />
+      <div
+        className={`absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-3xl transition-all duration-700 pointer-events-none ${founder.glowColor}`}
+      />
+
+      {/* Avatar */}
+      <div className="relative shrink-0">
+        <div className="w-45 h-45 rounded-full overflow-hidden border-2 border-white/15 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
+          <Image
+            src={founder.image}
+            alt={founder.name}
+            width={180}
+            height={180}
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+        {/* Online dot */}
+        <div className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-500/90 rounded-full border-2 border-black shadow-[0_0_8px_rgba(74,222,128,0.7)]" />
+      </div>
+
+      {/* Badge */}
+      <span
+        className={`px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase border bg-gradient-to-r ${founder.badgeColor}`}
+      >
+        {founder.badge}
+      </span>
+
+      {/* Info */}
+      <div className="space-y-1">
+        <h3 className="text-lg font-bold text-zinc-100">{founder.name}</h3>
+        <p className="text-xs font-medium text-zinc-500 tracking-wide">{founder.role}</p>
+      </div>
+
+      {/* Bio */}
+      <p className="text-zinc-400 text-sm leading-relaxed flex-1">{founder.bio}</p>
+
+      {/* LinkedIn Button */}
+      <a
+        href={founder.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 flex items-center gap-2 bg-zinc-900/60 hover:bg-[#0A66C2]/20 border border-white/10 hover:border-[#0A66C2]/40 text-zinc-400 hover:text-[#0A66C2] px-5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 w-full justify-center"
+      >
+        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        Connect on LinkedIn
+      </a>
+    </motion.div>
   );
 }
 

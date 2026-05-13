@@ -15,7 +15,7 @@ export function Navbar() {
     <header className="relative z-50 flex flex-col w-full">
       <div className="relative z-50 flex bg-linear-to-b from-white via-white/50 dark:from-black/95 dark:via-black/50 to-transparent items-center justify-between px-6 py-4 md:px-10 lg:px-12 w-full">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo" width={100} height={100} decoding="async" loading="eager" fetchPriority="high" className="size-10" />
+          <Image src="/logo.png" alt="Logo" width={40} height={40} decoding="async" loading="eager" fetchPriority="high" className="size-10" style={{ height: 'auto' }} />
           <span className="text-xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100 w-40 leading-4">{brand.name}</span>
         </Link>
 

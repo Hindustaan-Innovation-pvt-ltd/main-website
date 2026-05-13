@@ -13,6 +13,7 @@
       "Services",
       "About",
       "Blog",
+      "Solutions",
       "Career",
       "Contact"
     ],
@@ -429,5 +430,142 @@
     "madeByLabel": "Made with ❤️ by",
     "madeByName": "Hindustaan Innovations",
     "email": "connect@hindustaan.in"
+  },
+  "solutions": {
+    "pill": "SOLUTIONS",
+    "heading": "Innovative",
+    "headingItalic": "Products",
+    "subheading": "Tailored software solutions built to solve real-world industry challenges",
+    "items": [
+      {
+        "id": "vidyum-school-erp",
+        "title": "Vidyum School ERP",
+        "shortDescription": "Complete digital transformation for educational institutions.",
+        "description": "Vidyum School ERP is a comprehensive, cloud-based management system designed to automate administrative tasks, streamline operations, and enhance the educational experience for students, teachers, and parents alike.",
+        "fullDescription": "Vidyum School ERP stands at the forefront of educational technology, providing a unified platform that bridges the gap between administration and learning. Our system is built on a scalable, secure architecture that handles everything from the first inquiry to the final graduation. With real-time data insights, automated workflows, and a user-friendly interface, Vidyum empowers schools to operate with unprecedented efficiency and precision. Whether it's managing complex fee structures, tracking school transport in real-time, or facilitating seamless parent-teacher communication, Vidyum is the ultimate partner for modern schools striving for excellence.",
+        "image": "/vidyum.jpeg",
+        "projectUrl": "https://vidyum.framer.website/",
+        "pricing": {
+          "pill": "PRICING",
+          "heading": "Choose your",
+          "headingItalic": "Plan",
+          "subheading": "Flexible pricing for institutions of all sizes.",
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "10,000",
+              "description": "Perfect for small schools starting their digital journey.",
+              "features": [
+                "Basic Student Management",
+                "Attendance Tracking",
+                "Exam & Results",
+                "Basic Reports"
+              ]
+            },
+            {
+              "name": "Growth",
+              "price": "20,000",
+              "description": "Comprehensive tools for growing educational institutions.",
+              "features": [
+                "Everything in Starter",
+                "Fee Management",
+                "HR & Payroll",
+                "Library Management",
+                "Parent Dashboard"
+              ],
+              "isPopular": true
+            },
+            {
+              "name": "Enterprise",
+              "price": "35,000",
+              "description": "Full-scale solution for large campuses and chains.",
+              "features": [
+                "Everything in Growth",
+                "Transport Management",
+                "AI Analytics",
+                "Custom Integrations",
+                "24/7 Priority Support"
+              ]
+            }
+          ]
+        },
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Vidyum.",
+          "questions": [
+            {
+              "question": "What is Vidyum School ERP?",
+              "answer": "Vidyum is a comprehensive, cloud-based school management system that automates all administrative and academic processes."
+            },
+            {
+              "question": "Is my school's data secure?",
+              "answer": "Yes, we use enterprise-grade encryption and secure cloud storage to ensure your data is always protected and backed up."
+            },
+            {
+              "question": "Can I upgrade my plan later?",
+              "answer": "Absolutely! You can upgrade your plan at any time as your institution's needs grow."
+            },
+            {
+              "question": "Do you provide on-site training?",
+              "answer": "Yes, we provide both online and on-site training for your staff to ensure a smooth transition to Vidyum."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Student Dashboard",
+            "description": "A centralized hub for students to access attendance, grades, assignments, and school announcements in real-time.",
+            "icon": "UserCircle"
+          },
+          {
+            "title": "Parents Dashboard",
+            "description": "Real-time updates for parents regarding their child's attendance, grades, fees, and school events.",
+            "icon": "Users"
+          },
+          {
+            "title": "Teacher & Staff Dashboard",
+            "description": "Personalized portal for teachers to manage student attendance, academic progress, and communication.",
+            "icon": "ClipboardList"
+          },
+          {
+            "title": "HR & Payroll",
+            "description": "Manage staff records, salaries, leaves, and performance tracking in one integrated system.",
+            "icon": "Wallet"
+          },
+          {
+            "title": "Attendance Module",
+            "description": "Streamline daily attendance tracking for students and staff with automated notifications and reports.",
+            "icon": "CalendarCheck"
+          },
+          {
+            "title": "Fees & Finance",
+            "description": "Simplify fee collection with online payment integration, automated invoicing, and detailed financial reporting.",
+            "icon": "CreditCard"
+          },
+          {
+            "title": "Examination System",
+            "description": "Automate result processing, generate customizable report cards, and track academic progress over time.",
+            "icon": "FileSpreadsheet"
+          },
+          {
+            "title": "Library Management",
+            "description": "Streamline book tracking, reservations, and inventory management with an automated digital catalog system.",
+            "icon": "Library"
+          },
+          {
+            "title": "Class & Academic Module",
+            "description": "Manage schedules, subject allocations, and lesson plans with ease, ensuring a smooth academic flow.",
+            "icon": "BookOpen"
+          },
+          {
+            "title": "Transport Management",
+            "description": "Ensure student safety with real-time vehicle tracking, route optimization, and automated transport fee alerts.",
+            "icon": "Bus"
+          }
+        ]
+      }
+    ]
   }
 }

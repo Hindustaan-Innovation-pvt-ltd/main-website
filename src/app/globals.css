@@ -64,6 +64,33 @@
     transform: translateY(calc(-100% - var(--gap)));
     }
   }
+
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
+
+.animate-border-beam {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.animate-border-beam::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  width: 250px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), white, rgba(255, 255, 255, 0.5), transparent);
+  offset-path: rect(0 100% 100% 0 round 2.5rem);
+  animation: border-beam 6s infinite linear;
 }
 
 :root {
