@@ -387,7 +387,7 @@ function OurValues() {
 
 const FOUNDERS = [
   {
-    name: "Dineshwer Singh",
+    name: "Dineshwar Singh",
     role: "Founding Mentor",
     image: "/ff.jpeg",
     bio: "Their guidance, discipline, and lifelong support played a major role in shaping the vision and values of the company. They continue to inspire the team through integrity, hard work, and dedication",
