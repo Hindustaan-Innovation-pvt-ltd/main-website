@@ -1,6 +1,6 @@
 "use client";
 
-import { use } from "react";
+import { use, useRef } from "react";
 import { motion, type Variants, useScroll, useTransform, useSpring } from "motion/react";
 import {
   ArrowLeft,
@@ -65,18 +65,22 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
   const { id } = use(params);
   const solution = data.solutions.items.find((item) => item.id === id);
 
-  const { scrollY } = useScroll();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 30%", "start start"]
+  });
 
-  const smoothScrollY = useSpring(scrollY, {
-    stiffness: 100,
-    damping: 30,
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 400,
+    damping: 50,
     restDelta: 0.001
   });
 
-  const rotateX = useTransform(smoothScrollY, [0, 400], [10, 0]);
-  const scale = useTransform(smoothScrollY, [0, 400], [0.95, 1]);
-  const translateZ = useTransform(smoothScrollY, [0, 400], [-50, 0]);
-  const opacity = useTransform(smoothScrollY, [0, 200], [0.9, 1]);
+  const rotateX = useTransform(smoothProgress, [0, 0.05], [25, 0]);
+  const scale = useTransform(smoothProgress, [0, 0.2], [1.05, 1]);
+  const translateZ = useTransform(smoothProgress, [0, 0.2], [-100, 0]);
+  const opacity = useTransform(smoothProgress, [0, 0.2], [0.95, 1]);
 
   if (!solution) {
     notFound();
@@ -133,28 +137,36 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
           </motion.div>
         </div>
 
-       
+
 
         {/* Hero Banner */}
-        <section className="px-6 py-16 max-w-7xl mx-auto [perspective:2000px]">
+        <section ref={containerRef} className="px-6 py-16 max-w-7xl mx-auto [perspective:1500px]">
           <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             style={{
               rotateX,
               scale,
               translateZ,
               opacity,
-              transformStyle: "preserve-3d"
+              transformStyle: "preserve-3d",
+              transformOrigin: "center center"
             }}
             transition={{ duration: 0.8 }}
-            className="relative h-[400px] md:h-[600px] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl"
+            className="relative h-[300px] md:h-[600px] rounded-[3rem] md:rounded-[3rem] overflow-hidden border border-white/40 shadow-2xl shadow-white/10"
           >
-            <Image
-              src={solution.image}
-              alt={solution.title}
-              fill
-              className="object-contain"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+            <div className="relative w-full h-full bg-zinc-950">
+              <Image
+                src={solution.image}
+                alt={solution.title}
+                fill
+                className="object-contain md:object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+            </div>
           </motion.div>
         </section>
 
@@ -184,7 +196,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-white">
-                    <Check className="w-4 h-4 text-white" />
+                      <Check className="w-4 h-4 text-white" />
                     </div>
                     <span className="font-medium text-zinc-200">{feature.label}</span>
                   </div>
