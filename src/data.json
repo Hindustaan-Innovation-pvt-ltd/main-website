@@ -444,7 +444,7 @@
         "description": "Vidyum School ERP is a comprehensive, cloud-based management system designed to automate administrative tasks, streamline operations, and enhance the educational experience for students, teachers, and parents alike.",
         "fullDescription": "Vidyum School ERP stands at the forefront of educational technology, providing a unified platform that bridges the gap between administration and learning. Our system is built on a scalable, secure architecture that handles everything from the first inquiry to the final graduation. With real-time data insights, automated workflows, and a user-friendly interface, Vidyum empowers schools to operate with unprecedented efficiency and precision. Whether it's managing complex fee structures, tracking school transport in real-time, or facilitating seamless parent-teacher communication, Vidyum is the ultimate partner for modern schools striving for excellence.",
         "image": "/vidyum.jpeg",
-        "projectUrl": "https://vidyum.framer.website/",
+        "projectUrl": "https://vidyumerp.vercel.app",
         "pricing": {
           "pill": "PRICING",
           "heading": "Choose your",
