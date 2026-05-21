@@ -416,26 +416,26 @@ const FOUNDERS = [
     badgeColor: "from-amber-500/20 to-orange-500/10 border-amber-500/30 text-amber-400",
     glowColor: "bg-amber-500/5 group-hover:bg-amber-500/10",
   },
-  {
-    name: "Aryan Patel",
-    role: "Co-founder & CTO",
-    image: "/Aryan.jpeg",
-    bio: "Full-stack engineer and tech architect. Aryan builds the digital backbone of Hindustaan Innovations, leading all technical development.",
-    linkedin: "https://www.linkedin.com/in/ghostxaryan/",
-    badge: "Co-founder",
-    badgeColor: "from-blue-500/20 to-indigo-500/10 border-blue-500/30 text-blue-400",
-    glowColor: "bg-blue-500/5 group-hover:bg-blue-500/10",
-  },
-  {
-    name: "Siddhant Supkar",
-    role: "Co-founder & CMO",
-    image: "/Shiddant.jpeg",
-    bio: "Growth strategist and brand builder. Siddhant spearheads marketing, client acquisition, and partnerships.",
-    linkedin: "https://www.linkedin.com/in/siddhantsupkar/",
-    badge: "Co-founder",
-    badgeColor: "from-violet-500/20 to-purple-500/10 border-violet-500/30 text-violet-400",
-    glowColor: "bg-violet-500/5 group-hover:bg-violet-500/10",
-  },
+  // {
+  //   name: "Aryan Patel",
+  //   role: "Co-founder & CTO",
+  //   image: "/Aryan.jpeg",
+  //   bio: "Full-stack engineer and tech architect. Aryan builds the digital backbone of Hindustaan Innovations, leading all technical development.",
+  //   linkedin: "https://www.linkedin.com/in/ghostxaryan/",
+  //   badge: "Co-founder",
+  //   badgeColor: "from-blue-500/20 to-indigo-500/10 border-blue-500/30 text-blue-400",
+  //   glowColor: "bg-blue-500/5 group-hover:bg-blue-500/10",
+  // },
+  // {
+  //   name: "Siddhant Supkar",
+  //   role: "Co-founder & CMO",
+  //   image: "/Shiddant.jpeg",
+  //   bio: "Growth strategist and brand builder. Siddhant spearheads marketing, client acquisition, and partnerships.",
+  //   linkedin: "https://www.linkedin.com/in/siddhantsupkar/",
+  //   badge: "Co-founder",
+  //   badgeColor: "from-violet-500/20 to-purple-500/10 border-violet-500/30 text-violet-400",
+  //   glowColor: "bg-violet-500/5 group-hover:bg-violet-500/10",
+  // },
 ];
 
 function OurFounders() {
@@ -466,7 +466,7 @@ function OurFounders() {
           ))}
         </motion.div>
 
-        {/* Row 2: Co-founders */}
+        {/* Row 2: Co-founders
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -479,7 +479,7 @@ function OurFounders() {
               <FounderCard founder={founder} />
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
