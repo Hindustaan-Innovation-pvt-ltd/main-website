@@ -565,6 +565,75 @@
             "icon": "Bus"
           }
         ]
+      },
+      {
+        "id": "karmanisht",
+        "title": "KarmaNisht",
+        "shortDescription": "Raipur's fastest home services connection platform — bridging verified professionals with local households in real-time.",
+        "description": "KarmaNisht is a modern geospatial web portal that connects Raipur households with verified professionals — electricians, plumbers, AC technicians, painters, and more — using real-time proximity calculations and a smart 15 km radius search.",
+        "fullDescription": "KarmaNisht redefines the home-services experience in Raipur by eliminating middlemen and putting high-intent customers directly in touch with verified, nearby professionals. Powered by the Haversine formula and PostGIS integration, the platform calculates live distances between households and service partners and automatically surfaces the nearest, highest-rated providers at the top of every search. Service professionals gain visibility through a dedicated Partner App — available as a direct, secure APK download — which places them on the geospatial grid and lets them receive job requests instantly. With glassmorphic UI cards, custom radar animations, and a seamless dark/light theme, KarmaNisht delivers a premium discovery experience that feels as good as it performs.",
+        "image": "/karmanisht.png",
+        "projectUrl": "https://www.karmanisht.com",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about KarmaNisht.",
+          "questions": [
+            {
+              "question": "What is KarmaNisht?",
+              "answer": "KarmaNisht is a geospatial home-services platform that connects Raipur households with the nearest verified professionals across categories like electrical, plumbing, AC repair, and painting."
+            },
+            {
+              "question": "How does the proximity search work?",
+              "answer": "We use the Haversine formula and PostGIS to calculate the real-time distance between your location and every registered service partner, then surface the closest, highest-rated professionals within a 15 km radius."
+            },
+            {
+              "question": "Is there a fee to browse professionals?",
+              "answer": "No. Browsing verified provider profiles, ratings, and contact details is completely free with zero middleman interference."
+            },
+            {
+              "question": "How can service professionals join KarmaNisht?",
+              "answer": "Professionals can download the KarmaNisht Partner App directly from our APK download portal, follow the installation guide, and go live on the GPS grid within minutes."
+            },
+            {
+              "question": "Which categories of services are supported?",
+              "answer": "Currently we support electricians, plumbers, AC technicians, painters, carpenters, and home cleaners — with more categories launching regularly."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Live Geospatial Search",
+            "description": "Calculates the exact distance between households and service providers on-the-fly using the Haversine formula and PostGIS integration for pinpoint accuracy.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Proximity & Rating Sort",
+            "description": "The nearest, highest-rated verified professionals are automatically prioritised at the top of search results within a smart 15 km radius.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Verified Provider Profiles",
+            "description": "Browse detailed profiles including years of experience, service categories, ratings, and direct contact details — all completely free.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Partner App Download Portal",
+            "description": "A dedicated, secure APK download portal and step-by-step installation guide so Raipur's service professionals can go live on the GPS grid instantly.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Direct Customer Connection",
+            "description": "Zero middleman interference — customers connect directly with professionals, cutting wait times and eliminating unnecessary commissions.",
+            "icon": "Users"
+          },
+          {
+            "title": "Category Management",
+            "description": "Organised service categories — electrical, plumbing, AC repair, painting, carpentry, and more — with interactive transitions and smart filtering.",
+            "icon": "ClipboardList"
+          }
+        ]
       }
     ]
   }
