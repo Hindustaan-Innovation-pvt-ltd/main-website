@@ -19,7 +19,7 @@ const CHANNELS = [
     title: "WhatsApp Support",
     desc: "The fastest way to reach us. Send a message and get a reply within minutes during business hours.",
     action: "Chat on WhatsApp",
-    href: "https://wa.me/917000064349",
+    href: "https://wa.me/918803555558",
     badge: "Fastest",
     badgeColor: "text-green-400 bg-green-500/10 border-green-500/20",
   },
