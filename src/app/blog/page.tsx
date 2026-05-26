@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description:
     "Insights and ideas on AI automation, web development, cloud computing, and digital business strategy from the Hindustaan Innovation team.",
   icons: { icon: "/logo.png" },
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {

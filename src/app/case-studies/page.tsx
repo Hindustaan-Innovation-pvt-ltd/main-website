@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies | Hindustaan Innovations",
   description: "Explore real-world results from our AI automation and digital solutions — measurable impact for Indian businesses.",
+  alternates: {
+    canonical: "/case-studies",
+  },
 };
 
 const CASES = [
