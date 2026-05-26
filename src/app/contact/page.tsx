@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

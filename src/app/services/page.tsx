@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

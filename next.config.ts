@@ -6,16 +6,41 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "framerusercontent.com",
-        // pathname: "**",
-        // port: "**",
       },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-        // pathname: "**",
-        // port: "**",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/faq",
+        destination: "/#faq",
+        permanent: true,
+      },
+      {
+        source: "/portfolio",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/career/ai-engineer",
+        destination: "/career",
+        permanent: true,
+      },
+      {
+        source: "/career/ai engineer",
+        destination: "/career",
+        permanent: true,
+      },
+      {
+        source: "/career/devops engineer",
+        destination: "/career/devops-engineer",
+        permanent: true,
+      },
+    ];
   },
 };
 

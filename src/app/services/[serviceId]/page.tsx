@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${card.title} | Hindustaan Innovations`,
     description: card.description,
     icons: { icon: "/logo.png" },
+    alternates: {
+      canonical: `/services/${serviceId}`,
+    },
   };
 }
 

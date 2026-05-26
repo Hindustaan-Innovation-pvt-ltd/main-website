@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  alternates: {
+    canonical: "/career",
+  },
 };
 
 export default function CareersPage() {

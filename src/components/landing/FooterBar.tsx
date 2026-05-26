@@ -62,7 +62,7 @@ const COLUMNS = [
       { label: "About Us", href: "/about" },
       { label: "Blog", href: "/blog" },
       { label: "Careers", href: "/career" },
-      { label: "Portfolio", href: "/portfolio" },
+      { label: "Portfolio", href: "/case-studies" },
       { label: "Contact", href: "/contact" },
     ],
   },
