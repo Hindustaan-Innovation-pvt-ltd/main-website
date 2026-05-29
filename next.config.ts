@@ -31,12 +31,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/career/ai engineer",
+        source: "/career/ai%20engineer",
         destination: "/career",
         permanent: true,
       },
       {
-        source: "/career/devops engineer",
+        source: "/career/devops%20engineer",
         destination: "/career/devops-engineer",
         permanent: true,
       },

@@ -33,7 +33,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${job.title} - ${job.department} | Our Company`,
       description: `Join our team as a ${job.title} in the ${job.department} department. Explore the role, responsibilities, and how you can contribute to our company's success.`,
-      url: `https://www.hindustaan.in/career/${id}`,
+      url: `https://hindustaan.in/career/${id}`,
       siteName: "Hindustaan Innovations",
     },
   };
