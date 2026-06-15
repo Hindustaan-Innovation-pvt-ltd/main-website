@@ -28,9 +28,6 @@ export const metadata: Metadata = {
   title: "Hindustaan Innovations",
   description: "AI Automation for Modern Businesses Made Simple",
   metadataBase: new URL("https://hindustaan.in"),
-  alternates: {
-    canonical: "/",
-  },
 };
 
 export default function RootLayout({
