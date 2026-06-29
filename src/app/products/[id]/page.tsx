@@ -95,11 +95,11 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         {/* Navigation & Header */}
         <div className="px-6 pt-24 md:pt-32 max-w-7xl mx-auto">
           <Link
-            href="/solutions"
+            href="/products"
             className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Solutions</span>
+            <span>Back to Products</span>
           </Link>
 
           <motion.div

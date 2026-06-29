@@ -135,7 +135,7 @@ export default function SolutionsPage() {
 
                     <div className="pt-6">
                       <Link 
-                        href={`/solutions/${item.id}`}
+                        href={`/products/${item.id}`}
                         className="inline-flex items-center gap-2 group/btn relative px-8 py-4 bg-white text-black font-semibold rounded-2xl hover:bg-zinc-200 transition-all overflow-hidden"
                       >
                         <span>View Details</span>
