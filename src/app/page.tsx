@@ -1,7 +1,5 @@
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { Navbar } from "@/components/landing/Navbar";
 import Popups from "@/components/popup/popup";
-// import { HeroSection } from "@/components/landing/HeroSection";
 import { HeroSection2 } from "@/components/landing/HeroSection2";
 import { QuoteSection } from "@/components/landing/QuoteSection";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
