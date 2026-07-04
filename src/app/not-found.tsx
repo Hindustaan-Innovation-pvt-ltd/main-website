@@ -1,6 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/landing/Navbar";
 import { FooterBar } from "@/components/landing/FooterBar";
 import Link from "next/link";
 import { Home } from "lucide-react";
