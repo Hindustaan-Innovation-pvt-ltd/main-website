@@ -28,7 +28,7 @@ export function Navbar2() {
           <Link href="/">
             <div className="flex items-center bg-[#1ba453] rounded-xl md:rounded-[18px] p-1 cursor-pointer">
               <div className="flex items-center justify-center w-10 h-10 shrink-0">
-                <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain ml-2" />
+                <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain md:ml-2" />
               </div>
               
               <motion.div
