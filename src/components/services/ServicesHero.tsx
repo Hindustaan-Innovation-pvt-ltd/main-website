@@ -2,7 +2,6 @@
 import { Layers, ArrowUpRight } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { BackgroundEffects } from "../landing/BackgroundEffects";
-import { Navbar } from "../landing/Navbar";
 import servicesData from "@/services.json";
 
 export function ServicesHero() {
@@ -24,7 +23,6 @@ export function ServicesHero() {
   return (
     <div className="relative h-screen">
       <BackgroundEffects />
-      <Navbar />
       <motion.section
         variants={containerVariants}
         initial="hidden"
