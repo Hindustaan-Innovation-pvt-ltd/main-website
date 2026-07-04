@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, type Variants } from "motion/react";
 import { BookOpen } from "lucide-react";
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { Navbar } from "@/components/landing/Navbar";
+import { Navbar2 } from "@/components/landing/navbar2";
 
 interface HeroData {
   pill: string;
@@ -53,34 +53,31 @@ export function BlogHero() {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
-      <BackgroundEffects />
-      <Navbar />
+    <div className="relative pt-32 md:pt-40 pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
+      <Navbar2 />
       {hero ? (
         <motion.section
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 pt-10 pb-16 w-full max-w-5xl mx-auto text-center"
+          className="relative z-10 flex flex-col items-center justify-center px-4 w-full max-w-6xl mx-auto text-center mt-12"
         >
           {/* Pill */}
           <motion.div
             variants={itemVariants}
-            className="flex items-center gap-2 mb-6 bg-zinc-900/50 backdrop-blur-md border border-white/8 rounded-full px-4 py-1.5 shadow-lg"
+            className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-black mb-6 gap-2"
           >
-            <BookOpen className="w-4 h-4 text-zinc-300" />
-            <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">
-              {hero.pill}
-            </span>
+            <BookOpen className="w-3.5 h-3.5 text-zinc-600" />
+            {hero.pill}
           </motion.div>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100 mb-5 text-center leading-[1.1]"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center"
           >
             {hero.heading}{" "}
-            <span className="font-serif italic font-light text-zinc-300">
+            <span className="text-[#1ba453]">
               {hero.headingItalic}
             </span>
           </motion.h1>
@@ -88,26 +85,14 @@ export function BlogHero() {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-zinc-400 text-lg md:text-xl text-center max-w-2xl leading-relaxed"
-        >
-          {hero.subheading}
-        </motion.p>
+            className="text-base md:text-lg text-zinc-500 max-w-2xl mb-8 text-center"
+          >
+            {hero.subheading}
+          </motion.p>
 
-        {/* Scroll indicator */}
-        <motion.div
-          variants={itemVariants}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs text-zinc-600 tracking-widest uppercase">Scroll</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-px h-8 bg-gradient-to-b from-zinc-500 to-transparent"
-          />
-        </motion.div>
         </motion.section>
       ) : (
-        <div className="flex flex-col items-center justify-center flex-1 px-4">
+        <div className="flex flex-col items-center justify-center flex-1 px-4 py-32">
           <div className="animate-pulse text-zinc-600">Loading blog content...</div>
         </div>
       )}

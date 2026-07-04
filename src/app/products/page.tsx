@@ -12,10 +12,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data.json";
-import { Navbar } from "@/components/landing/Navbar";
+import { Navbar2 } from "@/components/landing/navbar2";
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { CtaFooter } from "@/components/landing/CtaFooter";
-import { FooterBar } from "@/components/landing/FooterBar";
+import Footer2 from "@/components/landing/footer2";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -29,9 +28,9 @@ const stagger: Variants = {
 
 function Pill({ icon: Icon, label }: { icon: any; label: string }) {
   return (
-    <div className="flex items-center gap-2 bg-zinc-100/40 dark:bg-zinc-900/40 backdrop-blur-md border border-black/10 dark:border-white/5 rounded-full px-4 py-1.5 shadow-lg w-fit">
-      <Icon className="w-4 h-4 text-zinc-600 dark:text-zinc-300" />
-      <span className="text-xs font-semibold tracking-wider text-zinc-600 dark:text-zinc-300 uppercase">{label}</span>
+    <div className="flex items-center gap-2 px-3 py-1 bg-white border border-zinc-200 rounded-full shadow-sm w-fit">
+      <Icon className="w-4 h-4 text-zinc-800" />
+      <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-800">{label}</span>
     </div>
   );
 }
@@ -40,9 +39,9 @@ export default function SolutionsPage() {
   const { solutions } = data;
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-zinc-950 text-zinc-50 overflow-hidden">
-      <Navbar />
-      <BackgroundEffects />
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
+      <Navbar2 />
+      
 
       <main className="relative z-10 flex-1">
         {/* Hero Section */}
@@ -59,14 +58,14 @@ export default function SolutionsPage() {
             
             <motion.h1 
               variants={fadeUp}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-white max-w-4xl"
+              className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black max-w-4xl leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 px-2"
             >
-              {solutions.heading} <span className="font-serif italic font-light text-zinc-400">{solutions.headingItalic}</span>
+              {solutions.heading} <span className="text-[#1ba453]">{solutions.headingItalic}</span>
             </motion.h1>
             
             <motion.p 
               variants={fadeUp}
-              className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-zinc-500 max-w-2xl mx-auto mb-8"
             >
               {solutions.subheading}
             </motion.p>
@@ -86,22 +85,20 @@ export default function SolutionsPage() {
               <motion.div
                 key={item.id}
                 variants={fadeUp}
-                className="group relative bg-zinc-900/40 backdrop-blur-sm border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-white/10 transition-colors duration-500"
+                className="group relative bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-sm border border-zinc-200/60 hover:shadow-md transition-shadow"
               >
-                <div className="animate-border-beam" />
                 <div className="flex flex-col lg:flex-row items-stretch">
                   {/* Image side */}
-                  <div className="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-[500px] overflow-hidden">
-                    <div className="absolute inset-0 bg-linear-to-tr from-zinc-950 via-transparent to-transparent z-10 opacity-60" />
+                  <div className="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-[500px] overflow-hidden bg-zinc-50/50">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      className="object-contain transition-transform duration-700"
+                      className="object-contain transition-transform duration-700 p-8"
                     />
-                    <div className="absolute bottom-8 left-8 z-20">
-                      <div className="p-3 bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl">
-                        <School className="w-8 h-8 text-white" />
+                    <div className="absolute bottom-6 left-6 z-20">
+                      <div className="p-3 bg-white border border-zinc-200 shadow-sm rounded-xl">
+                        <School className="w-6 h-6 text-zinc-800" />
                       </div>
                     </div>
                   </div>
@@ -109,10 +106,10 @@ export default function SolutionsPage() {
                   {/* Content side */}
                   <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center gap-6">
                     <div className="flex flex-col gap-4">
-                      <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-zinc-200 transition-colors">
+                      <h3 className="text-xl md:text-2xl font-bold text-black transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-lg text-zinc-400 leading-relaxed">
+                      <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -121,14 +118,14 @@ export default function SolutionsPage() {
                       {item.modules.slice(0, 3).map((module, idx) => (
                         <span 
                           key={idx}
-                          className="px-4 py-1.5 rounded-full bg-white/5 border border-white/5 text-sm text-zinc-300"
+                          className="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-xs font-semibold text-zinc-800"
                         >
                           {module.title}
                         </span>
                       ))}
                       {item.modules.length > 3 && (
-                        <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/5 text-sm text-zinc-500 italic">
-                          +{item.modules.length - 3} More Modules
+                        <span className="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-xs font-semibold text-zinc-500 italic">
+                          +{item.modules.length - 3} More
                         </span>
                       )}
                     </div>
@@ -136,13 +133,12 @@ export default function SolutionsPage() {
                     <div className="pt-6">
                       <Link 
                         href={`/products/${item.id}`}
-                        className="inline-flex items-center gap-2 group/btn relative px-8 py-4 bg-white text-black font-semibold rounded-2xl hover:bg-zinc-200 transition-all overflow-hidden"
+                        className="inline-flex items-center gap-2 group/btn relative px-6 py-3 bg-[#222222] text-white text-sm font-medium rounded-[14px] hover:bg-black transition-colors shadow-lg"
                       >
                         <span>View Details</span>
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                        
-                        {/* Glow effect on hover */}
-                        <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
+                        <div className="flex items-center justify-center w-6 h-6 bg-white/10 rounded-[8px] ml-1">
+                          <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -153,8 +149,7 @@ export default function SolutionsPage() {
         </section>
       </main>
 
-      <CtaFooter />
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

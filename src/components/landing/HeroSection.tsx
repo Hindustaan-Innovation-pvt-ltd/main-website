@@ -8,6 +8,7 @@ import { SparklesCore } from "../ui/sparkles";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { BackgroundEffects } from "./BackgroundEffects";
 import { Navbar } from "./Navbar";
+
 import Link from "next/link";
 
 const containerVariants: Variants = {

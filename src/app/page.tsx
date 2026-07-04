@@ -1,6 +1,8 @@
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
 import { Navbar } from "@/components/landing/Navbar";
-import { HeroSection } from "@/components/landing/HeroSection";
+import Popups from "@/components/popup/popup";
+// import { HeroSection } from "@/components/landing/HeroSection";
+import { HeroSection2 } from "@/components/landing/HeroSection2";
 import { QuoteSection } from "@/components/landing/QuoteSection";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ServicesSection } from "@/components/landing/ServicesSection";
@@ -12,14 +14,23 @@ import { FooterBar } from "@/components/landing/FooterBar";
 import Testimonial from "@/components/landing/Testimonial";
 import SuccessStories from "@/components/landing/SuccessStories";
 import FaqSection from "@/components/landing/FaqSection";
+import { ServicesSection2 } from "@/components/landing/ServicesSection2";
+import { TrustedSection } from "@/components/landing/trusted"
+import { ProductSection } from "@/components/landing/Product";
+import FaqSection2 from "@/components/landing/FaqSection2";
+import { ProcessSection2 } from "@/components/landing/ProcessSection2";
+import { WhyUsSection } from "@/components/landing/Whyus";
+import Footer2 from "@/components/landing/footer2";
+import { MobileHoverObserver } from "@/components/landing/MobileHoverObserver";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col text-zinc-50 overflow-hidden">
 
-      <HeroSection />
-      <QuoteSection />
-      <BenefitsSection />
+      {/* <HeroSection /> */}
+      <HeroSection2 />
+      {/* <QuoteSection />
+      <BenefitsSection /> 
       <ServicesSection />
       <FeaturesSection />
       <ProcessSection />
@@ -28,7 +39,16 @@ export default function Home() {
       <SuccessStories />
       <FaqSection />
       <CtaFooter />
-      <FooterBar />
+      <FooterBar /> */}
+      <ServicesSection2 />
+      <TrustedSection />
+      <ProductSection />
+      <ProcessSection2 />
+      <WhyUsSection />
+      <FaqSection2 />
+      <Footer2 />
+      <Popups />
+      <MobileHoverObserver />
     </div>
   );
 }

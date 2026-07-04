@@ -27,10 +27,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data.json";
-import { Navbar } from "@/components/landing/Navbar";
+import { Navbar2 } from "@/components/landing/navbar2";
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { CtaFooter } from "@/components/landing/CtaFooter";
-import { FooterBar } from "@/components/landing/FooterBar";
+import Footer2 from "@/components/landing/footer2";
 import { notFound } from "next/navigation";
 
 const iconMap: Record<string, any> = {
@@ -87,16 +86,16 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
   }
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-zinc-950 text-zinc-50 overflow-hidden">
-      <Navbar />
-      <BackgroundEffects />
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
+      <Navbar2 />
+      
 
       <main className="relative z-10 flex-1">
         {/* Navigation & Header */}
         <div className="px-6 pt-24 md:pt-32 max-w-7xl mx-auto">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Back to Products</span>
@@ -110,13 +109,13 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-6xl font-bold tracking-tight text-white"
+              className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900"
             >
               {solution.title}
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-xl text-zinc-400 max-w-3xl leading-relaxed"
+              className="text-xl text-zinc-600 max-w-3xl leading-relaxed"
             >
               {solution.shortDescription}
             </motion.p>
@@ -157,7 +156,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
             transition={{ duration: 0.8 }}
             className="relative h-[300px] md:h-[600px] rounded-[3rem] md:rounded-[3rem] overflow-hidden border border-white/40 shadow-2xl shadow-white/10"
           >
-            <div className="relative w-full h-full bg-zinc-950">
+            <div className="relative w-full h-full bg-white">
               <Image
                 src={solution.image}
                 alt={solution.title}
@@ -171,7 +170,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         </section>
 
         {/* Detailed Explanation */}
-        <section className="px-6 py-24 bg-white/[0.02] border-y border-white/5">
+        <section className="px-6 py-24 bg-white/[0.02] border-y border-black/5">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={fadeUp}
@@ -180,10 +179,10 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               viewport={{ once: true }}
               className="flex flex-col gap-8"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                Empowering Institutions with <span className="text-zinc-400 font-serif italic">Next-Gen Technology</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
+                Empowering Institutions with <span className="text-zinc-600 font-serif italic">Next-Gen Technology</span>
               </h2>
-              <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+              <div className="space-y-6 text-zinc-600 text-lg leading-relaxed">
                 <p>{solution.fullDescription}</p>
               </div>
 
@@ -195,8 +194,8 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   { label: "24/7 Support", icon: Sparkles },
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-white">
-                      <Check className="w-4 h-4 text-white" />
+                    <div className="p-2 rounded-lg bg-white/5 border border-black/10 text-zinc-900">
+                      <Check className="w-4 h-4 text-zinc-900" />
                     </div>
                     <span className="font-medium text-zinc-200">{feature.label}</span>
                   </div>
@@ -208,11 +207,11 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-[2.5rem] bg-zinc-900 overflow-hidden border border-white/5"
+              className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-[2.5rem] bg-zinc-50 overflow-hidden border border-black/5"
             >
               {/* Decorative elements or secondary image */}
               <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="w-full h-full rounded-3xl bg-linear-to-br from-zinc-800 to-zinc-950 border border-white/10 shadow-2xl flex items-center justify-center relative group">
+                <div className="w-full h-full rounded-3xl bg-linear-to-br from-zinc-800 to-zinc-950 border border-black/10 shadow-2xl flex items-center justify-center relative group">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-50" />
                   <Image src={solution.logo} alt={solution.title} fill className="object-cover rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
@@ -224,10 +223,10 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         {/* Modules Grid */}
         <section className="px-6 py-32 max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center gap-6 mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Comprehensive <span className="font-serif italic text-zinc-400">Modules</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900">
+              Comprehensive <span className="font-serif italic text-zinc-600">Modules</span>
             </h2>
-            <p className="text-lg text-zinc-400 max-w-2xl">
+            <p className="text-lg text-zinc-600 max-w-2xl">
               Everything you need to manage your institution efficiently in one unified platform.
             </p>
           </div>
@@ -245,13 +244,13 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 <motion.div
                   key={idx}
                   variants={fadeUp}
-                  className="p-8 rounded-[2rem] bg-zinc-900/50 border border-white/5 hover:border-white/10 hover:bg-zinc-900/80 transition-all group"
+                  className="p-8 rounded-[2rem] bg-white/60 border border-black/5 hover:border-black/10 hover:bg-zinc-50/80 transition-all group"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white/10 transition-all">
-                    <Icon className="w-7 h-7 text-white" />
+                    <Icon className="w-7 h-7 text-zinc-900" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{module.title}</h3>
-                  <p className="text-zinc-400 leading-relaxed">
+                  <h3 className="text-xl font-bold text-zinc-900 mb-4">{module.title}</h3>
+                  <p className="text-zinc-600 leading-relaxed">
                     {module.description}
                   </p>
                 </motion.div>
@@ -264,11 +263,11 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         {solution.faq && (
           <section className="px-6 py-32 max-w-3xl mx-auto">
             <div className="flex flex-col items-center text-center gap-6 mb-16">
-              <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold tracking-widest text-white uppercase">
+              <span className="px-4 py-1.5 rounded-full bg-white/5 border border-black/10 text-xs font-bold tracking-widest text-zinc-900 uppercase">
                 {solution.faq.pill}
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white">
-                {solution.faq.heading} <span className="font-serif italic text-zinc-400">{solution.faq.headingItalic}</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-zinc-900">
+                {solution.faq.heading} <span className="font-serif italic text-zinc-600">{solution.faq.headingItalic}</span>
               </h2>
             </div>
 
@@ -280,17 +279,17 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="group rounded-3xl border border-white/5 bg-zinc-900/30 overflow-hidden"
+                  className="group rounded-3xl border border-black/5 bg-zinc-50/30 overflow-hidden"
                 >
                   <details className="w-full">
                     <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                       <div className="flex items-center gap-4">
                         <HelpCircle className="w-5 h-5 text-zinc-500" />
-                        <h3 className="font-bold text-white text-lg">{item.question}</h3>
+                        <h3 className="font-bold text-zinc-900 text-lg">{item.question}</h3>
                       </div>
                       <ChevronDown className="w-5 h-5 text-zinc-500 group-open:rotate-180 transition-transform" />
                     </summary>
-                    <div className="px-6 pb-6 pt-0 text-zinc-400 leading-relaxed pl-[3.25rem]">
+                    <div className="px-6 pb-6 pt-0 text-zinc-600 leading-relaxed pl-[3.25rem]">
                       {item.answer}
                     </div>
                   </details>
@@ -301,8 +300,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         )}
       </main>
 
-      <CtaFooter />
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

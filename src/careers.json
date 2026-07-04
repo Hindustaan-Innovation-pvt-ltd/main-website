@@ -120,6 +120,34 @@
             "Health and wellness stipends.",
             "Generous learning and development budget."
           ]
+        },
+        {
+          "id": "ai-engineer",
+          "title": "AI & Machine Learning Engineer",
+          "icon": "Brain",
+          "accent": "text-yellow-500",
+          "description": "Develop and deploy machine learning models and AI-driven features for our core products.",
+          "items": ["Full-time", "Remote", "Senior"],
+          "graphic": "nodes",
+          "colSpan": 3,
+          "responsibilities": [
+            "Design and build scalable machine learning models.",
+            "Integrate AI capabilities into our existing software stack.",
+            "Optimize model performance and deploy to production environments.",
+            "Collaborate with backend teams to ensure seamless data pipelines."
+          ],
+          "requirements": [
+            "3+ years of experience in AI/ML development.",
+            "Strong proficiency in Python, PyTorch, or TensorFlow.",
+            "Experience with LLMs, NLP, or computer vision.",
+            "Solid understanding of cloud deployment for ML models."
+          ],
+          "benefits": [
+            "Competitive salary and equity options.",
+            "Flexible working hours and remote options.",
+            "Health and wellness stipends.",
+            "Generous learning and development budget."
+          ]
         }
       ]
     },
@@ -196,6 +224,64 @@
             "Competitive contract rates.",
             "Flexible, asynchronous working hours.",
             "Opportunity to work on cutting-edge AI product interfaces."
+          ]
+        },
+        {
+          "id": "product-manager",
+          "title": "Product Manager",
+          "icon": "TrendingUp",
+          "accent": "text-indigo-500",
+          "description": "Drive product strategy and execution, working closely with engineering and design teams.",
+          "items": ["Full-time", "Remote / Hybrid", "Senior"],
+          "graphic": "cluster",
+          "graphicIcons": ["TrendingUp", "Users", "Briefcase"],
+          "colSpan": 3,
+          "responsibilities": [
+            "Define product vision, strategy, and roadmap.",
+            "Gather and analyze user feedback to inform product decisions.",
+            "Collaborate with engineering and design to deliver high-quality features.",
+            "Track and report on product performance metrics."
+          ],
+          "requirements": [
+            "4+ years of experience in product management.",
+            "Strong understanding of software development lifecycles.",
+            "Excellent communication and leadership skills.",
+            "Data-driven decision making approach."
+          ],
+          "benefits": [
+            "Competitive salary and equity options.",
+            "Flexible working hours and remote options.",
+            "Health and wellness stipends.",
+            "Generous learning and development budget."
+          ]
+        },
+        {
+          "id": "ux-researcher",
+          "title": "UX Researcher",
+          "icon": "Eye",
+          "accent": "text-orange-500",
+          "description": "Conduct deep user research to uncover insights that drive product innovation.",
+          "items": ["Full-time", "Remote", "Mid-Level"],
+          "graphic": "tags",
+          "graphicTags": ["Research", "Usability", "Insights"],
+          "colSpan": 3,
+          "responsibilities": [
+            "Plan and conduct user interviews, surveys, and usability tests.",
+            "Synthesize research findings into actionable insights.",
+            "Collaborate with designers to validate concepts and prototypes.",
+            "Advocate for the user throughout the product development process."
+          ],
+          "requirements": [
+            "3+ years of experience in UX research.",
+            "Proficiency in qualitative and quantitative research methods.",
+            "Strong analytical and communication skills.",
+            "Experience working in an agile development environment."
+          ],
+          "benefits": [
+            "Competitive salary and equity options.",
+            "Flexible working hours and remote options.",
+            "Health and wellness stipends.",
+            "Generous learning and development budget."
           ]
         }
       ]

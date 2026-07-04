@@ -84,10 +84,10 @@ export default function JobDetailsClient({ job }: { job: Job }) {
       transition={{ duration: 0.4 }}
     >
       {/* Back Button */}
-      <motion.div variants={itemVariants} className="max-w-5xl mx-auto w-full mb-8">
+      <motion.div variants={itemVariants} className="max-w-[1800px] mx-auto w-full mb-8">
         <Link
-          href="/career"
-          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors group"
+          href="/careers"
+          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-black transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back to Careers
@@ -98,29 +98,29 @@ export default function JobDetailsClient({ job }: { job: Job }) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-5xl mx-auto w-full"
+        className="max-w-[1800px] mx-auto w-full"
       >
         {/* Header Section with Gradient Background */}
         <motion.div
           variants={itemVariants}
-          className="relative rounded-2xl bg-gradient-to-br from-zinc-900/80 to-zinc-950 border border-white/10 p-8 sm:p-12 mb-8 overflow-hidden"
+          className="relative rounded-2xl bg-white border border-black/10 p-8 sm:p-12 mb-8 overflow-hidden shadow-sm"
         >
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 via-transparent to-transparent rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/5 via-transparent to-transparent rounded-full blur-3xl" />
 
           <div className="relative z-10">
             {/* Department Tag */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 mb-4"
+              className="inline-flex items-center gap-2 bg-zinc-100 border border-zinc-200 rounded-full px-4 py-1.5 mb-4"
             >
-              <Briefcase className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-300">{job.department}</span>
+              <Briefcase className="w-4 h-4 text-zinc-600" />
+              <span className="text-sm font-semibold text-zinc-800">{job.department}</span>
             </motion.div>
 
             {/* Title */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl font-bold text-white mb-4 tracking-tight"
+              className="text-5xl sm:text-6xl font-bold text-black mb-4 tracking-tight"
             >
               {job.title}
             </motion.h1>
@@ -128,7 +128,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-xl text-zinc-300 mb-8 max-w-2xl leading-relaxed"
+              className="text-xl text-zinc-600 mb-8 max-w-2xl leading-relaxed"
             >
               {job.description}
             </motion.p>
@@ -139,29 +139,29 @@ export default function JobDetailsClient({ job }: { job: Job }) {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4"
             >
               {/* Location */}
-              <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition-colors">
+              <div className="flex items-center gap-3 p-3 bg-zinc-50 rounded-lg border border-black/5 hover:bg-zinc-100 transition-colors">
                 <MapPin className={`w-5 h-5 shrink-0 ${job.accent}`} />
                 <div>
                   <p className="text-xs text-zinc-500 uppercase tracking-wide">Location</p>
-                  <p className="text-sm font-semibold text-zinc-100">{jobDetails.location}</p>
+                  <p className="text-sm font-semibold text-black">{jobDetails.location}</p>
                 </div>
               </div>
 
               {/* Type */}
-              <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition-colors">
+              <div className="flex items-center gap-3 p-3 bg-zinc-50 rounded-lg border border-black/5 hover:bg-zinc-100 transition-colors">
                 <Clock className={`w-5 h-5 shrink-0 ${job.accent}`} />
                 <div>
                   <p className="text-xs text-zinc-500 uppercase tracking-wide">Type</p>
-                  <p className="text-sm font-semibold text-zinc-100">{jobDetails.type}</p>
+                  <p className="text-sm font-semibold text-black">{jobDetails.type}</p>
                 </div>
               </div>
 
               {/* Level */}
-              <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition-colors">
+              <div className="flex items-center gap-3 p-3 bg-zinc-50 rounded-lg border border-black/5 hover:bg-zinc-100 transition-colors">
                 <Users className={`w-5 h-5 shrink-0 ${job.accent}`} />
                 <div>
                   <p className="text-xs text-zinc-500 uppercase tracking-wide">Level</p>
-                  <p className="text-sm font-semibold text-zinc-100">{jobDetails.level}</p>
+                  <p className="text-sm font-semibold text-black">{jobDetails.level}</p>
                 </div>
               </div>
             </motion.div>
@@ -177,7 +177,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
               <motion.section variants={itemVariants}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className={`w-1 h-8 rounded-full ${job.accent}`} />
-                  <h2 className="text-2xl font-bold text-white">What You'll Do</h2>
+                  <h2 className="text-2xl font-bold text-black">What You'll Do</h2>
                 </div>
                 <div className="space-y-3 pl-4">
                   {job.responsibilities.map((item, i) => (
@@ -187,7 +187,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
                       className="flex items-start gap-3 group"
                     >
                       <CheckCircle2 className={`w-5 h-5 mt-1 shrink-0 ${job.accent} group-hover:scale-110 transition-transform`} />
-                      <span className="text-zinc-300 group-hover:text-zinc-100 transition-colors">{item}</span>
+                      <span className="text-zinc-600 group-hover:text-zinc-900 transition-colors">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -202,7 +202,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
               <motion.section variants={itemVariants}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className={`w-1 h-8 rounded-full ${job.accent}`} />
-                  <h2 className="text-2xl font-bold text-white">What We're Looking For</h2>
+                  <h2 className="text-2xl font-bold text-black">What We're Looking For</h2>
                 </div>
                 <div className="space-y-3 pl-4">
                   {job.requirements.map((item, i) => (
@@ -212,7 +212,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
                       className="flex items-start gap-3 group"
                     >
                       <CheckCircle2 className={`w-5 h-5 mt-1 shrink-0 ${job.accent} group-hover:scale-110 transition-transform`} />
-                      <span className="text-zinc-300 group-hover:text-zinc-100 transition-colors">{item}</span>
+                      <span className="text-zinc-600 group-hover:text-zinc-900 transition-colors">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -227,17 +227,17 @@ export default function JobDetailsClient({ job }: { job: Job }) {
               <motion.section variants={itemVariants}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className={`w-1 h-8 rounded-full ${job.accent}`} />
-                  <h2 className="text-2xl font-bold text-white">What We Offer</h2>
+                  <h2 className="text-2xl font-bold text-black">What We Offer</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {job.benefits.map((benefit, i) => (
                     <motion.div
                       key={i}
                       variants={itemVariants}
-                      className="flex items-start gap-3 p-4 rounded-lg bg-linear-to-br from-white/5 to-white/0 border border-white/10 hover:border-white/20 hover:bg-gradient-to-br hover:from-white/10 hover:to-white/5 transition-all group"
+                      className="flex items-start gap-3 p-4 rounded-lg bg-zinc-50 border border-black/5 hover:border-black/10 hover:bg-zinc-100 transition-all group"
                     >
                       <CheckCircle2 className={`w-5 h-5 mt-1 shrink-0 ${job.accent} group-hover:scale-110 transition-transform`} />
-                      <span className="text-sm text-zinc-300 group-hover:text-zinc-100 transition-colors">{benefit}</span>
+                      <span className="text-sm text-zinc-600 group-hover:text-zinc-900 transition-colors">{benefit}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -258,12 +258,12 @@ export default function JobDetailsClient({ job }: { job: Job }) {
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all" />
 
               <div className="relative z-10">
-                <h3 className="text-lg font-bold text-white mb-2">Ready to apply?</h3>
+                <h3 className="text-lg font-bold text-zinc-900 mb-2">Ready to apply?</h3>
                 <p className="text-sm text-blue-100 mb-6">Submit your application and let us know why you'd be perfect for this role.</p>
 
                 <HoverBorderGradient
                   containerClassName="rounded-xl w-full"
-                  className="dark:bg-black bg-white text-black dark:text-white flex items-center justify-center space-x-2 px-6 py-3 w-full"
+                  className="dark:bg-[#f5f5f5] bg-white text-black dark:text-zinc-900 flex items-center justify-center space-x-2 px-6 py-3 w-full"
                   onClick={() => {
                     redirect("https://forms.gle/3tG7K6VcD7z5Q8VD7");
                   }}
@@ -281,22 +281,22 @@ export default function JobDetailsClient({ job }: { job: Job }) {
             {/* Job Summary Card */}
             <motion.div
               variants={itemVariants}
-              className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 p-6"
+              className="rounded-2xl bg-white border border-black/10 p-6 shadow-sm"
             >
-              <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-4">Job Summary</h3>
+              <h3 className="text-sm font-bold text-zinc-600 uppercase tracking-widest mb-4">Job Summary</h3>
               <div className="space-y-4">
                 <div>
                   <p className="text-xs text-zinc-500 uppercase tracking-wide">Department</p>
-                  <p className="text-sm font-semibold text-zinc-100 mt-1">{job.department}</p>
+                  <p className="text-sm font-semibold text-zinc-900 mt-1">{job.department}</p>
                 </div>
-                <div className="h-px bg-white/5" />
+                <div className="h-px bg-zinc-200" />
                 <div>
                   <p className="text-xs text-zinc-500 uppercase tracking-wide">Tags</p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {job.items?.map((item) => (
                       <span
                         key={item}
-                        className="px-2.5 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded text-zinc-300 hover:bg-white/10 hover:text-zinc-100 transition-all"
+                        className="px-2.5 py-1 text-xs font-medium bg-zinc-50 border border-black/10 rounded text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 transition-all"
                       >
                         {item}
                       </span>
@@ -309,15 +309,15 @@ export default function JobDetailsClient({ job }: { job: Job }) {
             {/* Share Card */}
             <motion.div
               variants={itemVariants}
-              className="rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 p-6"
+              className="rounded-2xl bg-white border border-black/10 p-6 shadow-sm"
             >
-              <h3 className="text-sm font-bold text-zinc-400 uppercase tracking-widest mb-4">Share this job</h3>
+              <h3 className="text-sm font-bold text-zinc-600 uppercase tracking-widest mb-4">Share this job</h3>
               <div className="flex gap-2">
                 <a
                   href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20${job.title}%20role%20at%20Hindustan%20Innovations`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 px-3 py-2 text-sm font-medium bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:text-white transition-all text-zinc-300"
+                  className="flex-1 px-3 py-2 text-sm font-medium bg-zinc-50 border border-black/10 rounded-lg hover:bg-zinc-100 hover:text-zinc-900 transition-all text-zinc-600 text-center"
                 >
                   Twitter
                 </a>
@@ -325,7 +325,7 @@ export default function JobDetailsClient({ job }: { job: Job }) {
                   href={linkedinShareUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 px-3 py-2 text-sm font-medium bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:text-white transition-all text-zinc-300"
+                  className="flex-1 px-3 py-2 text-sm font-medium bg-zinc-50 border border-black/10 rounded-lg hover:bg-zinc-100 hover:text-zinc-900 transition-all text-zinc-600 text-center"
                 >
                   LinkedIn
                 </a>

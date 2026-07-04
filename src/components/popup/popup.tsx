@@ -119,7 +119,7 @@ export default function Popups() {
     React.useEffect(() => {
         const timer = window.setTimeout(() => {
             setShowPopup(true);
-        }, 1500);
+        }, 10000);
 
         // Check initially and set an interval to check every hour while page is open
         checkAndSendEmails();
@@ -176,122 +176,111 @@ export default function Popups() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setShowPopup(false)}
-                        className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
+                        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
                     />
 
                     {/* Popup Card */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                        transition={{ type: "spring", damping: 20, stiffness: 200 }}
-                        className="relative max-w-[440px] w-[calc(100vw-2rem)]"
+                        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                        className="relative w-[calc(100vw-2rem)] max-w-lg"
                     >
-                        {/* Subtle Organic Glows (Matching zinc theme) */}
-                        <div className="absolute -top-12 -right-12 w-64 h-64 bg-zinc-500/10 blur-[100px] rounded-full" />
-                        <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-zinc-500/5 blur-[100px] rounded-full" />
-
-                        <div className="relative bg-zinc-950/20 backdrop-blur-xl rounded-[2.5rem] border border-white/10 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.5)] overflow-hidden">
-                            {/* Curved Header Background */}
-                            <div className="absolute top-0 left-0 w-full h-40 bg-linear-to-br from-white/5 to-transparent -z-10" />
-                            <svg className="absolute top-32 left-0 w-full h-24 -z-10 text-zinc-950/20" viewBox="0 0 500 150" preserveAspectRatio="none">
-                                <path 
-                                    d="M0,150 C150,50 350,250 500,150 L500,0 L0,0 Z" 
-                                    fill="currentColor" 
-                                />
-                            </svg>
+                        {/* Premium Glow Effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-200 rounded-[2rem] sm:rounded-[2.5rem] blur-lg opacity-50" />
+                        
+                        <div className="relative bg-white rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 shadow-2xl overflow-hidden">
+                            
+                            {/* Decorative background gradients */}
+                            <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-zinc-50 to-transparent pointer-events-none" />
+                            <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
+                            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
 
                             <Button
-                                className="absolute top-6 right-6 text-zinc-500 hover:text-zinc-100 hover:bg-white/5 rounded-2xl w-10 h-10 p-0 transition-all z-20"
+                                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-zinc-400 hover:text-black hover:bg-zinc-100 rounded-full w-8 h-8 sm:w-10 sm:h-10 p-0 transition-all z-20"
                                 variant="ghost"
                                 onClick={() => setShowPopup(false)}
                                 aria-label="Close popup"
                             >
-                                <X size={20} />
+                                <X className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                             </Button>
 
-                            <div className="p-10 pt-12">
-                                <form className="relative space-y-8" onSubmit={handleSubmit}>
-                                    <div className="space-y-4">
+                            <div className="p-6 sm:p-10 md:p-12">
+                                <form className="relative z-10" onSubmit={handleSubmit}>
+                                    <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 mb-8 sm:mb-10">
                                         <motion.div 
                                             initial={{ y: 10, opacity: 0 }}
                                             animate={{ y: 0, opacity: 1 }}
                                             transition={{ delay: 0.1 }}
-                                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100/5 border border-white/10 text-[10px] font-bold text-zinc-400 uppercase tracking-[0.2em]"
+                                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-800 uppercase tracking-widest shadow-sm"
                                         >
-                                            <Sparkles className="w-3 h-3 text-zinc-500" />
+                                            <Sparkles className="w-3.5 h-3.5 text-[#1ba453]" />
                                             Limited Consultation
                                         </motion.div>
                                         
-                                        <div className="space-y-2">
-                                            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 leading-tight">
+                                        <div className="space-y-2 sm:space-y-3">
+                                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-black leading-[1.15] md:leading-[1.1]">
                                                 Build your project <br />
-                                                <span className="text-zinc-400 font-serif italic font-light">
-                                                    with our engineers.
-                                                </span>
+                                                with our engineers.
                                             </h2>
-                                            <p className="text-zinc-500 text-base leading-relaxed max-w-[280px]">
+                                            <p className="text-zinc-500 text-sm sm:text-base leading-relaxed max-w-[320px] mx-auto">
                                                 Share your contact number and our team will reach out shortly.
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div className="space-y-3">
-                                        <div className="relative group">
-                                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-zinc-100 transition-colors">
-                                                <Phone size={18} />
+                                    <div className="space-y-6">
+                                        <div className="space-y-2 relative">
+                                            <div className="relative group">
+                                                <div className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-[#1ba453] transition-colors duration-300">
+                                                    <Phone className="w-5 h-5 sm:w-[20px] sm:h-[20px]" />
+                                                </div>
+                                                <input
+                                                    id="mobile"
+                                                    name="mobile"
+                                                    type="tel"
+                                                    inputMode="numeric"
+                                                    autoComplete="tel"
+                                                    placeholder="Your mobile number"
+                                                    value={mobile}
+                                                    onChange={(e) => setMobile(e.target.value)}
+                                                    className="w-full h-12 sm:h-14 md:h-16 pl-12 sm:pl-14 pr-6 rounded-2xl border border-zinc-200 bg-zinc-50 text-black placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-[#1ba453]/30 focus:bg-white focus:ring-4 focus:ring-[#1ba453]/10 text-base sm:text-lg shadow-sm"
+                                                    required
+                                                />
                                             </div>
-                                            <input
-                                                id="mobile"
-                                                name="mobile"
-                                                type="tel"
-                                                inputMode="numeric"
-                                                autoComplete="tel"
-                                                placeholder="Your mobile number"
-                                                value={mobile}
-                                                onChange={(e) => setMobile(e.target.value)}
-                                                className="w-full h-14 pl-12 pr-6 rounded-2xl border border-white/15 bg-white/5 text-zinc-100 placeholder:text-zinc-2000 outline-none transition-all focus:border-white/20 focus:bg-white/10 focus:ring-4 focus:ring-white/5"
-                                                required
-                                            />
+                                            {error && (
+                                                <motion.p 
+                                                    initial={{ opacity: 0, y: -5 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    className="text-sm text-red-500 pl-2 flex items-center gap-1.5 font-medium absolute -bottom-7"
+                                                >
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                                                    {error}
+                                                </motion.p>
+                                            )}
                                         </div>
-                                        {error && (
-                                            <motion.p 
-                                                initial={{ opacity: 0, x: -10 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                className="text-xs text-red-500 pl-2 flex items-center gap-1 font-medium"
-                                            >
-                                                <span className="w-1 h-1 rounded-full bg-red-500" />
-                                                {error}
-                                            </motion.p>
-                                        )}
-                                    </div>
 
-                                    <div className="space-y-4">
-                                        <Button 
-                                            type="submit" 
-                                            className="w-full h-14 rounded-2xl bg-zinc-100 text-zinc-950 hover:bg-white active:scale-[0.98] transition-all font-bold text-base shadow-xl shadow-black/20 group flex items-center justify-center gap-3"
-                                        >
-                                            Get a Free Call
-                                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                        </Button>
-                                        
-                                        <p className="text-[11px] text-center text-zinc-600 px-6">
-                                            Secure & Confidential. <br />
-                                            Join 500+ successful enterprises.
-                                        </p>
+                                        <div className="pt-4 space-y-5">
+                                            <Button 
+                                                type="submit" 
+                                                className="w-full h-14 md:h-16 rounded-2xl bg-[#1ba453] text-white hover:bg-[#158743] active:scale-[0.98] transition-all duration-300 font-medium text-lg shadow-lg shadow-green-500/20 group flex items-center justify-center gap-3"
+                                            >
+                                                Get a Free Call
+                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                                            </Button>
+                                            
+                                            <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-zinc-500 font-medium text-center leading-snug">
+                                                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                </svg>
+                                                Secure & Confidential. Join 500+ successful enterprises.
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-
-                        {/* Floating Decorative Elements */}
-                        <motion.div 
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-6 -left-6 w-12 h-12 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center -z-10"
-                        >
-                            <Sparkles className="w-5 h-5 text-zinc-500" />
-                        </motion.div>
                     </motion.div>
                 </div>
             )}

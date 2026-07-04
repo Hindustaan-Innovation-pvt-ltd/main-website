@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FooterBar } from "@/components/landing/FooterBar";
+import Footer2 from "@/components/landing/footer2";
 import { ContactSection } from "@/components/contact/ContactSection";
 import FaqSection from "@/components/landing/FaqSection";
 import ContactFaqSection from "@/components/contact/ContactFAQ";
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="relative min-h-screen flex flex-col text-zinc-50 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
       <ContactSection />
       <ContactFaqSection />
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

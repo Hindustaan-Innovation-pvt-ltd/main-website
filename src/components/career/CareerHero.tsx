@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { Briefcase, ArrowUpRight } from "lucide-react";
 import { motion, type Variants } from "motion/react";
-import { BackgroundEffects } from "../landing/BackgroundEffects";
-import { Navbar } from "../landing/Navbar";
+import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
+import { Navbar2 } from "@/components/landing/navbar2";
 
 interface HeroData {
   pill: string;
@@ -61,44 +61,49 @@ export function CareerHero() {
   if (!hero) return null;
 
   return (
-    <div className="relative h-screen">
-      <BackgroundEffects />
-      <Navbar />
+    <div className="relative pt-32 md:pt-40 pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
+      <Navbar2 />
       <motion.section
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="absolute z-10 inset-0 h-full grid place-content-center  px-4 pt-24 pb-4 w-full"
+        className="relative z-10 flex flex-col items-center justify-center px-4 w-full max-w-6xl mx-auto text-center mt-12"
       >
-        <div className="flex flex-col justify-center items-center">
-          {/* Pill */}
-          <motion.div variants={itemVariants} className="max-w-44 flex items-center justify-center gap-2 mb-6 bg-zinc-100/40 dark:bg-zinc-900/40 backdrop-blur-md border border-black/10 dark:border-white/5 rounded-full px-4 py-1.5 shadow-lg">
-            <Briefcase className="w-4 h-4 text-zinc-600 dark:text-zinc-300" />
-            <span className="text-xs font-semibold tracking-wider text-zinc-600 dark:text-zinc-300 uppercase">
-              {hero.pill}
-            </span>
-          </motion.div>
+        {/* Pill */}
+        <motion.div
+          variants={itemVariants}
+          className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-black mb-6 gap-2"
+        >
+          <Briefcase className="w-3.5 h-3.5 text-zinc-600" />
+          {hero.pill}
+        </motion.div>
 
-          {/* Heading */}
-          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4 text-center">
-            {hero.heading}{" "}
-            <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">
-              {hero.headingItalic}
-            </span>
-          </motion.h1>
+        {/* Heading */}
+        <motion.h1
+          variants={itemVariants}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center"
+        >
+          {hero.heading}{" "}
+          <span className="text-[#1ba453]">
+            {hero.headingItalic}
+          </span>
+        </motion.h1>
 
-          <motion.p variants={itemVariants} className="text-zinc-600 dark:text-zinc-400 mb-10 text-lg text-center max-w-2xl">
-            {hero.subheading}
-          </motion.p>
+        {/* Subheading */}
+        <motion.p
+          variants={itemVariants}
+          className="text-base md:text-lg text-zinc-500 max-w-2xl mb-8 text-center"
+        >
+          {hero.subheading}
+        </motion.p>
 
-          <motion.a
-            variants={itemVariants}
-            href={hero.ctaLink}
-            className="inline-flex items-center gap-2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-white px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
-          >
-            {hero.ctaText} <ArrowUpRight className="w-4 h-4" />
-          </motion.a>
-        </div>
+        <motion.a
+          variants={itemVariants}
+          href={hero.ctaLink}
+          className="inline-flex items-center gap-2 bg-black text-white hover:bg-zinc-800 px-7 py-3 rounded-full text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+        >
+          {hero.ctaText} <ArrowUpRight className="w-4 h-4" />
+        </motion.a>
       </motion.section>
     </div>
   );

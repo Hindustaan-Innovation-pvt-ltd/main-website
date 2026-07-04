@@ -1,8 +1,8 @@
 export const dynamicParams = true
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Navbar } from "@/components/landing/Navbar";
-import { FooterBar } from "@/components/landing/FooterBar";
+import { Navbar2 } from "@/components/landing/navbar2";
+import Footer2 from "@/components/landing/footer2";
 import careersData from "@/careers.json";
 import JobDetailsClient from "@/components/career/JobDetailsClient";
 
@@ -51,10 +51,10 @@ export default async function JobDetailsPage({
   if (!job) notFound();
 
   return (
-    <div className="relative min-h-screen flex flex-col text-zinc-50 bg-black overflow-hidden">
-      <Navbar />
+    <div className="relative min-h-screen flex flex-col text-black bg-[#f5f5f5] overflow-hidden">
+      <Navbar2 />
       <JobDetailsClient job={job} />
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { Navbar } from "@/components/landing/Navbar";
-import { FooterBar } from "@/components/landing/FooterBar";
-import { ServicesHero } from "@/components/services/ServicesHero";
-import { ServicesCategoryGrid } from "@/components/services/ServicesCategoryGrid";
-import { ServicesCtaBanner } from "@/components/services/ServicesCtaBanner";
+import { Navbar2 } from "@/components/landing/navbar2";
+import Footer2 from "@/components/landing/footer2";
+import { ServicesHero2 } from "@/components/services2/ServicesHero2";
+import { ServicesCategoryGrid2 } from "@/components/services2/ServicesCategoryGrid2";
+import { ServicesCtaBanner2 } from "@/components/services2/ServicesCtaBanner2";
 
 export const metadata: Metadata = {
   title: "Services | Hindustan Innovations",
@@ -20,12 +19,12 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="relative min-h-screen flex flex-col text-zinc-50 overflow-hidden">
-
-      <ServicesHero />
-      <ServicesCategoryGrid />
-      <ServicesCtaBanner />
-      <FooterBar />
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
+      <Navbar2 />
+      <ServicesHero2 />
+      <ServicesCategoryGrid2 />
+      <ServicesCtaBanner2 />
+      <Footer2 />
     </div>
   );
 }

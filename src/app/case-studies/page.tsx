@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/landing/Navbar";
+import { Navbar2 } from "@/components/landing/navbar2";
 import { FooterBar } from "@/components/landing/FooterBar";
 import { CtaFooter } from "@/components/landing/CtaFooter";
 import { ArrowUpRight, BarChart2, TrendingUp, Zap, Users, Clock, Star } from "lucide-react";
@@ -108,21 +108,21 @@ const CASES = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="relative bg-black text-white min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-black z-0 pointer-events-none" />
-      <Navbar />
+    <div className="relative bg-white text-zinc-900 min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
+      <Navbar2 />
 
       {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-20 max-w-5xl mx-auto text-center gap-6">
-        <div className="flex items-center gap-2 bg-zinc-900/40 backdrop-blur-md border border-white/5 rounded-full px-4 py-1.5">
-          <BarChart2 className="w-4 h-4 text-zinc-300" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">Case Studies</span>
+        <div className="flex items-center gap-2 bg-white/60 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
+          <BarChart2 className="w-4 h-4 text-zinc-700" />
+          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">Case Studies</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-100">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
           Real Results,{" "}
-          <span className="font-serif italic font-light text-zinc-300">Real Businesses.</span>
+          <span className="font-serif italic font-light text-zinc-700">Real Businesses.</span>
         </h1>
-        <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed">
+        <p className="text-zinc-600 text-lg max-w-2xl leading-relaxed">
           Every project we ship is tied to measurable outcomes. Here's a look at what we've built and the impact it created.
         </p>
 
@@ -133,8 +133,8 @@ export default function CaseStudiesPage() {
             { value: "30+", label: "Happy Clients" },
             { value: "3x", label: "Avg. ROI Boost" },
           ].map((s) => (
-            <div key={s.label} className="flex flex-col items-center bg-zinc-900/40 border border-white/5 rounded-2xl px-4 py-4">
-              <span className="text-2xl font-bold text-zinc-100">{s.value}</span>
+            <div key={s.label} className="flex flex-col items-center bg-white/60 border border-black/5 rounded-2xl px-4 py-4">
+              <span className="text-2xl font-bold text-zinc-900">{s.value}</span>
               <span className="text-xs text-zinc-500 mt-0.5">{s.label}</span>
             </div>
           ))}
@@ -147,7 +147,7 @@ export default function CaseStudiesPage() {
           {CASES.map((c) => (
             <div
               key={c.id}
-              className="group flex flex-col gap-5 bg-zinc-950 rounded-3xl border-t-2 border-white/20 outline outline-white/8 p-7 hover:bg-zinc-900/60 hover:-translate-y-1 transition-all duration-300 overflow-hidden relative"
+              className="group flex flex-col gap-5 bg-white rounded-3xl border-t-2 border-black/10 outline outline-white/8 p-7 hover:bg-zinc-50/60 hover:-translate-y-1 transition-all duration-300 overflow-hidden relative"
             >
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-white/2 rounded-full blur-3xl group-hover:bg-white/4 transition-all duration-700 pointer-events-none" />
 
@@ -157,24 +157,24 @@ export default function CaseStudiesPage() {
               </span>
 
               {/* Title */}
-              <h2 className="text-lg font-bold text-zinc-100 leading-snug">{c.title}</h2>
+              <h2 className="text-lg font-bold text-zinc-900 leading-snug">{c.title}</h2>
 
               {/* Desc */}
-              <p className="text-zinc-400 text-sm leading-relaxed flex-1">{c.desc}</p>
+              <p className="text-zinc-600 text-sm leading-relaxed flex-1">{c.desc}</p>
 
               {/* Metrics */}
               <div className="grid grid-cols-3 gap-2">
                 {c.metrics.map((m) => (
-                  <div key={m.label} className="flex flex-col items-center bg-white/3 border border-white/5 rounded-xl py-2.5 px-1">
+                  <div key={m.label} className="flex flex-col items-center bg-white/3 border border-black/5 rounded-xl py-2.5 px-1">
                     <m.icon className="w-3.5 h-3.5 text-zinc-500 mb-1" />
-                    <span className="text-sm font-bold text-zinc-100">{m.value}</span>
+                    <span className="text-sm font-bold text-zinc-900">{m.value}</span>
                     <span className="text-[9px] text-zinc-600 text-center leading-tight mt-0.5">{m.label}</span>
                   </div>
                 ))}
               </div>
 
               {/* Meta */}
-              <div className="flex flex-wrap gap-2 pt-1 border-t border-white/5">
+              <div className="flex flex-wrap gap-2 pt-1 border-t border-black/5">
                 <span className="text-[10px] text-zinc-500">{c.industry}</span>
                 <span className="text-[10px] text-zinc-700">·</span>
                 <span className="text-[10px] text-zinc-500">{c.duration}</span>
@@ -183,7 +183,7 @@ export default function CaseStudiesPage() {
               {/* Services chips */}
               <div className="flex flex-wrap gap-1.5">
                 {c.services.map((s) => (
-                  <span key={s} className="text-[10px] bg-zinc-900 border border-white/8 text-zinc-500 px-2 py-0.5 rounded-full">{s}</span>
+                  <span key={s} className="text-[10px] bg-zinc-50 border border-white/8 text-zinc-500 px-2 py-0.5 rounded-full">{s}</span>
                 ))}
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function CaseStudiesPage() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-zinc-400 text-sm mb-4">Want results like these for your business?</p>
+          <p className="text-zinc-600 text-sm mb-4">Want results like these for your business?</p>
           <Link
             href="tel:+917712994005"
             className="inline-flex items-center gap-2 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold px-6 py-3 rounded-xl transition-colors text-sm"

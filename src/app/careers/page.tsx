@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-
-import Footer2 from "@/components/landing/footer2";
 import { CareerHero } from "@/components/career/CareerHero";
 import { CareerGrid } from "@/components/career/CareerGrid";
 import { CareerCtaBanner } from "@/components/career/CareerCtaBanner";
+import Footer2 from "@/components/landing/footer2";
 
 export const metadata: Metadata = {
   title: "Careers | Hindustan Innovations",
-  description: "Join our team to build the next generation of AI and web automation tools.",
+  description:
+    "Join our team and help build the future of software development, AI, and cloud computing.",
   icons: {
     icon: "/logo.png",
   },
   alternates: {
-    canonical: "/career",
+    canonical: "/careers",
   },
 };
 

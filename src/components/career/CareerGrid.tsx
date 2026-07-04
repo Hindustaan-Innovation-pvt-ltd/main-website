@@ -56,21 +56,21 @@ const IconMap: Record<string, React.FC<any>> = {
 function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accent: string }) {
   return (
     <div className="w-full h-40 flex items-center justify-center mb-6 relative">
-      <div className={`relative z-10 w-16 h-16 bg-zinc-900 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(255,255,255,0.04)] flex items-center justify-center ${accent}`}>
+      <div className={`relative z-10 w-16 h-16 bg-zinc-100 rounded-2xl border border-black/10 shadow-[0_0_30px_rgba(255,255,255,0.04)] flex items-center justify-center ${accent}`}>
         {icons[0]}
       </div>
       {icons[1] && (
-        <div className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-900 rounded-xl border border-white/5 flex items-center justify-center shadow-lg text-zinc-500">
+        <div className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
           {icons[1]}
         </div>
       )}
       {icons[2] && (
-        <div className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-900 rounded-xl border border-white/5 flex items-center justify-center shadow-lg text-zinc-500">
+        <div className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
           {icons[2]}
         </div>
       )}
       {icons[3] && (
-        <div className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-900 rounded-xl border border-white/5 flex items-center justify-center shadow-lg text-zinc-600">
+        <div className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
           {icons[3]}
         </div>
       )}
@@ -86,13 +86,13 @@ function TagListGraphic({ tags }: { tags: string[] }) {
         {loopedTags.map((t, i) => (
           <div
             key={`${t}-${i}`}
-            className={`w-full flex items-center justify-between bg-zinc-900/80 border border-white/5 rounded-md px-3 py-4 shadow ${i % tags.length === 1 ? "w-full" : "w-[90%]"}`}
+            className={`w-full flex items-center justify-between bg-zinc-100/80 border border-black/5 rounded-md px-3 py-4 shadow ${i % tags.length === 1 ? "w-full" : "w-[90%]"}`}
           >
             <div className="flex items-center gap-2">
               <Check className="w-3 h-3 text-zinc-500" />
-              <span className="text-[11px] text-zinc-400 font-medium">{t}</span>
+              <span className="text-[11px] text-zinc-500 font-medium">{t}</span>
             </div>
-            <ArrowUpRight className="w-3 h-3 text-zinc-600" />
+            <ArrowUpRight className="w-3 h-3 text-zinc-500" />
           </div>
         ))}
       </AnimatedList>
@@ -108,13 +108,13 @@ function NodesGraphic({ accent }: { accent: string }) {
         <line x1="70%" y1="25%" x2="50%" y2="50%" strokeWidth="1" />
         <line x1="25%" y1="65%" x2="50%" y2="50%" strokeWidth="1" />
       </svg>
-      <div className={`relative z-10 w-14 h-14 bg-zinc-950 rounded-full border border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.05)] ${accent}`}>
+      <div className={`relative z-10 w-14 h-14 bg-white rounded-full border border-black/10 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.05)] ${accent}`}>
         <Zap className="w-6 h-6" />
       </div>
-      <div className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-900 rounded-full border border-white/5 flex items-center justify-center text-zinc-500"><Cpu className="w-4 h-4" /></div>
-      <div className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-900 rounded-full border border-white/5 flex items-center justify-center text-zinc-500"><Shield className="w-4 h-4" /></div>
-      <div className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-900 rounded-full border border-white/5 flex items-center justify-center text-zinc-500"><Database className="w-4 h-4" /></div>
-      <div className="absolute bottom-[18%] right-[20%] w-9 h-9 bg-zinc-900 rounded-full border border-white/5 flex items-center justify-center text-zinc-500"><Waypoints className="w-4 h-4" /></div>
+      <div className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Cpu className="w-4 h-4" /></div>
+      <div className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Shield className="w-4 h-4" /></div>
+      <div className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Database className="w-4 h-4" /></div>
+      <div className="absolute bottom-[18%] right-[20%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Waypoints className="w-4 h-4" /></div>
     </div>
   );
 }
@@ -205,7 +205,7 @@ function JobCardComponent({ card }: { card: JobCard }) {
       whileHover="hover"
       whileTap={{ scale: 0.98 }}
       custom={cardHoverVariants}
-      className="flex flex-col p-8 bg-zinc-950 rounded-2xl border border-white/10 overflow-hidden relative group"
+      className="flex flex-col p-8 bg-white rounded-2xl border border-black/10 overflow-hidden relative group"
     >
       {/* Animated border glow on hover */}
       <motion.div
@@ -228,10 +228,10 @@ function JobCardComponent({ card }: { card: JobCard }) {
 
         <div className="flex items-center gap-3 mb-3">
           <div className={`shrink-0 ${card.accent}`}>{resolvedIcon}</div>
-          <h3 className="text-lg font-semibold text-zinc-100">{card.title}</h3>
+          <h3 className="text-lg font-semibold text-zinc-900">{card.title}</h3>
         </div>
 
-        <p className="text-zinc-400 text-sm leading-relaxed mb-5">{Truncate(card.description, 80)}</p>
+        <p className="text-zinc-500 text-sm leading-relaxed mb-5">{Truncate(card.description, 80)}</p>
 
         <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 mb-6">
           {card.items.map((item) => (
@@ -246,7 +246,7 @@ function JobCardComponent({ card }: { card: JobCard }) {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <Link href={`/career/${card.id}`} className="inline-flex items-center justify-center w-full gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">
+          <Link href={`/career/${card.id}`} className="inline-flex items-center justify-center w-full gap-2 bg-black/5 hover:bg-white/10 border border-black/10 text-zinc-900 px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">
             View Details <ArrowUpRight className="w-4 h-4" />
           </Link>
         </motion.div>
@@ -259,32 +259,53 @@ function JobCardComponent({ card }: { card: JobCard }) {
 
 function DepartmentSection({ dept }: { dept: Department }) {
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center px-4 py-20 w-full max-w-6xl mx-auto">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        variants={itemVariants}
-        className="flex flex-col items-center text-center w-full"
-      >
-        <div className="flex items-center gap-2 mb-6 bg-zinc-900/40 backdrop-blur-md border border-white/5 rounded-full px-4 py-1.5 shadow-lg">
-          <LayoutGrid className="w-4 h-4 text-zinc-300" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">{dept.pill}</span>
+    <section className="relative z-10 flex flex-col items-center justify-center px-4 py-20 w-full max-w-[1800px] mx-auto">
+      
+      {/* Header Area matching home page */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8 w-full">
+        <div className="max-w-5xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-zinc-200 rounded-full mb-6 shadow-sm w-fit"
+          >
+            <LayoutGrid className="w-3.5 h-3.5 text-zinc-700" />
+            <span className="text-[10px] font-bold tracking-wider uppercase text-zinc-800">
+              {dept.pill}
+            </span>
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight"
+          >
+            {dept.heading} <span className="text-[#1ba453]">{dept.headingItalic}</span>
+          </motion.h2>
         </div>
-
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-100 mb-4 text-center">
-          {dept.heading}{" "}
-          <span className="font-serif italic font-light text-zinc-300">{dept.headingItalic}</span>
-        </h2>
-        <p className="text-zinc-400 mb-16 text-lg text-center max-w-2xl">{dept.subheading}</p>
-      </motion.div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="max-w-md lg:pb-2"
+        >
+          <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
+            {dept.subheading}
+          </p>
+        </motion.div>
+      </div>
 
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full"
       >
         {dept.jobs.map((job) => (
           <JobCardComponent key={job.id} card={job} />
@@ -328,7 +349,7 @@ export function CareerGrid() {
   if (loading) {
     return (
       <div className="w-full py-24 flex flex-col items-center justify-center gap-4">
-        <Loader2 className="w-8 h-8 text-zinc-400 animate-spin" />
+        <Loader2 className="w-8 h-8 text-zinc-500 animate-spin" />
         <p className="text-zinc-500">Loading career opportunities...</p>
       </div>
     );

@@ -60,11 +60,11 @@ function BlogCard({ post }: { post: Post }) {
     <motion.article
       variants={cardVariants}
       layout
-      className="group flex flex-col bg-zinc-950 rounded-3xl border-t-2 border-slate-300/40 outline outline-slate-800 overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)] hover:shadow-[0_0_60px_rgba(255,255,255,0.04)] transition-shadow duration-500 relative"
+      className="group flex flex-col bg-white rounded-3xl border-t-2 border-zinc-200 outline outline-black/5 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 relative"
     >
       {/* Gradient banner */}
       <div className={`h-44 bg-gradient-to-br ${post.coverGradient} relative flex items-center justify-center overflow-hidden`}>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.05)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,0,0,0.02)_0%,transparent_60%)]" />
         <div className={`w-16 h-16 rounded-2xl ${post.accentBg} border backdrop-blur-sm flex items-center justify-center`}>
           <Icon className={`w-7 h-7 ${post.accentColor}`} />
         </div>
@@ -81,20 +81,20 @@ function BlogCard({ post }: { post: Post }) {
           <img
             src={post.author.avatar}
             alt={post.author.name}
-            className="w-7 h-7 rounded-full ring-1 ring-white/10 object-cover"
+            className="w-7 h-7 rounded-full ring-1 ring-black/5 object-cover"
           />
           <div>
-            <p className="text-xs text-zinc-300 font-medium leading-none">{post.author.name}</p>
-            <p className="text-[10px] text-zinc-600 leading-none mt-0.5">{post.date}</p>
+            <p className="text-xs text-zinc-700 font-medium leading-none">{post.author.name}</p>
+            <p className="text-[10px] text-zinc-500 leading-none mt-0.5">{post.date}</p>
           </div>
-          <div className="ml-auto flex items-center gap-1 text-zinc-600">
+          <div className="ml-auto flex items-center gap-1 text-zinc-500">
             <Clock className="w-3 h-3" />
             <span className="text-[11px]">{post.readTime}</span>
           </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold text-zinc-100 mb-2 leading-snug group-hover:text-white transition-colors">
+        <h3 className="text-lg font-semibold text-zinc-900 mb-2 leading-snug group-hover:text-black transition-colors">
           {post.title}
         </h3>
 
@@ -108,7 +108,7 @@ function BlogCard({ post }: { post: Post }) {
           {post.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium text-zinc-500 bg-zinc-900 border border-white/5 rounded-full px-2.5 py-0.5"
+              className="text-[10px] font-medium text-zinc-500 bg-zinc-100 border border-black/5 rounded-full px-2.5 py-0.5"
             >
               {tag}
             </span>
@@ -189,7 +189,7 @@ export function BlogGrid() {
   }, [activeCategory]);
 
   return (
-    <section className="relative z-10 w-full max-w-6xl mx-auto px-4 py-20">
+    <section className="relative z-10 w-full max-w-[1800px] mx-auto px-4 py-20">
       {/* Category Filter */}
       <div className="flex flex-wrap gap-2 justify-center mb-14">
         {categories.map((cat) => (
@@ -201,7 +201,7 @@ export function BlogGrid() {
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
               activeCategory === cat.id
                 ? "bg-zinc-100 text-zinc-900 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
-                : "bg-zinc-900/60 border border-white/8 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60 disabled:opacity-50 disabled:cursor-not-allowed"
+                : "bg-zinc-100/60 border border-white/8 text-zinc-600 hover:text-zinc-200 hover:bg-zinc-800/60 disabled:opacity-50 disabled:cursor-not-allowed"
             }`}
           >
             {cat.label}
@@ -215,7 +215,7 @@ export function BlogGrid() {
       {/* Loading State */}
       {loading && (
         <div className="flex flex-col items-center justify-center py-24 gap-4">
-          <Loader2 className="w-8 h-8 text-zinc-400 animate-spin" />
+          <Loader2 className="w-8 h-8 text-zinc-600 animate-spin" />
           <p className="text-zinc-500">Loading blog posts...</p>
         </div>
       )}
@@ -227,7 +227,7 @@ export function BlogGrid() {
           <p className="text-zinc-500 text-sm">{error}</p>
           <button
             onClick={() => setActiveCategory("all")}
-            className="mt-4 px-4 py-2 bg-zinc-900 border border-white/8 rounded-lg text-sm hover:bg-zinc-800 transition-colors"
+            className="mt-4 px-4 py-2 bg-zinc-100 border border-white/8 rounded-lg text-sm hover:bg-zinc-800 transition-colors"
           >
             Try Again
           </button>
@@ -253,7 +253,7 @@ export function BlogGrid() {
 
       {/* Empty State */}
       {!loading && !error && posts.length === 0 && (
-        <div className="text-center py-24 text-zinc-600">
+        <div className="text-center py-24 text-zinc-500">
           <p className="text-lg">No posts in this category yet.</p>
         </div>
       )}

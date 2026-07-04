@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
-import { Navbar } from "@/components/landing/Navbar";
-import { FooterBar } from "@/components/landing/FooterBar";
+import { Navbar2 } from "@/components/landing/navbar2";
+import Footer2 from "@/components/landing/footer2";
 
 /* ── Icon map ── */
 const IconMap: Record<string, React.FC<{ className?: string }>> = {
@@ -100,11 +100,11 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
 
   return (
     <aside className="hidden lg:flex flex-col sticky top-24 self-start w-full">
-      <div className="bg-zinc-900/60 border border-white/8 rounded-2xl p-5 backdrop-blur-sm">
+      <div className="bg-zinc-50/60 border border-black/10 rounded-2xl p-5 backdrop-blur-sm">
         {/* Header */}
-        <div className="flex items-center gap-2 mb-5 pb-4 border-b border-white/8">
-          <List className="w-4 h-4 text-zinc-400" />
-          <span className="text-xs font-bold tracking-widest uppercase text-zinc-400">
+        <div className="flex items-center gap-2 mb-5 pb-4 border-b border-black/10">
+          <List className="w-4 h-4 text-zinc-600" />
+          <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">
             Table of Contents
           </span>
         </div>
@@ -119,8 +119,8 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
                 href={`#section-${item.idx}`}
                 className={`flex items-start gap-2 px-3 py-2 rounded-xl text-sm transition-all duration-200 group ${
                   isActive
-                    ? `${post.accentColor} bg-white/5 font-semibold`
-                    : "text-zinc-500 hover:text-zinc-300 hover:bg-white/4"
+                    ? `${post.accentColor} bg-black/5 font-semibold`
+                    : "text-zinc-500 hover:text-zinc-800 hover:bg-black/5"
                 }`}
               >
                 <ChevronRight
@@ -135,7 +135,7 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
         </nav>
 
         {/* Read time */}
-        <div className="mt-5 pt-4 border-t border-white/8 flex items-center gap-1.5 text-zinc-600">
+        <div className="mt-5 pt-4 border-t border-black/10 flex items-center gap-1.5 text-zinc-600">
           <Clock className="w-3.5 h-3.5" />
           <span className="text-xs">{post.readTime}</span>
         </div>
@@ -162,13 +162,13 @@ function EnquiryForm({ post }: { post: Post }) {
 
   return (
     <aside className="hidden lg:flex flex-col sticky top-24 self-start w-full">
-      <div className={`bg-zinc-900/60 border border-white/8 rounded-2xl p-5 backdrop-blur-sm`}>
+      <div className={`bg-zinc-50/60 border border-black/10 rounded-2xl p-5 backdrop-blur-sm`}>
         {/* Header */}
         <div className="flex items-center gap-2 mb-1">
           <div className={`w-8 h-8 rounded-xl ${post.accentBg} border flex items-center justify-center shrink-0`}>
             <Send className={`w-3.5 h-3.5 ${post.accentColor}`} />
           </div>
-          <h3 className="text-sm font-bold text-zinc-100">Quick Enquiry</h3>
+          <h3 className="text-sm font-bold text-zinc-900">Quick Enquiry</h3>
         </div>
         <p className="text-xs text-zinc-500 mb-5 pl-10">
           Interested in this topic? Let's talk!
@@ -183,12 +183,12 @@ function EnquiryForm({ post }: { post: Post }) {
             <div className={`w-14 h-14 rounded-2xl ${post.accentBg} border flex items-center justify-center`}>
               <CheckCircle2 className={`w-7 h-7 ${post.accentColor}`} />
             </div>
-            <p className="text-sm font-semibold text-zinc-200">Message Sent!</p>
+            <p className="text-sm font-semibold text-zinc-900">Message Sent!</p>
             <p className="text-xs text-zinc-500">We'll get back to you within 24 hours.</p>
             <button
               type="button"
               onClick={() => { setStatus("idle"); setForm({ name: "", email: "", message: "" }); }}
-              className="text-xs text-zinc-500 hover:text-zinc-300 underline underline-offset-2 mt-1 transition-colors"
+              className="text-xs text-zinc-500 hover:text-zinc-600 underline underline-offset-2 mt-1 transition-colors"
             >
               Send another
             </button>
@@ -197,40 +197,40 @@ function EnquiryForm({ post }: { post: Post }) {
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             {/* Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-400">Your Name</label>
+              <label className="text-xs font-medium text-zinc-600">Your Name</label>
               <input
                 type="text"
                 required
                 value={form.name}
                 onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                 placeholder="Rahul Sharma"
-                className="w-full bg-zinc-950/80 border border-white/8 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-white/20 transition-colors"
+                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors"
               />
             </div>
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-400">Email Address</label>
+              <label className="text-xs font-medium text-zinc-600">Email Address</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                 placeholder="rahul@company.com"
-                className="w-full bg-zinc-950/80 border border-white/8 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-white/20 transition-colors"
+                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors"
               />
             </div>
 
             {/* Message */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-400">Message</label>
+              <label className="text-xs font-medium text-zinc-600">Message</label>
               <textarea
                 required
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 placeholder="I'd like to know more about..."
-                className="w-full bg-zinc-950/80 border border-white/8 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-white/20 transition-colors resize-none"
+                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors resize-none"
               />
             </div>
 
@@ -254,11 +254,11 @@ function EnquiryForm({ post }: { post: Post }) {
         )}
 
         {/* Direct contact */}
-        <div className="mt-4 pt-4 border-t border-white/8 text-center">
+        <div className="mt-4 pt-4 border-t border-black/10 text-center">
           <p className="text-[11px] text-zinc-600 mb-1">Or reach us directly</p>
           <a
             href="mailto:info@hindustaan.in"
-            className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors"
+            className="text-xs text-zinc-500 hover:text-zinc-600 transition-colors"
           >
             info@hindustaan.in
           </a>
@@ -266,12 +266,12 @@ function EnquiryForm({ post }: { post: Post }) {
       </div>
 
       {/* CTA Card */}
-      <div className={`mt-4 bg-gradient-to-br ${post.coverGradient} border border-white/8 rounded-2xl p-5 text-center`}>
-        <p className="text-xs text-zinc-300 font-medium mb-1">Want a custom solution?</p>
+      <div className={`mt-4 bg-gradient-to-br ${post.coverGradient} border border-black/10 rounded-2xl p-5 text-center`}>
+        <p className="text-xs text-zinc-600 font-medium mb-1">Want a custom solution?</p>
         <p className="text-[11px] text-zinc-500 mb-4">Book a free strategy call with our team</p>
         <Link
           href="/contact"
-          className={`inline-flex items-center gap-1.5 text-xs font-semibold ${post.accentColor} bg-zinc-900/60 border border-white/10 px-4 py-2 rounded-xl hover:bg-zinc-900 transition-colors`}
+          className={`inline-flex items-center gap-1.5 text-xs font-semibold ${post.accentColor} bg-zinc-50/60 border border-black/10 px-4 py-2 rounded-xl hover:bg-zinc-50 transition-colors`}
         >
           Book a Call <ChevronRight className="w-3.5 h-3.5" />
         </Link>
@@ -319,12 +319,12 @@ export function BlogDetailView({
   }, [post]);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-zinc-950 text-zinc-50">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black">
 
       {/* ── Hero Banner ── */}
       <div className={`relative min-h-[55vh] flex flex-col overflow-hidden bg-gradient-to-br ${post.coverGradient}`}>
-        <BackgroundEffects />
-        <Navbar />
+        
+        <Navbar2 />
 
         <motion.div
           variants={containerVariants}
@@ -336,7 +336,7 @@ export function BlogDetailView({
           <motion.div variants={itemVariants} className="w-full flex justify-start mb-8">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-200 transition-colors bg-zinc-900/50 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition-colors bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full"
             >
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
@@ -345,7 +345,7 @@ export function BlogDetailView({
           {/* Category badge */}
           <motion.span
             variants={itemVariants}
-            className={`inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full ${post.accentBg} border ${post.accentColor} mb-6`}
+            className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full bg-white/20 text-white border border-white/30 backdrop-blur-md mb-6"
           >
             <Icon className="w-3.5 h-3.5" />
             {post.categoryLabel}
@@ -354,7 +354,7 @@ export function BlogDetailView({
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-3xl md:text-5xl font-bold text-zinc-100 leading-tight mb-6 max-w-3xl"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center max-w-4xl"
           >
             {post.title}
           </motion.h1>
@@ -371,14 +371,14 @@ export function BlogDetailView({
                 className="w-9 h-9 rounded-full ring-2 ring-white/10 object-cover"
               />
               <div className="text-left">
-                <p className="text-sm font-semibold text-zinc-200">{post.author.name}</p>
-                <p className="text-xs text-zinc-500">{post.author.role}</p>
+                <p className="text-sm font-semibold text-white">{post.author.name}</p>
+                <p className="text-xs text-zinc-400">{post.author.role}</p>
               </div>
             </div>
             <div className="w-px h-8 bg-white/10" />
-            <span className="text-xs text-zinc-500">{post.date}</span>
+            <span className="text-xs text-zinc-300">{post.date}</span>
             <div className="w-px h-8 bg-white/10" />
-            <div className="flex items-center gap-1.5 text-zinc-500">
+            <div className="flex items-center gap-1.5 text-zinc-300">
               <Clock className="w-3.5 h-3.5" />
               <span className="text-xs">{post.readTime}</span>
             </div>
@@ -387,7 +387,7 @@ export function BlogDetailView({
       </div>
 
       {/* ── 3-column layout ── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-16">
+      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_240px] xl:grid-cols-[240px_1fr_260px] gap-8 items-start">
 
           {/* LEFT — Table of Contents */}
@@ -413,7 +413,7 @@ export function BlogDetailView({
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-lg text-zinc-300 leading-relaxed mb-12 border-l-2 border-white/10 pl-5 italic"
+              className="text-lg text-zinc-600 leading-relaxed mb-12 border-l-2 border-black/10 pl-5 italic"
             >
               {post.content.intro}
             </motion.p>
@@ -431,14 +431,14 @@ export function BlogDetailView({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <h2 className={`text-2xl font-bold mb-5 flex items-center gap-3 ${post.accentColor}`}>
-                    <span className="text-xs font-mono text-zinc-600 bg-zinc-900 border border-white/8 rounded-lg px-2 py-1">
+                    <span className="text-xs font-mono text-zinc-600 bg-zinc-50 border border-black/10 rounded-lg px-2 py-1">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {section.heading}
                   </h2>
                   <div className="space-y-4">
                     {section.body.split("\n\n").map((para, j) => (
-                      <p key={j} className="text-zinc-400 leading-relaxed">
+                      <p key={j} className="text-zinc-600 leading-relaxed">
                         {para}
                       </p>
                     ))}
@@ -457,12 +457,12 @@ export function BlogDetailView({
               className={`mt-14 p-6 rounded-2xl ${post.accentBg} border`}
             >
               <h3 className={`text-lg font-semibold mb-3 ${post.accentColor}`}>Key Takeaway</h3>
-              <p className="text-zinc-300 leading-relaxed">{post.content.conclusion}</p>
+              <p className="text-zinc-600 leading-relaxed">{post.content.conclusion}</p>
             </motion.div>
 
             {/* Mobile Enquiry CTA */}
-            <div className="lg:hidden mt-10 p-5 bg-zinc-900/60 border border-white/8 rounded-2xl text-center">
-              <p className="text-sm font-semibold text-zinc-200 mb-1">Interested in this topic?</p>
+            <div className="lg:hidden mt-10 p-5 bg-zinc-50/60 border border-black/10 rounded-2xl text-center">
+              <p className="text-sm font-semibold text-zinc-900 mb-1">Interested in this topic?</p>
               <p className="text-xs text-zinc-500 mb-4">Get in touch with our team today</p>
               <Link
                 href="/contact"
@@ -480,9 +480,9 @@ export function BlogDetailView({
 
       {/* ── Related Posts ── */}
       {related.length > 0 && (
-        <section className="relative z-10 w-full max-w-7xl mx-auto px-4 pb-20">
-          <div className="border-t border-white/8 pt-12">
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8">Related Articles</h2>
+        <section className="relative z-10 w-full max-w-[1800px] mx-auto px-4 pb-20">
+          <div className="border-t border-black/10 pt-12">
+            <h2 className="text-2xl font-bold text-zinc-900 mb-8">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
               {related.map((r) => {
                 const RelIcon = IconMap[r.icon] ?? Bot;
@@ -490,12 +490,12 @@ export function BlogDetailView({
                   <Link
                     key={r.id}
                     href={`/blog/${r.slug}`}
-                    className="group flex flex-col bg-zinc-900/60 border border-white/8 rounded-2xl p-5 hover:bg-zinc-900 transition-colors"
+                    className="group flex flex-col bg-zinc-50/60 border border-black/10 rounded-2xl p-5 hover:bg-zinc-50 transition-colors"
                   >
                     <div className={`w-10 h-10 rounded-xl ${r.accentBg} border flex items-center justify-center mb-4`}>
                       <RelIcon className={`w-5 h-5 ${r.accentColor}`} />
                     </div>
-                    <h3 className="text-sm font-semibold text-zinc-200 group-hover:text-white transition-colors mb-1 leading-snug">
+                    <h3 className="text-sm font-semibold text-zinc-900 transition-colors mb-1 leading-snug">
                       {r.title}
                     </h3>
                     <p className="text-xs text-zinc-500 mt-auto pt-3 flex items-center gap-1">
@@ -509,7 +509,7 @@ export function BlogDetailView({
         </section>
       )}
 
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

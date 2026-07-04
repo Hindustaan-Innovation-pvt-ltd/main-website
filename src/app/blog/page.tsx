@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogGrid } from "@/components/blog/BlogGrid";
-import { FooterBar } from "@/components/landing/FooterBar";
+import Footer2 from "@/components/landing/footer2";
 
 export const metadata: Metadata = {
   title: "Blog | Hindustaan Innovations",
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="relative min-h-screen flex flex-col text-zinc-50 overflow-hidden bg-zinc-950">
+    <div className="relative min-h-screen flex flex-col text-black overflow-hidden bg-[#f5f5f5]">
       <BlogHero />
       <BlogGrid />
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

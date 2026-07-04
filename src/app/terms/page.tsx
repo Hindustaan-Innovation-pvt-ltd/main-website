@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/landing/Navbar";
-import { FooterBar } from "@/components/landing/FooterBar";
+import { Navbar2 } from "@/components/landing/navbar2";
+import Footer2 from "@/components/landing/footer2";
 import { FileText } from "lucide-react";
 
 import type { Metadata } from "next";
@@ -154,21 +154,21 @@ Last updated: April 27, 2026`,
 
 export default function TermsPage() {
   return (
-    <div className="relative bg-black text-white min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-black z-0 pointer-events-none" />
-      <Navbar />
+    <div className="relative bg-white text-zinc-900 min-h-screen overflow-hidden">
+      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
+      <Navbar2 />
 
       {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-12 max-w-3xl mx-auto text-center gap-5">
-        <div className="flex items-center gap-2 bg-zinc-900/40 backdrop-blur-md border border-white/5 rounded-full px-4 py-1.5">
-          <FileText className="w-4 h-4 text-zinc-300" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-300 uppercase">Terms of Service</span>
+        <div className="flex items-center gap-2 bg-zinc-50/40 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
+          <FileText className="w-4 h-4 text-zinc-700" />
+          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">Terms of Service</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900">
           Clear Terms,{" "}
-          <span className="font-serif italic font-light text-zinc-300">No Surprises.</span>
+          <span className="font-serif italic font-light text-zinc-700">No Surprises.</span>
         </h1>
-        <p className="text-zinc-400 text-base leading-relaxed">
+        <p className="text-zinc-600 text-base leading-relaxed">
           These terms govern your use of Hindustaan Innovations services. We've written them to be as clear and fair as possible.
         </p>
         <p className="text-xs text-zinc-600">Last updated: April 27, 2026</p>
@@ -176,17 +176,17 @@ export default function TermsPage() {
 
       {/* Terms content */}
       <section className="relative z-10 px-4 pb-24 w-full max-w-3xl mx-auto">
-        <div className="bg-zinc-950 border border-white/8 rounded-3xl p-8 md:p-12 flex flex-col gap-10">
+        <div className="bg-[#f5f5f5] border border-black/10 rounded-3xl p-8 md:p-12 flex flex-col gap-10">
           {SECTIONS.map((sec) => (
-            <div key={sec.title} className="flex flex-col gap-3 pb-10 border-b border-white/5 last:border-0 last:pb-0">
-              <h2 className="text-lg font-bold text-zinc-100">{sec.title}</h2>
-              <p className="text-zinc-400 text-sm leading-relaxed whitespace-pre-line">{sec.content}</p>
+            <div key={sec.title} className="flex flex-col gap-3 pb-10 border-b border-black/5 last:border-0 last:pb-0">
+              <h2 className="text-lg font-bold text-zinc-900">{sec.title}</h2>
+              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">{sec.content}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }
