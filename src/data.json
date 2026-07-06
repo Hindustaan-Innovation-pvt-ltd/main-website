@@ -636,6 +636,40 @@
             "icon": "ClipboardList"
           }
         ]
+      },
+      {
+        "id": "hindustaan-mart",
+        "title": "Hindustaan Mart",
+        "shortDescription": "It is a marketplace e-commerce website.",
+        "description": "Hindustaan Mart is a comprehensive marketplace e-commerce platform.",
+        "fullDescription": "Hindustaan Mart is a complete marketplace e-commerce solution, connecting buyers and sellers across a robust digital ecosystem. Providing an intuitive interface and secure transactions.",
+        "image": "/hindutaanmart.png",
+        "logo": "/martlogo.png",
+        "projectUrl": "https://allindiahub.com",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hindustaanmart",
+        "appStoreUrl": "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
+        "modules": [
+          {
+            "title": "E-commerce Marketplace",
+            "description": "A fully functional marketplace connecting buyers and sellers seamlessly.",
+            "icon": "Users"
+          },
+          {
+            "title": "Secure Transactions",
+            "description": "Built-in payment gateways for safe and reliable transactions.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Vendor Management",
+            "description": "Powerful tools for vendors to manage their products and orders.",
+            "icon": "ClipboardList"
+          },
+          {
+            "title": "Mobile Applications",
+            "description": "Available on Play Store and App Store for on-the-go access.",
+            "icon": "Zap"
+          }
+        ]
       }
     ]
   }
