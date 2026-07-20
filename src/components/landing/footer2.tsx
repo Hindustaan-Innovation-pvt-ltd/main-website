@@ -99,7 +99,7 @@ export default function Footer2() {
                     <div className="flex flex-col sm:flex-row justify-between items-center w-full mt-auto gap-6 sm:gap-0">
                         <div className="flex items-center justify-center flex-wrap gap-5 sm:gap-8 text-white font-medium text-[14px] sm:text-[15px]">
                             <Link href="/about" className="hover:text-[#1ba453] transition-colors">About Us</Link>
-                            <Link href="/work" className="hover:text-[#1ba453] transition-colors">Work</Link>
+                            <Link href="/products" className="hover:text-[#1ba453] transition-colors">Products</Link>
                             <Link href="/services" className="hover:text-[#1ba453] transition-colors">Services</Link>
                         </div>
                         <div className="text-zinc-500 text-sm font-medium">
