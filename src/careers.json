@@ -285,6 +285,61 @@
           ]
         }
       ]
+    },
+    {
+      "id": "marketing-sales",
+      "pill": "MARKETING & SALES",
+      "heading": "Growth &",
+      "headingItalic": "Partnerships",
+      "subheading": "Drive customer acquisition, market expansion, and strategic growth for our platforms.",
+      "jobs": [
+        {
+          "id": "marketing-sales-head",
+          "title": "Marketing & Sales Head",
+          "icon": "TrendingUp",
+          "accent": "text-blue-500",
+          "description": "Lead the sales, marketing, and on-ground operations for our digital platforms, including Hindustaan Mart and Karmanisht.",
+          "items": [
+            "Full-time",
+            "On-site",
+            "5-10 Years Exp"
+          ],
+          "graphic": "cluster",
+          "graphicIcons": [
+            "TrendingUp",
+            "Megaphone",
+            "Globe"
+          ],
+          "colSpan": 4,
+          "responsibilities": [
+            "Develop and execute sales and marketing strategies to drive business growth.",
+            "Lead on-ground sales and marketing operations across target cities.",
+            "Drive customer acquisition, vendor onboarding, and service provider onboarding for Hindustaan Mart and Karmanisht.",
+            "Identify and expand into new markets through strategic planning and execution.",
+            "Build and maintain strong relationships with businesses, vendors, partners, and key stakeholders.",
+            "Recruit, train, mentor, and manage field sales and marketing teams.",
+            "Plan and execute ATL, BTL, and digital marketing campaigns to increase brand awareness.",
+            "Monitor sales performance, set KPIs, and ensure monthly and quarterly targets are achieved.",
+            "Analyze market trends, customer insights, and competitor activities to identify growth opportunities.",
+            "Collaborate with product, operations, and leadership teams to ensure successful business execution.",
+            "Prepare sales reports, forecasts, and business performance reviews."
+          ],
+          "requirements": [
+            "Bachelor's degree in Marketing, Business Administration, Management, or a related field (MBA preferred).",
+            "5–10 years of experience in Sales, Marketing, Business Development, or Operations.",
+            "Proven experience leading large sales teams and managing on-ground operations.",
+            "Strong leadership, communication, negotiation, and analytical skills.",
+            "Experience in marketplace, e-commerce, startup, retail, or technology businesses is preferred.",
+            "Ability to build strategic partnerships and scale business operations."
+          ],
+          "benefits": [
+            "Competitive salary and performance-based incentives.",
+            "Health and wellness stipends.",
+            "Generous learning and development budget.",
+            "Opportunity to lead growth for innovative digital platforms."
+          ]
+        }
+      ]
     }
   ]
 }

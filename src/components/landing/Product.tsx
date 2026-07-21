@@ -69,12 +69,14 @@ export function ProductSection() {
             <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed lg:text-right">
               A selection of projects where clear thinking, strong design, and business goals come together to deliver measurable impact.
             </p>
+            <a href="/products">
             <button className="bg-[#1c1c1c] hover:bg-black text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 transition-colors">
               See All Projects
               <div className="bg-zinc-700/50 rounded-full p-1">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </button>
+            </a>
           </motion.div>
         </div>
 

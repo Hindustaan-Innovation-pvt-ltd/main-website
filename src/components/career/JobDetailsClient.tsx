@@ -265,7 +265,11 @@ export default function JobDetailsClient({ job }: { job: Job }) {
                   containerClassName="rounded-xl w-full"
                   className="dark:bg-[#f5f5f5] bg-white text-black dark:text-zinc-900 flex items-center justify-center space-x-2 px-6 py-3 w-full"
                   onClick={() => {
-                    redirect("https://forms.gle/3tG7K6VcD7z5Q8VD7");
+                    const isMarketing = job.department?.toLowerCase().includes("marketing") || job.id.toLowerCase().includes("marketing");
+                    const formLink = isMarketing 
+                      ? "https://docs.google.com/forms/d/e/1FAIpQLScmcOkicLN5Ga46oLp1k5iQyT1QeUnupfPay988UjdS2zPaPA/viewform"
+                      : "https://forms.gle/3tG7K6VcD7z5Q8VD7";
+                    window.open(formLink, "_blank");
                   }}
                 >
                   <span
