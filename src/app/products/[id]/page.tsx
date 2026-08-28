@@ -88,7 +88,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
   return (
     <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
       <Navbar2 />
-      
+
 
       <main className="relative z-10 flex-1">
         {/* Navigation & Header */}
@@ -132,7 +132,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               )}
-              
+
               {(solution as any).playStoreUrl && (
                 <Link
                   href={(solution as any).playStoreUrl}
@@ -195,7 +195,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 className="object-contain md:object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
             </div>
           </motion.div>
         </section>
@@ -211,10 +211,12 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               className="flex flex-col gap-8"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
-                Empowering Institutions with <span className="text-zinc-600 font-serif italic">Next-Gen Technology</span>
+                Transforming the Future with <span className="text-zinc-600 font-serif italic">Next-Gen Technology</span>
               </h2>
-              <div className="space-y-6 text-zinc-600 text-lg leading-relaxed">
-                <p>{solution.fullDescription}</p>
+              <div className="space-y-6 text-zinc-600 text-lg leading-relaxed text-justify">
+                {solution.fullDescription.split('\n').filter(Boolean).map((para, i) => (
+                  <p key={i}>{para.trim()}</p>
+                ))}
               </div>
 
               <div className="grid grid-cols-2 gap-6 pt-4">
@@ -228,7 +230,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                     <div className="p-2 rounded-lg bg-white/5 border border-black/10 text-zinc-900">
                       <Check className="w-4 h-4 text-zinc-900" />
                     </div>
-                    <span className="font-medium text-zinc-200">{feature.label}</span>
+                    <span className="font-medium text-zinc-700">{feature.label}</span>
                   </div>
                 ))}
               </div>
@@ -242,9 +244,9 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
             >
               {/* Decorative elements or secondary image */}
               <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="w-full h-full rounded-3xl bg-linear-to-br from-zinc-800 to-zinc-950 border border-black/10 shadow-2xl flex items-center justify-center relative group">
+                <div className="w-full h-full rounded-3xl bg-white border border-black/10 shadow-2xl flex items-center justify-center relative group">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-50" />
-                  <Image src={solution.logo} alt={solution.title} fill className="object-cover rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
+                  <Image src={solution.logo} alt={solution.title} fill className="object-contain p-4 rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             </motion.div>

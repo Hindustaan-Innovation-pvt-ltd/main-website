@@ -444,7 +444,7 @@
         "description": "Vidyum School ERP is a comprehensive, cloud-based management system designed to automate administrative tasks, streamline operations, and enhance the educational experience for students, teachers, and parents alike.",
         "fullDescription": "Vidyum School ERP stands at the forefront of educational technology, providing a unified platform that bridges the gap between administration and learning. Our system is built on a scalable, secure architecture that handles everything from the first inquiry to the final graduation. With real-time data insights, automated workflows, and a user-friendly interface, Vidyum empowers schools to operate with unprecedented efficiency and precision. Whether it's managing complex fee structures, tracking school transport in real-time, or facilitating seamless parent-teacher communication, Vidyum is the ultimate partner for modern schools striving for excellence.",
         "image": "/vidyum.jpeg",
-        "logo":"/vidyum.png",
+        "logo": "/vidyum.png",
         "projectUrl": "https://vidyum.hindustaan.in",
         "pricing": {
           "pill": "PRICING",
@@ -574,7 +574,7 @@
         "description": "KarmaNisht is a modern geospatial web portal that connects Raipur households with verified professionals — electricians, plumbers, AC technicians, painters, and more — using real-time proximity calculations and a smart 15 km radius search.",
         "fullDescription": "KarmaNisht redefines the home-services experience in Raipur by eliminating middlemen and putting high-intent customers directly in touch with verified, nearby professionals. Powered by the Haversine formula and PostGIS integration, the platform calculates live distances between households and service partners and automatically surfaces the nearest, highest-rated providers at the top of every search. Service professionals gain visibility through a dedicated Partner App — available as a direct, secure APK download — which places them on the geospatial grid and lets them receive job requests instantly. With glassmorphic UI cards, custom radar animations, and a seamless dark/light theme, KarmaNisht delivers a premium discovery experience that feels as good as it performs.",
         "image": "/karmanisht.png",
-        "logo":"/karmanisht-logo.png",
+        "logo": "/karmanisht-logo.png",
         "projectUrl": "https://www.karmanisht.com",
         "faq": {
           "pill": "FAQ",
@@ -668,6 +668,72 @@
             "title": "Mobile Applications",
             "description": "Available on Play Store and App Store for on-the-go access.",
             "icon": "Zap"
+          }
+        ]
+      },
+      {
+        "id": "bhukkadh",
+        "title": "Bhukkadh",
+        "shortDescription": "A fast and reliable food delivery platform.",
+        "description": "Bhukkadh is your go-to app for ordering delicious food from your favorite local restaurants with lightning fast delivery.",
+        "fullDescription": "Bhukkadh connects food lovers with top-rated local restaurants. It features a seamless ordering process, live order tracking, and secure payments, ensuring your food reaches you hot and fresh. Operated by Hindustaan Innovations Private Limited, the platform serves as a complete hyperlocal food delivery ecosystem connecting hungry customers, culinary partners, and dedicated delivery riders across three specialized mobile apps.\n\nWhile the website serves as the central digital front door to onboard partners and introduce the brand, the complete dining experience comes to life on the Bhukkadh mobile app. There, foodies can unlock exclusive app-only deals, explore diverse menus from neighborhood favorites to fine dining, and enjoy lightning-fast checkout. At the same time, restaurant owners gain powerful tools to expand their reach and grow their daily order volume, while riders find flexible earning opportunities with reliable, on-time delivery support. Built for trust, speed, and safety, Bhukkadh brings community-driven flavors straight to your doorstep in just a few taps.",
+        "image": "/bhukkadh.png",
+        "logo": "/new-bhukkadh-icon.png",
+        "projectUrl": "#",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
+        "modules": [
+          {
+            "title": "Food Delivery",
+            "description": "Fast and reliable food delivery at your doorstep.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Restaurant Discovery",
+            "description": "Discover top restaurants and cuisines near you.",
+            "icon": "Search"
+          },
+          {
+            "title": "Live Tracking",
+            "description": "Real-time tracking of your food orders.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Secure Payments",
+            "description": "Multiple secure payment options for quick checkout.",
+            "icon": "Shield"
+          }
+        ]
+      },
+      {
+        "id": "ghummakadh",
+        "title": "Ghummakadh",
+        "shortDescription": "A comprehensive travel and tourism platform.",
+        "description": "Ghummakadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
+        "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
+        "image": "/ghumakkadh.png",
+        "logo": "/ghumakkadh_icon.png",
+        "projectUrl": "#",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "modules": [
+          {
+            "title": "Travel Planning",
+            "description": "Tools to help users plan their trips easily.",
+            "icon": "Map"
+          },
+          {
+            "title": "Booking System",
+            "description": "Integrated booking system for hotels and travel.",
+            "icon": "CreditCard"
+          },
+          {
+            "title": "Destination Guide",
+            "description": "Comprehensive guides to popular destinations.",
+            "icon": "Navigation"
+          },
+          {
+            "title": "Mobile App",
+            "description": "Mobile application for on-the-go access.",
+            "icon": "Smartphone"
           }
         ]
       }
