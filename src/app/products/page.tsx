@@ -79,68 +79,66 @@ export default function SolutionsPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-12"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {solutions.items.map((item) => (
               <motion.div
                 key={item.id}
                 variants={fadeUp}
-                className="group relative bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-sm border border-zinc-200/60 hover:shadow-md transition-shadow"
+                className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm border border-zinc-200/60 hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
-                <div className="flex flex-col lg:flex-row items-stretch">
-                  {/* Image side */}
-                  <div className="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-[500px] overflow-hidden bg-zinc-50/50">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-contain transition-transform duration-700 p-8"
-                    />
-                    <div className="absolute bottom-6 left-6 z-20">
-                      <div className="p-3 bg-white border border-zinc-200 shadow-sm rounded-xl">
-                        <School className="w-6 h-6 text-zinc-800" />
-                      </div>
+                {/* Image Area */}
+                <div className="relative w-full h-[280px] overflow-hidden bg-zinc-50 border-b border-zinc-100 flex items-center justify-center p-6">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-contain transition-transform duration-700 p-6 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-4 left-4 z-20">
+                    <div className="p-2.5 bg-white border border-zinc-200 shadow-sm rounded-xl">
+                      <School className="w-5 h-5 text-zinc-800" />
                     </div>
                   </div>
+                </div>
 
-                  {/* Content side */}
-                  <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center gap-6">
-                    <div className="flex flex-col gap-4">
-                      <h3 className="text-xl md:text-2xl font-bold text-black transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
+                {/* Content Area */}
+                <div className="flex-1 p-6 md:p-8 flex flex-col gap-6">
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-xl font-bold text-black transition-colors line-clamp-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-zinc-500 font-medium leading-relaxed line-clamp-3 text-justify">
+                      {item.description}
+                    </p>
+                  </div>
 
-                    <div className="flex flex-wrap gap-4 mt-2">
-                      {item.modules.slice(0, 3).map((module, idx) => (
-                        <span 
-                          key={idx}
-                          className="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-xs font-semibold text-zinc-800"
-                        >
-                          {module.title}
-                        </span>
-                      ))}
-                      {item.modules.length > 3 && (
-                        <span className="px-3 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-xs font-semibold text-zinc-500 italic">
-                          +{item.modules.length - 3} More
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="pt-6">
-                      <Link 
-                        href={`/products/${item.id}`}
-                        className="inline-flex items-center gap-2 group/btn relative px-6 py-3 bg-[#222222] text-white text-sm font-medium rounded-[14px] hover:bg-black transition-colors shadow-lg"
+                  <div className="flex flex-wrap gap-2 mt-auto pt-2">
+                    {item.modules?.slice(0, 3).map((module, idx) => (
+                      <span 
+                        key={idx}
+                        className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-[11px] font-semibold text-zinc-800"
                       >
-                        <span>View Details</span>
-                        <div className="flex items-center justify-center w-6 h-6 bg-white/10 rounded-[8px] ml-1">
-                          <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
-                        </div>
-                      </Link>
-                    </div>
+                        {module.title}
+                      </span>
+                    ))}
+                    {item.modules && item.modules.length > 3 && (
+                      <span className="px-2.5 py-1 rounded-full bg-white border border-zinc-200 shadow-sm text-[11px] font-semibold text-zinc-500 italic">
+                        +{item.modules.length - 3} More
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="pt-5 border-t border-zinc-100">
+                    <Link 
+                      href={`/products/${item.id}`}
+                      className="inline-flex items-center justify-center gap-2 group/btn relative w-full px-6 py-3 bg-[#222222] text-white text-sm font-medium rounded-xl hover:bg-black transition-colors shadow-sm"
+                    >
+                      <span>View Details</span>
+                      <div className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-[6px] ml-1">
+                        <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
