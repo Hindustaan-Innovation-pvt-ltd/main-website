@@ -243,7 +243,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 Transforming the Future with <span className="text-zinc-600 font-serif italic">Next-Gen Technology</span>
               </h2>
               <div className="space-y-6 text-zinc-600 text-lg leading-relaxed text-justify">
-                {solution.fullDescription.split('\n').filter(Boolean).map((para, i) => (
+                {(solution.fullDescription || solution.description).split('\n').filter(Boolean).map((para: string, i: number) => (
                   <p key={i}>{para.trim()}</p>
                 ))}
               </div>
@@ -283,7 +283,8 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         </section>
 
         {/* Modules Grid */}
-        <section className="px-6 py-32 max-w-7xl mx-auto">
+        {solution.modules && solution.modules.length > 0 && (
+          <section className="px-6 py-32 max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center gap-6 mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-zinc-900">
               Comprehensive <span className="font-serif italic text-zinc-600">Modules</span>
@@ -318,8 +319,9 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 </motion.div>
               );
             })}
-          </motion.div>
-        </section>
+            </motion.div>
+          </section>
+        )}
 
         {/* FAQ Section */}
         {solution.faq && (
