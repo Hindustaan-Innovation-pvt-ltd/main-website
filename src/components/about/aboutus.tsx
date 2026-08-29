@@ -429,7 +429,7 @@ const FOUNDERS = [
   {
     name: "Renu Devi",
     role: "Cultural Advisor",
-    image: "/fff.jpeg",
+    image: "/renu-devi.png",
     bio: "Their encouragement, positivity, and unwavering belief have been a constant source of motivation behind the company’s journey. They represent the care, values, and strength that drive our culture",
     linkedin: "https://www.linkedin.com/",
     badge: "Founder",

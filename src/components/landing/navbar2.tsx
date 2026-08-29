@@ -28,7 +28,7 @@ export function Navbar2() {
           <Link href="/">
             <div className="flex items-center bg-[#1ba453] rounded-xl md:rounded-[18px] p-1 cursor-pointer">
               <div className="flex items-center justify-center w-10 h-10 shrink-0">
-                <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain md:ml-2" />
+                  <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain w-auto h-auto md:ml-2" />
               </div>
               
               <motion.div
@@ -110,7 +110,7 @@ export function Navbar2() {
               <div className="flex items-center gap-3">
                  {/* Actual Logo */}
                  <div className="flex items-center justify-center w-10 h-10 shrink-0 bg-[#1ba453] rounded-xl">
-                   <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain" />
+                   <Image src="/logo.png" alt="Logo" width={24} height={24} className="object-contain w-auto h-auto" />
                  </div>
                  <div className="flex flex-col justify-center leading-none gap-1 mt-1">
                     <span className="text-[14px] font-bold text-zinc-900 tracking-wide">HINDUSTAAN INNOVATIONS</span>

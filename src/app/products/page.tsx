@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion, type Variants } from "motion/react";
 import { 
   Rocket, 
@@ -37,6 +38,9 @@ function Pill({ icon: Icon, label }: { icon: any; label: string }) {
 
 export default function SolutionsPage() {
   const { solutions } = data;
+  const [activeTab, setActiveTab] = useState<"our" | "client">("our");
+
+  const filteredItems = solutions.items.filter((item: any) => item.type === activeTab);
 
   return (
     <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
@@ -72,16 +76,52 @@ export default function SolutionsPage() {
           </motion.div>
         </section>
 
+        {/* Tabs */}
+        <section className="px-6 mb-12 max-w-7xl mx-auto flex justify-center">
+          <div className="flex p-1.5 space-x-1 bg-zinc-200/50 rounded-full w-full max-w-sm">
+            <button
+              onClick={() => setActiveTab("our")}
+              className={`w-full rounded-full py-2.5 text-sm font-semibold transition-all duration-300 ${
+                activeTab === "our"
+                  ? "bg-white text-black shadow-sm"
+                  : "text-zinc-500 hover:text-black hover:bg-white/50"
+              }`}
+            >
+              Our Projects
+            </button>
+            <button
+              onClick={() => setActiveTab("client")}
+              className={`w-full rounded-full py-2.5 text-sm font-semibold transition-all duration-300 ${
+                activeTab === "client"
+                  ? "bg-white text-black shadow-sm"
+                  : "text-zinc-500 hover:text-black hover:bg-white/50"
+              }`}
+            >
+              Client Projects
+            </button>
+          </div>
+        </section>
+
         {/* Solutions Grid */}
         <section className="px-6 pb-32 max-w-7xl mx-auto">
-          <motion.div 
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {solutions.items.map((item) => (
+          {filteredItems.length === 0 ? (
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              className="text-center py-20 text-zinc-500 font-medium"
+            >
+              Projects coming soon...
+            </motion.div>
+          ) : (
+            <motion.div 
+              key={activeTab} // Forces re-render animation when tab changes
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
                 variants={fadeUp}
@@ -93,6 +133,7 @@ export default function SolutionsPage() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-contain transition-transform duration-700 p-6 group-hover:scale-105"
                   />
                   <div className="absolute bottom-4 left-4 z-20">
@@ -142,8 +183,9 @@ export default function SolutionsPage() {
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
+          )}
         </section>
       </main>
 
