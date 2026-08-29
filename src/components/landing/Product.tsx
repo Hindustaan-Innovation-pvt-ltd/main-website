@@ -236,45 +236,6 @@ export function ProductSection() {
             <HoverOverlay href="https://www.hindustaanmart.in/" />
           </motion.div>
 
-          {/* Card 5: Bhukkadh */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
-          >
-            <div className="flex justify-between items-center mb-12 relative z-10">
-              <div className="flex items-center gap-2">
-                <Pizza className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Bhukkadh</span>
-              </div>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.bhukkhad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer"
-              >
-                Mobile App <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Project Image */}
-            <div className="relative flex justify-center py-6 px-4">
-              <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
-                <Image
-                  src="/bhukkadh_phone.png"
-                  alt="Bhukkadh App"
-                  width={400}
-                  height={800}
-                  className="w-full h-auto object-contain drop-shadow-2xl"
-                  unoptimized
-                />
-              </div>
-            </div>
-            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.bhukkhad" />
-          </motion.div>
-
           {/* Card 6: Bhukkadh Website */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,6 +275,84 @@ export function ProductSection() {
               </div>
             </div>
             <HoverOverlay href="https://bhukkadh.hindustaan.in/" />
+          </motion.div>
+
+          {/* Card 5: Bhukkadh */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex justify-between items-center mb-12 relative z-10">
+              <div className="flex items-center gap-2">
+                <Pizza className="w-5 h-5 text-zinc-400" />
+                <span className="font-bold text-zinc-800 text-lg">Bhukkadh</span>
+              </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.bhukkhad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer"
+              >
+                Mobile App <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Project Image */}
+            <div className="relative flex justify-center py-6 px-4">
+              <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+                <Image
+                  src="/bhukkadh_phone.png"
+                  alt="Bhukkadh App"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.bhukkhad" />
+          </motion.div>
+
+          {/* Card 7: Ghumakkadh Mobile App */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 }}
+            className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex justify-between items-center mb-12 relative z-10">
+              <div className="flex items-center gap-2">
+                <Map className="w-5 h-5 text-zinc-400" />
+                <span className="font-bold text-zinc-800 text-lg">Ghumakkadh</span>
+              </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ghumakkadh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer"
+              >
+                Mobile App <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Project Image */}
+            <div className="relative flex justify-center py-6 px-4">
+              <div className="relative w-[60%] max-w-[220px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+                <Image
+                  src="/ghumakkadh_phone.png"
+                  alt="Ghumakkadh App"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.ghumakkadh" />
           </motion.div>
 
           {/* Card 8: Ghumakkadh Website */}
@@ -361,46 +400,7 @@ export function ProductSection() {
             </div>
             <HoverOverlay href="https://ghumakkadh.hindustaan.in/" />
           </motion.div>
-        {/* Card 7: Ghumakkadh Mobile App */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
-          >
-            <div className="flex justify-between items-center mb-12 relative z-10">
-              <div className="flex items-center gap-2">
-                <Map className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Ghumakkadh</span>
-              </div>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.ghumakkadh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer"
-              >
-                Mobile App <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Project Image */}
-            <div className="relative flex justify-center py-6 px-4">
-              <div className="relative w-[60%] max-w-[220px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
-                <Image
-                  src="/ghumakkadh_phone.png"
-                  alt="Ghumakkadh App"
-                  width={400}
-                  height={800}
-                  className="w-full h-auto object-contain drop-shadow-2xl"
-                  unoptimized
-                />
-              </div>
-            </div>
-            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.ghumakkadh" />
-          </motion.div>
-
-          </div>
+        </div>
       </div>
     </section>
   );

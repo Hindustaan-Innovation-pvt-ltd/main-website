@@ -126,7 +126,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={solution.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-zinc-200 transition-colors group"
+                  className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-200 transition-colors group"
                 >
                   <span>Visit Project Website</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -138,13 +138,12 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).playStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-6 py-3 rounded-full font-bold hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M5 2.5C5 2.22386 5.22386 2 5.5 2H5.60275C5.83617 2 6.0631 2.07923 6.24449 2.22137L20.6481 13.5108C20.9157 13.7206 20.9625 14.1074 20.7526 14.375C20.6384 14.5206 20.4639 14.606 20.2796 14.606H14.5C14.2239 14.606 14 14.8299 14 15.106V21.5C14 21.7761 13.7761 22 13.5 22H5.5C5.22386 22 5 21.7761 5 21.5V2.5Z" />
-                    {/* Just using a generic play icon for Play Store to avoid bringing complex SVGs, or using an external icon library if they have it? The project has lucide-react, maybe use Smartphone or something similar if no Play store icon */}
+                  <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
                   </svg>
-                  <span>Google Play</span>
+                  <span>{solution.title}</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               )}
@@ -154,12 +153,42 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).appStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-6 py-3 rounded-full font-bold hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
                 >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM15.4674 15.5C15.4674 15.5 14.1953 17 12 17C9.8047 17 8.5326 15.5 8.5326 15.5M15.4674 15.5C15.4674 15.5 16.5 13.3047 16.5 11.1094C16.5 8.91406 14.4844 7.10938 12 7.10938C9.51562 7.10938 7.5 8.91406 7.5 11.1094C7.5 13.3047 8.5326 15.5 8.5326 15.5M15.4674 15.5L8.5326 15.5" />
                   </svg>
                   <span>App Store</span>
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
+              )}
+
+              {(solution as any).partnerPlayStoreUrl && (
+                <Link
+                  href={(solution as any).partnerPlayStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                  </svg>
+                  <span>{solution.title} Partner</span>
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
+              )}
+
+              {(solution as any).riderPlayStoreUrl && (
+                <Link
+                  href={(solution as any).riderPlayStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
+                    <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                  </svg>
+                  <span>{solution.title} Rider</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               )}

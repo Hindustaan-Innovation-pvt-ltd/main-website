@@ -681,6 +681,8 @@
         "logo": "/new-bhukkadh-icon.png",
         "projectUrl": "#",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
+        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
+        "riderPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
         "modules": [
           {
             "title": "Food Delivery",
@@ -705,10 +707,10 @@
         ]
       },
       {
-        "id": "ghummakadh",
-        "title": "Ghummakadh",
+        "id": "ghumakkadh",
+        "title": "Ghumakkadh",
         "shortDescription": "A comprehensive travel and tourism platform.",
-        "description": "Ghummakadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
+        "description": "Ghumakkadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
         "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
         "image": "/ghumakkadh.png",
         "logo": "/ghumakkadh_icon.png",
