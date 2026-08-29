@@ -275,7 +275,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               <div className="absolute inset-0 flex items-center justify-center p-12">
                 <div className="w-full h-full rounded-3xl bg-white border border-black/10 shadow-2xl flex items-center justify-center relative group">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-50" />
-                  <Image src={solution.logo} alt={solution.title} fill className="object-contain p-4 rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
+                  <Image src={solution.logo || solution.image} alt={solution.title} fill className="object-contain p-4 rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             </motion.div>
