@@ -83,9 +83,9 @@ export default function Footer2() {
                     <div className="flex justify-center w-full mb-12 md:mb-20">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
                             {/* "hi" abstract icon */}
-                            <img src="/logo.png" alt="Hindustaan Innovations Logo" className="h-[50px] md:h-[80px] w-auto object-contain md:mr-10" />
+                            <img src="/logo.png" alt="Hindustaan Innovations Logo" className="h-[50px] md:h-[80px] w-auto object-contain md:mr-6" />
                             {/* Separator */}
-                            <div className="hidden md:block w-[1px] h-[70px] bg-white/20 md:mr-5"></div>
+                            <div className="hidden md:block w-[1px] h-[70px] bg-white/20 md:mr-4"></div>
                             {/* Text Logo */}
                             <div className="flex flex-col w-max justify-center text-left">
                                 {/* Line 1: HINDUSTAAN */}
