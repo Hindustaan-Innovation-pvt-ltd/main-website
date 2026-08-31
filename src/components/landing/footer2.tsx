@@ -5,7 +5,7 @@ export default function Footer2() {
     return (
         <div className="w-full bg-white flex justify-center py-10 px-4">
             <footer className="w-full max-w-[1800px] bg-[#0a0a0a] rounded-3xl p-4 sm:p-6 pb-6 flex flex-col">
-                
+
                 {/* Top Dark Grey Card */}
                 <div className="w-full bg-[#1c1c1c] rounded-[24px] p-6 md:p-8 lg:p-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-12">
                     {/* Left: Heading & Icons */}
@@ -18,7 +18,7 @@ export default function Footer2() {
                                     {/* Icon 1 - Yellow Framer-like */}
                                     <div className="w-[30px] h-[30px] md:w-[38px] md:h-[38px] rounded-lg md:rounded-[10px] bg-[#f2a900] flex items-center justify-center shadow-sm">
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="md:w-[22px] md:h-[22px]">
-                                            <path d="M12 2L2 12h10v10l10-10H12V2z" fill="#fff"/>
+                                            <path d="M12 2L2 12h10v10l10-10H12V2z" fill="#fff" />
                                         </svg>
                                     </div>
                                     {/* Icon 2 - Dark Honeycomb */}
@@ -81,16 +81,34 @@ export default function Footer2() {
                 <div className="w-full flex flex-col pt-16 md:pt-24 pb-8 px-4 sm:px-12 relative">
                     {/* Center Logo */}
                     <div className="flex justify-center w-full mb-12 md:mb-20">
-                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
                             {/* "hi" abstract icon */}
-                            <img src="/logo.png" alt="Hindustaan Innovations Logo" className="h-[50px] md:h-[80px] w-auto object-contain" />
+                            <img src="/logo.png" alt="Hindustaan Innovations Logo" className="h-[50px] md:h-[80px] w-auto object-contain md:mr-10" />
                             {/* Separator */}
-                            <div className="hidden md:block w-[1px] h-[70px] bg-white/20"></div>
-                            {/* Text */}
-                            <div className="flex flex-col justify-center text-center md:text-left">
-                                <span className="text-[22px] sm:text-[24px] md:text-[32px] font-bold text-white tracking-[0.15em] leading-none mb-1.5">HINDUSTAAN</span>
-                                <span className="text-[16px] sm:text-[18px] md:text-[26px] font-semibold text-[#858382] tracking-[0.3em] leading-none">INNOVATIONS</span>
-                                <span className="text-[9px] sm:text-[10px] md:text-[11px] font-semibold text-white tracking-[0.3em] leading-none mt-2">PRIVATE LIMITED</span>
+                            <div className="hidden md:block w-[1px] h-[70px] bg-white/20 md:mr-5"></div>
+                            {/* Text Logo */}
+                            <div className="flex flex-col w-max justify-center text-left">
+                                {/* Line 1: HINDUSTAAN */}
+                                <span 
+                                    className="text-[22px] sm:text-[24px] md:text-[32px] font-bold text-white tracking-widest leading-none mb-1.5 block"
+                                    style={{ marginRight: '-0.1em' }}
+                                >
+                                    HINDUSTAAN
+                                </span>
+                                
+                                {/* Line 2: INNOVATIONS */}
+                                <div className="flex justify-between w-full text-[16px] sm:text-[18px] md:text-[26px] font-semibold text-white leading-none">
+                                    {"INNOVATIONS".split("").map((char, i) => (
+                                        <span key={`i-${i}`}>{char}</span>
+                                    ))}
+                                </div>
+                                
+                                {/* Line 3: PRIVATE LIMITED */}
+                                <div className="flex justify-between w-full mt-2 text-[9px] sm:text-[10px] md:text-[11px] font-semibold text-[#858382] leading-none">
+                                    {"PRIVATE LIMITED".split("").map((char, i) => (
+                                        <span key={`p-${i}`}>{char === " " ? "\u00A0" : char}</span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

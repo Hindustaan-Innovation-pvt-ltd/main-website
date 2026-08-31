@@ -126,9 +126,9 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={solution.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-200 transition-colors group"
+                  className="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
                 >
-                  <span>Visit Project Website</span>
+                  <span>Visit {solution.projectUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               )}

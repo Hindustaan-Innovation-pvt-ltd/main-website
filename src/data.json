@@ -751,7 +751,7 @@
         "shortDescription": "An elegant e-commerce platform for traditional handloom products.",
         "description": "A beautifully crafted e-commerce website designed to showcase and sell exquisite handloom products online with a seamless shopping experience.",
         "projectUrl": "https://aakarhandloom.in/",
-        "image": "/p1.png",
+        "image": "/handlooms.png",
         "fullDescription": "Aakar Handloom is a premium e-commerce platform dedicated to bringing authentic, beautifully crafted handloom products to a wider audience. Built on Shopify, the store offers a seamless and elegant shopping experience, highlighting the intricate details of traditional weaving through high-quality imagery and a clean, modern interface. We focused on performance and mobile responsiveness to ensure customers can easily browse and purchase products on any device, while integrating secure payment gateways for a frictionless checkout process."
       },
       {
@@ -761,7 +761,7 @@
         "shortDescription": "A premium online destination for modern and classic furniture.",
         "description": "A custom e-commerce solution for PTC Furnitures, offering a seamless browsing and shopping experience for premium home and office furniture.",
         "projectUrl": "https://ptcfurnitures.com/",
-        "image": "/p2.jpg",
+        "image": "/ptc_furniture.png",
         "fullDescription": "PTC Furnitures required a sophisticated online presence to showcase their premium collection of modern and classic furniture. We developed a robust e-commerce solution that emphasizes product visualization and categorization, allowing customers to easily find pieces that match their style. The platform features advanced search capabilities, detailed product pages with specifications, and an intuitive user journey from discovery to purchase. Built with modern web technologies, the site ensures fast loading times and a highly responsive design across all screen sizes."
       }
     ]

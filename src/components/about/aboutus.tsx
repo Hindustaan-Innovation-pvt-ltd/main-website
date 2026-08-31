@@ -521,7 +521,7 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
 
       {/* Avatar */}
       <div className="relative shrink-0">
-        <div className="w-45 h-45 rounded-full overflow-hidden border-2 border-black/10 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
+        <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-2 border-black/10 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
           <Image
             src={founder.image}
             alt={founder.name}
