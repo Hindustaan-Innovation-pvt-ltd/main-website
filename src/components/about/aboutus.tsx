@@ -110,7 +110,7 @@ function SectionHeader({
 
 function AboutHero() {
   return (
-    <div className="relative min-h-[70vh] flex flex-col overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-black/20 dark:after:via-white/20 after:to-transparent">
+    <div className="relative min-h-[50vh] lg:min-h-[70vh] flex flex-col overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-black/20 dark:after:via-white/20 after:to-transparent">
       
       
 
@@ -118,7 +118,7 @@ function AboutHero() {
         variants={stagger}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-24 max-w-[1800px] mx-auto w-full text-center gap-8"
+        className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 pt-24 pb-4 lg:pb-24 max-w-[1800px] mx-auto w-full text-center gap-8"
       >
         {/* Pill */}
         <motion.div variants={fadeUp} className="flex items-center gap-2">
@@ -147,8 +147,8 @@ function AboutHero() {
           className="grid grid-cols-3 gap-6 mt-4 w-full max-w-2xl"
         >
           {[
-            { value: "30+", label: "Happy Clients" },
-            { value: "35+", label: "Projects Delivered" },
+            { value: "SEO", label: "Optimized & Fast" },
+            { value: "On-Time", label: "Project Delivery" },
             { value: "24/7", label: "Support Available" },
           ].map((stat) => (
             <motion.div
@@ -170,7 +170,7 @@ function AboutHero() {
 
 function OurStory() {
   return (
-    <section className="relative z-10 px-4 py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
+    <section className="relative z-10 px-4 pt-4 pb-4 lg:py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
       <SectionHeader
         icon={BookOpen}
         pill="Our Story"
@@ -266,7 +266,7 @@ function OurStory() {
 
 function MissionVision() {
   return (
-    <section className="relative z-10 px-4 py-24 w-full max-w-[1800px] mx-auto">
+    <section className="relative z-10 px-4 pt-4 pb-4 lg:py-24 w-full max-w-[1800px] mx-auto">
       <SectionHeader
         icon={Target}
         pill="Mission & Vision"
@@ -369,7 +369,7 @@ const VALUES = [
 
 function OurValues() {
   return (
-    <section className="relative z-10 px-4 py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
+    <section className="relative z-10 px-4 pt-4 pb-4 lg:py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
       <SectionHeader
         icon={Heart}
         pill="Our Values"
@@ -463,7 +463,7 @@ function OurFounders() {
   const coFounders = FOUNDERS.filter((f) => f.badge === "Co-founder");
 
   return (
-    <section className="relative z-10 px-4 py-24 w-full max-w-[1800px] mx-auto">
+    <section className="relative z-10 px-4 pt-4 pb-4 lg:py-24 w-full max-w-[1800px] mx-auto">
       <SectionHeader
         icon={Users}
         pill="Meet the Founders"
@@ -597,7 +597,7 @@ const HOW_WE_HELP = [
 
 function HowWeHelp() {
   return (
-    <section className="relative z-10 px-4 py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
+    <section className="relative z-10 px-4 pt-4 pb-24 lg:py-24 w-full max-w-[1800px] mx-auto after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-linear-to-r after:from-transparent after:via-white/20 after:to-transparent">
       <SectionHeader
         icon={Handshake}
         pill="How We Help"
@@ -651,7 +651,7 @@ function HowWeHelp() {
 
           <button
             type="button"
-            className="flex items-center gap-2 bg-zinc-900/50 backdrop-blur-md border border-black/10 hover:bg-zinc-800/80 text-zinc-800 px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 hover:border-black/10"
+            className="flex items-center gap-2 bg-white border border-zinc-200 hover:bg-zinc-50 text-black px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md"
           >
             Book a Free Call
             <ArrowUpRight className="w-4 h-4" />

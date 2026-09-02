@@ -36,7 +36,7 @@ export function HeroSection2() {
             animate={{ opacity: 1, y: 0 }}
             className="px-4 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 shadow-sm mb-6"
           >
-            <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">50+ Shipping Projects</span>
+            <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Digital Solutions, Built for Real-World Impact</span>
           </motion.div>
           
           <motion.h1 

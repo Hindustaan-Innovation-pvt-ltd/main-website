@@ -53,7 +53,7 @@ export function CareerCtaBanner() {
   if (!ctaBanner) return null;
 
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center px-4 py-24 w-full max-w-4xl mx-auto text-center">
+    <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-8 pb-16 lg:py-24 w-full max-w-4xl mx-auto text-center">
       <motion.div
         initial="hidden"
         whileInView="visible"

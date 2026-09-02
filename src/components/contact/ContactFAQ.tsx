@@ -10,7 +10,7 @@ export default function FaqSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="relative z-10 flex flex-col items-center justify-center px-4 py-20 w-full max-w-6xl mx-auto overflow-hidden" id="faq">
+        <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-20 lg:pt-20 lg:pb-20 w-full max-w-6xl mx-auto overflow-hidden" id="faq">
             <div className="flex flex-col items-center text-center w-full mb-16">
                 <div className="flex items-center gap-2 mb-6 px-4 py-1.5 bg-white border border-zinc-200 rounded-full shadow-sm">
                     <MessageCircleQuestion className="w-4 h-4 text-zinc-800" />
@@ -20,7 +20,7 @@ export default function FaqSection() {
                 <h2 className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 text-center max-w-4xl">
                     {faq.heading} <span className="text-[#1ba453]">{faq.headingItalic}</span>
                 </h2>
-                <p className="text-base md:text-lg text-zinc-500 mb-16 text-center max-w-2xl">{faq.subheading}</p>
+                <p className="text-base md:text-lg text-zinc-500 mb-8 lg:mb-16 text-center max-w-2xl">{faq.subheading}</p>
             </div>
 
             <div className="w-full">

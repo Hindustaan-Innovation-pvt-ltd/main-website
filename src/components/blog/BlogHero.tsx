@@ -53,7 +53,7 @@ export function BlogHero() {
   }, []);
 
   return (
-    <div className="relative pt-32 md:pt-40 pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
+    <div className="relative pt-32 md:pt-40 pb-8 lg:pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
       <Navbar2 />
       {hero ? (
         <motion.section

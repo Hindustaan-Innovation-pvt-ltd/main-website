@@ -63,12 +63,12 @@ export default function Footer2() {
                                     Schedule a Call
                                 </button>
                             </Link>
-                            <Link href="#">
+                            <Link href="/contact">
                                 <button className="w-[56px] h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group">
                                     <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 max-lg:group-data-[in-view=true]:scale-110 transition-transform" />
                                 </button>
                             </Link>
-                            <Link href="#">
+                            <Link href="/contact">
                                 <button className="w-[56px] h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group">
                                     <Send className="w-5 h-5 text-white group-hover:translate-x-0.5 max-lg:group-data-[in-view=true]:translate-x-0.5 group-hover:-translate-y-0.5 max-lg:group-data-[in-view=true]:-translate-y-0.5 transition-transform" />
                                 </button>

@@ -6,6 +6,7 @@ import {
   Headphones,
   Mail,
   Phone,
+  MapPin,
 } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useCallback, useState, Suspense, useEffect } from "react";
@@ -163,7 +164,7 @@ function ContactSectionContent() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex flex-col items-center justify-center px-4 pt-32 pb-20 w-full max-w-6xl mx-auto text-center"
+        className="relative z-10 flex flex-col items-center justify-center px-4 pt-32 pb-8 lg:pb-20 w-full max-w-6xl mx-auto text-center"
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-8">
@@ -237,6 +238,40 @@ function ContactSectionContent() {
                 <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
               </span>
             </motion.a>
+
+            <motion.div
+              variants={itemVariants}
+              className="group p-7 bg-white rounded-[2rem] shadow-sm border border-zinc-200/60 hover:shadow-md hover:border-zinc-300 transition-all duration-300"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-50 border border-zinc-100 mb-5">
+                <MapPin className="w-5 h-5 text-zinc-800" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-black mb-2 transition-colors">
+                Head Office
+              </h3>
+              <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed mb-4">
+                Hindustaan Innovations Private Limited<br/>
+                CO: B-41, Sector-8A, Kamal-Vihar,<br/>
+                Raipur (C.G.) - 492001<br/>
+                Phone: 0771- 299 - 4005
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="group p-7 bg-white rounded-[2rem] shadow-sm border border-zinc-200/60 hover:shadow-md hover:border-zinc-300 transition-all duration-300"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-50 border border-zinc-100 mb-5">
+                <MapPin className="w-5 h-5 text-zinc-800" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-black mb-2 transition-colors">
+                Registered Office
+              </h3>
+              <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed mb-4">
+                Hindustaan Innovations Private Limited<br/>
+                Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Gopalganj, Gopalganj, Bihar, India, 841428
+              </p>
+            </motion.div>
           </div>
 
           {/* Right Column - Form */}

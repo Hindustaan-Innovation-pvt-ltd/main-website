@@ -364,7 +364,7 @@ function Card({ card }: { card: ServiceCard }) {
 
 function GroupSection({ group }: { group: Group }) {
   return (
-    <section className="relative z-10 py-16 w-full">
+    <section className="relative z-10 pt-8 pb-4 lg:py-16 w-full">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-8 md:px-12">
         {/* Header Area */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
@@ -413,7 +413,7 @@ function GroupSection({ group }: { group: Group }) {
       </motion.div>
 
       {/* section divider */}
-      <div className="mt-20 w-full h-px bg-linear-to-r from-transparent via-black/10 to-transparent" />
+      <div className="mt-10 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-black/10 to-transparent" />
       </div>
     </section>
   );

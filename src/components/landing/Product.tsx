@@ -16,24 +16,24 @@ const HoverOverlay = ({ href }: { href?: string }) => {
 
   const className = "translate-y-10 opacity-0 group-hover:translate-y-0 max-lg:group-data-[in-view=true]:translate-y-0 group-hover:opacity-100 max-lg:group-data-[in-view=true]:opacity-100 transition-all duration-500 bg-white text-zinc-900 px-5 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 shadow-xl border border-zinc-200 hover:scale-105 active:scale-95";
 
-  return (
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-30 bg-white/5 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 max-lg:group-data-[in-view=true]:opacity-100 transition-all duration-500 flex items-center justify-center cursor-pointer">
+      <div className={className}>
+        {content}
+      </div>
+    </a>
+  ) : (
     <div className="absolute inset-0 z-30 bg-white/5 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 max-lg:group-data-[in-view=true]:opacity-100 transition-all duration-500 flex items-center justify-center">
-      {href ? (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-          {content}
-        </a>
-      ) : (
-        <button className={className}>
-          {content}
-        </button>
-      )}
+      <button className={className}>
+        {content}
+      </button>
     </div>
   );
 };
 
 export function ProductSection() {
   return (
-    <section className="py-24 bg-[#f5f5f5]">
+    <section className="pb-12 pt-8 bg-[#f5f5f5]">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-8 md:px-12">
         {/* Header Area */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
@@ -127,10 +127,10 @@ export function ProductSection() {
             transition={{ delay: 0.1 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-12 relative z-10">
-              <div className="flex items-center gap-2">
-                <Heart className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Karmanisht</span>
+            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/karmanisht-logo.png" alt="Karmanisht Logo" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 text-4xl tracking-tight">Karmanisht</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer">
                 Services Marketplace <ArrowUpRight className="w-4 h-4" />
@@ -138,20 +138,16 @@ export function ProductSection() {
             </div>
 
             {/* Mobile Mockup */}
-            <div className="relative flex justify-center py-6 px-4">
-              <div className="w-[70%] sm:w-[60%] max-w-[260px] bg-zinc-900 rounded-[2.5rem] sm:rounded-[3rem] p-2.5 sm:p-3 shadow-2xl relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
-                {/* Phone Notch Removed */}
-                {/* Screen Area */}
-                <div className="w-full bg-white rounded-[2rem] sm:rounded-[2.2rem] overflow-hidden relative flex">
-                  <Image
-                    src="/kamanisht-mobile.jpg"
-                    alt="Karmanisht App"
-                    width={400}
-                    height={800}
-                    className="w-full h-auto object-cover object-top"
-                    unoptimized
-                  />
-                </div>
+            <div className="relative flex justify-center pt-0 pb-6 px-4 -mt-4 sm:-mt-8">
+              <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+                <Image
+                  src="/kamanisht-mobile.png"
+                  alt="Karmanisht App"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  unoptimized
+                />
               </div>
             </div>
             <HoverOverlay />
@@ -177,7 +173,7 @@ export function ProductSection() {
 
             {/* Mobile Mockup */}
             <div className="relative flex justify-center py-6 px-4">
-              <div className="w-[70%] sm:w-[60%] max-w-[260px] bg-zinc-900 rounded-[2.5rem] sm:rounded-[3rem] p-2.5 sm:p-3 shadow-2xl relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+              <div className="w-[70%] sm:w-[60%] max-w-[260px] rounded-[2rem] sm:rounded-[2.2rem] shadow-2xl relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 {/* Phone Notch Removed */}
                 {/* Screen Area */}
                 <div className="w-full bg-white rounded-[2rem] sm:rounded-[2.2rem] overflow-hidden relative flex">
@@ -244,10 +240,10 @@ export function ProductSection() {
             transition={{ delay: 0.5 }}
             className="lg:col-span-2 relative bg-white rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-8 relative z-10">
-              <div className="flex items-center gap-2">
-                <Pizza className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Bhukkadh</span>
+            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/new-bhukkadh-icon.png" alt="Bhukkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 text-4xl tracking-tight">Bhukkadh</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer">
                 Website <ArrowUpRight className="w-4 h-4" />
@@ -285,10 +281,10 @@ export function ProductSection() {
             transition={{ delay: 0.4 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-12 relative z-10">
-              <div className="flex items-center gap-2">
-                <Pizza className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Bhukkadh</span>
+            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/new-bhukkadh-icon.png" alt="Bhukkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 text-4xl tracking-tight">Bhukkadh</span>
               </div>
               <a
                 href="https://play.google.com/store/apps/details?id=com.bhukkhad"
@@ -324,10 +320,10 @@ export function ProductSection() {
             transition={{ delay: 0.6 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-12 relative z-10">
-              <div className="flex items-center gap-2">
-                <Map className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Ghumakkadh</span>
+            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/ghumakkadh_icon.png" alt="Ghumakkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 text-4xl tracking-tight">Ghumakkadh</span>
               </div>
               <a
                 href="https://play.google.com/store/apps/details?id=com.ghumakkadh"
@@ -363,10 +359,10 @@ export function ProductSection() {
             transition={{ delay: 0.7 }}
             className="lg:col-span-2 relative bg-white rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-8 relative z-10">
-              <div className="flex items-center gap-2">
-                <Map className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Ghumakkadh</span>
+            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/ghumakkadh_icon.png" alt="Ghumakkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 text-4xl tracking-tight">Ghumakkadh</span>
               </div>
               <a
                 href="https://ghumakkadh.hindustaan.in/"

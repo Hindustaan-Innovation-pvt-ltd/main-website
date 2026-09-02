@@ -127,6 +127,7 @@ export default function SolutionsPage() {
                 variants={fadeUp}
                 className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm border border-zinc-200/60 hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
+                <Link href={`/products/${item.id}`} className="flex flex-col h-full w-full">
                 {/* Image Area */}
                 <div className="relative w-full h-[280px] overflow-hidden bg-zinc-50 border-b border-zinc-100 flex items-center justify-center p-6">
                   <Image
@@ -171,17 +172,17 @@ export default function SolutionsPage() {
                   </div>
 
                   <div className="pt-5 border-t border-zinc-100">
-                    <Link 
-                      href={`/products/${item.id}`}
+                    <div 
                       className="inline-flex items-center justify-center gap-2 group/btn relative w-full px-6 py-3 bg-[#222222] text-white text-sm font-medium rounded-xl hover:bg-black transition-colors shadow-sm"
                     >
                       <span>View Details</span>
                       <div className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-[6px] ml-1">
-                        <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                       </div>
-                    </Link>
+                    </div>
                   </div>
                 </div>
+                </Link>
               </motion.div>
               ))}
             </motion.div>

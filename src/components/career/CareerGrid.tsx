@@ -259,7 +259,7 @@ function JobCardComponent({ card }: { card: JobCard }) {
 
 function DepartmentSection({ dept }: { dept: Department }) {
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center px-4 py-20 w-full max-w-[1800px] mx-auto">
+    <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-8 pb-4 lg:py-20 w-full max-w-[1800px] mx-auto">
       
       {/* Header Area matching home page */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8 w-full">
@@ -312,7 +312,7 @@ function DepartmentSection({ dept }: { dept: Department }) {
         ))}
       </motion.div>
 
-      <div className="mt-20 w-full h-px bg-linear-to-r from-transparent via-white/8 to-transparent" />
+      <div className="mt-8 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-white/8 to-transparent" />
     </section>
   );
 }

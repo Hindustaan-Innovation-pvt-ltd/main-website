@@ -29,7 +29,7 @@ export function ProcessSection2() {
   ];
 
   return (
-    <section className="py-24 bg-[#f5f5f5]">
+    <section className="pt-8 pb-24 bg-[#f5f5f5]">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-8 md:px-12">
         {/* Header Area */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">

@@ -332,15 +332,6 @@ export function BlogDetailView({
           animate="visible"
           className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 pt-8 pb-16 text-center max-w-4xl mx-auto w-full"
         >
-          {/* Back link */}
-          <motion.div variants={itemVariants} className="w-full flex justify-start mb-8">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition-colors bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to Blog
-            </Link>
-          </motion.div>
 
           {/* Category badge */}
           <motion.span

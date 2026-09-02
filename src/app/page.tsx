@@ -13,7 +13,7 @@ import Testimonial from "@/components/landing/Testimonial";
 import SuccessStories from "@/components/landing/SuccessStories";
 import FaqSection from "@/components/landing/FaqSection";
 import { ServicesSection2 } from "@/components/landing/ServicesSection2";
-import { TrustedSection } from "@/components/landing/trusted"
+import { ServicesSection3 } from "@/components/landing/ServicesSection3";
 import { ProductSection } from "@/components/landing/Product";
 import FaqSection2 from "@/components/landing/FaqSection2";
 import { ProcessSection2 } from "@/components/landing/ProcessSection2";
@@ -39,7 +39,7 @@ export default function Home() {
       <CtaFooter />
       <FooterBar /> */}
       <ServicesSection2 />
-      <TrustedSection />
+      <ServicesSection3 />
       <ProductSection />
       <ProcessSection2 />
       <WhyUsSection />

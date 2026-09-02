@@ -62,6 +62,7 @@ function BlogCard({ post }: { post: Post }) {
       layout
       className="group flex flex-col bg-white rounded-3xl border-t-2 border-zinc-200 outline outline-black/5 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 relative"
     >
+      <Link href={`/blog/${post.slug}`} className="flex flex-col flex-1 h-full">
       {/* Gradient banner */}
       <div className={`h-44 bg-gradient-to-br ${post.coverGradient} relative flex items-center justify-center overflow-hidden`}>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(0,0,0,0.02)_0%,transparent_60%)]" />
@@ -116,16 +117,16 @@ function BlogCard({ post }: { post: Post }) {
         </div>
 
         {/* CTA */}
-        <Link
-          href={`/blog/${post.slug}`}
-          className={`inline-flex items-center gap-1.5 text-sm font-semibold ${post.accentColor} hover:gap-3 transition-all duration-200`}
+        <div
+          className={`inline-flex items-center gap-1.5 text-sm font-semibold ${post.accentColor} group-hover:gap-3 transition-all duration-200`}
         >
           Read Article <ArrowUpRight className="w-4 h-4" />
-        </Link>
+        </div>
       </div>
 
       {/* Hover glow */}
       <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-white/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      </Link>
     </motion.article>
   );
 }
@@ -189,7 +190,7 @@ export function BlogGrid() {
   }, [activeCategory]);
 
   return (
-    <section className="relative z-10 w-full max-w-[1800px] mx-auto px-4 py-20">
+    <section className="relative z-10 w-full max-w-[1800px] mx-auto px-4 pt-4 pb-20 lg:pt-20 lg:pb-20">
       {/* Category Filter */}
       <div className="flex flex-wrap gap-2 justify-center mb-14">
         {categories.map((cat) => (
