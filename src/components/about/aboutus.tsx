@@ -118,7 +118,7 @@ function AboutHero() {
         variants={stagger}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 pt-24 pb-4 lg:pb-24 max-w-[1800px] mx-auto w-full text-center gap-8"
+        className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 pt-36 lg:pt-24 pb-4 lg:pb-24 max-w-[1800px] mx-auto w-full text-center gap-8"
       >
         {/* Pill */}
         <motion.div variants={fadeUp} className="flex items-center gap-2">

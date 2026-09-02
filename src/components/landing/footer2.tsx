@@ -56,21 +56,21 @@ export default function Footer2() {
                         <p className="text-zinc-300 text-base md:text-lg leading-relaxed">
                             We help teams turn complex ideas into clear, high-performing digital experiences.
                         </p>
-                        <div className="flex flex-row flex-wrap items-center gap-3 md:gap-4 w-full">
-                            <Link href="/contact" className="flex-1 sm:flex-none">
-                                <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-black px-7 py-4 rounded-[14px] font-bold text-base hover:bg-zinc-200 transition-colors">
-                                    <Video className="w-5 h-5" />
+                        <div className="flex flex-row flex-nowrap items-center gap-2 sm:gap-3 md:gap-4 w-full">
+                            <Link href="/contact" className="flex-none overflow-hidden">
+                                <button className="w-auto flex items-center justify-center gap-2 sm:gap-3 bg-white text-black px-4 sm:px-7 py-3 sm:py-4 rounded-[14px] font-bold text-[14px] sm:text-base whitespace-nowrap hover:bg-zinc-200 transition-colors">
+                                    <Video className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                                     Schedule a Call
                                 </button>
                             </Link>
-                            <Link href="/contact">
-                                <button className="w-[56px] h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group">
-                                    <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 max-lg:group-data-[in-view=true]:scale-110 transition-transform" />
+                            <Link href="/contact" className="shrink-0">
+                                <button className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group shrink-0">
+                                    <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 max-lg:group-data-[in-view=true]:scale-110 transition-transform" />
                                 </button>
                             </Link>
-                            <Link href="/contact">
-                                <button className="w-[56px] h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group">
-                                    <Send className="w-5 h-5 text-white group-hover:translate-x-0.5 max-lg:group-data-[in-view=true]:translate-x-0.5 group-hover:-translate-y-0.5 max-lg:group-data-[in-view=true]:-translate-y-0.5 transition-transform" />
+                            <Link href="/contact" className="shrink-0">
+                                <button className="w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] flex items-center justify-center bg-[#2a2a2a] border border-white/5 rounded-[14px] hover:bg-[#333] transition-colors group shrink-0">
+                                    <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:translate-x-0.5 max-lg:group-data-[in-view=true]:translate-x-0.5 group-hover:-translate-y-0.5 max-lg:group-data-[in-view=true]:-translate-y-0.5 transition-transform" />
                                 </button>
                             </Link>
                         </div>

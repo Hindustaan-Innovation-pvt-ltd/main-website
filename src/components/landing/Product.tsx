@@ -161,7 +161,7 @@ export function ProductSection() {
             transition={{ delay: 0.2 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-between items-center mb-12 relative z-10">
+            <div className="flex justify-between items-center mb-6 relative z-10">
               <div className="flex items-center gap-2">
                 <Zap className="w-5 h-5 text-zinc-400" />
                 <span className="font-bold text-zinc-800 text-lg">Marketplace</span>
@@ -172,7 +172,7 @@ export function ProductSection() {
             </div>
 
             {/* Mobile Mockup */}
-            <div className="relative flex justify-center py-6 px-4">
+            <div className="relative flex justify-center pt-4 pb-6 px-4">
               <div className="w-[70%] sm:w-[60%] max-w-[260px] rounded-[2rem] sm:rounded-[2.2rem] shadow-2xl relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 {/* Phone Notch Removed */}
                 {/* Screen Area */}
@@ -281,7 +281,7 @@ export function ProductSection() {
             transition={{ delay: 0.4 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+            <div className="flex flex-wrap justify-between items-center mb-6 relative z-10 gap-4">
               <div className="flex items-center gap-4">
                 <Image src="/new-bhukkadh-icon.png" alt="Bhukkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
                 <span className="font-bold text-zinc-800 text-4xl tracking-tight">Bhukkadh</span>
@@ -297,7 +297,7 @@ export function ProductSection() {
             </div>
 
             {/* Project Image */}
-            <div className="relative flex justify-center py-6 px-4">
+            <div className="relative flex justify-center pt-4 pb-6 px-4">
               <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 <Image
                   src="/bhukkadh_phone.png"
@@ -320,7 +320,7 @@ export function ProductSection() {
             transition={{ delay: 0.6 }}
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+            <div className="flex flex-wrap justify-between items-center mb-6 relative z-10 gap-4">
               <div className="flex items-center gap-4">
                 <Image src="/ghumakkadh_icon.png" alt="Ghumakkadh Icon" width={48} height={48} className="w-12 h-12 object-contain" />
                 <span className="font-bold text-zinc-800 text-4xl tracking-tight">Ghumakkadh</span>
@@ -336,7 +336,7 @@ export function ProductSection() {
             </div>
 
             {/* Project Image */}
-            <div className="relative flex justify-center py-6 px-4">
+            <div className="relative flex justify-center pt-4 pb-6 px-4">
               <div className="relative w-[60%] max-w-[220px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 <Image
                   src="/ghumakkadh_phone.png"

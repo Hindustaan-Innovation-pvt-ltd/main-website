@@ -61,13 +61,13 @@ export function CareerHero() {
   if (!hero) return null;
 
   return (
-    <div className="relative pt-32 md:pt-40 pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
+    <div className="relative pt-36 lg:pt-40 pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
       <Navbar2 />
       <motion.section
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 flex flex-col items-center justify-center px-4 w-full max-w-6xl mx-auto text-center mt-12"
+        className="relative z-10 flex flex-col items-center justify-center px-4 w-full max-w-6xl mx-auto text-center mt-0 md:mt-12"
       >
         {/* Pill */}
         <motion.div

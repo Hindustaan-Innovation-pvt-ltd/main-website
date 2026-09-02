@@ -49,7 +49,7 @@ export default function SolutionsPage() {
 
       <main className="relative z-10 flex-1">
         {/* Hero Section */}
-        <section className="px-6 py-24 md:py-32 max-w-7xl mx-auto text-center">
+        <section className="px-6 pt-36 pb-24 lg:pt-32 lg:pb-32 max-w-7xl mx-auto text-center">
           <motion.div
             variants={stagger}
             initial="hidden"
