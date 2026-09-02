@@ -162,9 +162,9 @@ export function ProductSection() {
             className="lg:col-span-1 relative bg-white rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
             <div className="flex justify-between items-center mb-6 relative z-10">
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Marketplace</span>
+              <div className="flex items-center gap-3">
+                <Image src="/Hindustaan_mart_logo.jpeg" alt="Hindustaan Mart Logo" width={32} height={32} className="w-8 h-8 object-contain rounded-md" />
+                <span className="font-bold text-zinc-800 text-xl">Marketplace</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer">
                 Mobile App <ArrowUpRight className="w-4 h-4" />
@@ -173,16 +173,15 @@ export function ProductSection() {
 
             {/* Mobile Mockup */}
             <div className="relative flex justify-center pt-4 pb-6 px-4">
-              <div className="w-[70%] sm:w-[60%] max-w-[260px] rounded-[2rem] sm:rounded-[2.2rem] shadow-2xl relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
-                {/* Phone Notch Removed */}
+              <div className="w-[70%] sm:w-[60%] max-w-[260px] relative group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 {/* Screen Area */}
-                <div className="w-full bg-white rounded-[2rem] sm:rounded-[2.2rem] overflow-hidden relative flex">
+                <div className="w-full relative flex">
                   <Image
                     src="/Marketplace app design (2).png"
                     alt="Marketplace App"
                     width={400}
                     height={800}
-                    className="w-full h-auto object-cover object-top"
+                    className="w-full h-auto object-cover object-top drop-shadow-2xl"
                     unoptimized
                   />
                 </div>
@@ -200,9 +199,9 @@ export function ProductSection() {
             className="lg:col-span-2 relative bg-white rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
             <div className="flex justify-between items-center mb-8 relative z-10">
-              <div className="flex items-center gap-2">
-                <Sun className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 text-lg">Hindustaan Mart</span>
+              <div className="flex items-center gap-3">
+                <Image src="/Hindustaan_mart_logo.jpeg" alt="Hindustaan Mart Logo" width={32} height={32} className="w-8 h-8 object-contain rounded-md" />
+                <span className="font-bold text-zinc-800 text-xl">Hindustaan Mart</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 font-medium text-sm group-hover:text-black max-lg:group-data-[in-view=true]:text-black transition-colors cursor-pointer">
                 E-Commerce Platform <ArrowUpRight className="w-4 h-4" />

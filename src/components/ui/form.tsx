@@ -36,12 +36,13 @@ export { Input };
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: string;
+  wrapperClassName?: string;
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, error, ...props }, ref) => {
+  ({ className, wrapperClassName, error, ...props }, ref) => {
     return (
-      <div className="relative">
+      <div className={cn("relative flex flex-col", wrapperClassName)}>
         <textarea
           className={cn(
             "flex min-h-[120px] w-full rounded-lg border bg-neutral-900/80 px-4 py-3 text-sm text-neutral-100 placeholder:text-neutral-500",
