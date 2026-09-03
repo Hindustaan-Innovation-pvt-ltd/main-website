@@ -8,7 +8,6 @@ import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
 import { IntegrationsSection } from "@/components/landing/IntegrationsSection";
 import { CtaFooter } from "@/components/landing/CtaFooter";
-import { FooterBar } from "@/components/landing/FooterBar";
 import Testimonial from "@/components/landing/Testimonial";
 import SuccessStories from "@/components/landing/SuccessStories";
 import FaqSection from "@/components/landing/FaqSection";
@@ -23,7 +22,7 @@ import { MobileHoverObserver } from "@/components/landing/MobileHoverObserver";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col text-zinc-50 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
 
       {/* <HeroSection /> */}
       <HeroSection2 />

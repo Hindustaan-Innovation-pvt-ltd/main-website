@@ -188,17 +188,17 @@ export default function Popups() {
                         className="relative w-[calc(100vw-2rem)] max-w-lg"
                     >
                         {/* Premium Glow Effect */}
-                        <div className="absolute -inset-1 bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-200 rounded-[2rem] sm:rounded-[2.5rem] blur-lg opacity-50" />
+                        <div className="absolute -inset-1 bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-200 dark:from-zinc-800 dark:via-zinc-700 dark:to-zinc-800 rounded-[2rem] sm:rounded-[2.5rem] blur-lg opacity-50" />
                         
-                        <div className="relative bg-white rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 shadow-2xl overflow-hidden">
+                        <div className="relative bg-white dark:bg-zinc-900 rounded-[2rem] sm:rounded-[2.5rem] border border-zinc-200 dark:border-white/10 shadow-2xl overflow-hidden">
                             
                             {/* Decorative background gradients */}
-                            <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-zinc-50 to-transparent pointer-events-none" />
+                            <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-zinc-50 dark:from-zinc-800/40 to-transparent pointer-events-none" />
                             <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
                             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
 
                             <Button
-                                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-zinc-400 hover:text-black hover:bg-zinc-100 rounded-full w-8 h-8 sm:w-10 sm:h-10 p-0 transition-all z-20"
+                                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-zinc-400 hover:text-black dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full w-8 h-8 sm:w-10 sm:h-10 p-0 transition-all z-20"
                                 variant="ghost"
                                 onClick={() => setShowPopup(false)}
                                 aria-label="Close popup"
@@ -213,18 +213,18 @@ export default function Popups() {
                                             initial={{ y: 10, opacity: 0 }}
                                             animate={{ y: 0, opacity: 1 }}
                                             transition={{ delay: 0.1 }}
-                                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-800 uppercase tracking-widest shadow-sm"
+                                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs font-semibold text-zinc-800 dark:text-zinc-200 uppercase tracking-widest shadow-xs"
                                         >
                                             <Sparkles className="w-3.5 h-3.5 text-[#1ba453]" />
                                             Limited Consultation
                                         </motion.div>
                                         
                                         <div className="space-y-2 sm:space-y-3">
-                                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-black leading-[1.15] md:leading-[1.1]">
+                                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-[1.15] md:leading-[1.1]">
                                                 Build your project <br />
                                                 with our engineers.
                                             </h2>
-                                            <p className="text-zinc-500 text-sm sm:text-base leading-relaxed max-w-[320px] mx-auto">
+                                            <p className="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base leading-relaxed max-w-[320px] mx-auto">
                                                 Share your contact number and our team will reach out shortly.
                                             </p>
                                         </div>
@@ -245,7 +245,7 @@ export default function Popups() {
                                                     placeholder="Your mobile number"
                                                     value={mobile}
                                                     onChange={(e) => setMobile(e.target.value)}
-                                                    className="w-full h-12 sm:h-14 md:h-16 pl-12 sm:pl-14 pr-6 rounded-2xl border border-zinc-200 bg-zinc-50 text-black placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-[#1ba453]/30 focus:bg-white focus:ring-4 focus:ring-[#1ba453]/10 text-base sm:text-lg shadow-sm"
+                                                    className="w-full h-12 sm:h-14 md:h-16 pl-12 sm:pl-14 pr-6 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 outline-none transition-all duration-300 focus:border-[#1ba453]/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-[#1ba453]/10 text-base sm:text-lg shadow-xs"
                                                     required
                                                 />
                                             </div>

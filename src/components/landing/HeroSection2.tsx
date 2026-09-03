@@ -21,7 +21,7 @@ const cards = [
 
 export function HeroSection2() {
   return (
-    <div className="relative min-h-dvh flex flex-col overflow-hidden bg-[#f5f5f5]">
+    <div className="relative min-h-dvh flex flex-col overflow-hidden bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       {/* Top Navigation */}
       <Navbar2 />
       
@@ -34,7 +34,7 @@ export function HeroSection2() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 shadow-sm mb-6"
+            className="px-4 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 shadow-xs mb-6"
           >
             <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Digital Solutions, Built for Real-World Impact</span>
           </motion.div>
@@ -43,7 +43,7 @@ export function HeroSection2() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black max-w-4xl leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 px-2"
+            className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white max-w-4xl leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 px-2"
           >
             Building Digital Experiences<br />That Actually Convert
           </motion.h1>
@@ -126,7 +126,7 @@ export function HeroSection2() {
                   rotate: card.rotate > 0 ? card.rotate + 2 : card.rotate - 2,
                   transition: { duration: 0.2 }
                 }}
-                className="absolute top-0 left-1/2 w-[240px] h-[340px] md:w-[320px] md:h-[450px] rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden bg-white cursor-pointer origin-bottom"
+                className="absolute top-0 left-1/2 w-[240px] h-[340px] md:w-[320px] md:h-[450px] rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-white/10 cursor-pointer origin-bottom"
                 style={{
                   // Middle card (index 3) will have the highest z-index
                   zIndex: 20 - Math.abs(3 - index) * 5
@@ -163,7 +163,7 @@ export function HeroSection2() {
                {[...cards, ...cards].map((card, index) => (
                   <div 
                     key={`mobile-${card.id}-${index}`} 
-                    className="relative shrink-0 w-[220px] h-[320px] rounded-2xl overflow-hidden shadow-xl bg-white"
+                    className="relative shrink-0 w-[220px] h-[320px] rounded-2xl overflow-hidden shadow-xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-white/10"
                   >
                      {card.src ? (
                        <Image 

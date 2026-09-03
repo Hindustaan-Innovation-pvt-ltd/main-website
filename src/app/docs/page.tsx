@@ -93,28 +93,27 @@ const DOC_SECTIONS = [
 
 export default function DocsPage() {
   return (
-    <div className="relative bg-white text-zinc-900 min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
+    <div className="relative bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 min-h-screen overflow-hidden transition-colors duration-200">
       <Navbar2 />
 
       {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-16 max-w-4xl mx-auto text-center gap-6">
-        <div className="flex items-center gap-2 bg-zinc-50/40 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
-          <BookOpen className="w-4 h-4 text-zinc-700" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">Documentation</span>
+        <div className="flex items-center gap-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs">
+          <BookOpen className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
+          <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">Documentation</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white">
           Everything You{" "}
-          <span className="font-serif italic font-light text-zinc-700">Need to Know.</span>
+          <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">Need to Know.</span>
         </h1>
-        <p className="text-zinc-600 text-lg max-w-2xl leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
           Guides, references, and how-tos for all our services. Built for business owners, not just engineers.
         </p>
 
         {/* Search bar (UI only) */}
-        <div className="flex items-center gap-3 w-full max-w-md bg-zinc-50/60 border border-black/10 rounded-2xl px-4 py-3 mt-2">
-          <Search className="w-4 h-4 text-zinc-500 shrink-0" />
-          <span className="text-sm text-zinc-600">Search documentation...</span>
+        <div className="flex items-center gap-3 w-full max-w-md bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl px-4 py-3 mt-2 shadow-xs">
+          <Search className="w-4 h-4 text-zinc-500 dark:text-zinc-400 shrink-0" />
+          <span className="text-sm text-zinc-500 dark:text-zinc-400">Search documentation...</span>
         </div>
       </section>
 
@@ -124,7 +123,7 @@ export default function DocsPage() {
           {DOC_SECTIONS.map((sec) => (
             <div
               key={sec.title}
-              className="group flex flex-col gap-5 bg-[#f5f5f5] rounded-3xl border-t-2 border-white/20 outline outline-white/8 p-7 hover:bg-zinc-50/60 transition-all duration-300"
+              className="group flex flex-col gap-5 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 p-7 hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all duration-300 shadow-xs"
             >
               {/* Icon */}
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${sec.bg}`}>
@@ -132,8 +131,8 @@ export default function DocsPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-bold text-zinc-900 mb-2">{sec.title}</h2>
-                <p className="text-zinc-600 text-sm leading-relaxed">{sec.desc}</p>
+                <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">{sec.title}</h2>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">{sec.desc}</p>
               </div>
 
               {/* Article list */}
@@ -142,9 +141,9 @@ export default function DocsPage() {
                   <li key={a}>
                     <Link
                       href="/contact"
-                      className="flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-200 transition-colors group/link"
+                      className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors group/link"
                     >
-                      <ChevronRight className="w-3.5 h-3.5 shrink-0 text-zinc-700 group-hover/link:text-zinc-600 transition-colors" />
+                      <ChevronRight className="w-3.5 h-3.5 shrink-0 text-zinc-400 group-hover/link:text-zinc-900 dark:group-hover/link:text-white transition-colors" />
                       {a}
                     </Link>
                   </li>
@@ -155,14 +154,14 @@ export default function DocsPage() {
         </div>
 
         {/* Help nudge */}
-        <div className="mt-16 bg-[#f5f5f5] border border-black/10 rounded-3xl p-8 md:p-12 text-center flex flex-col items-center gap-4">
-          <h3 className="text-2xl font-bold text-zinc-900">Can't find what you're looking for?</h3>
-          <p className="text-zinc-600 text-sm max-w-md">
+        <div className="mt-16 bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-3xl p-8 md:p-12 text-center flex flex-col items-center gap-4 shadow-xs">
+          <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">Can't find what you're looking for?</h3>
+          <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-md">
             Our support team is available 24/7. Reach out and we'll point you in the right direction — fast.
           </p>
           <Link
             href="/support"
-            className="inline-flex items-center gap-2 bg-zinc-100 hover:bg-white text-zinc-900 font-semibold px-6 py-3 rounded-xl transition-colors text-sm"
+            className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 hover:bg-zinc-800 dark:hover:bg-zinc-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm shadow-xs"
           >
             Contact Support
           </Link>

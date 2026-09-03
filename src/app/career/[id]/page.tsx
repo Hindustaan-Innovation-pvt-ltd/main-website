@@ -51,7 +51,7 @@ export default async function JobDetailsPage({
   if (!job) notFound();
 
   return (
-    <div className="relative min-h-screen flex flex-col text-black bg-[#f5f5f5] overflow-hidden">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
       <Navbar2 />
       <JobDetailsClient job={job} />
       <Footer2 />

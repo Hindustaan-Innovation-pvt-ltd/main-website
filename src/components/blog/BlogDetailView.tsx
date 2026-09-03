@@ -100,11 +100,11 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
 
   return (
     <aside className="hidden lg:flex flex-col sticky top-24 self-start w-full">
-      <div className="bg-zinc-50/60 border border-black/10 rounded-2xl p-5 backdrop-blur-sm">
+      <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-5 shadow-xs">
         {/* Header */}
-        <div className="flex items-center gap-2 mb-5 pb-4 border-b border-black/10">
-          <List className="w-4 h-4 text-zinc-600" />
-          <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">
+        <div className="flex items-center gap-2 mb-5 pb-4 border-b border-zinc-200 dark:border-white/10">
+          <List className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
+          <span className="text-xs font-bold tracking-widest uppercase text-zinc-600 dark:text-zinc-400">
             Table of Contents
           </span>
         </div>
@@ -119,8 +119,8 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
                 href={`#section-${item.idx}`}
                 className={`flex items-start gap-2 px-3 py-2 rounded-xl text-sm transition-all duration-200 group ${
                   isActive
-                    ? `${post.accentColor} bg-black/5 font-semibold`
-                    : "text-zinc-500 hover:text-zinc-800 hover:bg-black/5"
+                    ? `${post.accentColor} bg-black/5 dark:bg-white/5 font-semibold`
+                    : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800"
                 }`}
               >
                 <ChevronRight
@@ -135,7 +135,7 @@ function TableOfContents({ post, activeSection }: { post: Post; activeSection: n
         </nav>
 
         {/* Read time */}
-        <div className="mt-5 pt-4 border-t border-black/10 flex items-center gap-1.5 text-zinc-600">
+        <div className="mt-5 pt-4 border-t border-zinc-200 dark:border-white/10 flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400">
           <Clock className="w-3.5 h-3.5" />
           <span className="text-xs">{post.readTime}</span>
         </div>
@@ -162,15 +162,15 @@ function EnquiryForm({ post }: { post: Post }) {
 
   return (
     <aside className="hidden lg:flex flex-col sticky top-24 self-start w-full">
-      <div className={`bg-zinc-50/60 border border-black/10 rounded-2xl p-5 backdrop-blur-sm`}>
+      <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-5 shadow-xs">
         {/* Header */}
         <div className="flex items-center gap-2 mb-1">
           <div className={`w-8 h-8 rounded-xl ${post.accentBg} border flex items-center justify-center shrink-0`}>
             <Send className={`w-3.5 h-3.5 ${post.accentColor}`} />
           </div>
-          <h3 className="text-sm font-bold text-zinc-900">Quick Enquiry</h3>
+          <h3 className="text-sm font-bold text-zinc-900 dark:text-white">Quick Enquiry</h3>
         </div>
-        <p className="text-xs text-zinc-500 mb-5 pl-10">
+        <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-5 pl-10">
           Interested in this topic? Let's talk!
         </p>
 
@@ -183,12 +183,12 @@ function EnquiryForm({ post }: { post: Post }) {
             <div className={`w-14 h-14 rounded-2xl ${post.accentBg} border flex items-center justify-center`}>
               <CheckCircle2 className={`w-7 h-7 ${post.accentColor}`} />
             </div>
-            <p className="text-sm font-semibold text-zinc-900">Message Sent!</p>
-            <p className="text-xs text-zinc-500">We'll get back to you within 24 hours.</p>
+            <p className="text-sm font-semibold text-zinc-900 dark:text-white">Message Sent!</p>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400">We'll get back to you within 24 hours.</p>
             <button
               type="button"
               onClick={() => { setStatus("idle"); setForm({ name: "", email: "", message: "" }); }}
-              className="text-xs text-zinc-500 hover:text-zinc-600 underline underline-offset-2 mt-1 transition-colors"
+              className="text-xs text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 underline underline-offset-2 mt-1 transition-colors"
             >
               Send another
             </button>
@@ -197,40 +197,40 @@ function EnquiryForm({ post }: { post: Post }) {
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             {/* Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-600">Your Name</label>
+              <label className="text-xs font-medium text-zinc-600 dark:text-zinc-300">Your Name</label>
               <input
                 type="text"
                 required
                 value={form.name}
                 onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                 placeholder="Rahul Sharma"
-                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-4 py-2.5 text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-[#1ba453] transition-colors"
               />
             </div>
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-600">Email Address</label>
+              <label className="text-xs font-medium text-zinc-600 dark:text-zinc-300">Email Address</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                 placeholder="rahul@company.com"
-                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-4 py-2.5 text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-[#1ba453] transition-colors"
               />
             </div>
 
             {/* Message */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-600">Message</label>
+              <label className="text-xs font-medium text-zinc-600 dark:text-zinc-300">Message</label>
               <textarea
                 required
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 placeholder="I'd like to know more about..."
-                className="w-full bg-white border border-black/10 rounded-xl px-4 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-300 transition-colors resize-none"
+                className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-4 py-2.5 text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:border-[#1ba453] transition-colors resize-none"
               />
             </div>
 
@@ -241,7 +241,7 @@ function EnquiryForm({ post }: { post: Post }) {
               className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 mt-1 ${
                 status === "loading"
                   ? "bg-zinc-800 text-zinc-500 cursor-not-allowed"
-                  : `${post.accentBg} border ${post.accentColor} hover:brightness-125`
+                  : `${post.accentBg} border ${post.accentColor} hover:brightness-110`
               }`}
             >
               {status === "loading" ? (
@@ -254,11 +254,11 @@ function EnquiryForm({ post }: { post: Post }) {
         )}
 
         {/* Direct contact */}
-        <div className="mt-4 pt-4 border-t border-black/10 text-center">
-          <p className="text-[11px] text-zinc-600 mb-1">Or reach us directly</p>
+        <div className="mt-4 pt-4 border-t border-zinc-200 dark:border-white/10 text-center">
+          <p className="text-[11px] text-zinc-600 dark:text-zinc-400 mb-1">Or reach us directly</p>
           <a
             href="mailto:info@hindustaan.in"
-            className="text-xs text-zinc-500 hover:text-zinc-600 transition-colors"
+            className="text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
           >
             info@hindustaan.in
           </a>
@@ -266,12 +266,12 @@ function EnquiryForm({ post }: { post: Post }) {
       </div>
 
       {/* CTA Card */}
-      <div className={`mt-4 bg-gradient-to-br ${post.coverGradient} border border-black/10 rounded-2xl p-5 text-center`}>
-        <p className="text-xs text-zinc-600 font-medium mb-1">Want a custom solution?</p>
-        <p className="text-[11px] text-zinc-500 mb-4">Book a free strategy call with our team</p>
+      <div className={`mt-4 bg-gradient-to-br ${post.coverGradient} border border-white/10 rounded-2xl p-5 text-center`}>
+        <p className="text-xs text-white/90 font-medium mb-1">Want a custom solution?</p>
+        <p className="text-[11px] text-white/70 mb-4">Book a free strategy call with our team</p>
         <Link
           href="/contact"
-          className={`inline-flex items-center gap-1.5 text-xs font-semibold ${post.accentColor} bg-zinc-50/60 border border-black/10 px-4 py-2 rounded-xl hover:bg-zinc-50 transition-colors`}
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-900 bg-white border border-transparent px-4 py-2 rounded-xl hover:bg-zinc-100 transition-colors shadow-xs"
         >
           Book a Call <ChevronRight className="w-3.5 h-3.5" />
         </Link>
@@ -319,7 +319,7 @@ export function BlogDetailView({
   }, [post]);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
 
       {/* ── Hero Banner ── */}
       <div className={`relative min-h-[55vh] flex flex-col overflow-hidden bg-gradient-to-br ${post.coverGradient}`}>
@@ -404,7 +404,7 @@ export function BlogDetailView({
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-lg text-zinc-600 leading-relaxed mb-12 border-l-2 border-black/10 pl-5 italic"
+              className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed mb-12 border-l-2 border-zinc-200 dark:border-zinc-700 pl-5 italic"
             >
               {post.content.intro}
             </motion.p>
@@ -422,14 +422,14 @@ export function BlogDetailView({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <h2 className={`text-2xl font-bold mb-5 flex items-center gap-3 ${post.accentColor}`}>
-                    <span className="text-xs font-mono text-zinc-600 bg-zinc-50 border border-black/10 rounded-lg px-2 py-1">
+                    <span className="text-xs font-mono text-zinc-600 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-2 py-1">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {section.heading}
                   </h2>
                   <div className="space-y-4">
                     {section.body.split("\n\n").map((para, j) => (
-                      <p key={j} className="text-zinc-600 leading-relaxed">
+                      <p key={j} className="text-zinc-600 dark:text-zinc-300 leading-relaxed">
                         {para}
                       </p>
                     ))}
@@ -448,13 +448,13 @@ export function BlogDetailView({
               className={`mt-14 p-6 rounded-2xl ${post.accentBg} border`}
             >
               <h3 className={`text-lg font-semibold mb-3 ${post.accentColor}`}>Key Takeaway</h3>
-              <p className="text-zinc-600 leading-relaxed">{post.content.conclusion}</p>
+              <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed">{post.content.conclusion}</p>
             </motion.div>
 
             {/* Mobile Enquiry CTA */}
-            <div className="lg:hidden mt-10 p-5 bg-zinc-50/60 border border-black/10 rounded-2xl text-center">
-              <p className="text-sm font-semibold text-zinc-900 mb-1">Interested in this topic?</p>
-              <p className="text-xs text-zinc-500 mb-4">Get in touch with our team today</p>
+            <div className="lg:hidden mt-10 p-5 bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl text-center shadow-xs">
+              <p className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">Interested in this topic?</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-4">Get in touch with our team today</p>
               <Link
                 href="/contact"
                 className={`inline-flex items-center gap-2 text-sm font-semibold ${post.accentColor} ${post.accentBg} border px-5 py-2.5 rounded-xl`}
@@ -472,8 +472,8 @@ export function BlogDetailView({
       {/* ── Related Posts ── */}
       {related.length > 0 && (
         <section className="relative z-10 w-full max-w-[1800px] mx-auto px-4 pb-20">
-          <div className="border-t border-black/10 pt-12">
-            <h2 className="text-2xl font-bold text-zinc-900 mb-8">Related Articles</h2>
+          <div className="border-t border-zinc-200 dark:border-white/10 pt-12">
+            <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-8">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
               {related.map((r) => {
                 const RelIcon = IconMap[r.icon] ?? Bot;
@@ -481,15 +481,15 @@ export function BlogDetailView({
                   <Link
                     key={r.id}
                     href={`/blog/${r.slug}`}
-                    className="group flex flex-col bg-zinc-50/60 border border-black/10 rounded-2xl p-5 hover:bg-zinc-50 transition-colors"
+                    className="group flex flex-col bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-colors shadow-xs"
                   >
                     <div className={`w-10 h-10 rounded-xl ${r.accentBg} border flex items-center justify-center mb-4`}>
                       <RelIcon className={`w-5 h-5 ${r.accentColor}`} />
                     </div>
-                    <h3 className="text-sm font-semibold text-zinc-900 transition-colors mb-1 leading-snug">
+                    <h3 className="text-sm font-semibold text-zinc-900 dark:text-white transition-colors mb-1 leading-snug">
                       {r.title}
                     </h3>
-                    <p className="text-xs text-zinc-500 mt-auto pt-3 flex items-center gap-1">
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-auto pt-3 flex items-center gap-1">
                       <Clock className="w-3 h-3" /> {r.readTime}
                     </p>
                   </Link>

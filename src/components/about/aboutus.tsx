@@ -44,9 +44,9 @@ const stagger: Variants = {
 
 function Pill({ icon: Icon, label }: { icon: React.ElementType; label: string }) {
   return (
-    <div className="flex items-center gap-2 bg-zinc-100/40 dark:bg-white border border-zinc-200 backdrop-blur-md border border-black/10 dark:border-black/5 rounded-full px-4 py-1.5 shadow-lg w-fit">
-      <Icon className="w-4 h-4 text-zinc-600 dark:text-zinc-600" />
-      <span className="text-xs font-semibold tracking-wider text-zinc-600 dark:text-zinc-600 uppercase">{label}</span>
+    <div className="flex items-center gap-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs w-fit">
+      <Icon className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
+      <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">{label}</span>
     </div>
   );
 }
@@ -84,7 +84,7 @@ function SectionHeader({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
         >
           {heading}{" "}
           <span className="text-[#1ba453]">{italic}</span>
@@ -98,7 +98,7 @@ function SectionHeader({
         viewport={{ once: true }}
         className="max-w-lg lg:pb-2"
       >
-        <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
+        <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
           {sub}
         </p>
       </motion.div>
@@ -110,7 +110,7 @@ function SectionHeader({
 
 function AboutHero() {
   return (
-    <div className="relative min-h-[50vh] lg:min-h-[70vh] flex flex-col overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-black/20 dark:after:via-white/20 after:to-transparent">
+    <div className="relative min-h-[50vh] lg:min-h-[70vh] flex flex-col overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-black/10 dark:after:via-white/10 after:to-transparent">
       
       
 
@@ -123,13 +123,13 @@ function AboutHero() {
         {/* Pill */}
         <motion.div variants={fadeUp} className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
-          <span className="text-xs font-bold tracking-wider text-zinc-600 uppercase">About Hindustaan Innovations</span>
+          <span className="text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-300 uppercase">About Hindustaan Innovations</span>
         </motion.div>
 
         {/* Heading */}
         <motion.h1
           variants={fadeUp}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-black"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-zinc-900 dark:text-white"
         >
           Built for India's
           <br />
@@ -137,7 +137,7 @@ function AboutHero() {
         </motion.h1>
 
         {/* Subheading */}
-        <motion.p variants={fadeUp} className="text-zinc-500 text-base md:text-xl max-w-2xl leading-relaxed">
+        <motion.p variants={fadeUp} className="text-zinc-500 dark:text-zinc-400 text-base md:text-xl max-w-2xl leading-relaxed">
           We are a software development company helping businesses design, build, and scale reliable digital products with practical engineering support.
         </motion.p>
 
@@ -154,10 +154,10 @@ function AboutHero() {
             <motion.div
               variants={fadeUp}
               key={stat.label}
-              className="flex flex-col items-center gap-1 bg-white border border-zinc-200 backdrop-blur-md border border-black/5 rounded-2xl px-4 py-5"
+              className="flex flex-col items-center gap-1 bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl px-4 py-5 shadow-xs"
             >
-              <span className="text-3xl font-bold text-zinc-900">{stat.value}</span>
-              <span className="text-xs text-zinc-500 tracking-wide">{stat.label}</span>
+              <span className="text-3xl font-bold text-zinc-900 dark:text-white">{stat.value}</span>
+              <span className="text-xs text-zinc-500 dark:text-zinc-400 tracking-wide">{stat.label}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -285,18 +285,18 @@ function MissionVision() {
         {/* Mission */}
         <motion.div
           variants={fadeUp}
-          className="group relative flex flex-col gap-6 bg-white rounded-3xl border-t-2 border-black/10 outline outline-black/5 p-8 md:p-10 overflow-hidden"
+          className="group relative flex flex-col gap-6 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 p-8 md:p-10 overflow-hidden shadow-xs"
         >
           <div className="absolute -top-16 -right-16 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-all duration-700" />
-          <div className="p-3 bg-zinc-100 rounded-xl border border-black/5 w-fit">
-            <Target className="w-5 h-5 text-zinc-600" />
+          <div className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 w-fit">
+            <Target className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
           </div>
           <div>
-            <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-2">Mission</p>
-            <h3 className="text-2xl font-bold text-zinc-900 mb-4">
+            <p className="text-xs font-semibold tracking-widest text-zinc-400 dark:text-zinc-500 uppercase mb-2">Mission</p>
+            <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">
               Build Software That Solves Real Problems
             </h3>
-            <p className="text-zinc-500 leading-relaxed">
+            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
               To deliver practical, scalable software that helps growing businesses launch faster, streamline operations, and serve customers better through clean engineering and thoughtful product design.
             </p>
           </div>
@@ -305,18 +305,18 @@ function MissionVision() {
         {/* Vision */}
         <motion.div
           variants={fadeUp}
-          className="group relative flex flex-col gap-6 bg-white rounded-3xl border-t-2 border-black/10 outline outline-black/5 p-8 md:p-10 overflow-hidden"
+          className="group relative flex flex-col gap-6 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 p-8 md:p-10 overflow-hidden shadow-xs"
         >
           <div className="absolute -top-16 -right-16 w-48 h-48 bg-violet-500/5 rounded-full blur-3xl group-hover:bg-violet-500/10 transition-all duration-700" />
-          <div className="p-3 bg-zinc-100 rounded-xl border border-black/5 w-fit">
-            <Eye className="w-5 h-5 text-zinc-600" />
+          <div className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 w-fit">
+            <Eye className="w-5 h-5 text-zinc-600 dark:text-zinc-300" />
           </div>
           <div>
-            <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-2">Vision</p>
-            <h3 className="text-2xl font-bold text-zinc-900 mb-4">
+            <p className="text-xs font-semibold tracking-widest text-zinc-400 dark:text-zinc-500 uppercase mb-2">Vision</p>
+            <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">
               Become India's Most Trusted Technology Partner
             </h3>
-            <p className="text-zinc-500 leading-relaxed">
+            <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed">
               To become the go-to software partner for early-stage and growth-stage companies by delivering dependable products, transparent collaboration, and long-term technical ownership.
             </p>
           </div>
@@ -389,13 +389,13 @@ function OurValues() {
           <motion.div
             variants={fadeUp}
             key={v.title}
-            className="group flex flex-col gap-6 bg-white rounded-3xl border-t-2 border-black/10 outline outline-black/5 px-6 py-10 transition-all duration-300 hover:bg-zinc-50 border border-zinc-200"
+            className="group flex flex-col gap-6 bg-white dark:bg-zinc-900/90 rounded-3xl px-6 py-10 transition-all duration-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-white/10 shadow-xs"
           >
-            <div className="p-4 bg-zinc-100 rounded-xl border border-black/5 w-fit group-hover:scale-110 transition-transform duration-500">
-              <v.icon className="w-5 h-5 text-zinc-500 group-hover:text-zinc-800 transition-colors" />
+            <div className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 w-fit group-hover:scale-110 transition-transform duration-500">
+              <v.icon className="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors" />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900">{v.title}</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">{v.description}</p>
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">{v.title}</h3>
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">{v.description}</p>
           </motion.div>
         ))}
       </motion.div>
@@ -509,7 +509,7 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="group relative flex flex-col items-center text-center gap-5 bg-white rounded-3xl border-t-2 border-black/10 outline outline-black/5 px-7 py-10 transition-all duration-300 hover:bg-zinc-50 border border-zinc-200 overflow-hidden h-full"
+      className="group relative flex flex-col items-center text-center gap-5 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 px-7 py-10 transition-all duration-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 shadow-xs overflow-hidden h-full"
     >
       {/* Glow bg */}
       <div
@@ -521,7 +521,7 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
 
       {/* Avatar */}
       <div className="relative shrink-0">
-        <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-2 border-black/10 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
+        <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-2 border-black/10 dark:border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-white/5">
           <Image
             src={founder.image}
             alt={founder.name}
@@ -531,7 +531,7 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
           />
         </div>
         {/* Online dot */}
-        <div className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-500/90 rounded-full border-2 border-black shadow-[0_0_8px_rgba(74,222,128,0.7)]" />
+        <div className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-green-500/90 rounded-full border-2 border-white dark:border-zinc-900 shadow-[0_0_8px_rgba(74,222,128,0.7)]" />
       </div>
 
       {/* Badge */}
@@ -543,25 +543,12 @@ function FounderCard({ founder }: { founder: (typeof FOUNDERS)[0] }) {
 
       {/* Info */}
       <div className="space-y-1">
-        <h3 className="text-lg font-bold text-zinc-900">{founder.name}</h3>
-        <p className="text-xs font-medium text-zinc-500 tracking-wide">{founder.role}</p>
+        <h3 className="text-lg font-bold text-zinc-900 dark:text-white">{founder.name}</h3>
+        <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400 tracking-wide">{founder.role}</p>
       </div>
 
       {/* Bio */}
-      <p className="text-zinc-500 text-sm leading-relaxed flex-1">{founder.bio}</p>
-
-      {/* LinkedIn Button 
-      <a
-        href={founder.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative z-10 flex items-center gap-2 bg-zinc-50 border border-zinc-200 hover:bg-[#0A66C2]/20 border border-black/10 hover:border-[#0A66C2]/40 text-zinc-500 hover:text-[#0A66C2] px-5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 w-full justify-center"
-      >
-        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg>
-        Connect on LinkedIn
-      </a>*/}
+      <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed flex-1">{founder.bio}</p>
     </motion.div>
   );
 }
@@ -611,7 +598,7 @@ function HowWeHelp() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.1 }}
-        className="w-full bg-white border-t-2 border-black/10 outline outline-black/5 rounded-[2rem] p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="w-full bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-[2rem] p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 shadow-xs"
       >
         {HOW_WE_HELP.map((item, idx) => (
           <motion.div
@@ -621,18 +608,18 @@ function HowWeHelp() {
           >
             {/* Step number + connector */}
             <div className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-xl bg-zinc-100 border border-black/10 flex items-center justify-center text-xs font-bold text-zinc-500 group-hover:text-zinc-900 transition-colors shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-xs font-bold text-zinc-600 dark:text-zinc-300 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors shrink-0">
                 {item.step}
               </div>
               {idx < HOW_WE_HELP.length - 1 && (
-                <div className="w-px flex-1 mt-3 bg-white/5 min-h-8" />
+                <div className="w-px flex-1 mt-3 bg-zinc-200 dark:bg-zinc-800 min-h-8" />
               )}
             </div>
 
             {/* Content */}
             <div className="pb-6">
-              <h3 className="text-lg font-semibold text-zinc-900 mb-2">{item.title}</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">{item.title}</h3>
+              <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">{item.description}</p>
             </div>
           </motion.div>
         ))}
@@ -646,12 +633,12 @@ function HowWeHelp() {
         viewport={{ once: false, amount: 0.3 }}
         className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-14"
       >
-        <p className="text-zinc-500 text-sm">Ready to get started?</p>
+        <p className="text-zinc-500 dark:text-zinc-400 text-sm">Ready to get started?</p>
         <Link href="tel:+917712994005" target="_blank" rel="noopener noreferrer">
 
           <button
             type="button"
-            className="flex items-center gap-2 bg-white border border-zinc-200 hover:bg-zinc-50 text-black px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md"
+            className="flex items-center gap-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 shadow-xs hover:shadow-md"
           >
             Book a Free Call
             <ArrowUpRight className="w-4 h-4" />
@@ -666,10 +653,7 @@ function HowWeHelp() {
 
 export function AboutUs() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
-      {/* Persistent dark background for non-hero sections */}
-      
-
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
       <Navbar2 />
       <AboutHero />
       <OurStory />

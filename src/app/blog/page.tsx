@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="relative min-h-screen flex flex-col text-black overflow-hidden bg-[#f5f5f5]">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
       <BlogHero />
       <BlogGrid />
       <Footer2 />

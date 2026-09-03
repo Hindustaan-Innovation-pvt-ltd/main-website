@@ -59,32 +59,32 @@ export function CareerCtaBanner() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={itemVariants}
-        className="relative w-full rounded-3xl p-10 md:p-16 overflow-hidden bg-white border border-black/10 shadow-2xl"
+        className="relative w-full rounded-3xl p-10 md:p-16 overflow-hidden bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 shadow-2xl"
       >
         <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none" />
 
         <div className="flex flex-col items-center relative z-10">
-          <div className="flex items-center gap-2 mb-6 bg-zinc-900/60 backdrop-blur-md border border-white/5 rounded-full px-4 py-1.5">
-            <Send className="w-4 h-4 text-zinc-600" />
-            <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">
+          <div className="flex items-center gap-2 mb-6 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs">
+            <Send className="w-4 h-4 text-zinc-600 dark:text-zinc-300" />
+            <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">
               {ctaBanner.pill}
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
             {ctaBanner.heading}{" "}
-            <span className="font-serif italic font-light text-zinc-700">
+            <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">
               {ctaBanner.headingItalic}
             </span>
           </h2>
 
-          <p className="text-zinc-600 mb-10 text-lg max-w-xl">
+          <p className="text-zinc-600 dark:text-zinc-400 mb-10 text-lg max-w-xl">
             {ctaBanner.subheading}
           </p>
 
           <HoverBorderGradient
             containerClassName="rounded-xl"
-            className="dark:bg-[#f5f5f5] bg-white text-black dark:text-zinc-900 flex items-center space-x-2 px-8 py-3"
+            className="bg-black dark:bg-zinc-800 text-white flex items-center space-x-2 px-8 py-3 rounded-xl hover:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors"
           >
             <Link href={ctaBanner.ctaLink} >
               <span>{ctaBanner.ctaText}</span>

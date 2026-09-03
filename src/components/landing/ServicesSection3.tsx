@@ -72,7 +72,7 @@ const services = [
 
 export function ServicesSection3() {
   return (
-    <section className="pt-24 pb-12 bg-[#f5f5f5]">
+    <section className="pt-24 pb-12 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-8 md:px-12">
         {/* Header Area */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
@@ -81,7 +81,7 @@ export function ServicesSection3() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-black mb-6"
+              className="inline-flex items-center rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200 mb-6"
             >
               SERVICES
             </motion.div>
@@ -91,7 +91,7 @@ export function ServicesSection3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
               What We <span className="text-[#1ba453]">Build</span>
             </motion.h2>
@@ -104,7 +104,7 @@ export function ServicesSection3() {
             transition={{ delay: 0.2 }}
             className="max-w-[280px] lg:pb-3"
           >
-            <p className="text-sm md:text-sm text-zinc-500 font-medium leading-relaxed">
+            <p className="text-sm md:text-sm text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
               End-to-end product development — from architecture to deployment.
             </p>
           </motion.div>
@@ -119,17 +119,17 @@ export function ServicesSection3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-4 border border-zinc-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+              className="bg-white dark:bg-zinc-900/90 rounded-2xl p-6 md:p-8 flex flex-col gap-4 border border-zinc-200/60 dark:border-white/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-full bg-zinc-50 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1ba453]/10 transition-all duration-300">
-                <service.icon className="w-6 h-6 text-zinc-700 group-hover:text-[#1ba453] transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-full bg-zinc-50 dark:bg-zinc-800 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1ba453]/20 transition-all duration-300">
+                <service.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300 group-hover:text-[#1ba453] transition-colors duration-300" />
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-zinc-900 mb-2 tracking-tight group-hover:text-[#1ba453] transition-colors duration-300">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 tracking-tight group-hover:text-[#1ba453] transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-sm text-zinc-500 leading-relaxed font-medium">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium">
                   {service.description}
                 </p>
               </div>

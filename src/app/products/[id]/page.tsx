@@ -86,7 +86,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
   }
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
       <Navbar2 />
 
 
@@ -95,7 +95,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         <div className="px-6 pt-24 md:pt-32 max-w-7xl mx-auto">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Back to Products</span>
@@ -109,13 +109,13 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900"
+              className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white"
             >
               {solution.title}
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-xl text-zinc-600 max-w-3xl leading-relaxed"
+              className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed"
             >
               {solution.shortDescription}
             </motion.p>
@@ -126,7 +126,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={solution.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-zinc-900 dark:bg-zinc-800 text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
                 >
                   <span>Visit {solution.projectUrl.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -138,7 +138,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).playStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
                     <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
@@ -153,7 +153,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).appStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM15.4674 15.5C15.4674 15.5 14.1953 17 12 17C9.8047 17 8.5326 15.5 8.5326 15.5M15.4674 15.5C15.4674 15.5 16.5 13.3047 16.5 11.1094C16.5 8.91406 14.4844 7.10938 12 7.10938C9.51562 7.10938 7.5 8.91406 7.5 11.1094C7.5 13.3047 8.5326 15.5 8.5326 15.5M15.4674 15.5L8.5326 15.5" />
@@ -168,7 +168,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).partnerPlayStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
                     <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
@@ -183,7 +183,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   href={(solution as any).riderPlayStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#000000] text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 transition-colors group shadow-md"
+                  className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
                     <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
@@ -214,9 +214,9 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               transformOrigin: "center center"
             }}
             transition={{ duration: 0.8 }}
-            className="relative h-[300px] md:h-[600px] rounded-[3rem] md:rounded-[3rem] overflow-hidden border border-white/40 shadow-2xl shadow-white/10"
+            className="relative h-[300px] md:h-[600px] rounded-[3rem] md:rounded-[3rem] overflow-hidden border border-zinc-200/80 dark:border-white/10 shadow-2xl shadow-black/5"
           >
-            <div className="relative w-full h-full bg-white">
+            <div className="relative w-full h-full bg-white dark:bg-zinc-900">
               <Image
                 src={solution.image}
                 alt={solution.title}
@@ -230,7 +230,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         </section>
 
         {/* Detailed Explanation */}
-        <section className="px-6 py-24 bg-white/[0.02] border-y border-black/5">
+        <section className="px-6 py-24 bg-white/[0.02] border-y border-zinc-200/80 dark:border-white/10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={fadeUp}
@@ -239,10 +239,10 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               viewport={{ once: true }}
               className="flex flex-col gap-8"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
-                Transforming the Future with <span className="text-zinc-600 font-serif italic">Next-Gen Technology</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white leading-tight">
+                Transforming the Future with <span className="text-zinc-600 dark:text-zinc-400 font-serif italic">Next-Gen Technology</span>
               </h2>
-              <div className="space-y-6 text-zinc-600 text-lg leading-relaxed text-justify">
+              <div className="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed text-justify">
                 {(solution.fullDescription || solution.description).split('\n').filter(Boolean).map((para: string, i: number) => (
                   <p key={i}>{para.trim()}</p>
                 ))}
@@ -256,10 +256,10 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   { label: "24/7 Support", icon: Sparkles },
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-white/5 border border-black/10 text-zinc-900">
-                      <Check className="w-4 h-4 text-zinc-900" />
+                    <div className="p-2 rounded-lg bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white">
+                      <Check className="w-4 h-4 text-zinc-900 dark:text-white" />
                     </div>
-                    <span className="font-medium text-zinc-700">{feature.label}</span>
+                    <span className="font-medium text-zinc-700 dark:text-zinc-300">{feature.label}</span>
                   </div>
                 ))}
               </div>
@@ -269,11 +269,11 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-[2.5rem] bg-zinc-50 overflow-hidden border border-black/5"
+              className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-[2.5rem] bg-zinc-100 dark:bg-zinc-900/60 overflow-hidden border border-zinc-200 dark:border-white/10"
             >
               {/* Decorative elements or secondary image */}
               <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="w-full h-full rounded-3xl bg-white border border-black/10 shadow-2xl flex items-center justify-center relative group">
+                <div className="w-full h-full rounded-3xl bg-white dark:bg-zinc-850 border border-zinc-200 dark:border-white/10 shadow-2xl flex items-center justify-center relative group">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-50" />
                   <Image src={solution.logo || solution.image} alt={solution.title} fill className="object-contain p-4 rounded-3xl opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
@@ -286,10 +286,10 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         {solution.modules && solution.modules.length > 0 && (
           <section className="px-6 py-32 max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center gap-6 mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900">
-              Comprehensive <span className="font-serif italic text-zinc-600">Modules</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white">
+              Comprehensive <span className="font-serif italic text-zinc-600 dark:text-zinc-400">Modules</span>
             </h2>
-            <p className="text-lg text-zinc-600 max-w-2xl">
+            <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
               Everything you need to manage your institution efficiently in one unified platform.
             </p>
           </div>
@@ -307,13 +307,13 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 <motion.div
                   key={idx}
                   variants={fadeUp}
-                  className="p-8 rounded-[2rem] bg-white/60 border border-black/5 hover:border-black/10 hover:bg-zinc-50/80 transition-all group"
+                  className="p-8 rounded-[2rem] bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 shadow-xs transition-all group"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white/10 transition-all">
-                    <Icon className="w-7 h-7 text-zinc-900" />
+                  <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
+                    <Icon className="w-7 h-7 text-zinc-900 dark:text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-4">{module.title}</h3>
-                  <p className="text-zinc-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-4">{module.title}</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
                     {module.description}
                   </p>
                 </motion.div>
@@ -327,11 +327,11 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
         {solution.faq && (
           <section className="px-6 py-32 max-w-3xl mx-auto">
             <div className="flex flex-col items-center text-center gap-6 mb-16">
-              <span className="px-4 py-1.5 rounded-full bg-white/5 border border-black/10 text-xs font-bold tracking-widest text-zinc-900 uppercase">
+              <span className="px-4 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 text-xs font-bold tracking-widest text-zinc-900 dark:text-zinc-200 uppercase shadow-xs">
                 {solution.faq.pill}
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-zinc-900">
-                {solution.faq.heading} <span className="font-serif italic text-zinc-600">{solution.faq.headingItalic}</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white">
+                {solution.faq.heading} <span className="font-serif italic text-zinc-600 dark:text-zinc-400">{solution.faq.headingItalic}</span>
               </h2>
             </div>
 
@@ -343,17 +343,17 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.05 }}
-                  className="group rounded-3xl border border-black/5 bg-zinc-50/30 overflow-hidden"
+                  className="group rounded-3xl border border-zinc-200/80 dark:border-white/10 bg-white dark:bg-zinc-900/90 shadow-xs overflow-hidden"
                 >
                   <details className="w-full">
                     <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                       <div className="flex items-center gap-4">
                         <HelpCircle className="w-5 h-5 text-zinc-500" />
-                        <h3 className="font-bold text-zinc-900 text-lg">{item.question}</h3>
+                        <h3 className="font-bold text-zinc-900 dark:text-white text-lg">{item.question}</h3>
                       </div>
                       <ChevronDown className="w-5 h-5 text-zinc-500 group-open:rotate-180 transition-transform" />
                     </summary>
-                    <div className="px-6 pb-6 pt-0 text-zinc-600 leading-relaxed pl-[3.25rem]">
+                    <div className="px-6 pb-6 pt-0 text-zinc-600 dark:text-zinc-400 leading-relaxed pl-[3.25rem]">
                       {item.answer}
                     </div>
                   </details>

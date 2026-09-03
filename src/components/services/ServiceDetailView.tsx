@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import { BackgroundEffects } from "@/components/landing/BackgroundEffects";
 import { Navbar2 } from "@/components/landing/navbar2";
-import { FooterBar } from "@/components/landing/FooterBar";
+import Footer2 from "@/components/landing/footer2";
 import servicesData from "@/services.json";
 
 /* ── Icon map ── */
@@ -127,7 +127,7 @@ export function ServiceDetailView({ serviceId }: Props) {
   const relatedCards = category.cards.filter((c: any) => c.id !== card.id).slice(0, 3);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-white text-black">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
 
       {/* ── HERO ── */}
       <div className={`relative min-h-[60vh] flex flex-col overflow-hidden bg-gradient-to-br ${gradient}`}>
@@ -144,16 +144,16 @@ export function ServiceDetailView({ serviceId }: Props) {
           <motion.div variants={itemVariants} className="w-full flex justify-start mb-8 mt-24">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors bg-white/60 backdrop-blur-sm border border-black/10 px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-2 text-sm text-zinc-100 hover:text-white transition-colors bg-white/10 dark:bg-black/30 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full"
             >
               <ArrowLeft className="w-4 h-4" /> Back to Services
             </Link>
           </motion.div>
 
           {/* Category pill */}
-          <motion.div variants={itemVariants} className="flex items-center gap-2 mb-5 bg-white/60 backdrop-blur-md border border-black/10 rounded-full px-4 py-1.5">
-            <Layers className="w-3.5 h-3.5 text-zinc-600" />
-            <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">{category.pill}</span>
+          <motion.div variants={itemVariants} className="flex items-center gap-2 mb-5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5">
+            <Layers className="w-3.5 h-3.5 text-zinc-300" />
+            <span className="text-xs font-bold tracking-widest uppercase text-zinc-200">{category.pill}</span>
           </motion.div>
 
           {/* Icon */}
@@ -175,7 +175,7 @@ export function ServiceDetailView({ serviceId }: Props) {
           <motion.div variants={itemVariants}>
             <Link
               href={`/contact?subject=${encodeURIComponent(card.title)}`}
-              className="inline-flex items-center gap-2 bg-zinc-100 text-zinc-900 hover:bg-white px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-100 px-7 py-3 rounded-xl text-sm font-semibold transition-all duration-200 shadow-lg hover:scale-105"
             >
               Get Started <ArrowUpRight className="w-4 h-4" />
             </Link>
@@ -197,9 +197,9 @@ export function ServiceDetailView({ serviceId }: Props) {
             >
               <div className="flex items-center gap-2 mb-3">
                 <div className={`w-1 h-6 rounded-full ${card.accent.replace("text-", "bg-")}`} />
-                <h2 className="text-2xl font-bold text-zinc-900">What's Included</h2>
+                <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">What's Included</h2>
               </div>
-              <p className="text-zinc-600 mb-8 text-sm leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-400 mb-8 text-sm leading-relaxed">
                 Everything you get when you choose <span className={card.accent}>{card.title}</span> from Hindustaan Innovations.
               </p>
 
@@ -211,12 +211,12 @@ export function ServiceDetailView({ serviceId }: Props) {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.07, duration: 0.4 }}
-                    className={`flex items-center gap-3 p-4 rounded-2xl ${accentBg} border group hover:brightness-125 transition-all`}
+                    className={`flex items-center gap-3 p-4 rounded-2xl ${accentBg} border group hover:brightness-110 transition-all`}
                   >
                     <div className={`w-8 h-8 rounded-xl ${accentBg} border flex items-center justify-center shrink-0`}>
                       <Check className={`w-4 h-4 ${card.accent}`} />
                     </div>
-                    <span className="text-sm font-medium text-zinc-800">{item}</span>
+                    <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -232,7 +232,7 @@ export function ServiceDetailView({ serviceId }: Props) {
             >
               <div className="flex items-center gap-2 mb-8">
                 <div className={`w-1 h-6 rounded-full ${card.accent.replace("text-", "bg-")}`} />
-                <h2 className="text-2xl font-bold text-zinc-900">Our Process</h2>
+                <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">Our Process</h2>
               </div>
 
               <div className="flex flex-col gap-0">
@@ -242,10 +242,10 @@ export function ServiceDetailView({ serviceId }: Props) {
                       <div className={`w-9 h-9 rounded-full ${accentBg} border flex items-center justify-center shrink-0 text-xs font-bold ${card.accent}`}>
                         {String(i + 1).padStart(2, "0")}
                       </div>
-                      {i < 4 && <div className="w-px flex-1 bg-zinc-200 my-1" />}
+                      {i < 4 && <div className="w-px flex-1 bg-zinc-200 dark:bg-zinc-800 my-1" />}
                     </div>
                     <div className="pb-8 pt-1.5">
-                      <p className="text-sm font-semibold text-zinc-800">{step}</p>
+                      <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{step}</p>
                     </div>
                   </div>
                 ))}
@@ -262,14 +262,14 @@ export function ServiceDetailView({ serviceId }: Props) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-zinc-50/60 border border-black/10 rounded-2xl p-6 backdrop-blur-sm"
+              className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-6 shadow-xs"
             >
               <h3 className={`text-sm font-bold mb-4 ${card.accent}`}>Why Choose Us?</h3>
               <ul className="flex flex-col gap-3">
                 {WHY_US.map((point) => (
                   <li key={point} className="flex items-start gap-2.5">
                     <Check className={`w-3.5 h-3.5 mt-0.5 shrink-0 ${card.accent}`} />
-                    <span className="text-xs text-zinc-600 leading-relaxed">{point}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">{point}</span>
                   </li>
                 ))}
               </ul>
@@ -281,7 +281,7 @@ export function ServiceDetailView({ serviceId }: Props) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className={`bg-gradient-to-br ${gradient} border border-black/10 rounded-2xl p-6 text-center`}
+              className={`bg-gradient-to-br ${gradient} border border-white/10 rounded-2xl p-6 text-center shadow-lg`}
             >
               <div className={`w-12 h-12 rounded-2xl ${accentBg} border flex items-center justify-center mx-auto mb-4`}>
                 <Icon className={`w-6 h-6 ${card.accent}`} />
@@ -302,15 +302,15 @@ export function ServiceDetailView({ serviceId }: Props) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="bg-zinc-50/60 border border-black/10 rounded-2xl p-5 backdrop-blur-sm"
+              className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-5 shadow-xs"
             >
-              <p className="text-[10px] font-bold tracking-widest uppercase text-zinc-600 mb-2">Category</p>
+              <p className="text-[10px] font-bold tracking-widest uppercase text-zinc-500 dark:text-zinc-400 mb-2">Category</p>
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4 text-zinc-500" />
-                <span className="text-sm font-semibold text-zinc-600">{category.heading} {category.headingItalic}</span>
+                <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{category.heading} {category.headingItalic}</span>
               </div>
-              <p className="text-xs text-zinc-600 mt-2">{category.subheading}</p>
-              <Link href="/services#categories" className="inline-flex items-center gap-1 text-xs text-zinc-500 hover:text-zinc-800 mt-3 transition-colors">
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">{category.subheading}</p>
+              <Link href="/services#categories" className="inline-flex items-center gap-1 text-xs text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 mt-3 transition-colors">
                 View all in category <ArrowUpRight className="w-3 h-3" />
               </Link>
             </motion.div>
@@ -319,8 +319,8 @@ export function ServiceDetailView({ serviceId }: Props) {
 
         {/* ── Related Services ── */}
         {relatedCards.length > 0 && (
-          <div className="mt-20 pt-12 border-t border-black/10">
-            <h2 className="text-2xl font-bold text-zinc-900 mb-8">Related Services</h2>
+          <div className="mt-20 pt-12 border-t border-zinc-200/80 dark:border-white/10">
+            <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-8">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {relatedCards.map((r: any) => {
                 const RelIcon = IconMap[r.icon] ?? Globe;
@@ -329,13 +329,13 @@ export function ServiceDetailView({ serviceId }: Props) {
                   <Link
                     key={r.id}
                     href={`/services/${r.id}`}
-                    className="group flex flex-col bg-zinc-50/60 border border-black/10 rounded-2xl p-5 hover:bg-zinc-50 transition-all duration-200 hover:border-white/15"
+                    className="group flex flex-col bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800 shadow-xs transition-all duration-200"
                   >
                     <div className={`w-10 h-10 rounded-xl ${rBg} border flex items-center justify-center mb-4`}>
                       <RelIcon className={`w-5 h-5 ${r.accent}`} />
                     </div>
-                    <h3 className="text-sm font-semibold text-zinc-800 group-hover:text-zinc-900 transition-colors mb-2 leading-snug">{r.title}</h3>
-                    <p className="text-xs text-zinc-600 leading-relaxed flex-1">{r.description}</p>
+                    <h3 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors mb-2 leading-snug">{r.title}</h3>
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed flex-1">{r.description}</p>
                     <div className={`inline-flex items-center gap-1 text-xs font-semibold mt-4 ${r.accent}`}>
                       Learn more <ArrowUpRight className="w-3.5 h-3.5" />
                     </div>
@@ -347,7 +347,7 @@ export function ServiceDetailView({ serviceId }: Props) {
         )}
       </div>
 
-      <FooterBar />
+      <Footer2 />
     </div>
   );
 }

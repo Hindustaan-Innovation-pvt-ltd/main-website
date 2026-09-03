@@ -84,21 +84,20 @@ const FAQS = [
 
 export default function SupportPage() {
   return (
-    <div className="relative bg-white text-zinc-900 min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
+    <div className="relative bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 min-h-screen overflow-hidden transition-colors duration-200">
       <Navbar2 />
 
       {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-16 max-w-4xl mx-auto text-center gap-6">
-        <div className="flex items-center gap-2 bg-zinc-50/40 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
-          <HeadphonesIcon className="w-4 h-4 text-zinc-700" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">Support</span>
+        <div className="flex items-center gap-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs">
+          <HeadphonesIcon className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
+          <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">Support</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white">
           We're Here{" "}
-          <span className="font-serif italic font-light text-zinc-700">When You Need Us.</span>
+          <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">When You Need Us.</span>
         </h1>
-        <p className="text-zinc-600 text-lg max-w-2xl leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl leading-relaxed">
           Our team is available 7 days a week to help you with any questions, issues, or project needs.
         </p>
 
@@ -109,11 +108,11 @@ export default function SupportPage() {
             { icon: Zap, label: "1–2 Hr Response", sub: "WhatsApp" },
             { icon: BarChart2, label: "24Hr Response", sub: "Email" },
           ].map((s) => (
-            <div key={s.label} className="flex items-center gap-2 bg-zinc-50/60 border border-black/10 rounded-xl px-4 py-2.5">
-              <s.icon className="w-4 h-4 text-zinc-600" />
+            <div key={s.label} className="flex items-center gap-2 bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-xl px-4 py-2.5 shadow-xs">
+              <s.icon className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
               <div>
-                <p className="text-xs font-semibold text-zinc-200">{s.label}</p>
-                <p className="text-[10px] text-zinc-500">{s.sub}</p>
+                <p className="text-xs font-semibold text-zinc-900 dark:text-white">{s.label}</p>
+                <p className="text-[10px] text-zinc-500 dark:text-zinc-400">{s.sub}</p>
               </div>
             </div>
           ))}
@@ -129,7 +128,7 @@ export default function SupportPage() {
               href={ch.href}
               target={ch.href.startsWith("http") ? "_blank" : undefined}
               rel={ch.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex flex-col gap-5 bg-[#f5f5f5] rounded-3xl border-t-2 border-white/20 outline outline-white/8 p-7 hover:bg-zinc-50/60 transition-all duration-300 relative overflow-hidden"
+              className="group flex flex-col gap-5 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 p-7 hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all duration-300 relative overflow-hidden shadow-xs"
             >
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-white/2 rounded-full blur-3xl group-hover:bg-white/4 transition-all duration-700 pointer-events-none" />
 
@@ -143,11 +142,11 @@ export default function SupportPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-bold text-zinc-900 mb-2">{ch.title}</h2>
-                <p className="text-zinc-600 text-sm leading-relaxed">{ch.desc}</p>
+                <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-2">{ch.title}</h2>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">{ch.desc}</p>
               </div>
 
-              <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-zinc-200 group/link">
+              <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-white group/link">
                 {ch.action}
                 <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
               </div>
@@ -159,21 +158,21 @@ export default function SupportPage() {
       {/* FAQ */}
       <section className="relative z-10 px-4 pb-24 w-full max-w-3xl mx-auto">
         <div className="flex flex-col items-center text-center gap-4 mb-12">
-          <div className="flex items-center gap-2 bg-zinc-50/40 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
-            <BookOpen className="w-4 h-4 text-zinc-700" />
-            <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">FAQ</span>
+          <div className="flex items-center gap-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs">
+            <BookOpen className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
+            <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">FAQ</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
             Frequently Asked{" "}
-            <span className="font-serif italic font-light text-zinc-700">Questions.</span>
+            <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">Questions.</span>
           </h2>
         </div>
 
         <div className="flex flex-col gap-4">
           {FAQS.map((faq) => (
-            <div key={faq.q} className="bg-[#f5f5f5] border border-black/10 rounded-2xl p-6 flex flex-col gap-3">
-              <h3 className="text-base font-semibold text-zinc-900">{faq.q}</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">{faq.a}</p>
+            <div key={faq.q} className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-xs">
+              <h3 className="text-base font-semibold text-zinc-900 dark:text-white">{faq.q}</h3>
+              <p className="text-zinc-600 dark:text-zinc-300 text-sm leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>

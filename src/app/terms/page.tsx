@@ -154,33 +154,32 @@ Last updated: April 27, 2026`,
 
 export default function TermsPage() {
   return (
-    <div className="relative bg-white text-zinc-900 min-h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
+    <div className="relative bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 min-h-screen overflow-hidden transition-colors duration-200">
       <Navbar2 />
 
       {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center px-4 pt-36 pb-12 max-w-3xl mx-auto text-center gap-5">
-        <div className="flex items-center gap-2 bg-zinc-50/40 backdrop-blur-md border border-black/5 rounded-full px-4 py-1.5">
-          <FileText className="w-4 h-4 text-zinc-700" />
-          <span className="text-xs font-semibold tracking-wider text-zinc-700 uppercase">Terms of Service</span>
+        <div className="flex items-center gap-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full px-4 py-1.5 shadow-xs">
+          <FileText className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
+          <span className="text-xs font-semibold tracking-wider text-zinc-800 dark:text-zinc-200 uppercase">Terms of Service</span>
         </div>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
           Clear Terms,{" "}
-          <span className="font-serif italic font-light text-zinc-700">No Surprises.</span>
+          <span className="font-serif italic font-light text-zinc-700 dark:text-zinc-300">No Surprises.</span>
         </h1>
-        <p className="text-zinc-600 text-base leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed">
           These terms govern your use of Hindustaan Innovations services. We've written them to be as clear and fair as possible.
         </p>
-        <p className="text-xs text-zinc-600">Last updated: April 27, 2026</p>
+        <p className="text-xs text-zinc-500 dark:text-zinc-400">Last updated: April 27, 2026</p>
       </section>
 
       {/* Terms content */}
       <section className="relative z-10 px-4 pb-24 w-full max-w-3xl mx-auto">
-        <div className="bg-[#f5f5f5] border border-black/10 rounded-3xl p-8 md:p-12 flex flex-col gap-10">
+        <div className="bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 rounded-3xl p-8 md:p-12 flex flex-col gap-10 shadow-xs">
           {SECTIONS.map((sec) => (
-            <div key={sec.title} className="flex flex-col gap-3 pb-10 border-b border-black/5 last:border-0 last:pb-0">
-              <h2 className="text-lg font-bold text-zinc-900">{sec.title}</h2>
-              <p className="text-zinc-600 text-sm leading-relaxed whitespace-pre-line">{sec.content}</p>
+            <div key={sec.title} className="flex flex-col gap-3 pb-10 border-b border-zinc-200/80 dark:border-white/10 last:border-0 last:pb-0">
+              <h2 className="text-lg font-bold text-zinc-900 dark:text-white">{sec.title}</h2>
+              <p className="text-zinc-600 dark:text-zinc-300 text-sm leading-relaxed whitespace-pre-line">{sec.content}</p>
             </div>
           ))}
         </div>

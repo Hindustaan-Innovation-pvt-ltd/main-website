@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function CareersPage() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] text-black overflow-hidden">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
       <CareerHero />
       <CareerGrid />
       <CareerCtaBanner />

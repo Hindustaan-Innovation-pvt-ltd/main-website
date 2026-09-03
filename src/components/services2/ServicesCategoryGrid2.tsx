@@ -49,7 +49,7 @@ function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accen
       {/* Center hub icon */}
       <div
         ref={centerRef}
-        className={`relative z-10 w-16 h-16 bg-white  rounded-2xl border border-black/10  shadow-[0_0_30px_rgba(0,0,0,0.05)]  flex items-center justify-center ${accent}`}
+        className={`relative z-10 w-16 h-16 bg-white dark:bg-zinc-900 rounded-2xl border border-black/10 dark:border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.05)] dark:shadow-[0_0_30px_rgba(255,255,255,0.04)] flex items-center justify-center ${accent}`}
       >
         {icons[0]}
       </div>
@@ -58,7 +58,7 @@ function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accen
       {icons[1] && (
         <div
           ref={topLeftRef}
-          className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-50 rounded-xl border border-black/10  flex items-center justify-center shadow-lg text-zinc-600  z-10"
+          className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-black/10 dark:border-white/5 flex items-center justify-center shadow-lg text-zinc-600 dark:text-zinc-500 z-10"
         >
           {icons[1]}
         </div>
@@ -66,7 +66,7 @@ function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accen
       {icons[2] && (
         <div
           ref={bottomRightRef}
-          className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-50 rounded-xl border border-black/10  flex items-center justify-center shadow-lg text-zinc-600  z-10"
+          className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-black/10 dark:border-white/5 flex items-center justify-center shadow-lg text-zinc-600 dark:text-zinc-500 z-10"
         >
           {icons[2]}
         </div>
@@ -74,7 +74,7 @@ function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accen
       {icons[3] && (
         <div
           ref={topRightRef}
-          className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-50 rounded-xl border border-black/10  flex items-center justify-center shadow-lg text-zinc-700  z-10"
+          className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-black/10 dark:border-white/5 flex items-center justify-center shadow-lg text-zinc-700 dark:text-zinc-600 z-10"
         >
           {icons[3]}
         </div>
@@ -146,15 +146,15 @@ function TagListGraphic({ tags }: { tags: string[] }) {
           return (
             <div
               key={`${t}-${i}`}
-              className="flex items-center justify-between w-full bg-zinc-50/80 border border-black/10  rounded-xl px-3 py-4 shadow"
+              className="flex items-center justify-between w-full bg-zinc-50/80 dark:bg-zinc-900/80 border border-black/10 dark:border-white/8 rounded-xl px-3 py-4 shadow"
             >
               <div className="flex items-center gap-2">
-                <div className="w-5 h-5 rounded-md bg-zinc-200  flex items-center justify-center shrink-0">
-                  <Icon className="w-3 h-3 text-zinc-600 " />
+                <div className="w-5 h-5 rounded-md bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                  <Icon className="w-3 h-3 text-zinc-600 dark:text-zinc-400" />
                 </div>
-                <span className="text-[11px] text-zinc-700  font-medium">{t}</span>
+                <span className="text-[11px] text-zinc-700 dark:text-zinc-400 font-medium">{t}</span>
               </div>
-              <ArrowUpRight className="w-3 h-3 text-zinc-500  shrink-0" />
+              <ArrowUpRight className="w-3 h-3 text-zinc-500 dark:text-zinc-600 shrink-0" />
             </div>
           );
         })}
@@ -176,7 +176,7 @@ function NodesGraphic({ accent }: { accent: string }) {
       {/* Center hub */}
       <div
         ref={centerRef}
-        className={`relative z-10 w-14 h-14 bg-zinc-100 dark:bg-white rounded-full border border-black/10  flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.05)]  ${accent}`}
+        className={`relative z-10 w-14 h-14 bg-zinc-100 dark:bg-zinc-950 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.05)] dark:shadow-[0_0_20px_rgba(255,255,255,0.05)] ${accent}`}
       >
         <Sparkles className="w-6 h-6" />
       </div>
@@ -184,19 +184,19 @@ function NodesGraphic({ accent }: { accent: string }) {
       {/* Satellite nodes */}
       <div
         ref={topLeftRef}
-        className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/10  flex items-center justify-center text-zinc-700  z-10"
+        className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-100 dark:bg-zinc-900 rounded-full border border-black/10 dark:border-white/5 flex items-center justify-center text-zinc-700 dark:text-zinc-500 z-10"
       >
         <Cpu className="w-4 h-4" />
       </div>
       <div
         ref={topRightRef}
-        className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/10  flex items-center justify-center text-zinc-700  z-10"
+        className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-100 dark:bg-zinc-900 rounded-full border border-black/10 dark:border-white/5 flex items-center justify-center text-zinc-700 dark:text-zinc-500 z-10"
       >
         <Globe className="w-4 h-4" />
       </div>
       <div
         ref={bottomLeftRef}
-        className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-100 rounded-full border border-black/10  flex items-center justify-center text-zinc-700  z-10"
+        className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-100 dark:bg-zinc-900 rounded-full border border-black/10 dark:border-white/5 flex items-center justify-center text-zinc-700 dark:text-zinc-500 z-10"
       >
         <Database className="w-4 h-4" />
       </div>
@@ -325,25 +325,25 @@ function Card({ card }: { card: ServiceCard }) {
     >
       <Link
         href={`/services/${card.id}`}
-        className="flex flex-col flex-1 p-8 bg-white rounded-3xl border border-zinc-200 shadow-sm overflow-hidden relative group transition-all duration-300 hover:border-zinc-300 hover:-translate-y-1 hover:shadow-md"
+        className="flex flex-col flex-1 p-8 bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 shadow-xs overflow-hidden relative group transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:-translate-y-1 hover:shadow-md"
       >
         {/* subtle glow on hover */}
-        <div className="absolute inset-0 bg-linear-to-br from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" />
+        <div className="absolute inset-0 bg-linear-to-br from-black/5 dark:from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" />
 
         {renderGraphic()}
 
         {/* Icon + Title */}
         <div className="flex items-center gap-3 mb-3">
           <div className={`shrink-0 ${card.accent}`}>{card.icon}</div>
-          <h3 className="text-xl font-semibold text-zinc-900 group-hover:text-black transition-colors">{card.title}</h3>
+          <h3 className="text-xl font-semibold text-zinc-900 dark:text-white group-hover:text-black dark:group-hover:text-zinc-100 transition-colors">{card.title}</h3>
         </div>
 
-        <p className="text-zinc-500 text-sm leading-relaxed mb-5">{card.description}</p>
+        <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed mb-5">{card.description}</p>
 
         {/* Sub-items */}
         <div className="mt-auto grid grid-cols-2 gap-x-4 gap-y-1.5 mb-5">
           {card.items.map((item) => (
-            <div key={item} className="flex items-center gap-1.5 text-xs text-zinc-500">
+            <div key={item} className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
               <Check className={`w-3 h-3 shrink-0 ${card.accent}`} />
               {item}
             </div>
@@ -376,12 +376,12 @@ function GroupSection({ group }: { group: Group }) {
             className="max-w-3xl"
           >
             {/* Pill */}
-            <div className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-black mb-6 gap-2">
-              <Layers className="w-3.5 h-3.5 text-zinc-600" />
+            <div className="inline-flex items-center rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200 mb-6 gap-2">
+              <Layers className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-300" />
               {group.pill}
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight">
               {group.heading}{" "}
               <span className="text-[#1ba453]">{group.headingItalic}</span>
             </h2>
@@ -394,7 +394,7 @@ function GroupSection({ group }: { group: Group }) {
             variants={itemVariants}
             className="max-w-sm flex flex-col items-start lg:items-end gap-6"
           >
-            <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed lg:text-right">
+            <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed lg:text-right">
               {group.subheading}
             </p>
           </motion.div>
@@ -413,7 +413,7 @@ function GroupSection({ group }: { group: Group }) {
       </motion.div>
 
       {/* section divider */}
-      <div className="mt-10 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-black/10 to-transparent" />
+      <div className="mt-10 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-black/10 dark:via-white/10 to-transparent" />
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ export function BlogHero() {
   }, []);
 
   return (
-    <div className="relative pt-24 md:pt-28 lg:pt-40 pb-8 lg:pb-20 flex flex-col overflow-hidden bg-[#f5f5f5]">
+    <div className="relative pt-24 md:pt-28 lg:pt-40 pb-8 lg:pb-20 flex flex-col overflow-hidden bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       <Navbar2 />
       {hero ? (
         <motion.section
@@ -65,16 +65,16 @@ export function BlogHero() {
           {/* Pill */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-black mb-6 gap-2"
+            className="inline-flex items-center rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-200 mb-6 gap-2"
           >
-            <BookOpen className="w-3.5 h-3.5 text-zinc-600" />
+            <BookOpen className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-300" />
             {hero.pill}
           </motion.div>
 
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center"
           >
             {hero.heading}{" "}
             <span className="text-[#1ba453]">
@@ -85,7 +85,7 @@ export function BlogHero() {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-base md:text-lg text-zinc-500 max-w-2xl mb-8 text-center"
+            className="text-base md:text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mb-8 text-center"
           >
             {hero.subheading}
           </motion.p>
@@ -93,7 +93,7 @@ export function BlogHero() {
         </motion.section>
       ) : (
         <div className="flex flex-col items-center justify-center flex-1 px-4 py-32">
-          <div className="animate-pulse text-zinc-600">Loading blog content...</div>
+          <div className="animate-pulse text-zinc-600 dark:text-zinc-400">Loading blog content...</div>
         </div>
       )}
     </div>

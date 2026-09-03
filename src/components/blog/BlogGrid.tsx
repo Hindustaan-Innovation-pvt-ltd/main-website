@@ -60,7 +60,7 @@ function BlogCard({ post }: { post: Post }) {
     <motion.article
       variants={cardVariants}
       layout
-      className="group flex flex-col bg-white rounded-3xl border-t-2 border-zinc-200 outline outline-black/5 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 relative"
+      className="group flex flex-col bg-white dark:bg-zinc-900/90 rounded-3xl border border-zinc-200/80 dark:border-white/10 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-500 relative"
     >
       <Link href={`/blog/${post.slug}`} className="flex flex-col flex-1 h-full">
       {/* Gradient banner */}
@@ -82,25 +82,25 @@ function BlogCard({ post }: { post: Post }) {
           <img
             src={post.author.avatar}
             alt={post.author.name}
-            className="w-7 h-7 rounded-full ring-1 ring-black/5 object-cover"
+            className="w-7 h-7 rounded-full ring-1 ring-zinc-200 dark:ring-white/10 object-cover"
           />
           <div>
-            <p className="text-xs text-zinc-700 font-medium leading-none">{post.author.name}</p>
-            <p className="text-[10px] text-zinc-500 leading-none mt-0.5">{post.date}</p>
+            <p className="text-xs text-zinc-700 dark:text-zinc-300 font-medium leading-none">{post.author.name}</p>
+            <p className="text-[10px] text-zinc-500 dark:text-zinc-400 leading-none mt-0.5">{post.date}</p>
           </div>
-          <div className="ml-auto flex items-center gap-1 text-zinc-500">
+          <div className="ml-auto flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
             <Clock className="w-3 h-3" />
             <span className="text-[11px]">{post.readTime}</span>
           </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold text-zinc-900 mb-2 leading-snug group-hover:text-black transition-colors">
+        <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2 leading-snug group-hover:text-black dark:group-hover:text-zinc-100 transition-colors">
           {post.title}
         </h3>
 
         {/* Excerpt */}
-        <p className="text-sm text-zinc-500 leading-relaxed mb-4 flex-1">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4 flex-1">
           {post.excerpt}
         </p>
 
@@ -109,7 +109,7 @@ function BlogCard({ post }: { post: Post }) {
           {post.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium text-zinc-500 bg-zinc-100 border border-black/5 rounded-full px-2.5 py-0.5"
+              className="text-[10px] font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full px-2.5 py-0.5"
             >
               {tag}
             </span>
@@ -201,8 +201,8 @@ export function BlogGrid() {
             disabled={loading}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
               activeCategory === cat.id
-                ? "bg-zinc-100 text-zinc-900 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
-                : "bg-zinc-100/60 border border-white/8 text-zinc-600 hover:text-zinc-200 hover:bg-zinc-800/60 disabled:opacity-50 disabled:cursor-not-allowed"
+                ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-xs"
+                : "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed"
             }`}
           >
             {cat.label}

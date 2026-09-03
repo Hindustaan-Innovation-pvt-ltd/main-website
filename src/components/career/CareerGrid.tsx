@@ -56,21 +56,21 @@ const IconMap: Record<string, React.FC<any>> = {
 function IconClusterGraphic({ icons, accent }: { icons: React.ReactNode[]; accent: string }) {
   return (
     <div className="w-full h-40 flex items-center justify-center mb-6 relative">
-      <div className={`relative z-10 w-16 h-16 bg-zinc-100 rounded-2xl border border-black/10 shadow-[0_0_30px_rgba(255,255,255,0.04)] flex items-center justify-center ${accent}`}>
+      <div className={`relative z-10 w-16 h-16 bg-zinc-100 dark:bg-zinc-800 rounded-2xl border border-zinc-200 dark:border-white/10 shadow-xs flex items-center justify-center ${accent}`}>
         {icons[0]}
       </div>
       {icons[1] && (
-        <div className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
+        <div className="absolute top-[15%] left-[18%] w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200/60 dark:border-white/10 flex items-center justify-center shadow-xs text-zinc-500 dark:text-zinc-400">
           {icons[1]}
         </div>
       )}
       {icons[2] && (
-        <div className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
+        <div className="absolute bottom-[15%] right-[18%] w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200/60 dark:border-white/10 flex items-center justify-center shadow-xs text-zinc-500 dark:text-zinc-400">
           {icons[2]}
         </div>
       )}
       {icons[3] && (
-        <div className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-100 rounded-xl border border-black/5 flex items-center justify-center shadow-lg text-zinc-500">
+        <div className="absolute top-[12%] right-[22%] w-8 h-8 bg-zinc-100 dark:bg-zinc-800 rounded-xl border border-zinc-200/60 dark:border-white/10 flex items-center justify-center shadow-xs text-zinc-500 dark:text-zinc-400">
           {icons[3]}
         </div>
       )}
@@ -86,13 +86,13 @@ function TagListGraphic({ tags }: { tags: string[] }) {
         {loopedTags.map((t, i) => (
           <div
             key={`${t}-${i}`}
-            className={`w-full flex items-center justify-between bg-zinc-100/80 border border-black/5 rounded-md px-3 py-4 shadow ${i % tags.length === 1 ? "w-full" : "w-[90%]"}`}
+            className={`w-full flex items-center justify-between bg-zinc-100/80 dark:bg-zinc-800/80 border border-zinc-200/60 dark:border-white/10 rounded-md px-3 py-4 shadow-xs ${i % tags.length === 1 ? "w-full" : "w-[90%]"}`}
           >
             <div className="flex items-center gap-2">
-              <Check className="w-3 h-3 text-zinc-500" />
-              <span className="text-[11px] text-zinc-500 font-medium">{t}</span>
+              <Check className="w-3 h-3 text-zinc-500 dark:text-zinc-400" />
+              <span className="text-[11px] text-zinc-600 dark:text-zinc-300 font-medium">{t}</span>
             </div>
-            <ArrowUpRight className="w-3 h-3 text-zinc-500" />
+            <ArrowUpRight className="w-3 h-3 text-zinc-500 dark:text-zinc-400" />
           </div>
         ))}
       </AnimatedList>
@@ -103,18 +103,18 @@ function TagListGraphic({ tags }: { tags: string[] }) {
 function NodesGraphic({ accent }: { accent: string }) {
   return (
     <div className="w-full h-40 flex items-center justify-center mb-6 relative">
-      <svg className="absolute inset-0 w-full h-full text-zinc-800 stroke-current z-0">
+      <svg className="absolute inset-0 w-full h-full text-zinc-300 dark:text-zinc-700 stroke-current z-0">
         <line x1="30%" y1="30%" x2="70%" y2="70%" strokeWidth="1" />
         <line x1="70%" y1="25%" x2="50%" y2="50%" strokeWidth="1" />
         <line x1="25%" y1="65%" x2="50%" y2="50%" strokeWidth="1" />
       </svg>
-      <div className={`relative z-10 w-14 h-14 bg-white rounded-full border border-black/10 flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.05)] ${accent}`}>
+      <div className={`relative z-10 w-14 h-14 bg-white dark:bg-zinc-800 rounded-full border border-zinc-200 dark:border-white/10 flex items-center justify-center shadow-xs ${accent}`}>
         <Zap className="w-6 h-6" />
       </div>
-      <div className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Cpu className="w-4 h-4" /></div>
-      <div className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Shield className="w-4 h-4" /></div>
-      <div className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Database className="w-4 h-4" /></div>
-      <div className="absolute bottom-[18%] right-[20%] w-9 h-9 bg-zinc-100 rounded-full border border-black/5 flex items-center justify-center text-zinc-500"><Waypoints className="w-4 h-4" /></div>
+      <div className="absolute top-[18%] left-[22%] w-9 h-9 bg-zinc-100 dark:bg-zinc-800 rounded-full border border-zinc-200/60 dark:border-white/10 flex items-center justify-center text-zinc-500 dark:text-zinc-400"><Cpu className="w-4 h-4" /></div>
+      <div className="absolute top-[15%] right-[22%] w-9 h-9 bg-zinc-100 dark:bg-zinc-800 rounded-full border border-zinc-200/60 dark:border-white/10 flex items-center justify-center text-zinc-500 dark:text-zinc-400"><Shield className="w-4 h-4" /></div>
+      <div className="absolute bottom-[18%] left-[20%] w-9 h-9 bg-zinc-100 dark:bg-zinc-800 rounded-full border border-zinc-200/60 dark:border-white/10 flex items-center justify-center text-zinc-500 dark:text-zinc-400"><Database className="w-4 h-4" /></div>
+      <div className="absolute bottom-[18%] right-[20%] w-9 h-9 bg-zinc-100 dark:bg-zinc-800 rounded-full border border-zinc-200/60 dark:border-white/10 flex items-center justify-center text-zinc-500 dark:text-zinc-400"><Waypoints className="w-4 h-4" /></div>
     </div>
   );
 }
@@ -205,7 +205,7 @@ function JobCardComponent({ card }: { card: JobCard }) {
       whileHover="hover"
       whileTap={{ scale: 0.98 }}
       custom={cardHoverVariants}
-      className="flex flex-col p-8 bg-white rounded-2xl border border-black/10 overflow-hidden relative group"
+      className="flex flex-col p-8 bg-white dark:bg-zinc-900/90 rounded-2xl border border-zinc-200/80 dark:border-white/10 overflow-hidden relative group shadow-xs hover:shadow-xl transition-all"
     >
       {/* Animated border glow on hover */}
       <motion.div
@@ -228,14 +228,14 @@ function JobCardComponent({ card }: { card: JobCard }) {
 
         <div className="flex items-center gap-3 mb-3">
           <div className={`shrink-0 ${card.accent}`}>{resolvedIcon}</div>
-          <h3 className="text-lg font-semibold text-zinc-900">{card.title}</h3>
+          <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">{card.title}</h3>
         </div>
 
-        <p className="text-zinc-500 text-sm leading-relaxed mb-5">{Truncate(card.description, 80)}</p>
+        <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed mb-5">{Truncate(card.description, 80)}</p>
 
         <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 mb-6">
           {card.items.map((item) => (
-            <div key={item} className="flex items-center gap-1.5 text-xs text-zinc-500">
+            <div key={item} className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-400">
               <Check className={`w-3 h-3 shrink-0 ${card.accent}`} />
               {item}
             </div>
@@ -246,7 +246,7 @@ function JobCardComponent({ card }: { card: JobCard }) {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <Link href={`/career/${card.id}`} className="inline-flex items-center justify-center w-full gap-2 bg-black/5 hover:bg-white/10 border border-black/10 text-zinc-900 px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">
+          <Link href={`/career/${card.id}`} className="inline-flex items-center justify-center w-full gap-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">
             View Details <ArrowUpRight className="w-4 h-4" />
           </Link>
         </motion.div>
@@ -268,10 +268,10 @@ function DepartmentSection({ dept }: { dept: Department }) {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-zinc-200 rounded-full mb-6 shadow-sm w-fit"
+            className="inline-flex items-center gap-2 px-3 py-1 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full mb-6 shadow-xs w-fit"
           >
-            <LayoutGrid className="w-3.5 h-3.5 text-zinc-700" />
-            <span className="text-[10px] font-bold tracking-wider uppercase text-zinc-800">
+            <LayoutGrid className="w-3.5 h-3.5 text-zinc-700 dark:text-zinc-300" />
+            <span className="text-[10px] font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200">
               {dept.pill}
             </span>
           </motion.div>
@@ -281,7 +281,7 @@ function DepartmentSection({ dept }: { dept: Department }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
           >
             {dept.heading} <span className="text-[#1ba453]">{dept.headingItalic}</span>
           </motion.h2>
@@ -294,7 +294,7 @@ function DepartmentSection({ dept }: { dept: Department }) {
           transition={{ delay: 0.2 }}
           className="max-w-md lg:pb-2"
         >
-          <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
+          <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
             {dept.subheading}
           </p>
         </motion.div>
@@ -312,7 +312,7 @@ function DepartmentSection({ dept }: { dept: Department }) {
         ))}
       </motion.div>
 
-      <div className="mt-8 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-white/8 to-transparent" />
+      <div className="mt-8 lg:mt-20 w-full h-px bg-linear-to-r from-transparent via-zinc-200 dark:via-white/10 to-transparent" />
     </section>
   );
 }

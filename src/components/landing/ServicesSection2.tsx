@@ -41,15 +41,15 @@ const AnimatedCursor = ({ color, name, iconColor, x = "translate-x-12", y = "tra
 
 function SaasProductUI() {
   return (
-    <div className="absolute inset-0 p-6 flex gap-4 overflow-hidden items-end">
+    <div className="absolute inset-0 p-6 flex gap-4 overflow-hidden items-end bg-zinc-50/50 dark:bg-zinc-950/40">
       {/* Window 1 */}
-      <div className="flex-1 bg-white border border-zinc-100 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] flex flex-col h-[90%] relative">
-        <div className="h-8 border-b border-zinc-100 flex items-center px-3 bg-zinc-50/50">
-          <div className="w-24 h-2 bg-zinc-200 rounded-full"></div>
+      <div className="flex-1 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] dark:shadow-[0_0_30px_rgba(0,0,0,0.3)] flex flex-col h-[90%] relative">
+        <div className="h-8 border-b border-zinc-100 dark:border-white/10 flex items-center px-3 bg-zinc-50/50 dark:bg-zinc-800/60">
+          <div className="w-24 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
         <div className="flex-1 flex p-3 gap-3">
           <div className="w-1/3 flex flex-col gap-3">
-            <div className="w-6 h-6 rounded-full bg-zinc-200"></div>
+            <div className="w-6 h-6 rounded-full bg-zinc-200 dark:bg-zinc-700"></div>
             <div className="relative py-1">
               <div className="h-2 w-full rounded-full bg-[#1ba453]"></div>
               
@@ -63,25 +63,25 @@ function SaasProductUI() {
                 </svg>
               </div>
             </div>
-            <div className="h-2 w-full bg-zinc-100 rounded-full"></div>
-            <div className="h-2 w-3/4 bg-zinc-100 rounded-full"></div>
-            <div className="h-2 w-full bg-zinc-100 rounded-full"></div>
+            <div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+            <div className="h-2 w-3/4 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+            <div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
           </div>
           <div className="flex-1 grid grid-rows-2 gap-3">
-             <div className="bg-zinc-50/50 rounded-lg border border-zinc-100 p-2"></div>
-             <div className="bg-zinc-50/50 rounded-lg border border-zinc-100 p-2"></div>
+             <div className="bg-zinc-50/50 dark:bg-zinc-800/50 rounded-lg border border-zinc-100 dark:border-white/5 p-2"></div>
+             <div className="bg-zinc-50/50 dark:bg-zinc-800/50 rounded-lg border border-zinc-100 dark:border-white/5 p-2"></div>
           </div>
         </div>
       </div>
 
       {/* Window 2 */}
-      <div className="flex-1 bg-white border border-zinc-100 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] flex flex-col h-[90%] relative">
-        <div className="h-8 border-b border-zinc-100 flex items-center px-3 bg-zinc-50/50">
-          <div className="w-24 h-2 bg-zinc-200 rounded-full"></div>
+      <div className="flex-1 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] dark:shadow-[0_0_30px_rgba(0,0,0,0.3)] flex flex-col h-[90%] relative">
+        <div className="h-8 border-b border-zinc-100 dark:border-white/10 flex items-center px-3 bg-zinc-50/50 dark:bg-zinc-800/60">
+          <div className="w-24 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
         <div className="flex-1 flex p-3 gap-3">
           <div className="w-1/3 flex flex-col gap-3">
-            <div className="w-6 h-6 rounded-full bg-zinc-200"></div>
+            <div className="w-6 h-6 rounded-full bg-zinc-200 dark:bg-zinc-700"></div>
             <div className="relative py-1 mt-6">
               <div className="h-2 w-full rounded-full bg-[#3b82f6]"></div>
               
@@ -95,12 +95,12 @@ function SaasProductUI() {
                 </svg>
               </div>
             </div>
-            <div className="h-2 w-full bg-zinc-100 rounded-full"></div>
-            <div className="h-2 w-3/4 bg-zinc-100 rounded-full"></div>
+            <div className="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+            <div className="h-2 w-3/4 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
           </div>
           <div className="flex-1 grid grid-rows-2 gap-3">
-             <div className="bg-zinc-50/50 rounded-lg border border-zinc-100 p-2"></div>
-             <div className="bg-zinc-50/50 rounded-lg border border-zinc-100 p-2"></div>
+             <div className="bg-zinc-50/50 dark:bg-zinc-800/50 rounded-lg border border-zinc-100 dark:border-white/5 p-2"></div>
+             <div className="bg-zinc-50/50 dark:bg-zinc-800/50 rounded-lg border border-zinc-100 dark:border-white/5 p-2"></div>
           </div>
         </div>
       </div>
@@ -110,25 +110,25 @@ function SaasProductUI() {
 
 function WebsiteDesignUI() {
   return (
-    <div className="absolute inset-0 p-6 flex items-center justify-center overflow-hidden bg-zinc-50/50">
+    <div className="absolute inset-0 p-6 flex items-center justify-center overflow-hidden bg-zinc-50/50 dark:bg-zinc-950/40">
       {/* Large Window */}
-      <div className="absolute w-[85%] h-[120%] bg-white border border-zinc-100 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.03)] -rotate-3 left-4 top-12 flex flex-col">
-        <div className="h-8 border-b border-zinc-100 flex items-center justify-between px-3">
-           <div className="w-5 h-5 bg-zinc-200 rounded-full"></div>
+      <div className="absolute w-[85%] h-[120%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.03)] dark:shadow-[0_0_30px_rgba(0,0,0,0.3)] -rotate-3 left-4 top-12 flex flex-col">
+        <div className="h-8 border-b border-zinc-100 dark:border-white/10 flex items-center justify-between px-3 bg-zinc-50/50 dark:bg-zinc-800/60">
+           <div className="w-5 h-5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
            <div className="flex gap-1">
-             <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
-             <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
-             <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
+             <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+             <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+             <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
            </div>
            <div className="flex gap-1">
-             <div className="w-3 h-3 bg-zinc-200 rounded-full"></div>
-             <div className="w-3 h-3 bg-zinc-200 rounded-full"></div>
+             <div className="w-3 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+             <div className="w-3 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
            </div>
         </div>
         <div className="flex-1 flex flex-col items-center pt-8 px-8 gap-3">
-          <div className="w-3/4 h-3 bg-zinc-200 rounded-full mb-1"></div>
-          <div className="w-2/3 h-2.5 bg-zinc-200 rounded-full"></div>
-          <div className="w-3/4 h-2.5 bg-zinc-200 rounded-full"></div>
+          <div className="w-3/4 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-1"></div>
+          <div className="w-2/3 h-2.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+          <div className="w-3/4 h-2.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
           
           <div className="relative mt-2">
             <div className="w-12 h-3 bg-[#1ba453] rounded-full"></div>
@@ -136,30 +136,30 @@ function WebsiteDesignUI() {
           </div>
           
           <div className="w-full flex gap-3 mt-8">
-            <div className="flex-1 bg-zinc-50 rounded-lg h-24"></div>
-            <div className="flex-1 bg-zinc-50 rounded-lg h-24"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-24 border border-zinc-100 dark:border-white/5"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-24 border border-zinc-100 dark:border-white/5"></div>
           </div>
         </div>
       </div>
 
       {/* Mobile Window */}
-      <div className="absolute w-[35%] h-[110%] bg-white border border-zinc-100 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.08)] rotate-2 right-6 top-20 flex flex-col p-1.5 z-10">
+      <div className="absolute w-[35%] h-[110%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.08)] dark:shadow-[0_0_40px_rgba(0,0,0,0.4)] rotate-2 right-6 top-20 flex flex-col p-1.5 z-10">
          <div className="h-6 flex items-center justify-between px-2 mb-2">
-            <div className="w-3 h-3 bg-zinc-200 rounded-full"></div>
-            <div className="w-4 h-1 bg-zinc-200 rounded-full"></div>
+            <div className="w-3 h-3 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+            <div className="w-4 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
          </div>
-         <div className="flex-1 border border-zinc-100 rounded-2xl bg-zinc-50/50 flex flex-col items-center pt-8 px-3 gap-2">
-            <div className="w-full h-2 bg-zinc-200 rounded-full"></div>
-            <div className="w-5/6 h-2 bg-zinc-200 rounded-full"></div>
-            <div className="w-full h-2 bg-zinc-200 rounded-full"></div>
+         <div className="flex-1 border border-zinc-100 dark:border-white/10 rounded-2xl bg-zinc-50/50 dark:bg-zinc-800/50 flex flex-col items-center pt-8 px-3 gap-2">
+            <div className="w-full h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+            <div className="w-5/6 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+            <div className="w-full h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
             
             <div className="relative mt-2">
               <div className="w-8 h-2.5 bg-[#1ba453] rounded-full"></div>
             </div>
          </div>
          <div className="h-1/3 flex flex-col gap-2 mt-2">
-            <div className="flex-1 bg-zinc-50 rounded-xl border border-zinc-100"></div>
-            <div className="flex-1 bg-zinc-50 rounded-xl border border-zinc-100"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-xl border border-zinc-100 dark:border-white/5"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-xl border border-zinc-100 dark:border-white/5"></div>
          </div>
       </div>
     </div>
@@ -168,28 +168,28 @@ function WebsiteDesignUI() {
 
 function WebMobileAppsUI() {
   return (
-    <div className="absolute inset-0 p-4 flex items-center justify-center overflow-hidden bg-zinc-50/50">
+    <div className="absolute inset-0 p-4 flex items-center justify-center overflow-hidden bg-zinc-50/50 dark:bg-zinc-950/40">
       {/* Arrows (Background) */}
-      <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-        <path d="M 120 180 L 160 180" stroke="#d4d4d8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
-        <path d="M 270 180 L 300 180 L 300 120 L 320 120" stroke="#d4d4d8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
-        <path d="M 270 180 L 300 180 L 300 240 L 320 240" stroke="#d4d4d8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
+      <svg className="absolute inset-0 w-full h-full text-zinc-300 dark:text-zinc-700" style={{ zIndex: 0 }}>
+        <path d="M 120 180 L 160 180" stroke="currentColor" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
+        <path d="M 270 180 L 300 180 L 300 120 L 320 120" stroke="currentColor" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
+        <path d="M 270 180 L 300 180 L 300 240 L 320 240" stroke="currentColor" strokeWidth="1.5" fill="none" markerEnd="url(#arrowhead)"/>
         <defs>
           <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
-            <polygon points="0 0, 6 2, 0 4" fill="#d4d4d8" />
+            <polygon points="0 0, 6 2, 0 4" fill="currentColor" />
           </marker>
         </defs>
       </svg>
       
       {/* Screen 1 (Left) */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 w-[28%] h-[70%] bg-white border border-zinc-100 rounded-2xl shadow-sm flex flex-col p-2 z-10">
+      <div className="absolute left-6 top-1/2 -translate-y-1/2 w-[28%] h-[70%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-[0_0_20px_rgba(0,0,0,0.3)] flex flex-col p-2 z-10">
         <div className="h-4 flex items-center justify-between px-1 mb-2">
-          <div className="flex gap-1"><div className="w-4 h-1 bg-zinc-200 rounded-full"/><div className="w-4 h-1 bg-zinc-200 rounded-full"/></div>
-          <div className="w-3 h-1 bg-zinc-200 rounded-full"></div>
+          <div className="flex gap-1"><div className="w-4 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"/><div className="w-4 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"/></div>
+          <div className="w-3 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center gap-2">
-          <div className="w-16 h-2 bg-zinc-200 rounded-full"></div>
-          <div className="w-24 h-1.5 bg-zinc-100 rounded-full"></div>
+          <div className="w-16 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
         </div>
         <div className="mt-auto flex flex-col gap-2 pb-2">
           <div className="relative">
@@ -197,54 +197,54 @@ function WebMobileAppsUI() {
             <AnimatedCursor color="#3b82f6" name="Designer" top="-top-5" left="left-2" delay="delay-100" />
           </div>
           <div className="flex gap-2 px-2">
-            <div className="flex-1 bg-zinc-50 rounded-lg h-12"></div>
-            <div className="flex-1 bg-zinc-50 rounded-lg h-12"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-12 border border-zinc-100 dark:border-white/5"></div>
+            <div className="flex-1 bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-12 border border-zinc-100 dark:border-white/5"></div>
           </div>
         </div>
       </div>
 
       {/* Screen 2 (Center) */}
-      <div className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[28%] h-[70%] bg-white border border-zinc-100 rounded-2xl shadow-sm flex flex-col p-2 z-10">
+      <div className="absolute left-[38%] top-1/2 -translate-y-1/2 w-[28%] h-[70%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-[0_0_20px_rgba(0,0,0,0.3)] flex flex-col p-2 z-10">
         <div className="h-4 flex items-center justify-between px-1 mb-2">
-          <div className="w-6 h-1 bg-zinc-200 rounded-full"></div>
+          <div className="w-6 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
-        <div className="w-full bg-zinc-50 rounded-lg h-10 mb-2"></div>
+        <div className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-10 mb-2 border border-zinc-100 dark:border-white/5"></div>
         <div className="flex-1 grid grid-cols-2 gap-2">
-          <div className="bg-zinc-50 rounded-lg relative">
+          <div className="bg-zinc-50 dark:bg-zinc-800/80 rounded-lg relative border border-zinc-100 dark:border-white/5">
             <div className="absolute bottom-2 left-2 w-8 h-2 bg-[#1ba453] rounded-full"></div>
             <AnimatedCursor color="#1ba453" name="You" iconColor="#f97316" top="-top-3" left="left-1" />
           </div>
-          <div className="bg-zinc-50 rounded-lg"></div>
-          <div className="bg-zinc-50 rounded-lg"></div>
-          <div className="bg-zinc-50 rounded-lg"></div>
+          <div className="bg-zinc-50 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5"></div>
+          <div className="bg-zinc-50 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5"></div>
+          <div className="bg-zinc-50 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5"></div>
         </div>
       </div>
 
       {/* Screen 3 (Top Right) */}
-      <div className="absolute right-4 top-[10%] w-[28%] h-[70%] bg-white border border-zinc-100 rounded-2xl shadow-sm flex flex-col p-2 z-10">
+      <div className="absolute right-4 top-[10%] w-[28%] h-[70%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-[0_0_20px_rgba(0,0,0,0.3)] flex flex-col p-2 z-10">
         <div className="h-4 flex items-center justify-between px-1 mb-2">
-          <div className="w-6 h-1 bg-zinc-200 rounded-full"></div>
-          <div className="w-3 h-1 bg-zinc-200 rounded-full"></div>
+          <div className="w-6 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+          <div className="w-3 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
         <div className="flex-1 flex flex-col gap-2 items-center justify-center mt-2">
-          <div className="w-16 h-2 bg-zinc-200 rounded-full"></div>
-          <div className="w-24 h-1.5 bg-zinc-100 rounded-full mb-4"></div>
+          <div className="w-16 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full mb-4"></div>
           <div className="relative self-start ml-2">
             <div className="w-10 h-2.5 bg-purple-500 rounded-full"></div>
             <AnimatedCursor color="#a855f7" name="Designer" top="-top-5" left="left-2" delay="delay-200" />
           </div>
-          <div className="w-full bg-zinc-50 rounded-lg h-20 mt-2"></div>
+          <div className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-20 mt-2 border border-zinc-100 dark:border-white/5"></div>
         </div>
       </div>
       
       {/* Screen 4 (Bottom Right) */}
-      <div className="absolute right-4 bottom-[-40%] w-[28%] h-[70%] bg-white border border-zinc-100 rounded-2xl shadow-sm flex flex-col p-2 z-10 opacity-70">
+      <div className="absolute right-4 bottom-[-40%] w-[28%] h-[70%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-[0_0_20px_rgba(0,0,0,0.3)] flex flex-col p-2 z-10 opacity-70">
         <div className="h-4 flex items-center justify-between px-1 mb-2">
-          <div className="w-6 h-1 bg-zinc-200 rounded-full"></div>
+          <div className="w-6 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
         </div>
         <div className="w-full flex flex-col gap-2">
-          <div className="w-full bg-zinc-50 rounded-lg h-8"></div>
-          <div className="w-full bg-zinc-50 rounded-lg h-8"></div>
+          <div className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-8 border border-zinc-100 dark:border-white/5"></div>
+          <div className="w-full bg-zinc-50 dark:bg-zinc-800/80 rounded-lg h-8 border border-zinc-100 dark:border-white/5"></div>
         </div>
       </div>
     </div>
@@ -253,63 +253,63 @@ function WebMobileAppsUI() {
 
 function UiUxConsultationUI() {
   return (
-    <div className="absolute inset-0 p-4 flex items-center justify-center overflow-hidden bg-zinc-50/50">
+    <div className="absolute inset-0 p-4 flex items-center justify-center overflow-hidden bg-zinc-50/50 dark:bg-zinc-950/40">
       {/* Background Main Dashboard */}
-      <div className="absolute w-[85%] h-[110%] bg-white border border-zinc-100 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] top-8 flex flex-col z-0">
-        <div className="h-8 border-b border-zinc-100 px-4 flex items-center gap-2">
+      <div className="absolute w-[85%] h-[110%] bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-t-xl shadow-[0_0_30px_rgba(0,0,0,0.03)] dark:shadow-[0_0_30px_rgba(0,0,0,0.3)] top-8 flex flex-col z-0">
+        <div className="h-8 border-b border-zinc-100 dark:border-white/10 px-4 flex items-center gap-2 bg-zinc-50/50 dark:bg-zinc-800/60">
            <div className="relative">
              <div className="w-32 h-2.5 bg-[#1ba453] rounded-full"></div>
              <AnimatedCursor color="#1ba453" name="You" iconColor="#f97316" top="-top-4" left="left-16" />
            </div>
         </div>
         <div className="flex-1 flex gap-4 p-4">
-           <div className="w-1/4 bg-zinc-50/80 rounded-lg border border-zinc-100"></div>
+           <div className="w-1/4 bg-zinc-50/80 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5"></div>
            <div className="flex-1 flex flex-col gap-4">
              <div className="flex gap-4">
-               <div className="flex-1 bg-zinc-50/80 rounded-lg border border-zinc-100 h-20"></div>
-               <div className="flex-1 bg-zinc-50/80 rounded-lg border border-zinc-100 h-20"></div>
+               <div className="flex-1 bg-zinc-50/80 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5 h-20"></div>
+               <div className="flex-1 bg-zinc-50/80 dark:bg-zinc-800/80 rounded-lg border border-zinc-100 dark:border-white/5 h-20"></div>
              </div>
              {/* Bar Chart Area */}
              <div className="flex-1 flex items-end gap-3 px-4 pb-4">
-                <div className="w-6 h-8 bg-zinc-200 rounded-full"></div>
-                <div className="w-6 h-16 bg-zinc-200 rounded-full"></div>
+                <div className="w-6 h-8 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+                <div className="w-6 h-16 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
                 <div className="relative">
                   <div className="w-6 h-24 bg-yellow-400 rounded-full"></div>
                   <AnimatedCursor color="#eab308" name="Designer" top="-top-6" left="-left-2" delay="delay-300" />
                 </div>
-                <div className="w-6 h-12 bg-zinc-200 rounded-full"></div>
-                <div className="w-6 h-6 bg-zinc-200 rounded-full"></div>
+                <div className="w-6 h-12 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+                <div className="w-6 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
              </div>
            </div>
         </div>
       </div>
 
       {/* Floating Widget 1 (Left) */}
-      <div className="absolute left-2 top-[30%] w-36 h-28 bg-white border border-zinc-100 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] z-10 p-3 flex flex-col gap-2">
+      <div className="absolute left-2 top-[30%] w-36 h-28 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.4)] z-10 p-3 flex flex-col gap-2">
          <div className="relative">
            <div className="w-10 h-2.5 bg-purple-500 rounded-full"></div>
            <AnimatedCursor color="#a855f7" name="Designer" top="-top-5" left="-left-1" delay="delay-100" />
          </div>
-         <div className="w-16 h-1.5 bg-zinc-100 rounded-full mt-2"></div>
-         <div className="w-full h-10 bg-zinc-50/80 rounded-md mt-auto"></div>
+         <div className="w-16 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full mt-2"></div>
+         <div className="w-full h-10 bg-zinc-50/80 dark:bg-zinc-800/80 rounded-md mt-auto border border-zinc-100 dark:border-white/5"></div>
       </div>
 
       {/* Floating Widget 2 (Right) */}
-      <div className="absolute right-2 top-[45%] w-56 h-32 bg-white border border-zinc-100 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] z-20 p-4 flex flex-col">
+      <div className="absolute right-2 top-[45%] w-56 h-32 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/10 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.4)] z-20 p-4 flex flex-col">
          <div className="flex justify-between items-center px-2 pt-2">
-            <div className="w-8 h-8 rounded-full border-4 border-zinc-100"></div>
+            <div className="w-8 h-8 rounded-full border-4 border-zinc-100 dark:border-zinc-800"></div>
             <div className="relative">
               <div className="w-10 h-10 rounded-full border-4 border-blue-500 border-t-transparent -rotate-45"></div>
               <AnimatedCursor color="#3b82f6" name="Designer" top="-top-4" left="left-4" delay="delay-200" />
             </div>
-            <div className="w-8 h-8 rounded-full border-4 border-zinc-100"></div>
+            <div className="w-8 h-8 rounded-full border-4 border-zinc-100 dark:border-zinc-800"></div>
          </div>
          <div className="flex justify-between px-3 mt-4">
-           <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
-           <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
-           <div className="w-6 h-1.5 bg-zinc-200 rounded-full"></div>
+           <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+           <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+           <div className="w-6 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
          </div>
-         <div className="w-full h-8 bg-zinc-50/80 rounded-md mt-auto"></div>
+         <div className="w-full h-8 bg-zinc-50/80 dark:bg-zinc-800/80 rounded-md mt-auto border border-zinc-100 dark:border-white/5"></div>
       </div>
     </div>
   );
@@ -317,7 +317,7 @@ function UiUxConsultationUI() {
 
 export function ServicesSection2() {
   return (
-    <section className="py-24 bg-[#f5f5f5]">
+    <section className="py-24 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12">
         
         {/* Header Area */}
@@ -327,9 +327,9 @@ export function ServicesSection2() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-3 py-1 bg-white border border-zinc-200 rounded-full mb-6 shadow-sm"
+              className="inline-block px-3 py-1 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-full mb-6 shadow-xs"
             >
-              <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-800">
+              <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-800 dark:text-zinc-200">
                 Services
               </span>
             </motion.div>
@@ -339,7 +339,7 @@ export function ServicesSection2() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
               From ideas into high-impact digital solutions That <span className="text-[#1ba453]">engage</span> and <span className="text-[#1ba453]">convert.</span>
             </motion.h2>
@@ -352,7 +352,7 @@ export function ServicesSection2() {
             transition={{ delay: 0.2 }}
             className="max-w-sm lg:pb-2"
           >
-            <p className="text-sm md:text-base text-zinc-500 font-medium leading-relaxed">
+            <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
               From early-stage startups to growing businesses, teams trust us to design products that ship, scale, and deliver real results.
             </p>
           </motion.div>
@@ -367,14 +367,14 @@ export function ServicesSection2() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1, type: "spring", bounce: 0.3 }}
-              className="bg-white rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-zinc-200/60 flex flex-col h-[450px] md:h-[550px] overflow-hidden group hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-zinc-900/90 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 shadow-xs border border-zinc-200/60 dark:border-white/10 flex flex-col h-[450px] md:h-[550px] overflow-hidden group hover:shadow-md transition-all"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-8 z-10">
+              <h3 className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-white mb-8 z-10">
                 {service.title}
               </h3>
               
               {/* Image Placeholder Container */}
-              <div className="relative flex-1 w-full mt-auto rounded-2xl overflow-hidden group-hover:scale-[1.02] max-lg:group-data-[in-view=true]:scale-[1.02] transition-transform duration-500 ease-out flex items-center justify-center">
+              <div className="relative flex-1 w-full mt-auto rounded-2xl overflow-hidden group-hover:scale-[1.02] max-lg:group-data-[in-view=true]:scale-[1.02] transition-transform duration-500 ease-out flex items-center justify-center bg-zinc-50/70 dark:bg-zinc-950/60 border border-zinc-100 dark:border-white/5">
                 {/* 
                   === YOUR IMAGES GO HERE === 
                   Uncomment the Image tag below and place your images in the public folder.
