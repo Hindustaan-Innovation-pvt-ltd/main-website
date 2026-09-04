@@ -207,7 +207,7 @@ export function FooterBar() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <span className="text-xs text-zinc-600">{copyright} · All rights reserved.</span>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center flex-nowrap whitespace-nowrap gap-3.5 sm:gap-5">
             {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
               <a
                 key={item}
@@ -219,7 +219,7 @@ export function FooterBar() {
                       .replace(/\s+/g, "-")
                       .replace(/[^\w\-]/g, "")}`
                 }
-                className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors"
+                className="text-xs text-zinc-600 hover:text-zinc-400 transition-colors shrink-0"
               >
                 {item}
               </a>
