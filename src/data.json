@@ -577,6 +577,7 @@
         "image": "/karmanisht.png",
         "logo": "/karmanisht-logo.png",
         "projectUrl": "https://www.karmanisht.com",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.karmanisht",
         "faq": {
           "pill": "FAQ",
           "heading": "Common",
@@ -646,7 +647,7 @@
         "description": "Hindustaan Mart is a comprehensive marketplace e-commerce platform.",
         "fullDescription": "Hindustaan Mart is a complete marketplace e-commerce solution, connecting buyers and sellers across a robust digital ecosystem. Providing an intuitive interface and secure transactions.",
         "image": "/hindutaanmart.png",
-        "logo": "/martlogo.png",
+        "logo": "/Hindustaan_mart_logo.jpeg",
         "projectUrl": "https://allindiahub.com",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hindustaanmart",
         "appStoreUrl": "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",

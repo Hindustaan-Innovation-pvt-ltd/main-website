@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, Hexagon, Heart, Zap, Sun, Pizza, Map } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Heart, Zap, Sun, Pizza, Map } from "lucide-react";
 
 const HoverOverlay = ({ href }: { href?: string }) => {
   const content = (
@@ -83,62 +83,151 @@ export function ProductSection() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-          {/* Card 1: Vidyum (Large Horizontal) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
-          >
-            <div className="flex justify-between items-center mb-8 relative z-10">
-              <div className="flex items-center gap-2">
-                <Hexagon className="w-5 h-5 text-zinc-400" />
-                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-lg">Vidyum</span>
+          {/* Vidyum Section (50-50% Equal Width Cards) */}
+          <div className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Card 1: Vidyum Website (Left Side) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+            >
+              <div className="flex justify-between items-center mb-8 relative z-10">
+                <div className="flex items-center gap-3">
+                  <Image src="/vidyum.png" alt="Vidyum Logo" width={32} height={32} className="w-8 h-8 object-contain rounded-md" />
+                  <span className="font-bold text-zinc-800 dark:text-zinc-100 text-xl">Vidyum</span>
+                </div>
+                <a
+                  href="https://vidyum.hindustaan.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+                >
+                  EdTech Platform <ArrowUpRight className="w-4 h-4" />
+                </a>
               </div>
-              <a
-                href="https://vidyum.hindustaan.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
-              >
-                Dashboard Design <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
 
-            {/* Project Image */}
-            <div className="relative flex w-full rounded-t-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500">
-              <Image
-                src="/vidyum.jpeg"
-                alt="Vidyum Dashboard"
-                width={1200}
-                height={800}
-                className="w-full h-auto object-cover object-top"
-                unoptimized
-              />
-            </div>
-            <HoverOverlay href="https://vidyum.hindustaan.in/" />
-          </motion.div>
+              {/* Project Image */}
+              <div className="relative flex-1 w-full min-h-[300px] sm:min-h-[380px] rounded-t-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500">
+                <Image
+                  src="/Vidyum_home.png"
+                  alt="Vidyum Website"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <HoverOverlay href="https://vidyum.hindustaan.in/" />
+            </motion.div>
 
-          {/* Card 2: Karmanisht (Small Vertical) */}
+            {/* Card 2: Vidyum Dashboard (Right Side) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+            >
+              <div className="flex justify-between items-center mb-8 relative z-10">
+                <div className="flex items-center gap-3">
+                  <Image src="/vidyum.png" alt="Vidyum Logo" width={32} height={32} className="w-8 h-8 object-contain rounded-md" />
+                  <span className="font-bold text-zinc-800 dark:text-zinc-100 text-xl">Vidyum</span>
+                </div>
+                <a
+                  href="https://vidyum.hindustaan.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+                >
+                  EdTech Platform <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Dashboard Image */}
+              <div className="relative flex-1 w-full min-h-[300px] sm:min-h-[380px] rounded-t-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 shadow-[0_10px_40px_rgba(0,0,0,0.1)] group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500">
+                <Image
+                  src="/vidyum_dashboard.png"
+                  alt="Vidyum Dashboard"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <HoverOverlay href="https://vidyum.hindustaan.in/" />
+            </motion.div>
+          </div>
+
+          {/* Card 3: Karmanisht Website (Left Side) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+            transition={{ delay: 0.2 }}
+            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex flex-wrap justify-between items-center mb-12 relative z-10 gap-4">
+            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
               <div className="flex items-center gap-4">
                 <Image src="/karmanisht-logo.png" alt="Karmanisht Logo" width={48} height={48} className="w-12 h-12 object-contain" />
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Karmanisht</span>
               </div>
-              <div className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer">
+              <a
+                href="https://www.karmanisht.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
                 Services Marketplace <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Browser Mockup */}
+            <div className="relative flex w-full rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 overflow-hidden shadow-lg group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500 flex-col">
+              {/* Browser Top Bar */}
+              <div className="h-6 bg-zinc-200/50 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
               </div>
+              {/* Screen Area */}
+              <div className="bg-white dark:bg-zinc-900 relative w-full flex">
+                <Image
+                  src="/karmanisht_site.png"
+                  alt="Karmanisht Website"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-cover object-top"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="https://www.karmanisht.com" />
+          </motion.div>
+
+          {/* Card 4: Karmanisht Mobile App (Right Side) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/karmanisht-logo.png" alt="Karmanisht Logo" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Karmanisht</span>
+              </div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.karmanisht"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Services Marketplace <ArrowUpRight className="w-4 h-4" />
+              </a>
             </div>
 
             {/* Mobile Mockup */}
-            <div className="relative flex justify-center pt-0 pb-6 px-4 -mt-4 sm:-mt-8">
+            <div className="relative flex justify-center pt-2 pb-2 px-4 mt-0 sm:mt-1">
               <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
                 <Image
                   src="/kamanisht-mobile.png"
@@ -150,10 +239,10 @@ export function ProductSection() {
                 />
               </div>
             </div>
-            <HoverOverlay />
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.karmanisht" />
           </motion.div>
 
-          {/* Card 3: Marketplace App Design */}
+          {/* Card 5: Marketplace App Design */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +256,7 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-xl">Marketplace</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer">
-                Mobile App <ArrowUpRight className="w-4 h-4" />
+                E-Commerce Platform <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
 
@@ -190,7 +279,7 @@ export function ProductSection() {
             <HoverOverlay href="https://play.google.com/store/apps/details?id=com.hindustaanmart" />
           </motion.div>
 
-          {/* Card 4: Hindustaan Mart */}
+          {/* Card 6: Hindustaan Mart */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +320,7 @@ export function ProductSection() {
             <HoverOverlay href="https://www.hindustaanmart.in/" />
           </motion.div>
 
-          {/* Card 6: Bhukkadh Website */}
+          {/* Card 7: Bhukkadh Website */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -245,7 +334,7 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Bhukkadh</span>
               </div>
               <div className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer">
-                Website <ArrowUpRight className="w-4 h-4" />
+                Food Delivery Platform <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
 
@@ -272,7 +361,7 @@ export function ProductSection() {
             <HoverOverlay href="https://bhukkadh.hindustaan.in/" />
           </motion.div>
 
-          {/* Card 5: Bhukkadh */}
+          {/* Card 8: Bhukkadh Mobile App */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -291,7 +380,7 @@ export function ProductSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
-                Mobile App <ArrowUpRight className="w-4 h-4" />
+                Food Delivery Platform <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -311,7 +400,7 @@ export function ProductSection() {
             <HoverOverlay href="https://play.google.com/store/apps/details?id=com.bhukkhad" />
           </motion.div>
 
-          {/* Card 7: Ghumakkadh Mobile App */}
+          {/* Card 9: Ghumakkadh Mobile App */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +419,7 @@ export function ProductSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
-                Mobile App <ArrowUpRight className="w-4 h-4" />
+                Ride-Hailing Platform <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -350,7 +439,7 @@ export function ProductSection() {
             <HoverOverlay href="https://play.google.com/store/apps/details?id=com.ghumakkadh" />
           </motion.div>
 
-          {/* Card 8: Ghumakkadh Website */}
+          {/* Card 10: Ghumakkadh Website */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -369,7 +458,7 @@ export function ProductSection() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
-                Website <ArrowUpRight className="w-4 h-4" />
+                Ride-Hailing Platform <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
 
