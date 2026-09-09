@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { AccessDeniedCard } from "@/components/employee/AccessDeniedCard";
 import { VerifiedProfileCard } from "@/components/employee/VerifiedProfileCard";
-import { verifyEmployeeAccess } from "@/lib/employee";
+import { verifyEmployeeAccess } from "@/lib/employeeServer";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Official Employee Verification | Hindustaan Innovations",

@@ -1,6 +1,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { isAuthenticatedAdmin } from "@/lib/adminAuth";
 import type { Employee } from "@/lib/employee";
@@ -86,6 +87,13 @@ export async function POST(request: Request) {
     employees.push(newEmployee);
     await writeEmployeesFile(employees);
 
+    try {
+      revalidatePath("/verify", "layout");
+      revalidatePath("/private/employee-badges");
+    } catch (e) {
+      console.error("Revalidation error:", e);
+    }
+
     return NextResponse.json(
       { success: true, employee: newEmployee },
       { status: 201 },
@@ -159,6 +167,13 @@ export async function PUT(request: Request) {
     employees[index] = updatedEmployee;
     await writeEmployeesFile(employees);
 
+    try {
+      revalidatePath("/verify", "layout");
+      revalidatePath("/private/employee-badges");
+    } catch (e) {
+      console.error("Revalidation error:", e);
+    }
+
     return NextResponse.json({ success: true, employee: updatedEmployee });
   } catch (error) {
     console.error("Error updating employee:", error);
@@ -208,6 +223,14 @@ export async function DELETE(request: Request) {
     }
 
     await writeEmployeesFile(filtered);
+
+    try {
+      revalidatePath("/verify", "layout");
+      revalidatePath("/private/employee-badges");
+    } catch (e) {
+      console.error("Revalidation error:", e);
+    }
+
     return NextResponse.json({
       success: true,
       message: `Employee ${id} deleted.`,
