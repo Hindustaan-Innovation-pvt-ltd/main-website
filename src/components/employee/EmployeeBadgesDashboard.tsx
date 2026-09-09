@@ -87,8 +87,8 @@ export function EmployeeBadgesDashboard({
     (e) =>
       e.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       e.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      e.department.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      e.designation.toLowerCase().includes(searchTerm.toLowerCase()),
+      e.designation.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      e.location.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const verificationUrl = selectedEmp
@@ -138,13 +138,13 @@ export function EmployeeBadgesDashboard({
       id: selectedEmp.id,
       name: selectedEmp.name,
       designation: selectedEmp.designation,
-      department: selectedEmp.department,
       status: selectedEmp.status,
       email: selectedEmp.email,
       phone: selectedEmp.phone,
       location: selectedEmp.location,
       photo: selectedEmp.photo,
       bio: selectedEmp.bio || "",
+      emergencyContact: selectedEmp.emergencyContact || "",
     });
     setFormError("");
     setIsEditModalOpen(true);
@@ -191,13 +191,13 @@ export function EmployeeBadgesDashboard({
     setFormData({
       name: "",
       designation: "",
-      department: "Engineering",
       status: "Active",
       email: "",
       phone: "+91 ",
-      location: "Bangalore Innovation Hub, India",
+      location: "Patna HQ / Bangalore Innovation Hub, India",
       photo: "/logo.png",
       bio: "",
+      emergencyContact: "+91 88035 55558",
     });
     setFormError("");
     setIsAddModalOpen(true);
@@ -544,8 +544,8 @@ export function EmployeeBadgesDashboard({
                     <div className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5 leading-snug">
                       {selectedEmp.designation}
                     </div>
-                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5">
-                      {selectedEmp.department}
+                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 truncate max-w-[240px]">
+                      {selectedEmp.location}
                     </div>
 
                     {/* QR Code in Badge */}
@@ -800,17 +800,20 @@ export function EmployeeBadgesDashboard({
 
                 <div>
                   <label
-                    htmlFor="edit-department"
+                    htmlFor="edit-emergencyContact"
                     className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
                   >
-                    Department
+                    Emergency Contact No.
                   </label>
                   <input
-                    id="edit-department"
+                    id="edit-emergencyContact"
                     type="text"
-                    value={formData.department || ""}
+                    value={formData.emergencyContact || ""}
                     onChange={(e) =>
-                      setFormData({ ...formData, department: e.target.value })
+                      setFormData({
+                        ...formData,
+                        emergencyContact: e.target.value,
+                      })
                     }
                     className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                   />
@@ -1003,18 +1006,21 @@ export function EmployeeBadgesDashboard({
 
                 <div>
                   <label
-                    htmlFor="add-department"
+                    htmlFor="add-emergencyContact"
                     className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
                   >
-                    Department
+                    Emergency Contact No.
                   </label>
                   <input
-                    id="add-department"
+                    id="add-emergencyContact"
                     type="text"
-                    placeholder="e.g. Engineering & AI"
-                    value={formData.department || ""}
+                    placeholder="+91 88035 55558"
+                    value={formData.emergencyContact || ""}
                     onChange={(e) =>
-                      setFormData({ ...formData, department: e.target.value })
+                      setFormData({
+                        ...formData,
+                        emergencyContact: e.target.value,
+                      })
                     }
                     className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                   />

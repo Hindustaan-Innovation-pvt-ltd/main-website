@@ -1,20 +1,8 @@
 "use client";
 
-import {
-  Building2,
-  Check,
-  CheckCircle2,
-  ExternalLink,
-  Mail,
-  MapPin,
-  Phone,
-  Share2,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { CheckCircle2, ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import type { Employee } from "@/lib/employee";
 
 interface VerifiedProfileCardProps {
@@ -22,20 +10,6 @@ interface VerifiedProfileCardProps {
 }
 
 export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    if (typeof window !== "undefined") {
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2500);
-      } catch {
-        // ignore
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen py-8 sm:py-14 px-4 sm:px-6 flex flex-col items-center justify-center bg-gradient-to-b from-zinc-100 via-zinc-50 to-zinc-100 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 relative selection:bg-emerald-500 selection:text-white">
       {/* Background ambient lighting glows */}
@@ -45,8 +19,6 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
       </div>
 
       <div className="w-full max-w-xl relative z-10">
-       
-
         {/* Main Card Container */}
         <div className="bg-white/95 dark:bg-zinc-900/95 backdrop-blur-2xl border border-zinc-200/90 dark:border-zinc-800 rounded-3xl shadow-2xl shadow-zinc-900/10 dark:shadow-black/50 overflow-hidden">
           {/* Card Top Banner (Dedicated Company Header) */}
@@ -99,14 +71,12 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
 
               {/* Name & Designation */}
               <div className="text-center sm:text-left flex-1 min-w-0">
-              
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight truncate">
                   {employee.name}
                 </h1>
                 <p className="text-sm sm:text-base font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
                   {employee.designation}
                 </p>
-               
               </div>
             </div>
 
@@ -179,8 +149,6 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
 
             {/* Action Buttons Row */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-
-
               <Link
                 href="/"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-semibold transition-all shadow-sm"

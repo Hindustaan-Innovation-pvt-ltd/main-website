@@ -4,16 +4,13 @@ export interface Employee {
   id: string;
   name: string;
   designation: string;
-  department: string;
   status: "Active" | "Inactive";
-  joiningDate: string;
   email: string;
   phone: string;
   location: string;
   photo: string;
   bio?: string;
   verificationToken: string;
-  bloodGroup?: string;
   emergencyContact?: string;
 }
 
@@ -61,7 +58,6 @@ export function verifyEmployeeAccess(
     return { isValid: false, employee, reason: "MISSING_TOKEN" };
   }
 
-  // Constant-time like comparison to avoid timing leak
   const cleanToken = token.trim();
   if (cleanToken !== employee.verificationToken) {
     return { isValid: false, employee, reason: "INVALID_TOKEN" };

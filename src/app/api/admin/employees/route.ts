@@ -73,23 +73,14 @@ export async function POST(request: Request) {
       id,
       name: body.name?.trim() || "New Employee",
       designation: body.designation?.trim() || "Software Engineer",
-      department: body.department?.trim() || "Engineering",
       status: body.status === "Inactive" ? "Inactive" : "Active",
-      joiningDate:
-        body.joiningDate?.trim() ||
-        new Date().toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "short",
-          year: "numeric",
-        }),
       email: body.email?.trim() || `emp${nextNum}@hindustaan.in`,
       phone: body.phone?.trim() || "+91 88035 55558",
       location: body.location?.trim() || "Patna / Bangalore Hub, India",
       photo: body.photo?.trim() || "/logo.png",
       bio: body.bio?.trim() || "",
       verificationToken,
-      bloodGroup: body.bloodGroup?.trim() || undefined,
-      emergencyContact: body.emergencyContact?.trim() || undefined,
+      emergencyContact: body.emergencyContact?.trim() || "+91 88035 55558",
     };
 
     employees.push(newEmployee);
@@ -143,16 +134,12 @@ export async function PUT(request: Request) {
     const existing = employees[index];
 
     const updatedEmployee: Employee = {
-      ...existing,
+      id: existing.id,
       name: body.name !== undefined ? body.name.trim() : existing.name,
       designation:
         body.designation !== undefined
           ? body.designation.trim()
           : existing.designation,
-      department:
-        body.department !== undefined
-          ? body.department.trim()
-          : existing.department,
       status: body.status === "Inactive" ? "Inactive" : "Active",
       email: body.email !== undefined ? body.email.trim() : existing.email,
       phone: body.phone !== undefined ? body.phone.trim() : existing.phone,
@@ -163,6 +150,10 @@ export async function PUT(request: Request) {
       verificationToken:
         existing.verificationToken ||
         `hi_sec_${crypto.randomBytes(12).toString("hex")}`,
+      emergencyContact:
+        body.emergencyContact !== undefined
+          ? body.emergencyContact.trim()
+          : existing.emergencyContact,
     };
 
     employees[index] = updatedEmployee;
