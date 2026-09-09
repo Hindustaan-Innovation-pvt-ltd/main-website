@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, CheckCircle2, ExternalLink, Landmark, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Employee } from "@/lib/employee";
@@ -142,6 +142,36 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
                   </div>
                   <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                     {employee.location}
+                  </div>
+                </div>
+              </div>
+
+              {/* Head Office Address */}
+              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/70 dark:border-zinc-800 flex items-start gap-3.5 shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-200/60 dark:border-blue-800/50 mt-0.5">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    Head Office Address
+                  </div>
+                  <div className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mt-0.5">
+                    {employee.headOfficeAddress || "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001"}
+                  </div>
+                </div>
+              </div>
+
+              {/* Registered Office Address */}
+              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/70 dark:border-zinc-800 flex items-start gap-3.5 shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 border border-indigo-200/60 dark:border-indigo-800/50 mt-0.5">
+                  <Landmark className="w-4 h-4" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[10px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    Registered Office Address
+                  </div>
+                  <div className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mt-0.5">
+                    {employee.registeredOfficeAddress || "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"}
                   </div>
                 </div>
               </div>

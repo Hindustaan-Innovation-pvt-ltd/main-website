@@ -82,6 +82,12 @@ export async function POST(request: Request) {
       bio: body.bio?.trim() || "",
       verificationToken,
       emergencyContact: body.emergencyContact?.trim() || "+91 88035 55558",
+      headOfficeAddress:
+        body.headOfficeAddress?.trim() ||
+        "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
+      registeredOfficeAddress:
+        body.registeredOfficeAddress?.trim() ||
+        "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428",
     };
 
     employees.push(newEmployee);
@@ -162,6 +168,16 @@ export async function PUT(request: Request) {
         body.emergencyContact !== undefined
           ? body.emergencyContact.trim()
           : existing.emergencyContact,
+      headOfficeAddress:
+        body.headOfficeAddress !== undefined
+          ? body.headOfficeAddress.trim()
+          : existing.headOfficeAddress ||
+            "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
+      registeredOfficeAddress:
+        body.registeredOfficeAddress !== undefined
+          ? body.registeredOfficeAddress.trim()
+          : existing.registeredOfficeAddress ||
+            "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428",
     };
 
     employees[index] = updatedEmployee;

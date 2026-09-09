@@ -2,6 +2,7 @@
 
 import {
   AlertTriangle,
+  Building2,
   Check,
   Copy,
   Download,
@@ -145,6 +146,12 @@ export function EmployeeBadgesDashboard({
       photo: selectedEmp.photo,
       bio: selectedEmp.bio || "",
       emergencyContact: selectedEmp.emergencyContact || "",
+      headOfficeAddress:
+        selectedEmp.headOfficeAddress ||
+        "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
+      registeredOfficeAddress:
+        selectedEmp.registeredOfficeAddress ||
+        "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428",
     });
     setFormError("");
     setIsEditModalOpen(true);
@@ -198,6 +205,10 @@ export function EmployeeBadgesDashboard({
       photo: "/logo.png",
       bio: "",
       emergencyContact: "+91 88035 55558",
+      headOfficeAddress:
+        "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
+      registeredOfficeAddress:
+        "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428",
     });
     setFormError("");
     setIsAddModalOpen(true);
@@ -695,6 +706,36 @@ export function EmployeeBadgesDashboard({
                     </div>
                   </div>
                 </div>
+
+                {/* Official Corporate Addresses Box */}
+                <div className="bg-zinc-100/80 dark:bg-zinc-900/60 rounded-3xl p-5 border border-zinc-200 dark:border-zinc-800 text-xs space-y-3">
+                  <div className="font-semibold text-zinc-800 dark:text-zinc-200 flex items-center gap-1.5">
+                    <Building2 className="w-4 h-4 text-blue-500" />
+                    Official Corporate Addresses:
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="p-3 rounded-xl bg-white dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700">
+                      <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
+                        Head Office Address
+                      </div>
+                      <div className="text-xs text-zinc-800 dark:text-zinc-200 mt-0.5 leading-relaxed">
+                        {selectedEmp.headOfficeAddress ||
+                          "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001"}
+                      </div>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-white dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700">
+                      <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
+                        Registered Office Address
+                      </div>
+                      <div className="text-xs text-zinc-800 dark:text-zinc-200 mt-0.5 leading-relaxed">
+                        {selectedEmp.registeredOfficeAddress ||
+                          "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -868,6 +909,50 @@ export function EmployeeBadgesDashboard({
                     value={formData.location || ""}
                     onChange={(e) =>
                       setFormData({ ...formData, location: e.target.value })
+                    }
+                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                  />
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="edit-headOfficeAddress"
+                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
+                  >
+                    Head Office Address
+                  </label>
+                  <input
+                    id="edit-headOfficeAddress"
+                    type="text"
+                    placeholder="CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001"
+                    value={formData.headOfficeAddress || ""}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        headOfficeAddress: e.target.value,
+                      })
+                    }
+                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                  />
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="edit-registeredOfficeAddress"
+                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
+                  >
+                    Registered Office Address
+                  </label>
+                  <input
+                    id="edit-registeredOfficeAddress"
+                    type="text"
+                    placeholder="Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"
+                    value={formData.registeredOfficeAddress || ""}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        registeredOfficeAddress: e.target.value,
+                      })
                     }
                     className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                   />
@@ -1100,6 +1185,50 @@ export function EmployeeBadgesDashboard({
                     value={formData.location || ""}
                     onChange={(e) =>
                       setFormData({ ...formData, location: e.target.value })
+                    }
+                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                  />
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="add-headOfficeAddress"
+                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
+                  >
+                    Head Office Address
+                  </label>
+                  <input
+                    id="add-headOfficeAddress"
+                    type="text"
+                    placeholder="CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001"
+                    value={formData.headOfficeAddress || ""}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        headOfficeAddress: e.target.value,
+                      })
+                    }
+                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                  />
+                </div>
+
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="add-registeredOfficeAddress"
+                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
+                  >
+                    Registered Office Address
+                  </label>
+                  <input
+                    id="add-registeredOfficeAddress"
+                    type="text"
+                    placeholder="Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"
+                    value={formData.registeredOfficeAddress || ""}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        registeredOfficeAddress: e.target.value,
+                      })
                     }
                     className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                   />

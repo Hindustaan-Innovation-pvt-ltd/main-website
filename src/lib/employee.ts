@@ -12,6 +12,8 @@ export interface Employee {
   bio?: string;
   verificationToken: string;
   emergencyContact?: string;
+  headOfficeAddress?: string;
+  registeredOfficeAddress?: string;
 }
 
 export const EMPLOYEES: Employee[] = employeesFallback as Employee[];
