@@ -13,5 +13,20 @@
     "emergencyContact": "+91 88035 55558",
     "headOfficeAddress": "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
     "registeredOfficeAddress": "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"
+  },
+  {
+    "id": "HI-EMP-2026-002",
+    "name": "Vivek Sharma",
+    "designation": "Marketing & Sales Head",
+    "status": "Active",
+    "email": "vivek@hindustaan.in",
+    "phone": "+91 9527274098",
+    "location": "Patna HQ / Bangalore Innovation Hub, India",
+    "photo": "/Vivek.jpeg",
+    "bio": "\"Driving growth and strategic partnerships at Hindustaan Innovations Private Limited, scaling market reach, and delivering high-impact tech solutions to global clients.\"",
+    "verificationToken": "hi_sec_2ab06b81265bafcab89596fd",
+    "emergencyContact": "+91 9527274098",
+    "headOfficeAddress": "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001",
+    "registeredOfficeAddress": "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"
   }
 ]
