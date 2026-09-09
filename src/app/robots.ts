@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/_next/'],
+      disallow: ['/verify/', '/private/', '/_next/'],
     },
     sitemap: 'https://hindustaan.in/sitemap.xml', // Sitemap Index → references sitemap-main, sitemap-services, sitemap-blog
   }
