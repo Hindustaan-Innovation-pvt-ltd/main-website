@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, CheckCircle2, ExternalLink, Landmark, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, CheckCircle2, ExternalLink, Landmark, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Employee } from "@/lib/employee";
@@ -130,21 +130,6 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
                 </div>
                 <ExternalLink className="w-4 h-4 text-zinc-400 group-hover:text-teal-500 shrink-0 transition-colors" />
               </a>
-
-              {/* Office Location */}
-              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/70 dark:border-zinc-800 flex items-center gap-3.5 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 border border-purple-200/60 dark:border-purple-800/50">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-[10px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
-                    Office Location
-                  </div>
-                  <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                    {employee.location}
-                  </div>
-                </div>
-              </div>
 
               {/* Head Office Address */}
               <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/70 dark:border-zinc-800 flex items-start gap-3.5 shadow-xs">

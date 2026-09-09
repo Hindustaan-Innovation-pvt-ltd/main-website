@@ -89,7 +89,7 @@ export function EmployeeBadgesDashboard({
       e.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       e.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
       e.designation.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      e.location.toLowerCase().includes(searchTerm.toLowerCase()),
+      (e.location ? e.location.toLowerCase().includes(searchTerm.toLowerCase()) : false),
   );
 
   const verificationUrl = selectedEmp
@@ -201,7 +201,7 @@ export function EmployeeBadgesDashboard({
       status: "Active",
       email: "",
       phone: "+91 ",
-      location: "Patna HQ / Bangalore Innovation Hub, India",
+      location: "",
       photo: "/logo.png",
       bio: "",
       emergencyContact: "+91 88035 55558",
@@ -555,9 +555,11 @@ export function EmployeeBadgesDashboard({
                     <div className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5 leading-snug">
                       {selectedEmp.designation}
                     </div>
-                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 truncate max-w-[240px]">
-                      {selectedEmp.location}
-                    </div>
+                    {selectedEmp.location && (
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-0.5 truncate max-w-[240px]">
+                        {selectedEmp.location}
+                      </div>
+                    )}
 
                     {/* QR Code in Badge */}
                     <div className="mt-4 p-2 bg-white rounded-xl shadow-inner border border-zinc-200">
@@ -896,23 +898,6 @@ export function EmployeeBadgesDashboard({
                   />
                 </div>
 
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="edit-location"
-                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
-                  >
-                    Office / Hub Location
-                  </label>
-                  <input
-                    id="edit-location"
-                    type="text"
-                    value={formData.location || ""}
-                    onChange={(e) =>
-                      setFormData({ ...formData, location: e.target.value })
-                    }
-                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-                  />
-                </div>
 
                 <div className="sm:col-span-2">
                   <label
@@ -1171,24 +1156,6 @@ export function EmployeeBadgesDashboard({
                   />
                 </div>
 
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="add-location"
-                    className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase mb-1"
-                  >
-                    Office / Hub Location
-                  </label>
-                  <input
-                    id="add-location"
-                    type="text"
-                    placeholder="e.g. Patna HQ / Bangalore Innovation Hub, India"
-                    value={formData.location || ""}
-                    onChange={(e) =>
-                      setFormData({ ...formData, location: e.target.value })
-                    }
-                    className="w-full px-3 py-2 rounded-xl text-xs bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
-                  />
-                </div>
 
                 <div className="sm:col-span-2">
                   <label

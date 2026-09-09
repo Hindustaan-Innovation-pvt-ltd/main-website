@@ -7,7 +7,7 @@ export interface Employee {
   status: "Active" | "Inactive";
   email: string;
   phone: string;
-  location: string;
+  location?: string;
   photo: string;
   bio?: string;
   verificationToken: string;
