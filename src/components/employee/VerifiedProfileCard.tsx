@@ -138,7 +138,7 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
-                    Head Office Address
+                    Corporate Office Address
                   </div>
                   <div className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mt-0.5">
                     {employee.headOfficeAddress || "CO: B-41, Sector-8A, Kamal-Vihar, Raipur (C.G.) — 492001"}
@@ -153,7 +153,7 @@ export function VerifiedProfileCard({ employee }: VerifiedProfileCardProps) {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
-                    Registered Office Address
+                    Head Office Address
                   </div>
                   <div className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 leading-relaxed mt-0.5">
                     {employee.registeredOfficeAddress || "Gp14168, Near Rajdeep, Medico Ajency, Sector-14, Gopalganj, Bihar — 841428"}
