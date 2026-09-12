@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   title: "Services | Hindustan Innovations",
   description:
     "Explore our full range of services — Web Development, AI, Cloud Computing, UI/UX Design, Digital Marketing and more.",
-  icons: {
-    icon: "/logo.png",
-  },
   alternates: {
     canonical: "/services",
   },

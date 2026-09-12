@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Hindustaan Innovations Blog`,
     description: post.excerpt,
-    icons: { icon: "/logo.png" },
     alternates: {
       canonical: `/blog/${slug}`,
     },

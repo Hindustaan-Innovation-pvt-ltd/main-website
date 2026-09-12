@@ -8,9 +8,6 @@ export const metadata: Metadata = {
   title: "Careers | Hindustan Innovations",
   description:
     "Join our team and help build the future of software development, AI, and cloud computing.",
-  icons: {
-    icon: "/logo.png",
-  },
   alternates: {
     canonical: "/careers",
   },
