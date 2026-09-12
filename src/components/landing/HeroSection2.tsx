@@ -94,10 +94,10 @@ export function HeroSection2() {
               transition={{ repeat: Infinity, ease: "linear", duration: 50 }}
             >
               <h2 className="text-[18vw] md:text-[14vw] font-bold text-zinc-200/80 dark:text-zinc-800/40 tracking-tighter leading-none pr-16">
-                Hindustaan Innovation Pvt. Ltd.
+                Hindustaan Innovations Private Limited
               </h2>
               <h2 className="text-[18vw] md:text-[14vw] font-bold text-zinc-200/80 dark:text-zinc-800/40 tracking-tighter leading-none pr-16">
-                Hindustaan Innovation Pvt. Ltd.
+                Hindustaan Innovations Private Limited
               </h2>
             </motion.div>
           </div>

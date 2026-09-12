@@ -23,10 +23,54 @@ const playfair = Playfair_Display({
   style: ["italic", "normal"],
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  name: "Hindustaan Innovations Private Limited",
+  legalName: "Hindustaan Innovations Private Limited",
+  alternateName: [
+    "Hindustaan Innovations",
+    "Hindustan Innovations",
+    "Hindustaan Innovation",
+    "Hindustan Innovation Private Limited",
+  ],
+  url: "https://hindustaan.in",
+  logo: "https://hindustaan.in/logo.png",
+  description:
+    "AI Automation, Custom Software Development, and Next-Generation Digital Products.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+91-8803555558",
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi"],
+  },
+};
+
 export const metadata: Metadata = {
-  title: "Hindustaan Innovations",
-  description: "AI Automation for Modern Businesses Made Simple",
+  title: {
+    default: "Hindustaan Innovations Private Limited",
+    template: "%s | Hindustaan Innovations Private Limited",
+  },
+  description:
+    "Hindustaan Innovations Private Limited provides cutting-edge AI automation, custom software, web & mobile app development, and digital transformation.",
+  applicationName: "Hindustaan Innovations Private Limited",
   metadataBase: new URL("https://hindustaan.in"),
+  openGraph: {
+    title: "Hindustaan Innovations Private Limited",
+    description:
+      "AI Automation, Custom Software & Digital Engineering Solutions for Modern Businesses.",
+    url: "https://hindustaan.in",
+    siteName: "Hindustaan Innovations Private Limited",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hindustaan Innovations Private Limited",
+    description:
+      "AI Automation, Custom Software & Digital Engineering Solutions for Modern Businesses.",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -52,6 +96,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, playfair.variable)}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 antialiased transition-colors duration-200">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange={false}>
           {children}

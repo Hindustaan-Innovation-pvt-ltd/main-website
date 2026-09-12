@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   if (!card) return {};
   return {
-    title: `${card.title} | Hindustaan Innovations`,
+    title: card.title,
     description: card.description,
     alternates: {
       canonical: `/services/${serviceId}`,

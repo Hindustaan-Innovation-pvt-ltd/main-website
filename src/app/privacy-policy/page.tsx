@@ -5,8 +5,9 @@ import { Shield } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Hindustaan Innovations",
-  description: "How Hindustaan Innovations collects, uses, and protects your personal information.",
+  title: "Privacy Policy",
+  description:
+    "How Hindustaan Innovations Private Limited collects, uses, and protects your personal information.",
 };
 
 const SECTIONS = [

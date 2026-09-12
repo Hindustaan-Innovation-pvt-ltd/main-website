@@ -28,13 +28,13 @@ export async function generateMetadata({
   if (!job) notFound();
 
   return {
-    title: `${job.title} - ${job.department} | Our Company`,
-    description: `Join our team as a ${job.title} in the ${job.department} department. Explore the role, responsibilities, and how you can contribute to our company's success.`,
+    title: `${job.title} - ${job.department}`,
+    description: `Join our team at Hindustaan Innovations Private Limited as a ${job.title} in the ${job.department} department. Explore the role, responsibilities, and how you can contribute to our company's success.`,
     openGraph: {
-      title: `${job.title} - ${job.department} | Our Company`,
-      description: `Join our team as a ${job.title} in the ${job.department} department. Explore the role, responsibilities, and how you can contribute to our company's success.`,
+      title: `${job.title} - ${job.department} | Hindustaan Innovations Private Limited`,
+      description: `Join our team at Hindustaan Innovations Private Limited as a ${job.title} in the ${job.department} department. Explore the role, responsibilities, and how you can contribute to our company's success.`,
       url: `https://hindustaan.in/career/${id}`,
-      siteName: "Hindustaan Innovations",
+      siteName: "Hindustaan Innovations Private Limited",
     },
   };
 }

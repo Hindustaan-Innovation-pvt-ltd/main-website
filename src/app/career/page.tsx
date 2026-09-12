@@ -6,8 +6,9 @@ import { CareerGrid } from "@/components/career/CareerGrid";
 import { CareerCtaBanner } from "@/components/career/CareerCtaBanner";
 
 export const metadata: Metadata = {
-  title: "Careers | Hindustan Innovations",
-  description: "Join our team to build the next generation of AI and web automation tools.",
+  title: "Careers",
+  description:
+    "Join the team at Hindustaan Innovations Private Limited to build the next generation of AI and web automation tools.",
   alternates: {
     canonical: "/career",
   },

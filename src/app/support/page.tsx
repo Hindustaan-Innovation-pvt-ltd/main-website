@@ -7,8 +7,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support | Hindustaan Innovations",
-  description: "Get help from the Hindustaan Innovations support team. We're available 24/7 for all our clients.",
+  title: "Support",
+  description:
+    "Get dedicated technical help from the Hindustaan Innovations Private Limited support team. Available 24/7 for all our clients.",
 };
 
 const CHANNELS = [

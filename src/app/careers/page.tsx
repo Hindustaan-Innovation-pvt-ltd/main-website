@@ -5,9 +5,9 @@ import { CareerCtaBanner } from "@/components/career/CareerCtaBanner";
 import Footer2 from "@/components/landing/footer2";
 
 export const metadata: Metadata = {
-  title: "Careers | Hindustan Innovations",
+  title: "Careers",
   description:
-    "Join our team and help build the future of software development, AI, and cloud computing.",
+    "Join our team at Hindustaan Innovations Private Limited and help build the future of software development, AI, and cloud computing.",
   alternates: {
     canonical: "/careers",
   },

@@ -5,8 +5,9 @@ import FaqSection from "@/components/landing/FaqSection";
 import ContactFaqSection from "@/components/contact/ContactFAQ";
 
 export const metadata: Metadata = {
-  title: "Contact | Hindustan Innovations",
-  description: "Get in touch with us to discuss your automation and tech needs.",
+  title: "Contact Us",
+  description:
+    "Get in touch with Hindustaan Innovations Private Limited to discuss your AI automation, software engineering, and technology needs.",
   alternates: {
     canonical: "/contact",
   },

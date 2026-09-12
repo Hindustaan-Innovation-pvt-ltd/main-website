@@ -527,7 +527,7 @@ function ContactSectionContent() {
               src={mapSrc}
               loading="eager"
               className="w-full"
-              title="Hindustan Innovations Location Map"
+              title="Hindustaan Innovations Private Limited Location Map"
               width={2000}
               height={480}
               style={{ display: 'block' }}

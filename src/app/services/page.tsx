@@ -6,9 +6,9 @@ import { ServicesCategoryGrid2 } from "@/components/services2/ServicesCategoryGr
 import { ServicesCtaBanner2 } from "@/components/services2/ServicesCtaBanner2";
 
 export const metadata: Metadata = {
-  title: "Services | Hindustan Innovations",
+  title: "Services",
   description:
-    "Explore our full range of services — Web Development, AI, Cloud Computing, UI/UX Design, Digital Marketing and more.",
+    "Explore our full range of services from Hindustaan Innovations Private Limited — Web Development, AI, Cloud Computing, UI/UX Design, Digital Marketing and more.",
   alternates: {
     canonical: "/services",
   },

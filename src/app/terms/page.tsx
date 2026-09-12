@@ -5,8 +5,9 @@ import { FileText } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Hindustaan Innovations",
-  description: "Read the terms and conditions for using Hindustaan Innovations services and website.",
+  title: "Terms of Service",
+  description:
+    "Read the terms and conditions for using Hindustaan Innovations Private Limited services, systems, and website.",
 };
 
 const SECTIONS = [

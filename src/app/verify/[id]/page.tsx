@@ -7,9 +7,9 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Official Employee Verification | Hindustaan Innovations",
+  title: "Official Employee Verification",
   description:
-    "Secure Hindustaan Innovations Employee Identity Verification Portal",
+    "Secure Hindustaan Innovations Private Limited Employee Identity Verification Portal",
   robots: {
     index: false,
     follow: false,

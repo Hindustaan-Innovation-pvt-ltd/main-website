@@ -6,8 +6,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Documentation | Hindustaan Innovations",
-  description: "Guides, references, and how-tos for all Hindustaan Innovations services and platforms.",
+  title: "Documentation",
+  description:
+    "Guides, references, and documentation for all Hindustaan Innovations Private Limited services, systems, and platforms.",
 };
 
 const DOC_SECTIONS = [

@@ -6,8 +6,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Hindustaan Innovations",
-  description: "Explore real-world results from our AI automation and digital solutions — measurable impact for Indian businesses.",
+  title: "Case Studies",
+  description:
+    "Explore real-world results from Hindustaan Innovations Private Limited — measurable AI automation, software engineering, and digital solutions for modern businesses.",
   alternates: {
     canonical: "/case-studies",
   },

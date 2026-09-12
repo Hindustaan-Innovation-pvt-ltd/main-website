@@ -4,9 +4,9 @@ import { BlogGrid } from "@/components/blog/BlogGrid";
 import Footer2 from "@/components/landing/footer2";
 
 export const metadata: Metadata = {
-  title: "Blog | Hindustaan Innovations",
+  title: "Blog",
   description:
-    "Insights and ideas on AI automation, web development, cloud computing, and digital business strategy from the Hindustaan Innovation team.",
+    "Insights and ideas on AI automation, web development, cloud computing, and digital business strategy from the Hindustaan Innovations Private Limited team.",
   alternates: {
     canonical: "/blog",
   },

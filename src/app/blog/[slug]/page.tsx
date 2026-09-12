@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Hindustaan Innovations Blog`,
+    title: post.title,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
