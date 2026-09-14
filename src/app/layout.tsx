@@ -64,12 +64,21 @@ export const metadata: Metadata = {
     siteName: "Hindustaan Innovations Private Limited",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hindustaan Innovations Private Limited",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hindustaan Innovations Private Limited",
     description:
       "AI Automation, Custom Software & Digital Engineering Solutions for Modern Businesses.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: [
