@@ -114,7 +114,7 @@ export default function Footer2() {
                             <Link href="/privacy-policy" className="hover:text-[#1ba453] transition-colors py-1">Privacy Policy</Link>
                         </div>
                         <div className="text-zinc-500 text-xs sm:text-sm font-medium text-center md:text-right w-full md:w-auto">
-                            © 2026 Hindustaan Innovations. All rights reserved.
+                            © 2026 Hindustaan Innovations Private Limited. All rights reserved.
                         </div>
                     </div>
                 </div>
