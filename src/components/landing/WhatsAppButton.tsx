@@ -9,7 +9,7 @@ export function WhatsAppButton() {
   const waLink = (data.brand as { whatsapp?: string } | undefined)?.whatsapp;
 
   return (
-    <div className="fixed bottom-7 right-7 z-50 flex items-center gap-3">
+    <div className="fixed bottom-5 right-4 sm:bottom-7 sm:right-7 z-50 flex items-center gap-3">
       {/* Tooltip label */}
       <AnimatePresence>
         {hovered && (
@@ -18,7 +18,7 @@ export function WhatsAppButton() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 10, scale: 0.95 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="bg-[#075E54] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap pointer-events-none"
+            className="hidden sm:block bg-[#075E54] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap pointer-events-none"
           >
             Chat on WhatsApp
           </motion.div>
@@ -33,17 +33,17 @@ export function WhatsAppButton() {
         aria-label="Chat on WhatsApp"
         onHoverStart={() => setHovered(true)}
         onHoverEnd={() => setHovered(false)}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_4px_32px_rgba(37,211,102,0.65)] transition-shadow duration-300"
+        className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:shadow-[0_4px_28px_rgba(37,211,102,0.65)] transition-shadow duration-300"
       >
         {/* Ping ring animation */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
 
         {/* WhatsApp SVG icon */}
         <svg
           viewBox="0 0 32 32"
-          className="w-7 h-7 relative z-10"
+          className="w-6 h-6 sm:w-7 sm:h-7 relative z-10"
           fill="white"
           xmlns="http://www.w3.org/2000/svg"
         >
