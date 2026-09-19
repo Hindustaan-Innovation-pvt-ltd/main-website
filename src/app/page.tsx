@@ -13,6 +13,7 @@ import SuccessStories from "@/components/landing/SuccessStories";
 import FaqSection from "@/components/landing/FaqSection";
 import { ServicesSection2 } from "@/components/landing/ServicesSection2";
 import { ServicesSection3 } from "@/components/landing/ServicesSection3";
+import { OurProductsSection } from "@/components/landing/OurProductsSection";
 import { ProductSection } from "@/components/landing/Product";
 import FaqSection2 from "@/components/landing/FaqSection2";
 import { ProcessSection2 } from "@/components/landing/ProcessSection2";
@@ -39,6 +40,7 @@ export default function Home() {
       <FooterBar /> */}
       <ServicesSection2 />
       <ServicesSection3 />
+      <OurProductsSection />
       <ProductSection />
       <ProcessSection2 />
       <WhyUsSection />
