@@ -35,6 +35,15 @@ const ourProducts: ProductItem[] = [
     isExternal: true,
   },
   {
+    id: "miracal",
+    name: "Miracal",
+    category: "Instant Messaging",
+    description: "Next-generation secure instant messaging and calling app connecting friends, families, and communities with end-to-end encryption.",
+    logo: "/miracal-brand.png",
+    href: "/products/miracal",
+    isExternal: false,
+  },
+  {
     id: "hindustaan-mart",
     name: "Hindustaan Mart",
     category: "E-commerce Marketplace",

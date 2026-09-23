@@ -22,7 +22,13 @@ import {
   ExternalLink,
   Check,
   ChevronDown,
-  HelpCircle
+  HelpCircle,
+  MessageSquare,
+  Smartphone,
+  Map,
+  Navigation,
+  Search,
+  MapPin
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +53,13 @@ const iconMap: Record<string, any> = {
   Shield,
   Layers,
   Sparkles,
-  Check
+  Check,
+  MessageSquare,
+  Smartphone,
+  Map,
+  Navigation,
+  Search,
+  MapPin
 };
 
 const fadeUp: Variants = {

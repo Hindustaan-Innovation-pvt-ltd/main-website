@@ -746,6 +746,75 @@
         "type": "our"
       },
       {
+        "id": "miracal",
+        "title": "Miracal",
+        "shortDescription": "A next-generation instant messaging and calling app designed for fast, seamless, and secure connections.",
+        "description": "Miracal is a modern real-time messaging application inspired by the simplicity and power of WhatsApp, featuring instant chats, group conversations, media sharing, and high-definition voice and video calls.",
+        "fullDescription": "Miracal brings you closer to your friends, family, and the people who matter most. Operated by Hindustaan Innovations Private Limited, Miracal is an ultra-fast, secure instant messaging platform designed to make digital communication effortless, expressive, and completely private. Built with modern end-to-end encryption protocols, Miracal supports instant 1-on-1 chats, group messaging with advanced permissions, voice notes, expressive stickers, document sharing, and low-latency HD voice and video calling. With a familiar, intuitive design inspired by leading messaging apps like WhatsApp, Miracal ensures effortless onboarding and smooth cross-device synchronization between mobile and web platforms, empowering users to connect, collaborate, and share life's moments with peace of mind.",
+        "image": "/Miracal.png",
+        "logo": "/miracal-brand.png",
+        "projectUrl": "https://miracal.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal",
+        "appStoreUrl": "#",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Miracal.",
+          "questions": [
+            {
+              "question": "What is Miracal?",
+              "answer": "Miracal is a modern instant messaging and calling application built for real-time communication, featuring 1-on-1 chats, group conversations, voice notes, media sharing, and HD voice and video calls."
+            },
+            {
+              "question": "Is Miracal similar to WhatsApp?",
+              "answer": "Yes, Miracal provides an intuitive and familiar messaging experience similar to WhatsApp, with seamless instant messaging, status updates, voice notes, stickers, and group chats."
+            },
+            {
+              "question": "Is my communication secure and encrypted?",
+              "answer": "Yes, Miracal uses robust end-to-end encryption to guarantee that only you and the person you are communicating with can read your messages or listen to your calls."
+            },
+            {
+              "question": "Can I use Miracal on multiple devices?",
+              "answer": "Yes, Miracal supports multi-platform access across mobile and web interfaces with real-time cloud synchronization."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Instant Messaging",
+            "description": "Lightning-fast text messaging with real-time delivery status, typing indicators, and read receipts.",
+            "icon": "MessageSquare"
+          },
+          {
+            "title": "HD Voice & Video Calls",
+            "description": "Crystal-clear, low-latency audio and video calling to stay connected with family, friends, and colleagues worldwide.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Media & File Sharing",
+            "description": "Send high-resolution photos, videos, voice recordings, documents, and interactive sticker packs without loss of quality.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Advanced privacy safeguards and cryptographic security ensuring your chats and calls stay completely confidential.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Interactive Groups & Communities",
+            "description": "Organize dedicated group chats with customizable admin roles, media galleries, and pinned announcements.",
+            "icon": "Users"
+          },
+          {
+            "title": "Cross-Device Synchronization",
+            "description": "Seamless real-time synchronization between mobile apps and web platforms with reliable cloud backup.",
+            "icon": "Layers"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "aakar-handloom",
         "type": "client",
         "title": "Aakar Handloom",
