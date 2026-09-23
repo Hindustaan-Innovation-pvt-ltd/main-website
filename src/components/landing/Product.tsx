@@ -501,7 +501,9 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Miracal</span>
               </div>
               <a
-                href="/products/miracal"
+                href="https://miracal.hindustaan.tech"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
                 Instant Messaging App <ArrowUpRight className="w-4 h-4" />
@@ -528,7 +530,7 @@ export function ProductSection() {
                 />
               </div>
             </div>
-            <HoverOverlay href="/products/miracal" />
+            <HoverOverlay href="https://miracal.hindustaan.tech" />
           </motion.div>
 
           {/* Card 12: Miracal Mobile App */}
@@ -545,7 +547,9 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Miracal</span>
               </div>
               <a
-                href="/products/miracal"
+                href="https://play.google.com/store/apps/details?id=com.miracal"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
                 Instant Messaging App <ArrowUpRight className="w-4 h-4" />
@@ -565,7 +569,7 @@ export function ProductSection() {
                 />
               </div>
             </div>
-            <HoverOverlay href="/products/miracal" />
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.miracal" />
           </motion.div>
         </div>
       </div>
