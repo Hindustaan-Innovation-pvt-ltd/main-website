@@ -815,6 +815,74 @@
         "type": "our"
       },
       {
+        "id": "miracal-business",
+        "title": "Miracal Business",
+        "shortDescription": "Enterprise-grade secure communication platform for teams — encrypted messaging, file sharing, and seamless collaboration.",
+        "description": "Miracal Business is an enterprise-ready secure communication platform empowering teams with end-to-end encrypted messaging, HD voice & video calls, file sharing, and powerful collaboration tools designed for modern businesses.",
+        "fullDescription": "Miracal Business takes the simplicity and power of Miracal and supercharges it for professional teams and enterprises. Built on the same rock-solid encryption foundation as Miracal, Miracal Business adds a layer of business-grade tools — dedicated team workspaces, role-based access controls, broadcast announcements, advanced file sharing, and admin dashboards — giving organizations complete control over their internal communications. Whether you're a startup coordinating across departments or a large enterprise managing thousands of employees, Miracal Business delivers a familiar, intuitive interface with the compliance, security, and scalability that businesses demand.",
+        "image": "/miracal_business.png",
+        "logo": "/miracal-brand.png",
+        "projectUrl": "https://miracalbussiness.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal.business",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Miracal Business.",
+          "questions": [
+            {
+              "question": "What is Miracal Business?",
+              "answer": "Miracal Business is an enterprise communication platform providing secure team messaging, HD voice & video calls, file sharing, and collaboration tools built for organizations of all sizes."
+            },
+            {
+              "question": "How is Miracal Business different from Miracal?",
+              "answer": "While Miracal is designed for personal use, Miracal Business adds business-grade features such as team workspaces, admin controls, broadcast messaging, and compliance tools for professional environments."
+            },
+            {
+              "question": "Is communication on Miracal Business secure?",
+              "answer": "Yes, all messages and calls on Miracal Business are protected with end-to-end encryption, ensuring only authorized team members can access the content."
+            },
+            {
+              "question": "Can I manage my team's access and permissions?",
+              "answer": "Yes, Miracal Business provides role-based access controls and admin dashboards to manage team members, channels, and permissions with ease."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Team Messaging",
+            "description": "Organized team channels and direct messages for fast, focused, and encrypted business communication.",
+            "icon": "MessageSquare"
+          },
+          {
+            "title": "HD Voice & Video Calls",
+            "description": "Crystal-clear audio and video conferencing for remote teams and client meetings with low latency.",
+            "icon": "Zap"
+          },
+          {
+            "title": "File & Media Sharing",
+            "description": "Share documents, images, videos, and files securely within your team with organized storage.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Enterprise-grade cryptographic security ensuring all business communications remain private and compliant.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Admin Dashboard",
+            "description": "Powerful admin controls to manage team members, roles, channels, and organizational settings.",
+            "icon": "Users"
+          },
+          {
+            "title": "Cross-Device Sync",
+            "description": "Seamless real-time synchronization across mobile and desktop with reliable cloud backup for teams.",
+            "icon": "Layers"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "aakar-handloom",
         "type": "client",
         "title": "Aakar Handloom",

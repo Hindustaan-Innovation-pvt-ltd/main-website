@@ -571,6 +571,91 @@ export function ProductSection() {
             </div>
             <HoverOverlay href="https://play.google.com/store/apps/details?id=com.miracal" />
           </motion.div>
+
+          {/* Card 13: Miracal Business Mobile App (Left Side — swapped) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.9 }}
+            className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/miracal-brand.png" alt="Miracal Business Logo" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Miracal Business</span>
+              </div>
+              <a
+                href="https://miracalbussiness.hindustaan.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Business Messaging <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Mobile Mockup */}
+            <div className="relative flex justify-center pt-0 pb-0 px-4 mt-0 sm:mt-1">
+              <div className="relative w-[70%] max-w-[260px] flex justify-center -mt-6 group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+                <Image
+                  src="/miracal_business_phone.png"
+                  alt="Miracal Business App"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.miracal.business" />
+          </motion.div>
+
+          {/* Card 14: Miracal Business Landing Page (Right Side — swapped) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.0 }}
+            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/miracal-brand.png" alt="Miracal Business Logo" width={48} height={48} className="w-12 h-12 object-contain" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-4xl tracking-tight">Miracal Business</span>
+              </div>
+              <a
+                href="https://miracalbussiness.hindustaan.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Business Messaging <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Browser Mockup */}
+            <div className="relative flex w-full rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 overflow-hidden shadow-lg group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500 flex-col">
+              {/* Browser Top Bar */}
+              <div className="h-6 bg-zinc-200/50 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+              </div>
+              {/* Screen Area */}
+              <div className="bg-white dark:bg-zinc-900 relative w-full flex">
+                <Image
+                  src="/miracal_business.png"
+                  alt="Miracal Business Platform"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-cover object-top"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="https://miracalbussiness.hindustaan.tech" />
+          </motion.div>
         </div>
       </div>
     </section>
