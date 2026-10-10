@@ -44,6 +44,15 @@ const ourProducts: ProductItem[] = [
     isExternal: true,
   },
   {
+    id: "miracal-business",
+    name: "Miracal Business",
+    category: "Business Messaging",
+    description: "Enterprise-grade secure communication platform empowering teams with encrypted messaging, file sharing, and seamless collaboration tools.",
+    logo: "/miracal-brand.png",
+    href: "https://miracalbussiness.hindustaan.tech",
+    isExternal: true,
+  },
+  {
     id: "hindustaan-mart",
     name: "Hindustaan Mart",
     category: "E-commerce Marketplace",
