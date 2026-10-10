@@ -138,8 +138,12 @@ export default function SolutionsPage() {
                     className="object-contain transition-transform duration-700 p-6 group-hover:scale-105"
                   />
                   <div className="absolute bottom-4 left-4 z-20">
-                    <div className="p-2.5 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-xs rounded-xl">
-                      <School className="w-5 h-5 text-zinc-800 dark:text-zinc-200" />
+                    <div className="p-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-xs rounded-xl flex items-center justify-center">
+                      {item.logo ? (
+                        <Image src={item.logo} alt={item.title} width={24} height={24} className="w-6 h-6 object-contain rounded-md" />
+                      ) : (
+                        <School className="w-5 h-5 text-zinc-800 dark:text-zinc-200" />
+                      )}
                     </div>
                   </div>
                 </div>

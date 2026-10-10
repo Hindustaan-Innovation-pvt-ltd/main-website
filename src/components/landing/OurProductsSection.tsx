@@ -71,6 +71,15 @@ const ourProducts: ProductItem[] = [
     isExternal: true,
   },
   {
+    id: "truckbharat",
+    name: "TruckBharat",
+    category: "Digital Freight Platform",
+    description: "Next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers with verified fleets and live GPS tracking.",
+    logo: "/truckbharat_logo.png",
+    href: "https://play.google.com/store/apps/details?id=com.truckbharat",
+    isExternal: true,
+  },
+  {
     id: "hindustaan-os",
     name: "Hindustaan OS",
     category: "Enterprise Suite",

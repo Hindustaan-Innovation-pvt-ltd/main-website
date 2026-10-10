@@ -815,6 +815,88 @@
         "type": "our"
       },
       {
+        "id": "truckbharat",
+        "title": "TruckBharat",
+        "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
+        "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
+        "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
+        "image": "/truckbharat.png",
+        "logo": "/truckbharat_logo.png",
+        "projectUrl": "https://truckbharat.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about TruckBharat.",
+          "questions": [
+            {
+              "question": "What is TruckBharat?",
+              "answer": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics, connecting Shippers, Transporters, and Drivers on a single unified platform."
+            },
+            {
+              "question": "How do Shippers benefit from TruckBharat?",
+              "answer": "Shippers get instant access to 100% verified trucks (Open, Container, Trailer, Tipper) across India with transparent pricing, zero hidden charges, real-time GPS milestone tracking, and transit safety assistance."
+            },
+            {
+              "question": "How does TruckBharat eliminate empty returns for fleet owners?",
+              "answer": "TruckBharat features intelligent Return Load Matching that pairs returning vehicles with available freight along their route, eliminating empty miles and maximizing fleet profitability."
+            },
+            {
+              "question": "Which regional languages are supported?",
+              "answer": "TruckBharat supports 11 Indian languages: Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam."
+            },
+            {
+              "question": "How do drivers use TruckBharat?",
+              "answer": "Drivers (Saarthis) get a dedicated Driver Cockpit with simple trip status updates (Loaded, In-Transit, Delivered), direct navigation, 24/7 helpline, and emergency SOS assistance."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Instant Truck Discovery & Booking",
+            "description": "Pan-India access to verified trucks (Open, Container, Trailer, Tipper) available on-demand in just a few taps.",
+            "icon": "Truck"
+          },
+          {
+            "title": "Transparent Freight Pricing",
+            "description": "Competitive bidding and clear price breakdowns without hidden charges or unexpected middleman commissions.",
+            "icon": "CreditCard"
+          },
+          {
+            "title": "Live GPS & Telematics Tracking",
+            "description": "Real-time dispatch updates, route milestone alerts, and accurate live location monitoring from pickup to destination.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Transporter Cockpit",
+            "description": "A centralized digital cockpit for fleet owners to manage vehicles, drivers, documents, and real-time dispatches.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Zero Empty Return Matching",
+            "description": "Smart return-load pairing ensuring trucks return with profitable shipments, maximizing operational margins.",
+            "icon": "Zap"
+          },
+          {
+            "title": "11 Indian Languages",
+            "description": "Native language support across Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam.",
+            "icon": "Languages"
+          },
+          {
+            "title": "Driver Cockpit & SOS Assistance",
+            "description": "Simplified trip status reporting (Loaded, In-Transit, Delivered) paired with 24/7 driver helpline and emergency SOS.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Digital Ledger & Instant Payouts",
+            "description": "Paperless consignment notes, automated billing, and transparent ledgers for trips, fuel, and toll expenses.",
+            "icon": "FileSpreadsheet"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "aakar-handloom",
         "type": "client",
         "title": "Aakar Handloom",
