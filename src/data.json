@@ -438,6 +438,265 @@
     "subheading": "Tailored software solutions built to solve real-world industry challenges",
     "items": [
       {
+        "id": "karmanisht",
+        "title": "KarmaNisht",
+        "shortDescription": "Raipur's fastest home services connection platform — bridging verified professionals with local households in real-time.",
+        "description": "KarmaNisht is a modern geospatial web portal that connects Raipur households with verified professionals — electricians, plumbers, AC technicians, painters, and more — using real-time proximity calculations and a smart 15 km radius search.",
+        "fullDescription": "KarmaNisht redefines the home-services experience in Raipur by eliminating middlemen and putting high-intent customers directly in touch with verified, nearby professionals. Powered by the Haversine formula and PostGIS integration, the platform calculates live distances between households and service partners and automatically surfaces the nearest, highest-rated providers at the top of every search. Service professionals gain visibility through a dedicated Partner App — available as a direct, secure APK download — which places them on the geospatial grid and lets them receive job requests instantly. With glassmorphic UI cards, custom radar animations, and a seamless dark/light theme, KarmaNisht delivers a premium discovery experience that feels as good as it performs.",
+        "image": "/karmanisht.png",
+        "logo": "/karmanisht-logo.png",
+        "projectUrl": "https://www.karmanisht.com",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.karmanisht",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about KarmaNisht.",
+          "questions": [
+            {
+              "question": "What is KarmaNisht?",
+              "answer": "KarmaNisht is a geospatial home-services platform that connects Raipur households with the nearest verified professionals across categories like electrical, plumbing, AC repair, and painting."
+            },
+            {
+              "question": "How does the proximity search work?",
+              "answer": "We use the Haversine formula and PostGIS to calculate the real-time distance between your location and every registered service partner, then surface the closest, highest-rated professionals within a 15 km radius."
+            },
+            {
+              "question": "Is there a fee to browse professionals?",
+              "answer": "No. Browsing verified provider profiles, ratings, and contact details is completely free with zero middleman interference."
+            },
+            {
+              "question": "How can service professionals join KarmaNisht?",
+              "answer": "Professionals can download the KarmaNisht Partner App directly from our APK download portal, follow the installation guide, and go live on the GPS grid within minutes."
+            },
+            {
+              "question": "Which categories of services are supported?",
+              "answer": "Currently we support electricians, plumbers, AC technicians, painters, carpenters, and home cleaners — with more categories launching regularly."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Live Geospatial Search",
+            "description": "Calculates the exact distance between households and service providers on-the-fly using the Haversine formula and PostGIS integration for pinpoint accuracy.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Proximity & Rating Sort",
+            "description": "The nearest, highest-rated verified professionals are automatically prioritised at the top of search results within a smart 15 km radius.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "Verified Provider Profiles",
+            "description": "Browse detailed profiles including years of experience, service categories, ratings, and direct contact details — all completely free.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Partner App Download Portal",
+            "description": "A dedicated, secure APK download portal and step-by-step installation guide so Raipur's service professionals can go live on the GPS grid instantly.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Direct Customer Connection",
+            "description": "Zero middleman interference — customers connect directly with professionals, cutting wait times and eliminating unnecessary commissions.",
+            "icon": "Users"
+          },
+          {
+            "title": "Category Management",
+            "description": "Organised service categories — electrical, plumbing, AC repair, painting, carpentry, and more — with interactive transitions and smart filtering.",
+            "icon": "ClipboardList"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "bhukkadh",
+        "title": "Bhukkadh",
+        "shortDescription": "A fast and reliable food delivery platform.",
+        "description": "Bhukkadh is your go-to app for ordering delicious food from your favorite local restaurants with lightning fast delivery.",
+        "fullDescription": "Bhukkadh connects food lovers with top-rated local restaurants. It features a seamless ordering process, live order tracking, and secure payments, ensuring your food reaches you hot and fresh. Operated by Hindustaan Innovations Private Limited, the platform serves as a complete hyperlocal food delivery ecosystem connecting hungry customers, culinary partners, and dedicated delivery riders across three specialized mobile apps.\n\nWhile the website serves as the central digital front door to onboard partners and introduce the brand, the complete dining experience comes to life on the Bhukkadh mobile app. There, foodies can unlock exclusive app-only deals, explore diverse menus from neighborhood favorites to fine dining, and enjoy lightning-fast checkout. At the same time, restaurant owners gain powerful tools to expand their reach and grow their daily order volume, while riders find flexible earning opportunities with reliable, on-time delivery support. Built for trust, speed, and safety, Bhukkadh brings community-driven flavors straight to your doorstep in just a few taps.",
+        "image": "/bhukkadh.png",
+        "logo": "/new-bhukkadh-icon.png",
+        "projectUrl": "#",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
+        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
+        "riderPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
+        "modules": [
+          {
+            "title": "Food Delivery",
+            "description": "Fast and reliable food delivery at your doorstep.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Restaurant Discovery",
+            "description": "Discover top restaurants and cuisines near you.",
+            "icon": "Search"
+          },
+          {
+            "title": "Live Tracking",
+            "description": "Real-time tracking of your food orders.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Secure Payments",
+            "description": "Multiple secure payment options for quick checkout.",
+            "icon": "Shield"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "ghumakkadh",
+        "title": "Ghumakkadh",
+        "shortDescription": "A comprehensive travel and tourism platform.",
+        "description": "Ghumakkadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
+        "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
+        "image": "/ghumakkadh.png",
+        "logo": "/ghumakkadh_icon.png",
+        "projectUrl": "#",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "modules": [
+          {
+            "title": "Travel Planning",
+            "description": "Tools to help users plan their trips easily.",
+            "icon": "Map"
+          },
+          {
+            "title": "Booking System",
+            "description": "Integrated booking system for hotels and travel.",
+            "icon": "CreditCard"
+          },
+          {
+            "title": "Destination Guide",
+            "description": "Comprehensive guides to popular destinations.",
+            "icon": "Navigation"
+          },
+          {
+            "title": "Mobile App",
+            "description": "Mobile application for on-the-go access.",
+            "icon": "Smartphone"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "truckbharat",
+        "title": "TruckBharat",
+        "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
+        "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
+        "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
+        "image": "/truckbharat.png",
+        "logo": "/truckbharat_logo.png",
+        "projectUrl": "https://truckbharat.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about TruckBharat.",
+          "questions": [
+            {
+              "question": "What is TruckBharat?",
+              "answer": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics, connecting Shippers, Transporters, and Drivers on a single unified platform."
+            },
+            {
+              "question": "How do Shippers benefit from TruckBharat?",
+              "answer": "Shippers get instant access to 100% verified trucks (Open, Container, Trailer, Tipper) across India with transparent pricing, zero hidden charges, real-time GPS milestone tracking, and transit safety assistance."
+            },
+            {
+              "question": "How does TruckBharat eliminate empty returns for fleet owners?",
+              "answer": "TruckBharat features intelligent Return Load Matching that pairs returning vehicles with available freight along their route, eliminating empty miles and maximizing fleet profitability."
+            },
+            {
+              "question": "Which regional languages are supported?",
+              "answer": "TruckBharat supports 11 Indian languages: Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam."
+            },
+            {
+              "question": "How do drivers use TruckBharat?",
+              "answer": "Drivers (Saarthis) get a dedicated Driver Cockpit with simple trip status updates (Loaded, In-Transit, Delivered), direct navigation, 24/7 helpline, and emergency SOS assistance."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Instant Truck Discovery & Booking",
+            "description": "Pan-India access to verified trucks (Open, Container, Trailer, Tipper) available on-demand in just a few taps.",
+            "icon": "Truck"
+          },
+          {
+            "title": "Transparent Freight Pricing",
+            "description": "Competitive bidding and clear price breakdowns without hidden charges or unexpected middleman commissions.",
+            "icon": "CreditCard"
+          },
+          {
+            "title": "Live GPS & Telematics Tracking",
+            "description": "Real-time dispatch updates, route milestone alerts, and accurate live location monitoring from pickup to destination.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Transporter Cockpit",
+            "description": "A centralized digital cockpit for fleet owners to manage vehicles, drivers, documents, and real-time dispatches.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Zero Empty Return Matching",
+            "description": "Smart return-load pairing ensuring trucks return with profitable shipments, maximizing operational margins.",
+            "icon": "Zap"
+          },
+          {
+            "title": "11 Indian Languages",
+            "description": "Native language support across Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam.",
+            "icon": "Languages"
+          },
+          {
+            "title": "Driver Cockpit & SOS Assistance",
+            "description": "Simplified trip status reporting (Loaded, In-Transit, Delivered) paired with 24/7 driver helpline and emergency SOS.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Digital Ledger & Instant Payouts",
+            "description": "Paperless consignment notes, automated billing, and transparent ledgers for trips, fuel, and toll expenses.",
+            "icon": "FileSpreadsheet"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "hindustaan-mart",
+        "title": "Hindustaan Mart",
+        "shortDescription": "It is a marketplace e-commerce website.",
+        "description": "Hindustaan Mart is a comprehensive marketplace e-commerce platform.",
+        "fullDescription": "Hindustaan Mart is a complete marketplace e-commerce solution, connecting buyers and sellers across a robust digital ecosystem. Providing an intuitive interface and secure transactions.",
+        "image": "/hindutaanmart.png",
+        "logo": "/Hindustaan_mart_logo.jpeg",
+        "projectUrl": "https://allindiahub.com",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hindustaanmart",
+        "appStoreUrl": "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
+        "modules": [
+          {
+            "title": "E-commerce Marketplace",
+            "description": "A fully functional marketplace connecting buyers and sellers seamlessly.",
+            "icon": "Users"
+          },
+          {
+            "title": "Secure Transactions",
+            "description": "Built-in payment gateways for safe and reliable transactions.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Vendor Management",
+            "description": "Powerful tools for vendors to manage their products and orders.",
+            "icon": "ClipboardList"
+          },
+          {
+            "title": "Mobile Applications",
+            "description": "Available on Play Store and App Store for on-the-go access.",
+            "icon": "Zap"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "vidyum-school-erp",
         "title": "Vidyum School ERP",
         "shortDescription": "Complete digital transformation for educational institutions.",
@@ -564,183 +823,6 @@
             "title": "Transport Management",
             "description": "Ensure student safety with real-time vehicle tracking, route optimization, and automated transport fee alerts.",
             "icon": "Bus"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "karmanisht",
-        "title": "KarmaNisht",
-        "shortDescription": "Raipur's fastest home services connection platform — bridging verified professionals with local households in real-time.",
-        "description": "KarmaNisht is a modern geospatial web portal that connects Raipur households with verified professionals — electricians, plumbers, AC technicians, painters, and more — using real-time proximity calculations and a smart 15 km radius search.",
-        "fullDescription": "KarmaNisht redefines the home-services experience in Raipur by eliminating middlemen and putting high-intent customers directly in touch with verified, nearby professionals. Powered by the Haversine formula and PostGIS integration, the platform calculates live distances between households and service partners and automatically surfaces the nearest, highest-rated providers at the top of every search. Service professionals gain visibility through a dedicated Partner App — available as a direct, secure APK download — which places them on the geospatial grid and lets them receive job requests instantly. With glassmorphic UI cards, custom radar animations, and a seamless dark/light theme, KarmaNisht delivers a premium discovery experience that feels as good as it performs.",
-        "image": "/karmanisht.png",
-        "logo": "/karmanisht-logo.png",
-        "projectUrl": "https://www.karmanisht.com",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.karmanisht",
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about KarmaNisht.",
-          "questions": [
-            {
-              "question": "What is KarmaNisht?",
-              "answer": "KarmaNisht is a geospatial home-services platform that connects Raipur households with the nearest verified professionals across categories like electrical, plumbing, AC repair, and painting."
-            },
-            {
-              "question": "How does the proximity search work?",
-              "answer": "We use the Haversine formula and PostGIS to calculate the real-time distance between your location and every registered service partner, then surface the closest, highest-rated professionals within a 15 km radius."
-            },
-            {
-              "question": "Is there a fee to browse professionals?",
-              "answer": "No. Browsing verified provider profiles, ratings, and contact details is completely free with zero middleman interference."
-            },
-            {
-              "question": "How can service professionals join KarmaNisht?",
-              "answer": "Professionals can download the KarmaNisht Partner App directly from our APK download portal, follow the installation guide, and go live on the GPS grid within minutes."
-            },
-            {
-              "question": "Which categories of services are supported?",
-              "answer": "Currently we support electricians, plumbers, AC technicians, painters, carpenters, and home cleaners — with more categories launching regularly."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Live Geospatial Search",
-            "description": "Calculates the exact distance between households and service providers on-the-fly using the Haversine formula and PostGIS integration for pinpoint accuracy.",
-            "icon": "Zap"
-          },
-          {
-            "title": "Proximity & Rating Sort",
-            "description": "The nearest, highest-rated verified professionals are automatically prioritised at the top of search results within a smart 15 km radius.",
-            "icon": "Sparkles"
-          },
-          {
-            "title": "Verified Provider Profiles",
-            "description": "Browse detailed profiles including years of experience, service categories, ratings, and direct contact details — all completely free.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Partner App Download Portal",
-            "description": "A dedicated, secure APK download portal and step-by-step installation guide so Raipur's service professionals can go live on the GPS grid instantly.",
-            "icon": "Layers"
-          },
-          {
-            "title": "Direct Customer Connection",
-            "description": "Zero middleman interference — customers connect directly with professionals, cutting wait times and eliminating unnecessary commissions.",
-            "icon": "Users"
-          },
-          {
-            "title": "Category Management",
-            "description": "Organised service categories — electrical, plumbing, AC repair, painting, carpentry, and more — with interactive transitions and smart filtering.",
-            "icon": "ClipboardList"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "hindustaan-mart",
-        "title": "Hindustaan Mart",
-        "shortDescription": "It is a marketplace e-commerce website.",
-        "description": "Hindustaan Mart is a comprehensive marketplace e-commerce platform.",
-        "fullDescription": "Hindustaan Mart is a complete marketplace e-commerce solution, connecting buyers and sellers across a robust digital ecosystem. Providing an intuitive interface and secure transactions.",
-        "image": "/hindutaanmart.png",
-        "logo": "/Hindustaan_mart_logo.jpeg",
-        "projectUrl": "https://allindiahub.com",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hindustaanmart",
-        "appStoreUrl": "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
-        "modules": [
-          {
-            "title": "E-commerce Marketplace",
-            "description": "A fully functional marketplace connecting buyers and sellers seamlessly.",
-            "icon": "Users"
-          },
-          {
-            "title": "Secure Transactions",
-            "description": "Built-in payment gateways for safe and reliable transactions.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Vendor Management",
-            "description": "Powerful tools for vendors to manage their products and orders.",
-            "icon": "ClipboardList"
-          },
-          {
-            "title": "Mobile Applications",
-            "description": "Available on Play Store and App Store for on-the-go access.",
-            "icon": "Zap"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "bhukkadh",
-        "title": "Bhukkadh",
-        "shortDescription": "A fast and reliable food delivery platform.",
-        "description": "Bhukkadh is your go-to app for ordering delicious food from your favorite local restaurants with lightning fast delivery.",
-        "fullDescription": "Bhukkadh connects food lovers with top-rated local restaurants. It features a seamless ordering process, live order tracking, and secure payments, ensuring your food reaches you hot and fresh. Operated by Hindustaan Innovations Private Limited, the platform serves as a complete hyperlocal food delivery ecosystem connecting hungry customers, culinary partners, and dedicated delivery riders across three specialized mobile apps.\n\nWhile the website serves as the central digital front door to onboard partners and introduce the brand, the complete dining experience comes to life on the Bhukkadh mobile app. There, foodies can unlock exclusive app-only deals, explore diverse menus from neighborhood favorites to fine dining, and enjoy lightning-fast checkout. At the same time, restaurant owners gain powerful tools to expand their reach and grow their daily order volume, while riders find flexible earning opportunities with reliable, on-time delivery support. Built for trust, speed, and safety, Bhukkadh brings community-driven flavors straight to your doorstep in just a few taps.",
-        "image": "/bhukkadh.png",
-        "logo": "/new-bhukkadh-icon.png",
-        "projectUrl": "#",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
-        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
-        "riderPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
-        "modules": [
-          {
-            "title": "Food Delivery",
-            "description": "Fast and reliable food delivery at your doorstep.",
-            "icon": "Zap"
-          },
-          {
-            "title": "Restaurant Discovery",
-            "description": "Discover top restaurants and cuisines near you.",
-            "icon": "Search"
-          },
-          {
-            "title": "Live Tracking",
-            "description": "Real-time tracking of your food orders.",
-            "icon": "MapPin"
-          },
-          {
-            "title": "Secure Payments",
-            "description": "Multiple secure payment options for quick checkout.",
-            "icon": "Shield"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "ghumakkadh",
-        "title": "Ghumakkadh",
-        "shortDescription": "A comprehensive travel and tourism platform.",
-        "description": "Ghumakkadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
-        "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
-        "image": "/ghumakkadh.png",
-        "logo": "/ghumakkadh_icon.png",
-        "projectUrl": "#",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
-        "modules": [
-          {
-            "title": "Travel Planning",
-            "description": "Tools to help users plan their trips easily.",
-            "icon": "Map"
-          },
-          {
-            "title": "Booking System",
-            "description": "Integrated booking system for hotels and travel.",
-            "icon": "CreditCard"
-          },
-          {
-            "title": "Destination Guide",
-            "description": "Comprehensive guides to popular destinations.",
-            "icon": "Navigation"
-          },
-          {
-            "title": "Mobile App",
-            "description": "Mobile application for on-the-go access.",
-            "icon": "Smartphone"
           }
         ],
         "type": "our"
@@ -878,88 +960,6 @@
             "title": "Cross-Device Sync",
             "description": "Seamless real-time synchronization across mobile and desktop with reliable cloud backup for teams.",
             "icon": "Layers"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "truckbharat",
-        "title": "TruckBharat",
-        "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
-        "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
-        "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
-        "image": "/truckbharat.png",
-        "logo": "/truckbharat_logo.png",
-        "projectUrl": "https://truckbharat.hindustaan.tech",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about TruckBharat.",
-          "questions": [
-            {
-              "question": "What is TruckBharat?",
-              "answer": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics, connecting Shippers, Transporters, and Drivers on a single unified platform."
-            },
-            {
-              "question": "How do Shippers benefit from TruckBharat?",
-              "answer": "Shippers get instant access to 100% verified trucks (Open, Container, Trailer, Tipper) across India with transparent pricing, zero hidden charges, real-time GPS milestone tracking, and transit safety assistance."
-            },
-            {
-              "question": "How does TruckBharat eliminate empty returns for fleet owners?",
-              "answer": "TruckBharat features intelligent Return Load Matching that pairs returning vehicles with available freight along their route, eliminating empty miles and maximizing fleet profitability."
-            },
-            {
-              "question": "Which regional languages are supported?",
-              "answer": "TruckBharat supports 11 Indian languages: Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam."
-            },
-            {
-              "question": "How do drivers use TruckBharat?",
-              "answer": "Drivers (Saarthis) get a dedicated Driver Cockpit with simple trip status updates (Loaded, In-Transit, Delivered), direct navigation, 24/7 helpline, and emergency SOS assistance."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Instant Truck Discovery & Booking",
-            "description": "Pan-India access to verified trucks (Open, Container, Trailer, Tipper) available on-demand in just a few taps.",
-            "icon": "Truck"
-          },
-          {
-            "title": "Transparent Freight Pricing",
-            "description": "Competitive bidding and clear price breakdowns without hidden charges or unexpected middleman commissions.",
-            "icon": "CreditCard"
-          },
-          {
-            "title": "Live GPS & Telematics Tracking",
-            "description": "Real-time dispatch updates, route milestone alerts, and accurate live location monitoring from pickup to destination.",
-            "icon": "MapPin"
-          },
-          {
-            "title": "Transporter Cockpit",
-            "description": "A centralized digital cockpit for fleet owners to manage vehicles, drivers, documents, and real-time dispatches.",
-            "icon": "Layers"
-          },
-          {
-            "title": "Zero Empty Return Matching",
-            "description": "Smart return-load pairing ensuring trucks return with profitable shipments, maximizing operational margins.",
-            "icon": "Zap"
-          },
-          {
-            "title": "11 Indian Languages",
-            "description": "Native language support across Hindi, English, Punjabi, Tamil, Telugu, Bengali, Odia, Marathi, Gujarati, Kannada, and Malayalam.",
-            "icon": "Languages"
-          },
-          {
-            "title": "Driver Cockpit & SOS Assistance",
-            "description": "Simplified trip status reporting (Loaded, In-Transit, Delivered) paired with 24/7 driver helpline and emergency SOS.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Digital Ledger & Instant Payouts",
-            "description": "Paperless consignment notes, automated billing, and transparent ledgers for trips, fuel, and toll expenses.",
-            "icon": "FileSpreadsheet"
           }
         ],
         "type": "our"
