@@ -36,7 +36,7 @@ export function ProductSection() {
     <section className="pb-12 pt-8 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       <div className="max-w-[1800px] mx-auto px-4 sm:px-8 md:px-12">
         {/* Header Area */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
+        {/* <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -78,7 +78,7 @@ export function ProductSection() {
               </button>
             </a>
           </motion.div>
-        </div>
+        </div> */}
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
