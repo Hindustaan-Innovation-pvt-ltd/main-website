@@ -135,7 +135,7 @@ const ourProducts: ProductItem[] = [
     category: "Enterprise Suite",
     shortTagline: "Tailored CRM & workflow automation systems",
     description: "Tailor-made enterprise CRM systems, custom business suites, and automated workflow solutions built to scale modern businesses.",
-    logo: "/logo.png",
+    logo: "/favicon.svg",
     websiteUrl: "/products",
     playStoreUrl: "",
     appStoreUrl: "",
