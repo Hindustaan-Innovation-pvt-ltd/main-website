@@ -348,7 +348,7 @@ export function ProductSection() {
           >
             <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
               <div className="flex items-center gap-4">
-                <Image src="/truckbharat_logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
+                <Image src="/truckbharat-logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">TruckBharat</span>
               </div>
               <a
@@ -387,7 +387,7 @@ export function ProductSection() {
           >
             <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
               <div className="flex items-center gap-4">
-                <Image src="/truckbharat_logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
+                <Image src="/truckbharat-logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">TruckBharat</span>
               </div>
               <a

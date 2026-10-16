@@ -586,7 +586,7 @@
         "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
         "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
         "image": "/truckbharat.png",
-        "logo": "/truckbharat_logo.png",
+        "logo": "/truckbharat-logo.png",
         "projectUrl": "https://truckbharat.hindustaan.tech",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
         "faq": {
