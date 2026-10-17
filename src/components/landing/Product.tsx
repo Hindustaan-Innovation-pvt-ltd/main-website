@@ -748,6 +748,88 @@ export function ProductSection() {
             </div>
             <HoverOverlay href="https://miracalbussiness.hindustaan.tech" />
           </motion.div>
+
+          {/* Onstay Section */}
+          {/* Card 17: Onstay Home Platform (2 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/onstay-logo.png" alt="Onstay Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">Onstay</span>
+              </div>
+              <a
+                href="/products/onstay"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Hotel, Room & Lounge Booking <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Browser Mockup */}
+            <div className="relative flex w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 overflow-hidden shadow-lg group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500 flex-col">
+              {/* Browser Top Bar */}
+              <div className="h-6 bg-zinc-200/50 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+              </div>
+              {/* Screen Area */}
+              <div className="bg-white dark:bg-zinc-900 relative w-full flex">
+                <Image
+                  src="/onstay_home.png"
+                  alt="Onstay Home Platform"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto object-cover object-top"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="/products/onstay" />
+          </motion.div>
+
+          {/* Card 18: Onstay Mobile App (1 col) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/onstay-logo.png" alt="Onstay Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">Onstay</span>
+              </div>
+              <a
+                href="/products/onstay"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Hotel & Room Booking <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Mobile Mockup */}
+            <div className="relative flex justify-center pt-2 pb-2 px-4 mt-0 sm:mt-1">
+              <div className="relative w-[75%] max-w-[280px] flex justify-center group-hover:-translate-y-4 max-lg:group-data-[in-view=true]:-translate-y-4 transition-transform duration-500">
+                <Image
+                  src="/OnStay_Mockup.png"
+                  alt="Onstay Mobile App"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  unoptimized
+                />
+              </div>
+            </div>
+            <HoverOverlay href="/products/onstay" />
+          </motion.div>
         </div>
       </div>
     </section>

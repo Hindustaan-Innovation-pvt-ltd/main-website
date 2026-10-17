@@ -965,6 +965,75 @@
         "type": "our"
       },
       {
+        "id": "onstay",
+        "title": "Onstay",
+        "shortDescription": "All-in-one hotel, room, and lounge booking platform.",
+        "description": "Onstay is a smart hospitality booking platform for discovering and booking hotels, hourly rooms, luxury resorts, and executive lounges with instant confirmation.",
+        "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
+        "image": "/onstay_home.png",
+        "logo": "/onstay-logo.png",
+        "projectUrl": "#",
+        "playStoreUrl": "",
+        "appStoreUrl": "",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Onstay.",
+          "questions": [
+            {
+              "question": "What is Onstay?",
+              "answer": "Onstay is an all-in-one hospitality booking platform offering seamless reservations for premium hotels, hourly day-use rooms, and executive airport and city lounges."
+            },
+            {
+              "question": "Can I book rooms on an hourly basis?",
+              "answer": "Yes, Onstay features flexible hourly booking slots tailored for travelers with transit layovers, business travelers needing a quiet workspace, or short-stay visits."
+            },
+            {
+              "question": "How do lounge bookings work?",
+              "answer": "You can explore and book verified executive and airport lounges directly through Onstay, securing guaranteed entry, high-speed Wi-Fi, refreshments, and relaxation spaces without complex memberships."
+            },
+            {
+              "question": "Are bookings confirmed instantly?",
+              "answer": "Yes, all reservations made through Onstay are processed in real-time with instant digital vouchers and notifications."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Hotels & Stays Discovery",
+            "description": "Explore curated hotels, boutique stays, and luxury resorts with detailed photos, verified reviews, and transparent pricing.",
+            "icon": "Search"
+          },
+          {
+            "title": "Hourly Room Bookings",
+            "description": "Flexible short-duration day stays and transit room booking with customizable check-in hours.",
+            "icon": "CalendarCheck"
+          },
+          {
+            "title": "Executive Lounge Access",
+            "description": "Instant reservations for airport and business lounges featuring high-speed Wi-Fi, refreshments, and quiet suites.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Verified Listings & Best Price",
+            "description": "100% verified properties, authentic guest feedback, and price-matching guarantees with zero hidden costs.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Interactive Map & Proximity Sort",
+            "description": "Pinpoint stays near airports, train stations, business districts, and landmarks with live GPS guidance.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Instant & Secure Checkout",
+            "description": "Fast digital payments with UPI, cards, net banking, and pay-at-hotel options paired with instant e-vouchers.",
+            "icon": "CreditCard"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "aakar-handloom",
         "type": "client",
         "title": "Aakar Handloom",

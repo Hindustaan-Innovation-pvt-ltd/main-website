@@ -142,6 +142,19 @@ const ourProducts: ProductItem[] = [
     internalRoute: "/products",
     isExternalWebsite: false,
   },
+  {
+    id: "onstay",
+    name: "Onstay",
+    category: "Hotel & Lounge Booking",
+    shortTagline: "Hotels, rooms & lounge booking platform",
+    description: "All-in-one hospitality booking app for premium hotels, hourly day stays, luxury rooms, and airport or executive lounge reservations.",
+    logo: "/onstay-logo.png",
+    websiteUrl: "https://onstay.hindustaan.tech/",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
+    appStoreUrl: "",
+    internalRoute: "/products/onstay",
+    isExternalWebsite: false,
+  },
 ];
 
 function GooglePlayIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -246,7 +259,7 @@ export function OurProductsSection() {
         </div>
 
         {/* Compact Product Icons Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-2.5 sm:gap-3.5 md:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-2.5 sm:gap-3.5 md:gap-4">
           {ourProducts.map((product, index) => (
             <motion.button
               key={product.id}
