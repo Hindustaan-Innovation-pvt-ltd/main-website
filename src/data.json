@@ -972,8 +972,8 @@
         "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
         "image": "/onstay_home.png",
         "logo": "/onstay-logo.png",
-        "projectUrl": "#",
-        "playStoreUrl": "",
+        "projectUrl": "https://onstay.hindustaan.tech/",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
         "appStoreUrl": "",
         "faq": {
           "pill": "FAQ",

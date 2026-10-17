@@ -764,7 +764,9 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">Onstay</span>
               </div>
               <a
-                href="/products/onstay"
+                href="https://onstay.hindustaan.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
                 Hotel, Room & Lounge Booking <ArrowUpRight className="w-4 h-4" />
@@ -791,7 +793,7 @@ export function ProductSection() {
                 />
               </div>
             </div>
-            <HoverOverlay href="/products/onstay" />
+            <HoverOverlay href="https://onstay.hindustaan.tech/" />
           </motion.div>
 
           {/* Card 18: Onstay Mobile App (1 col) */}
@@ -808,7 +810,9 @@ export function ProductSection() {
                 <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">Onstay</span>
               </div>
               <a
-                href="/products/onstay"
+                href="https://play.google.com/store/apps/details?id=com.onstay"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
               >
                 Hotel & Room Booking <ArrowUpRight className="w-4 h-4" />
@@ -828,7 +832,7 @@ export function ProductSection() {
                 />
               </div>
             </div>
-            <HoverOverlay href="/products/onstay" />
+            <HoverOverlay href="https://play.google.com/store/apps/details?id=com.onstay" />
           </motion.div>
         </div>
       </div>

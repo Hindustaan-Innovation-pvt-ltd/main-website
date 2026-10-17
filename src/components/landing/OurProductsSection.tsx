@@ -13,6 +13,7 @@ interface ProductItem {
   shortTagline: string;
   description: string;
   logo: string;
+  darkLogo?: string;
   websiteUrl: string;
   playStoreUrl?: string;
   appStoreUrl?: string;
@@ -136,6 +137,7 @@ const ourProducts: ProductItem[] = [
     shortTagline: "Tailored CRM & workflow automation systems",
     description: "Tailor-made enterprise CRM systems, custom business suites, and automated workflow solutions built to scale modern businesses.",
     logo: "/favicon.svg",
+    darkLogo: "/logo.png",
     websiteUrl: "/products",
     playStoreUrl: "",
     appStoreUrl: "",
@@ -153,7 +155,7 @@ const ourProducts: ProductItem[] = [
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
     appStoreUrl: "",
     internalRoute: "/products/onstay",
-    isExternalWebsite: false,
+    isExternalWebsite: true,
   },
 ];
 
@@ -275,13 +277,32 @@ export function OurProductsSection() {
             >
               {/* Product App Icon container */}
               <div className="relative w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 rounded-2xl bg-zinc-50 dark:bg-zinc-800/90 border border-zinc-100 dark:border-zinc-700/60 p-1.5 sm:p-2 flex items-center justify-center shadow-2xs group-hover:scale-105 group-hover:shadow-md transition-all duration-300">
-                <Image
-                  src={product.logo}
-                  alt={product.name}
-                  width={72}
-                  height={72}
-                  className="w-full h-full object-contain rounded-xl"
-                />
+                {product.darkLogo ? (
+                  <>
+                    <Image
+                      src={product.logo}
+                      alt={product.name}
+                      width={72}
+                      height={72}
+                      className="w-full h-full object-contain rounded-xl dark:hidden"
+                    />
+                    <Image
+                      src={product.darkLogo}
+                      alt={product.name}
+                      width={72}
+                      height={72}
+                      className="w-full h-full object-contain rounded-xl hidden dark:block"
+                    />
+                  </>
+                ) : (
+                  <Image
+                    src={product.logo}
+                    alt={product.name}
+                    width={72}
+                    height={72}
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                )}
               </div>
 
               {/* Title & Category */}
@@ -343,13 +364,32 @@ export function OurProductsSection() {
               <div className="px-6 pb-4 pt-2">
                 <div className="flex items-start gap-4">
                   <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-zinc-50 dark:bg-zinc-800/90 border border-zinc-200/80 dark:border-zinc-700 p-2.5 flex items-center justify-center shrink-0 shadow-sm">
-                    <Image
-                      src={selectedProduct.logo}
-                      alt={selectedProduct.name}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+                    {selectedProduct.darkLogo ? (
+                      <>
+                        <Image
+                          src={selectedProduct.logo}
+                          alt={selectedProduct.name}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain rounded-lg dark:hidden"
+                        />
+                        <Image
+                          src={selectedProduct.darkLogo}
+                          alt={selectedProduct.name}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain rounded-lg hidden dark:block"
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={selectedProduct.logo}
+                        alt={selectedProduct.name}
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-contain rounded-lg"
+                      />
+                    )}
                   </div>
 
                   <div className="flex-1 min-w-0">
