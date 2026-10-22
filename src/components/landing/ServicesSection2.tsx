@@ -501,11 +501,11 @@ export function ServicesSection2() {
         </div>
 
         {/* Master Interactive Showcase: Left Menu & Right Showcase Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column: Interactive Options Menu (Desktop lg+) */}
-          <div className="hidden lg:flex lg:col-span-5 flex-col gap-3">
-            <div className="flex items-center justify-between px-2 mb-1">
+          <div className="hidden lg:flex flex-col justify-between h-full">
+            <div className="flex items-center justify-between px-2 mb-2">
               <span className="text-xs font-bold tracking-widest text-zinc-400 dark:text-zinc-500 uppercase">
                 Select Service
               </span>
@@ -514,7 +514,7 @@ export function ServicesSection2() {
               </span>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 flex-1 justify-between mb-3">
               {servicesData.map((service) => {
                 const isActive = service.id === activeId;
                 const Icon = service.icon;
@@ -524,7 +524,7 @@ export function ServicesSection2() {
                     key={service.id}
                     onClick={() => setActiveId(service.id)}
                     type="button"
-                    className={`group relative text-left w-full p-4 sm:p-5 rounded-2xl md:rounded-3xl transition-all duration-300 border flex flex-col justify-between overflow-hidden cursor-pointer ${
+                    className={`group relative text-left w-full p-4 sm:p-5 rounded-2xl md:rounded-3xl transition-all duration-300 border flex flex-col justify-center flex-1 overflow-hidden cursor-pointer ${
                       isActive
                         ? "bg-white dark:bg-zinc-900 border-[#1ba453] shadow-lg shadow-[#1ba453]/10 dark:shadow-black/40 ring-1 ring-[#1ba453]"
                         : "bg-white/70 dark:bg-zinc-900/40 hover:bg-white dark:hover:bg-zinc-900/80 border-zinc-200/80 dark:border-white/5 hover:border-zinc-300 dark:hover:border-white/15"
@@ -596,7 +596,7 @@ export function ServicesSection2() {
             </div>
 
             {/* Quick Consultation Callout Box under Left Options */}
-            <div className="flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-zinc-100/80 to-zinc-50/50 dark:from-zinc-900/60 dark:to-zinc-900/30 border border-zinc-200/70 dark:border-white/5 mt-2">
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-gradient-to-r from-zinc-100/80 to-zinc-50/50 dark:from-zinc-900/60 dark:to-zinc-900/30 border border-zinc-200/70 dark:border-white/5 mt-auto">
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#1ba453] animate-pulse shrink-0" />
                 <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
@@ -614,7 +614,7 @@ export function ServicesSection2() {
           </div>
 
           {/* Right Column: Upgraded Master Showcase Card */}
-          <div className="w-full lg:col-span-7">
+          <div className="w-full h-full flex flex-col">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeService.id}
@@ -622,7 +622,7 @@ export function ServicesSection2() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -16, scale: 0.99 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="relative bg-white dark:bg-zinc-900/90 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-xl shadow-zinc-900/5 dark:shadow-black/50 border border-zinc-200/80 dark:border-white/10 flex flex-col justify-between overflow-hidden group min-h-[620px]"
+                className="relative bg-white dark:bg-zinc-900/90 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-xl shadow-zinc-900/5 dark:shadow-black/50 border border-zinc-200/80 dark:border-white/10 flex flex-col justify-between overflow-hidden group min-h-[620px] h-full"
               >
                 {/* Decorative Ambient Radial Gradient Glow */}
                 <div 
