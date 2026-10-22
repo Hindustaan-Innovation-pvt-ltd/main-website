@@ -23,7 +23,7 @@ import { MobileHoverObserver } from "@/components/landing/MobileHoverObserver";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-hidden transition-colors duration-200">
+    <div className="relative min-h-screen flex flex-col bg-[#f5f5f5] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 overflow-x-clip transition-colors duration-200">
 
       {/* <HeroSection /> */}
       <HeroSection2 />
