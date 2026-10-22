@@ -338,12 +338,60 @@ export function ProductSection() {
           </motion.div>
 
           {/* TruckBharat Section */}
-          {/* Card 7: TruckBharat Mobile App (1 col) */}
+          {/* Card 7: TruckBharat Digital Freight Marketplace (2 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
+            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
+          >
+            <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/truckbharat-logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
+                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">TruckBharat</span>
+              </div>
+              <a
+                href="https://truckbharat.hindustaan.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
+              >
+                Digital Freight Platform <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Showcase Banner Graphic */}
+            <div className="flex-1 flex items-center justify-center w-full my-auto">
+              <div className="relative flex w-[95%] sm:w-[98%] rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 overflow-hidden shadow-lg group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500 flex-col">
+                {/* Browser/Window Top Bar */}
+                <div className="h-6 bg-zinc-200/50 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+                </div>
+                {/* Banner Area */}
+                <div className="bg-white dark:bg-zinc-900 relative w-full flex">
+                  <Image
+                    src="/truckbharat.png"
+                    alt="TruckBharat Digital Freight Platform"
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto object-cover object-top"
+                    unoptimized
+                  />
+                </div>
+              </div>
+            </div>
+            <HoverOverlay href="https://truckbharat.hindustaan.tech/" />
+          </motion.div>
+
+          {/* Card 8: TruckBharat Mobile App (1 col) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
             className="lg:col-span-1 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 pb-0 sm:pb-0 flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-500"
           >
             <div className="flex flex-wrap justify-between items-center mb-6 sm:mb-8 relative z-10 gap-4">
@@ -375,52 +423,6 @@ export function ProductSection() {
               </div>
             </div>
             <HoverOverlay href="https://play.google.com/store/apps/details?id=com.truckbharat" />
-          </motion.div>
-
-          {/* Card 8: TruckBharat Digital Freight Marketplace (2 cols) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="lg:col-span-2 relative bg-white dark:bg-zinc-900/90 border border-zinc-200/60 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 flex flex-col justify-between overflow-hidden group hover:shadow-xl transition-all duration-500"
-          >
-            <div className="flex flex-wrap justify-between items-center mb-8 relative z-10 gap-4">
-              <div className="flex items-center gap-4">
-                <Image src="/truckbharat-logo.png" alt="TruckBharat Logo" width={48} height={48} className="w-12 h-12 object-contain rounded-xl" />
-                <span className="font-bold text-zinc-800 dark:text-zinc-100 text-3xl sm:text-4xl tracking-tight">TruckBharat</span>
-              </div>
-              <a
-                href="https://truckbharat.hindustaan.tech/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400 font-medium text-sm group-hover:text-zinc-900 dark:group-hover:text-white transition-colors cursor-pointer"
-              >
-                Digital Freight Platform <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Showcase Banner Graphic */}
-            <div className="relative flex w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 overflow-hidden shadow-lg group-hover:-translate-y-2 max-lg:group-data-[in-view=true]:-translate-y-2 transition-transform duration-500 flex-col">
-              {/* Browser/Window Top Bar */}
-              <div className="h-6 bg-zinc-200/50 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
-              </div>
-              {/* Banner Area */}
-              <div className="bg-white dark:bg-zinc-900 relative w-full flex">
-                <Image
-                  src="/truckbharat.png"
-                  alt="TruckBharat Digital Freight Platform"
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto object-cover object-top"
-                  unoptimized
-                />
-              </div>
-            </div>
-            <HoverOverlay href="https://truckbharat.hindustaan.tech/" />
           </motion.div>
 
           {/* Hindustaan Mart Section */}
