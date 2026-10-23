@@ -440,13 +440,14 @@
       {
         "id": "karmanisht",
         "title": "KarmaNisht",
-        "shortDescription": "Raipur's fastest home services connection platform — bridging verified professionals with local households in real-time.",
-        "description": "KarmaNisht is a modern geospatial web portal that connects Raipur households with verified professionals — electricians, plumbers, AC technicians, painters, and more — using real-time proximity calculations and a smart 15 km radius search.",
+        "shortDescription": "India's fastest home services connection platform — bridging verified professionals with local households in real-time.",
+        "description": "Karmanisht, powered by Hindustaan Innovations Private Limited, is a hyperlocal home and utility services marketplace connecting households with Aadhaar-verified professionals across 50+ categories, including electricians, plumbers, carpenters, appliance technicians, deep cleaning, pest control, and home salon services. Users can discover nearby experts based on distance, verified ratings, and experience, while enjoying transparent pricing and a subscription-free booking experience. Service providers retain their full earnings, set their own service areas, and receive secure escrow-based payouts once customers confirm job satisfaction. Karmanisht makes finding trusted professionals and managing everyday home service needs simple, safe, and reliable.",
         "fullDescription": "KarmaNisht redefines the home-services experience in Raipur by eliminating middlemen and putting high-intent customers directly in touch with verified, nearby professionals. Powered by the Haversine formula and PostGIS integration, the platform calculates live distances between households and service partners and automatically surfaces the nearest, highest-rated providers at the top of every search. Service professionals gain visibility through a dedicated Partner App — available as a direct, secure APK download — which places them on the geospatial grid and lets them receive job requests instantly. With glassmorphic UI cards, custom radar animations, and a seamless dark/light theme, KarmaNisht delivers a premium discovery experience that feels as good as it performs.",
-        "image": "/karmanisht.png",
+        "image": "/KRMNST.png",
         "logo": "/karmanisht-logo.png",
         "projectUrl": "https://www.karmanisht.com",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.karmanisht",
+        "appStoreUrl": "https://apps.apple.com/us/app/karmanisht/id6781247473",
         "faq": {
           "pill": "FAQ",
           "heading": "Common",
@@ -520,7 +521,9 @@
         "projectUrl": "#",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
         "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
+        "partnerAppStoreUrl": "https://apps.apple.com/us/app/bhukkadh-partner/id6802583437",
         "riderPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
+        "riderAppStoreUrl": "https://apps.apple.com/us/app/bhukkadh-rider/id6802623601",
         "modules": [
           {
             "title": "Food Delivery",
@@ -555,6 +558,7 @@
         "logo": "/ghumakkadh_icon.png",
         "projectUrl": "#",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "riderAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
         "modules": [
           {
             "title": "Travel Planning",
@@ -585,10 +589,11 @@
         "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
         "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
         "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
-        "image": "/truckbharat.png",
+        "image": "/trucksite.png",
         "logo": "/truckbharat-logo.png",
         "projectUrl": "https://truckbharat.hindustaan.tech",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
+        "appStoreUrl": "https://apps.apple.com/us/app/truckbharat/id6807047989",
         "faq": {
           "pill": "FAQ",
           "heading": "Common",
@@ -664,12 +669,12 @@
       {
         "id": "hindustaan-mart",
         "title": "Hindustaan Mart",
-        "shortDescription": "It is a marketplace e-commerce website.",
-        "description": "Hindustaan Mart is a comprehensive marketplace e-commerce platform.",
-        "fullDescription": "Hindustaan Mart is a complete marketplace e-commerce solution, connecting buyers and sellers across a robust digital ecosystem. Providing an intuitive interface and secure transactions.",
-        "image": "/hindutaanmart.png",
+        "shortDescription": "Indian e-commerce platform delivering lifestyle, fashion, tech, home, and fitness products.",
+        "description": "Hindustaan Mart is an Indian e-commerce platform powered by Hindustaan Innovations Private Limited and based in Raipur, Chhattisgarh, delivering a wide selection of lifestyle, fashion, tech, home, and fitness products. Focused on combining everyday utility with aesthetic design, the site offers free shipping on orders over ₹499, 100% secure checkouts, a 7-day hassle-free return policy, and 24/7 customer support, while also hosting an integrated seller and affiliate ecosystem for merchant onboarding and product advertising.",
+        "fullDescription": "Hindustaan Mart is an Indian e-commerce platform powered by Hindustaan Innovations Private Limited and based in Raipur, Chhattisgarh, delivering a wide selection of lifestyle, fashion, tech, home, and fitness products. Focused on combining everyday utility with aesthetic design, the site offers free shipping on orders over ₹499, 100% secure checkouts, a 7-day hassle-free return policy, and 24/7 customer support, while also hosting an integrated seller and affiliate ecosystem for merchant onboarding and product advertising.",
+        "image": "/Hindustaan Mart Field Fashion Hero.png",
         "logo": "/Hindustaan_mart_logo.jpeg",
-        "projectUrl": "https://allindiahub.com",
+        "projectUrl": "https://www.hindustaanmart.in/",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.hindustaanmart",
         "appStoreUrl": "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
         "modules": [
