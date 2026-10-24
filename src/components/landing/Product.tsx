@@ -25,6 +25,10 @@ interface ProductItemData {
   webImageAspectRatio?: string;
   hasCustomBrowserFrame?: boolean;
   webUrl?: string;
+  webWidthClass?: string;
+  webOffsetClass?: string;
+  containerMaxWidthClass?: string;
+  dualPhonesPositionClass?: string;
   // Mobile / Secondary Platform
   mobileTitle?: string;
   mobileSubtitle?: string;
@@ -277,7 +281,11 @@ const productsData: ProductItemData[] = [
     webImage: "/OnStay Tropical Getaway Banner.png",
     webImageWidth: 1504,
     webImageHeight: 1046,
-    webImageAspectRatio: "1504 / 1046",
+    webImageAspectRatio: "16 / 10.5",
+    webWidthClass: "w-[64%] sm:w-[62%] lg:w-[63%] xl:w-[64%]",
+    webOffsetClass: "-translate-y-4 sm:-translate-y-6 lg:-translate-y-8 xl:-translate-y-10",
+    containerMaxWidthClass: "max-w-[460px] sm:max-w-[580px] lg:max-w-[720px] xl:max-w-[790px] 2xl:max-w-[860px]",
+    dualPhonesPositionClass: "right-0 sm:right-1 xl:right-2",
     webUrl: "https://onstay.hindustaan.tech/",
     mobileTitle: "Onstay App",
     mobileSubtitle: "Guest & Room Booking",
@@ -736,9 +744,9 @@ export function ProductSection() {
                     <div className="lg:col-span-7 relative flex items-center justify-center h-full group pt-3 sm:pt-5 lg:pt-0">
                       {product.webImage && product.mobileImage && product.secondaryMobileImage ? (
                         /* Case 1A: Desktop Browser Mockup + Dual Side-by-Side Mobile Apps (as per reference design) */
-                        <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[690px] xl:max-w-[760px] 2xl:max-w-[820px] flex items-center justify-start pb-12 sm:pb-16 lg:pb-2 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0">
+                        <div className={`relative w-full ${product.containerMaxWidthClass || 'max-w-[440px] sm:max-w-[560px] lg:max-w-[690px] xl:max-w-[760px] 2xl:max-w-[820px]'} flex items-center justify-start pb-12 sm:pb-16 lg:pb-2 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0`}>
                           {/* Desktop Browser Mockup */}
-                          <div className="relative w-[58%] sm:w-[56%] lg:w-[56%] xl:w-[58%] shrink-0">
+                          <div className={`relative ${product.webWidthClass || 'w-[58%] sm:w-[56%] lg:w-[56%] xl:w-[58%]'} ${product.webOffsetClass || ''} shrink-0`}>
                             <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
                               {!product.hasCustomBrowserFrame && (
                                 <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
@@ -769,7 +777,7 @@ export function ProductSection() {
                           </div>
 
                           {/* Dual Phones Side-by-Side (Overlapping the right of the desktop window) */}
-                          <div className="absolute right-0 sm:right-1 xl:right-2 -bottom-8 sm:-bottom-11 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5">
+                          <div className={`absolute ${product.dualPhonesPositionClass || 'right-0 sm:right-1 xl:right-2'} -bottom-8 sm:-bottom-11 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5`}>
                             {/* Phone 1: Customer / Primary App */}
                             <div className="w-[86px] sm:w-[118px] md:w-[134px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
                               <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
