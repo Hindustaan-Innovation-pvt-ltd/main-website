@@ -19,6 +19,8 @@ interface ProductItem {
   appStoreUrl?: string;
   partnerPlayStoreUrl?: string;
   riderPlayStoreUrl?: string;
+  partnerAppStoreUrl?: string;
+  riderAppStoreUrl?: string;
   internalRoute: string;
   isExternalWebsite?: boolean;
 }
@@ -49,6 +51,8 @@ const ourProducts: ProductItem[] = [
     partnerPlayStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
     riderPlayStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
     appStoreUrl: "https://apps.apple.com/us/app/bhukkadh/id6803089673",
+    partnerAppStoreUrl: "https://apps.apple.com/us/app/bhukkadh-partner/id6802583437",
+    riderAppStoreUrl: "https://apps.apple.com/us/app/bhukkadh-rider/id6802623601",
     internalRoute: "/products/bhukkadh",
     isExternalWebsite: true,
   },
@@ -492,31 +496,60 @@ export function OurProductsSection() {
 
                 {/* 2. Apple App Store */}
                 {selectedProduct.appStoreUrl ? (
-                  <a
-                    href={selectedProduct.appStoreUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-zinc-900 hover:bg-black dark:bg-zinc-800 dark:hover:bg-zinc-750 text-white border border-transparent dark:border-white/10 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
-                  >
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                        <AppleIcon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-wider font-semibold">
-                          Download on the
+                  <div>
+                    <a
+                      href={selectedProduct.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-zinc-900 hover:bg-black dark:bg-zinc-800 dark:hover:bg-zinc-750 text-white border border-transparent dark:border-white/10 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                          <AppleIcon className="w-6 h-6 text-white" />
                         </div>
-                        <div className="text-sm sm:text-base font-bold leading-tight">
-                          Apple App Store
+                        <div>
+                          <div className="text-[10px] sm:text-[11px] text-zinc-400 uppercase tracking-wider font-semibold">
+                            Download on the
+                          </div>
+                          <div className="text-sm sm:text-base font-bold leading-tight">
+                            Apple App Store
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 group-hover:translate-x-0.5 transition-transform">
-                      <span>Install</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </div>
-                  </a>
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 group-hover:translate-x-0.5 transition-transform">
+                        <span>Install</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </div>
+                    </a>
+
+                    {/* Secondary Partner/Rider App Store links if available (e.g., Bhukkadh) */}
+                    {(selectedProduct.partnerAppStoreUrl || selectedProduct.riderAppStoreUrl) && (
+                      <div className="flex flex-wrap items-center gap-2 mt-2 px-1">
+                        <span className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium">Also on App Store:</span>
+                        {selectedProduct.partnerAppStoreUrl && (
+                          <a
+                            href={selectedProduct.partnerAppStoreUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                          >
+                            Partner App <ExternalLink className="w-2.5 h-2.5" />
+                          </a>
+                        )}
+                        {selectedProduct.riderAppStoreUrl && (
+                          <a
+                            href={selectedProduct.riderAppStoreUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                          >
+                            Rider App <ExternalLink className="w-2.5 h-2.5" />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-zinc-100/80 dark:bg-zinc-850/40 text-zinc-400 dark:text-zinc-500 border border-zinc-200/60 dark:border-white/5">
                     <div className="flex items-center gap-3.5">

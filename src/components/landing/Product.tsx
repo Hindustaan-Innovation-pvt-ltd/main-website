@@ -569,7 +569,7 @@ export function ProductSection() {
                           className="flex flex-col items-center justify-end h-full w-full group/phone"
                         >
                           {/* Phone Mockup (Enlarged with identical width/height) */}
-                          <div className="relative w-full max-w-[105px] xs:max-w-[125px] sm:max-w-[170px] md:max-w-[205px] lg:max-w-[215px] xl:max-w-[270px] 2xl:max-w-[305px] drop-shadow-[0_12px_22px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)] lg:drop-shadow-[0_22px_38px_rgba(0,0,0,0.38)] dark:drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)] sm:dark:drop-shadow-[0_24px_40px_rgba(0,0,0,0.9)] lg:dark:drop-shadow-[0_28px_48px_rgba(0,0,0,0.92)] group-hover/phone:-translate-y-2.5 transition-transform duration-500 flex justify-center mx-auto">
+                          <div className="relative w-full max-w-[105px] sm:max-w-[170px] md:max-w-[205px] lg:max-w-[215px] xl:max-w-[270px] 2xl:max-w-[305px] drop-shadow-[0_12px_22px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)] lg:drop-shadow-[0_22px_38px_rgba(0,0,0,0.38)] dark:drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)] sm:dark:drop-shadow-[0_24px_40px_rgba(0,0,0,0.9)] lg:dark:drop-shadow-[0_28px_48px_rgba(0,0,0,0.92)] group-hover/phone:-translate-y-2.5 transition-transform duration-500 flex justify-center mx-auto">
                             {card.image && (
                               <Image
                                 src={card.image}
@@ -577,7 +577,7 @@ export function ProductSection() {
                                 width={776}
                                 height={1576}
                                 style={{ width: "100%", height: "auto" }}
-                                className="w-full h-auto max-h-[155px] xs:max-h-[185px] sm:max-h-[225px] md:max-h-[265px] lg:max-h-[270px] xl:max-h-[340px] 2xl:max-h-[395px] object-contain"
+                                className="w-full h-auto max-h-[145px] sm:max-h-[195px] md:max-h-[225px] lg:max-h-[245px] xl:max-h-[305px] 2xl:max-h-[360px] object-contain"
                                 unoptimized
                               />
                             )}
@@ -585,24 +585,24 @@ export function ProductSection() {
 
                           {/* Info & Action Buttons underneath each phone */}
                           <div className="w-full pt-1.5 sm:pt-2.5 lg:pt-3 flex flex-col items-center text-center shrink-0">
-                            <span className="text-[8px] xs:text-[9px] sm:text-[10px] lg:text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+                            <span className="text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
                               {card.badge}
                             </span>
-                            <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10.5px] xs:text-xs sm:text-xs lg:text-sm mt-0.5">
+                            <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10.5px] sm:text-xs lg:text-sm mt-0.5">
                               {card.title}
                             </h4>
-                            <p className="text-[9px] xs:text-[10px] sm:text-[10.5px] lg:text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
+                            <p className="text-[9px] sm:text-[10.5px] lg:text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
                               {card.subtitle}
                             </p>
 
-                            {/* Store Buttons */}
-                            <div className="flex flex-col xs:flex-row items-center justify-center gap-1 sm:gap-1.5 lg:gap-2 pt-1.5 sm:pt-2">
+                            {/* Store Buttons: Both Google Play and App Store side by side */}
+                            <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-1.5 lg:gap-2 pt-1.5 sm:pt-2">
                               {card.playStoreUrl && (
                                 <a
                                   href={card.playStoreUrl}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3.5 lg:py-1.5 rounded-full text-[9px] sm:text-[10px] lg:text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
+                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-[9px] sm:text-[10px] lg:text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
                                 >
                                   <GooglePlayIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                                   <span>Google Play</span>
@@ -613,7 +613,7 @@ export function ProductSection() {
                                   href={card.appStoreUrl}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3.5 lg:py-1.5 rounded-full text-[9px] sm:text-[10px] lg:text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
+                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-[9px] sm:text-[10px] lg:text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
                                 >
                                   <AppleIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                                   <span>App Store</span>
