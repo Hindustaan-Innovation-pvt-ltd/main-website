@@ -79,6 +79,19 @@ const ourProducts: ProductItem[] = [
     isExternalWebsite: true,
   },
   {
+    id: "onstay",
+    name: "Onstay",
+    category: "Hotel & Lounge Booking",
+    shortTagline: "Hotels, rooms & lounge booking platform",
+    description: "OnStay ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.",
+    logo: "/onstay-logo.png",
+    websiteUrl: "https://onstay.hindustaan.tech/",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
+    appStoreUrl: "https://apps.apple.com/us/app/onstay/id6807047989",
+    internalRoute: "/products/onstay",
+    isExternalWebsite: true,
+  },
+  {
     id: "hindustaan-mart",
     name: "Hindustaan Mart",
     category: "E-Commerce",
@@ -89,19 +102,6 @@ const ourProducts: ProductItem[] = [
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.hindustaanmart",
     appStoreUrl: "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
     internalRoute: "/products/hindustaan-mart",
-    isExternalWebsite: true,
-  },
-  {
-    id: "vidyum",
-    name: "Vidyum School ERP",
-    category: "EdTech & ERP",
-    shortTagline: "Cloud school management & smart campus suite",
-    description: "Complete cloud-based school management & ERP platform designed to automate administrative tasks, fees, exams, and attendance.",
-    logo: "/vidyum.png",
-    websiteUrl: "https://vidyum.hindustaan.in",
-    playStoreUrl: "",
-    appStoreUrl: "",
-    internalRoute: "/products/vidyum-school-erp",
     isExternalWebsite: true,
   },
   {
@@ -145,16 +145,16 @@ const ourProducts: ProductItem[] = [
     isExternalWebsite: false,
   },
   {
-    id: "onstay",
-    name: "Onstay",
-    category: "Hotel & Lounge Booking",
-    shortTagline: "Hotels, rooms & lounge booking platform",
-    description: "All-in-one hospitality booking app for premium hotels, hourly day stays, luxury rooms, and airport or executive lounge reservations.",
-    logo: "/onstay-logo.png",
-    websiteUrl: "https://onstay.hindustaan.tech/",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
+    id: "vidyum",
+    name: "Vidyum School ERP",
+    category: "EdTech & ERP",
+    shortTagline: "Cloud school management & smart campus suite",
+    description: "Complete cloud-based school management & ERP platform designed to automate administrative tasks, fees, exams, and attendance.",
+    logo: "/vidyum.png",
+    websiteUrl: "https://vidyum.hindustaan.in",
+    playStoreUrl: "",
     appStoreUrl: "",
-    internalRoute: "/products/onstay",
+    internalRoute: "/products/vidyum-school-erp",
     isExternalWebsite: true,
   },
 ];
@@ -405,7 +405,7 @@ export function OurProductsSection() {
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-[13px] text-zinc-600 dark:text-zinc-400 mt-3.5 pt-3 border-t border-zinc-100 dark:border-zinc-800/70 leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-zinc-600 dark:text-zinc-400 mt-3.5 pt-3 border-t border-zinc-100 dark:border-zinc-800/70 leading-relaxed text-justify">
                   {selectedProduct.description}
                 </p>
               </div>

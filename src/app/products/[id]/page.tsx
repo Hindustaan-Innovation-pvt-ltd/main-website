@@ -131,7 +131,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed"
+              className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed text-justify"
             >
               {solution.shortDescription}
             </motion.p>

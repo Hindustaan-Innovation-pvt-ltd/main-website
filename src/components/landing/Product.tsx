@@ -9,8 +9,10 @@ interface ProductItemData {
   id: string;
   name: string;
   tagline: string;
+  taglineClassName?: string;
   category: string;
   description: React.ReactNode;
+  descriptionClassName?: string;
   highlights: string[];
   logo: string;
   internalRoute: string;
@@ -21,16 +23,23 @@ interface ProductItemData {
   webImageWidth?: number;
   webImageHeight?: number;
   webImageAspectRatio?: string;
+  hasCustomBrowserFrame?: boolean;
   webUrl?: string;
   // Mobile / Secondary Platform
   mobileTitle?: string;
   mobileSubtitle?: string;
   mobileImage?: string;
+  mobileOffsetClass?: string;
   secondaryMobileTitle?: string;
   secondaryMobileSubtitle?: string;
   secondaryMobileImage?: string;
+  secondaryMobileOffsetClass?: string;
+  secondaryMobileUrl?: string;
   mobileUrl?: string;
   appStoreUrl?: string;
+  appStoreTitle?: string;
+  secondaryAppStoreUrl?: string;
+  secondaryAppStoreTitle?: string;
   // Multi Mobile Apps Showcase (e.g. Bhukkadh Partner, Customer, Rider apps)
   multiMobileMockups?: {
     leftImage: string;
@@ -91,19 +100,21 @@ const productsData: ProductItemData[] = [
     id: "karmanisht",
     name: "KarmaNisht",
     tagline: "India's fastest geospatial home services connection platform",
+    taglineClassName: "text-xs sm:text-[13px] lg:text-[16px] font-bold font-sans",
     category: "Hyperlocal Services",
+    descriptionClassName: "text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]",
     description: (
-      <>
+      <span className="text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]">
         <a
           href="https://www.karmanisht.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#1ba453] dark:text-emerald-400 font-semibold hover:underline"
+          className="text-[#1ba453] dark:text-emerald-400 font-bold hover:underline"
         >
           Karmanisht
         </a>
         {", powered by Hindustaan Innovations Private Limited, is a hyperlocal home and utility services marketplace connecting households with Aadhaar-verified professionals across 50+ categories, including electricians, plumbers, carpenters, appliance technicians, deep cleaning, pest control, and home salon services. Users can discover nearby experts based on distance, verified ratings, and experience, while enjoying transparent pricing and a subscription-free booking experience. Service providers retain their full earnings, set their own service areas, and receive secure escrow-based payouts once customers confirm job satisfaction. Karmanisht makes finding trusted professionals and managing everyday home service needs simple, safe, and reliable."}
-      </>
+      </span>
     ),
     highlights: ["Live Geospatial GPS", "100% Aadhaar Verified", "Zero Hidden Charges"],
     logo: "/karmanisht-logo.png",
@@ -168,36 +179,43 @@ const productsData: ProductItemData[] = [
     id: "ghumakkadh",
     name: "Ghumakkadh",
     tagline: "Indian ride-hailing & rapid parcel delivery network",
+    taglineClassName: "text-xs sm:text-[13px] lg:text-[16px] font-bold font-sans",
     category: "Rides & Logistics",
-    description: "Ghumakkadh is a PAN-India ride-hailing and parcel delivery platform emphasizing transparent, locked fares with zero surge pricing, OTP-verified safety, and live GPS tracking across bike, auto, and cab options. Its landing page is built to drive conversions with prominent ride-booking and driver-partner recruitment calls-to-action, backed by core feature highlights, user testimonials, a detailed service FAQ, and app download links for both riders and drivers.",
+    descriptionClassName: "text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]",
+    description: (
+      <span className="text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]">
+        <a
+          href="https://ghumakkadh.hindustaan.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 font-bold hover:underline inline-flex items-center gap-0.5"
+        >
+          Ghumakkadh
+        </a>{" "}
+        is a PAN-India ride-hailing and parcel delivery platform emphasizing transparent, locked fares with zero surge pricing, OTP-verified safety, and live GPS tracking across bike, auto, and cab options. Its landing page is built to drive conversions with prominent ride-booking and driver-partner recruitment calls-to-action, backed by core feature highlights, user testimonials, a detailed service FAQ, and app download links for both riders and drivers.
+      </span>
+    ),
     highlights: ["Bikes, Autos & Cabs", "Parcel Delivery", "Fare Lock Guarantee"],
     logo: "/ghumakkadh_icon.png",
     internalRoute: "/products/ghumakkadh",
-    appCards: [
-      {
-        isDescriptionCard: true,
-        title: "City Rides & Logistics",
-        description: "Ghumakkadh is a PAN-India ride-hailing and parcel delivery platform emphasizing transparent, locked fares with zero surge pricing, OTP-verified safety, and live GPS tracking across bike, auto, and cab options. Its landing page is built to drive conversions with prominent ride-booking and driver-partner recruitment calls-to-action, backed by core feature highlights, user testimonials, a detailed service FAQ, and app download links for both riders and drivers.",
-        highlights: ["Bikes, Autos & Cabs", "Parcel Delivery", "Fare Lock Guarantee"],
-        webUrl: "https://ghumakkadh.hindustaan.in/",
-      },
-      {
-        title: "Ghumakkadh",
-        subtitle: "Passenger & Parcel Booking",
-        badge: "For Commuters",
-        image: "/ghumakkadh_user_uniform.png",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.ghumakkadh",
-        appStoreUrl: "https://apps.apple.com/us/app/ghumakkadh/id6806542727",
-      },
-      {
-        title: "Ghumakkadh Rider",
-        subtitle: "Driver & Partner Dashboard",
-        badge: "For Driver Partners",
-        image: "/ghumakkadh_rider_uniform.png",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.ghumakkadh",
-        appStoreUrl: "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
-      },
-    ],
+    webTitle: "Ghumakkadh Web",
+    webSubtitle: "Ride Hailing & Delivery",
+    webImage: "/Ghumakkadh Night Ride Hero.png",
+    webImageWidth: 1503,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1503 / 1046",
+    webUrl: "https://ghumakkadh.hindustaan.in/",
+    mobileTitle: "Ghumakkadh App",
+    mobileSubtitle: "Passenger & Parcel Booking",
+    mobileImage: "/ghumakkadh_user_uniform.png",
+    mobileUrl: "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+    appStoreUrl: "https://apps.apple.com/us/app/ghumakkadh/id6806542727",
+    secondaryMobileTitle: "Ghumakkadh Rider",
+    secondaryMobileSubtitle: "Driver & Partner Dashboard",
+    secondaryMobileImage: "/ghumakkadh_rider_uniform.png",
+    secondaryMobileUrl: "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+    secondaryAppStoreUrl: "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
+    secondaryAppStoreTitle: "Partner App Store",
   },
   {
     id: "truckbharat",
@@ -238,21 +256,41 @@ const productsData: ProductItemData[] = [
     name: "Onstay",
     tagline: "Hotels, hourly room bookings & executive lounges",
     category: "Hospitality Booking",
-    description: "Smart hospitality booking platform for discovering premium hotels, transit hourly day stays, and executive airport lounges with instant digital confirmation.",
+    description: (
+      <>
+        <a
+          href="https://onstay.hindustaan.tech/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
+        >
+          OnStay
+        </a>{" "}
+        ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.
+      </>
+    ),
     highlights: ["Curated Hotels & Stays", "Hourly Room Bookings", "Executive Lounge Access"],
     logo: "/onstay-logo.png",
     internalRoute: "/products/onstay",
     webTitle: "Onstay Web",
     webSubtitle: "Hospitality Platform",
-    webImage: "/onstay_home.png",
-    webImageWidth: 1670,
-    webImageHeight: 942,
-    webImageAspectRatio: "1670 / 942",
+    webImage: "/OnStay Tropical Getaway Banner.png",
+    webImageWidth: 1504,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1504 / 1046",
     webUrl: "https://onstay.hindustaan.tech/",
     mobileTitle: "Onstay App",
-    mobileSubtitle: "Hotel & Lounge App",
+    mobileSubtitle: "Guest & Room Booking",
     mobileImage: "/OnStay_Mockup.png",
     mobileUrl: "https://play.google.com/store/apps/details?id=com.onstay",
+    appStoreUrl: "https://apps.apple.com/us/app/onstay/id6807047989",
+    secondaryMobileTitle: "Onstay Partner",
+    secondaryMobileSubtitle: "Hotel & Host Dashboard",
+    secondaryMobileImage: "/onstay_partner.png",
+    secondaryMobileOffsetClass: "translate-y-4 sm:translate-y-6 xl:translate-y-8",
+    secondaryMobileUrl: "https://play.google.com/store/apps/details?id=com.onstay",
+    secondaryAppStoreUrl: "https://apps.apple.com/us/app/onstay-partner/id6807047989",
+    secondaryAppStoreTitle: "Partner App Store",
   },
   {
     id: "hindustaan-mart",
@@ -289,23 +327,6 @@ const productsData: ProductItemData[] = [
     appStoreUrl: "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
   },
   {
-    id: "vidyum-school-erp",
-    name: "Vidyum School ERP",
-    tagline: "Complete cloud-based school management & ERP suite",
-    category: "EdTech & ERP",
-    description: "Automates school administration, fee collection, student attendance, examination results, and parent-teacher communication in one unified platform.",
-    highlights: ["Student & Parent Portals", "Automated Fee Billing", "Live Transport Tracking"],
-    logo: "/vidyum.png",
-    internalRoute: "/products/vidyum-school-erp",
-    webTitle: "Vidyum Portal",
-    webSubtitle: "EdTech Platform",
-    webImage: "/Vidyum_home.png",
-    webImageWidth: 1448,
-    webImageHeight: 1086,
-    webImageAspectRatio: "1448 / 1086",
-    webUrl: "https://vidyum.hindustaan.in/",
-  },
-  {
     id: "miracal",
     name: "Miracal",
     tagline: "Next-gen instant messaging & crystal-clear calling",
@@ -316,11 +337,11 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/miracal",
     webTitle: "Miracal Web",
     webSubtitle: "Instant Messaging Web",
-    webImage: "/Miracal.png",
-    webImageWidth: 1409,
-    webImageHeight: 791,
-    webImageAspectRatio: "1409 / 791",
-    webUrl: "https://miracal.hindustaan.tech",
+    webImage: "/Miracal Messaging App Hero Scene.png",
+    webImageWidth: 1504,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1504 / 1046",
+    webUrl: "https://miracal.hindustaan.tech/",
     mobileTitle: "Miracal App",
     mobileSubtitle: "Chat & Calling App",
     mobileImage: "/miracal-mobile.png",
@@ -337,15 +358,32 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/miracal-business",
     webTitle: "Miracal Business Web",
     webSubtitle: "Business Platform",
-    webImage: "/miracal_business.png",
-    webImageWidth: 1920,
-    webImageHeight: 901,
-    webImageAspectRatio: "1920 / 901",
-    webUrl: "https://miracalbussiness.hindustaan.tech",
+    webImage: "/Miracal Business Team Hero.png",
+    webImageWidth: 1504,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1504 / 1046",
+    webUrl: "https://miracalbussiness.hindustaan.tech/",
     mobileTitle: "Business App",
     mobileSubtitle: "Team Messaging App",
     mobileImage: "/miracal_business_phone.png",
     mobileUrl: "https://play.google.com/store/apps/details?id=com.miracal.business",
+  },
+  {
+    id: "vidyum-school-erp",
+    name: "Vidyum School ERP",
+    tagline: "Complete cloud-based school management & ERP suite",
+    category: "EdTech & ERP",
+    description: "Automates school administration, fee collection, student attendance, examination results, and parent-teacher communication in one unified platform.",
+    highlights: ["Student & Parent Portals", "Automated Fee Billing", "Live Transport Tracking"],
+    logo: "/vidyum.png",
+    internalRoute: "/products/vidyum-school-erp",
+    webTitle: "Vidyum Portal",
+    webSubtitle: "EdTech Platform",
+    webImage: "/Vidyum_home.png",
+    webImageWidth: 1448,
+    webImageHeight: 1086,
+    webImageAspectRatio: "1448 / 1086",
+    webUrl: "https://vidyum.hindustaan.in/",
   },
 ];
 
@@ -416,7 +454,7 @@ function ProductStackSlide({
       className={`w-full ${
         isDesktop
           ? "lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center"
-          : "relative mb-8 sm:mb-12"
+          : "relative mb-6 sm:mb-8 lg:mb-0"
       }`}
     >
       <div
@@ -424,7 +462,7 @@ function ProductStackSlide({
           isDesktop
             ? "h-full max-h-[480px] xl:max-h-[520px] 2xl:max-h-[600px]"
             : "h-auto"
-        } bg-white dark:bg-[#0c0c0e] border border-zinc-200/80 dark:border-white/10 rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-5 xl:p-6 shadow-2xl shadow-zinc-900/15 dark:shadow-black/80 flex flex-col justify-center overflow-hidden`}
+        } bg-white dark:bg-[#0c0c0e] border border-zinc-200/80 dark:border-white/10 rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem] p-4 sm:p-5 lg:p-5 xl:p-6 shadow-2xl shadow-zinc-900/15 dark:shadow-black/80 flex flex-col justify-center overflow-hidden`}
       >
         {children}
       </div>
@@ -467,7 +505,7 @@ export function ProductSection() {
           className={
             isDesktop
               ? "sticky top-20 xl:top-24 w-full h-[calc(100vh-6.5rem)] flex items-center justify-center overflow-hidden max-w-[1500px] mx-auto px-4 sm:px-6 md:px-10 py-1"
-              : "w-full max-w-[1500px] mx-auto px-4 sm:px-6 md:px-10"
+              : "w-full max-w-[1500px] mx-auto px-3.5 sm:px-6 md:px-10"
           }
         >
           {/* Card Deck Wrapper sized cleanly to fit PC screens without clipping */}
@@ -475,7 +513,7 @@ export function ProductSection() {
             className={`relative w-full ${
               isDesktop
                 ? "h-full max-h-[480px] xl:max-h-[520px] 2xl:max-h-[600px] flex items-center justify-center"
-                : "space-y-8"
+                : "space-y-6 sm:space-y-8 lg:space-y-0"
             }`}
           >
             {productsData.map((product, index) => (
@@ -523,119 +561,66 @@ export function ProductSection() {
                       )}
                     </div>
 
-                    {/* 3 Cards Grid: 1 Phone Mockup in 1 Card */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-3.5 xl:gap-4 w-full pt-2.5 sm:pt-3 flex-1 min-h-0 items-stretch">
+                    {/* 3 Phone Mockups Showcase (Enlarged, same size and width, responsive on mobile & tablet) */}
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full pt-2 sm:pt-3 flex-1 min-h-0 items-end justify-center">
                       {product.appCards.map((card, cIdx) => (
                         <div
                           key={cIdx}
-                          className="relative bg-zinc-50/80 dark:bg-zinc-950/40 border border-zinc-200/80 dark:border-white/10 rounded-2xl p-2.5 sm:p-3 xl:p-3.5 flex flex-col justify-between group/card hover:border-zinc-300 dark:hover:border-white/20 hover:shadow-md transition-all duration-300 overflow-hidden"
+                          className="flex flex-col items-center justify-end h-full w-full group/phone"
                         >
-                          {card.isDescriptionCard ? (
-                            /* Description Card (Left) */
-                            <div className="flex flex-col justify-start h-full w-full text-left p-1 sm:p-1.5">
-                              <div className="space-y-2">
-                                {card.badge && (
-                                  <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-                                    {card.badge}
-                                  </span>
-                                )}
-                                <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-sm sm:text-base tracking-tight leading-snug">
-                                  {card.title}
-                                </h4>
-                                <p className="text-[11px] sm:text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                                  {card.description}
-                                </p>
+                          {/* Phone Mockup (Enlarged with identical width/height) */}
+                          <div className="relative w-full max-w-[105px] xs:max-w-[125px] sm:max-w-[170px] md:max-w-[205px] lg:max-w-[215px] xl:max-w-[270px] 2xl:max-w-[305px] drop-shadow-[0_12px_22px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)] lg:drop-shadow-[0_22px_38px_rgba(0,0,0,0.38)] dark:drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)] sm:dark:drop-shadow-[0_24px_40px_rgba(0,0,0,0.9)] lg:dark:drop-shadow-[0_28px_48px_rgba(0,0,0,0.92)] group-hover/phone:-translate-y-2.5 transition-transform duration-500 flex justify-center mx-auto">
+                            {card.image && (
+                              <Image
+                                src={card.image}
+                                alt={card.title}
+                                width={776}
+                                height={1576}
+                                style={{ width: "100%", height: "auto" }}
+                                className="w-full h-auto max-h-[155px] xs:max-h-[185px] sm:max-h-[225px] md:max-h-[265px] lg:max-h-[270px] xl:max-h-[340px] 2xl:max-h-[395px] object-contain"
+                                unoptimized
+                              />
+                            )}
+                          </div>
 
-                                {/* Highlights tags */}
-                                {card.highlights && card.highlights.length > 0 && (
-                                  <div className="flex flex-wrap gap-1.5 pt-1.5">
-                                    {card.highlights.map((h, hIdx) => (
-                                      <span
-                                        key={hIdx}
-                                        className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] sm:text-[10.5px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-700/60"
-                                      >
-                                        {h}
-                                      </span>
-                                    ))}
-                                  </div>
-                                )}
+                          {/* Info & Action Buttons underneath each phone */}
+                          <div className="w-full pt-1.5 sm:pt-2.5 lg:pt-3 flex flex-col items-center text-center shrink-0">
+                            <span className="text-[8px] xs:text-[9px] sm:text-[10px] lg:text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+                              {card.badge}
+                            </span>
+                            <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10.5px] xs:text-xs sm:text-xs lg:text-sm mt-0.5">
+                              {card.title}
+                            </h4>
+                            <p className="text-[9px] xs:text-[10px] sm:text-[10.5px] lg:text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
+                              {card.subtitle}
+                            </p>
 
-                                {/* Website Button */}
-                                {card.webUrl && (
-                                  <div className="pt-2 sm:pt-2.5">
-                                    <a
-                                      href={card.webUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 transition-colors cursor-pointer shadow-xs"
-                                    >
-                                      <Globe className="w-3.5 h-3.5" />
-                                      <span>Website</span>
-                                      <ArrowUpRight className="w-3 h-3 opacity-70" />
-                                    </a>
-                                  </div>
-                                )}
-                              </div>
+                            {/* Store Buttons */}
+                            <div className="flex flex-col xs:flex-row items-center justify-center gap-1 sm:gap-1.5 lg:gap-2 pt-1.5 sm:pt-2">
+                              {card.playStoreUrl && (
+                                <a
+                                  href={card.playStoreUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3.5 lg:py-1.5 rounded-full text-[9px] sm:text-[10px] lg:text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
+                                >
+                                  <GooglePlayIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                                  <span>Google Play</span>
+                                </a>
+                              )}
+                              {card.appStoreUrl && (
+                                <a
+                                  href={card.appStoreUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3.5 lg:py-1.5 rounded-full text-[9px] sm:text-[10px] lg:text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
+                                >
+                                  <AppleIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                                  <span>App Store</span>
+                                </a>
+                              )}
                             </div>
-                          ) : (
-                            /* Phone Mockup Card */
-                            <div className="flex flex-col justify-between items-center h-full w-full">
-                              {/* Upper Card Area: Phone Mockup */}
-                              <div className="relative w-full flex-1 flex items-center justify-center py-1 min-h-[170px] sm:min-h-[190px] xl:min-h-[210px] 2xl:min-h-[250px]">
-                                <div className="relative w-full max-w-[145px] sm:max-w-[160px] xl:max-w-[180px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] group-hover/card:-translate-y-2 transition-transform duration-500 flex justify-center">
-                                  {card.image && (
-                                    <Image
-                                      src={card.image}
-                                      alt={card.title}
-                                      width={800}
-                                      height={1600}
-                                      className="w-full h-auto max-h-[175px] sm:max-h-[195px] xl:max-h-[220px] 2xl:max-h-[260px] object-contain"
-                                      unoptimized
-                                    />
-                                  )}
-                                </div>
-                              </div>
-
-                              {/* Lower Card Area: Title, Subtitle, Action Buttons */}
-                              <div className="w-full pt-2 sm:pt-2.5 border-t border-zinc-200/60 dark:border-white/10 flex flex-col items-center text-center mt-auto shrink-0">
-                                <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-                                  {card.badge}
-                                </span>
-                                <h4 className="font-bold text-zinc-900 dark:text-zinc-100 text-xs sm:text-sm mt-0.5">
-                                  {card.title}
-                                </h4>
-                                <p className="text-[10.5px] sm:text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
-                                  {card.subtitle}
-                                </p>
-
-                                {/* Action Download Buttons */}
-                                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mt-2.5">
-                                  {card.playStoreUrl && (
-                                    <a
-                                      href={card.playStoreUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-[12.5px] font-semibold bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
-                                    >
-                                      <GooglePlayIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                                      <span>Google Play</span>
-                                    </a>
-                                  )}
-                                  {card.appStoreUrl && (
-                                    <a
-                                      href={card.appStoreUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-[12.5px] font-semibold bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer"
-                                    >
-                                      <AppleIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                                      <span>App Store</span>
-                                    </a>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -660,15 +645,15 @@ export function ProductSection() {
                           </h3>
                         </div>
 
-                        {/* Body Content: Tagline, Description & Highlights (shifted further down) */}
-                        <div className="mt-8 sm:mt-10 xl:mt-12 space-y-3 sm:space-y-3.5">
+                        {/* Body Content: Tagline, Description & Highlights (shifted further down on PC, balanced on mobile/tablet) */}
+                        <div className="mt-3.5 sm:mt-5 lg:mt-8 xl:mt-12 space-y-2.5 sm:space-y-3 lg:space-y-3.5">
                           {/* Tagline */}
                           <p className="text-xs sm:text-[13px] font-semibold text-zinc-700 dark:text-zinc-300 leading-snug">
                             {product.tagline}
                           </p>
 
-                          {/* Description: full exact content displayed with zero scroll down */}
-                          <div className="text-[11px] sm:text-[11.5px] xl:text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                          {/* Description: full exact content displayed in 16px bold sans-serif with justified alignment on PC, clean left-aligned on mobile/tablet */}
+                          <div className={`leading-relaxed text-zinc-600 dark:text-zinc-400 text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans text-left lg:text-justify [text-align-last:left] ${product.descriptionClassName || ""}`}>
                             {product.description}
                           </div>
 
@@ -685,15 +670,15 @@ export function ProductSection() {
                           </div>
 
                           {/* Action Buttons: placed directly below 100% verified & zero hidden charges tags */}
-                          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-3 sm:pt-4">
+                          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 lg:gap-3 pt-2.5 sm:pt-3 lg:pt-4">
                             {product.webUrl && (
                               <a
                                 href={product.webUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 sm:px-4.5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 transition-colors cursor-pointer shadow-xs"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 transition-colors cursor-pointer shadow-xs"
                               >
-                                <Globe className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
+                                <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5" />
                                 <span>Website</span>
                                 <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-70" />
                               </a>
@@ -703,9 +688,9 @@ export function ProductSection() {
                                 href={product.mobileUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 sm:px-4.5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
                               >
-                                <GooglePlayIcon className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
+                                <GooglePlayIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5" />
                                 <span>Google Play</span>
                               </a>
                             )}
@@ -714,10 +699,32 @@ export function ProductSection() {
                                 href={product.appStoreUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 sm:px-4.5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
                               >
-                                <AppleIcon className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-                                <span>App Store</span>
+                                <AppleIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5" />
+                                <span>{product.appStoreTitle || "App Store"}</span>
+                              </a>
+                            )}
+                            {product.secondaryMobileUrl && (
+                              <a
+                                href={product.secondaryMobileUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
+                              >
+                                <GooglePlayIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5" />
+                                <span>Partner App</span>
+                              </a>
+                            )}
+                            {product.secondaryAppStoreUrl && (
+                              <a
+                                href={product.secondaryAppStoreUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
+                              >
+                                <AppleIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-4.5 lg:h-4.5" />
+                                <span>{product.secondaryAppStoreTitle || "Partner App Store"}</span>
                               </a>
                             )}
                           </div>
@@ -726,26 +733,95 @@ export function ProductSection() {
                     </div>
 
                     {/* RIGHT SIDE: Mockups Showcase (Web, Mobile, or Combined) */}
-                    <div className="lg:col-span-7 relative flex items-center justify-center h-full group">
-                      {product.webImage && product.mobileImage ? (
-                        /* Case 1: Standard Desktop Browser Mockup + Overlapping Mobile App */
-                        <div className="relative w-[72%] sm:w-[70%] -translate-x-[6%] sm:-translate-x-[7%] flex items-center">
+                    <div className="lg:col-span-7 relative flex items-center justify-center h-full group pt-3 sm:pt-5 lg:pt-0">
+                      {product.webImage && product.mobileImage && product.secondaryMobileImage ? (
+                        /* Case 1A: Desktop Browser Mockup + Dual Side-by-Side Mobile Apps (as per reference design) */
+                        <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[690px] xl:max-w-[760px] 2xl:max-w-[820px] flex items-center justify-start pb-12 sm:pb-16 lg:pb-2 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0">
                           {/* Desktop Browser Mockup */}
-                          <div className="w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10">
-                            {/* Browser Top Window Bar */}
-                            <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
-                              <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
-                              <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-                              <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
-                              <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[200px]">
-                                {product.webUrl?.replace(/^https?:\/\//, "")}
-                              </span>
+                          <div className="relative w-[58%] sm:w-[56%] lg:w-[56%] xl:w-[58%] shrink-0">
+                            <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
+                              {!product.hasCustomBrowserFrame && (
+                                <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                                  <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                                  <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                                  <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                                  <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[220px]">
+                                    {product.webUrl?.replace(/^https?:\/\//, "")}
+                                  </span>
+                                </div>
+                              )}
+
+                              {/* Browser Screenshot Content */}
+                              <div
+                                style={{ aspectRatio: product.webImageAspectRatio || "16/9" }}
+                                className={`${product.hasCustomBrowserFrame ? 'rounded-2xl' : 'bg-white dark:bg-zinc-900'} relative w-full overflow-hidden flex items-start justify-center`}
+                              >
+                                <Image
+                                  src={product.webImage}
+                                  alt={`${product.name} Web`}
+                                  width={product.webImageWidth || 1504}
+                                  height={product.webImageHeight || 1046}
+                                  className="w-full h-full object-cover object-top"
+                                  unoptimized
+                                />
+                              </div>
                             </div>
+                          </div>
+
+                          {/* Dual Phones Side-by-Side (Overlapping the right of the desktop window) */}
+                          <div className="absolute right-0 sm:right-1 xl:right-2 -bottom-8 sm:-bottom-11 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5">
+                            {/* Phone 1: Customer / Primary App */}
+                            <div className="w-[86px] sm:w-[118px] md:w-[134px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
+                              <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
+                                <Image
+                                  src={product.mobileImage}
+                                  alt={product.mobileTitle || `${product.name} App`}
+                                  width={776}
+                                  height={1576}
+                                  style={{ width: "100%", height: "auto" }}
+                                  className="w-full h-auto max-h-[180px] sm:max-h-[230px] md:max-h-[255px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  unoptimized
+                                />
+                              </div>
+                            </div>
+
+                            {/* Phone 2: Partner / Driver / Host App */}
+                            <div className="w-[86px] sm:w-[118px] md:w-[134px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 delay-75 flex justify-center">
+                              <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
+                                <Image
+                                  src={product.secondaryMobileImage}
+                                  alt={product.secondaryMobileTitle || `${product.name} Partner App`}
+                                  width={776}
+                                  height={1576}
+                                  style={{ width: "100%", height: "auto" }}
+                                  className="w-full h-auto max-h-[180px] sm:max-h-[230px] md:max-h-[255px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  unoptimized
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : product.webImage && product.mobileImage ? (
+                        /* Case 1: Standard Desktop Browser Mockup + Overlapping Mobile App */
+                        <div className="relative w-[82%] sm:w-[76%] lg:w-[72%] xl:w-[70%] -translate-x-[2%] sm:-translate-x-[4%] lg:-translate-x-[6%] sm:lg:-translate-x-[7%] flex items-center pb-8 sm:pb-10 lg:pb-0 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0">
+                          {/* Desktop Browser Mockup */}
+                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
+                            {/* Browser Top Window Bar */}
+                            {!product.hasCustomBrowserFrame && (
+                              <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                                <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                                <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                                <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                                <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[280px] sm:max-w-[340px]">
+                                  {product.webUrl?.replace(/^https?:\/\//, "")}
+                                </span>
+                              </div>
+                            )}
 
                             {/* Browser Screenshot Content */}
                             <div
                               style={{ aspectRatio: product.webImageAspectRatio || "16/9" }}
-                              className="bg-white dark:bg-zinc-900 relative w-full overflow-hidden flex items-start justify-center"
+                              className={`${product.hasCustomBrowserFrame ? 'rounded-2xl' : 'bg-white dark:bg-zinc-900'} relative w-full overflow-hidden flex items-start justify-center`}
                             >
                               <Image
                                 src={product.webImage}
@@ -759,14 +835,14 @@ export function ProductSection() {
                           </div>
 
                           {/* Mobile App Mockup (Overlapping right & down) */}
-                          <div className="absolute -right-6 sm:-right-7 xl:-right-8 translate-x-1/2 -bottom-10 sm:-bottom-11 xl:-bottom-12 z-20 w-[46%] sm:w-[42%] md:w-[38%] max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px] group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center">
-                            <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
+                          <div className="absolute -right-3 sm:-right-5 lg:-right-6 xl:-right-8 translate-x-1/2 -bottom-6 sm:-bottom-8 lg:-bottom-10 xl:-bottom-12 z-20 w-[44%] sm:w-[40%] lg:w-[46%] xl:w-[42%] md:w-[38%] max-w-[145px] sm:max-w-[175px] lg:max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px] group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center">
+                            <div className={`relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] ${product.mobileOffsetClass || ""}`}>
                               <Image
                                 src={product.mobileImage}
                                 alt={`${product.name} App`}
                                 width={400}
                                 height={800}
-                                className="w-full h-auto max-h-[240px] sm:max-h-[270px] xl:max-h-[305px] 2xl:max-h-[375px] object-contain"
+                                className="w-full h-auto max-h-[185px] sm:max-h-[225px] lg:max-h-[240px] xl:max-h-[305px] 2xl:max-h-[375px] object-contain"
                                 unoptimized
                               />
                             </div>
@@ -774,60 +850,62 @@ export function ProductSection() {
                         </div>
                       ) : product.mobileImage && product.secondaryMobileImage ? (
                         /* Case 2A: Dual Mobile App Showcase (Side-by-side with uniform sizing) */
-                        <div className="relative w-full flex items-center justify-center gap-4 sm:gap-6 xl:gap-8 py-2">
+                        <div className="relative w-full flex items-center justify-center gap-3 sm:gap-5 md:gap-6 xl:gap-8 py-2">
                           {/* Phone 1: Passenger App */}
-                          <div className="relative w-full max-w-[145px] sm:max-w-[170px] xl:max-w-[195px] 2xl:max-w-[225px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
+                          <div className="relative w-full max-w-[115px] sm:max-w-[145px] md:max-w-[170px] xl:max-w-[195px] 2xl:max-w-[230px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
                             <Image
                               src={product.mobileImage}
                               alt={product.mobileTitle || `${product.name} App`}
                               width={900}
                               height={1700}
-                              className="w-full h-auto max-h-[240px] sm:max-h-[270px] xl:max-h-[310px] 2xl:max-h-[370px] object-contain"
+                              className="w-full h-auto max-h-[190px] sm:max-h-[240px] md:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[380px] object-contain"
                               unoptimized
                             />
                           </div>
 
                           {/* Phone 2: Rider / Driver Dashboard Mockup */}
-                          <div className="relative w-full max-w-[145px] sm:max-w-[170px] xl:max-w-[195px] 2xl:max-w-[225px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2.5 transition-transform duration-500 delay-75 flex justify-center">
+                          <div className="relative w-full max-w-[115px] sm:max-w-[145px] md:max-w-[170px] xl:max-w-[195px] 2xl:max-w-[230px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2.5 transition-transform duration-500 delay-75 flex justify-center">
                             <Image
                               src={product.secondaryMobileImage}
                               alt={product.secondaryMobileTitle || `${product.name} Rider Dashboard`}
                               width={900}
                               height={1700}
-                              className="w-full h-auto max-h-[240px] sm:max-h-[270px] xl:max-h-[310px] 2xl:max-h-[370px] object-contain"
+                              className="w-full h-auto max-h-[190px] sm:max-h-[240px] md:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[380px] object-contain"
                               unoptimized
                             />
                           </div>
                         </div>
                       ) : product.mobileImage ? (
                         /* Case 2B: Pure Mobile App Showcase (Centered and Prominent) */
-                        <div className="relative w-full flex items-center justify-center py-2">
-                          <div className="relative w-full max-w-[200px] sm:max-w-[230px] xl:max-w-[260px] 2xl:max-w-[290px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
+                        <div className="relative w-full flex items-center justify-center py-2 sm:py-3 lg:py-2">
+                          <div className="relative w-full max-w-[155px] sm:max-w-[185px] lg:max-w-[200px] xl:max-w-[260px] 2xl:max-w-[290px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
                             <Image
                               src={product.mobileImage}
                               alt={`${product.name} App`}
                               width={400}
                               height={800}
-                              className="w-full h-auto max-h-[260px] sm:max-h-[295px] xl:max-h-[340px] 2xl:max-h-[400px] object-contain"
+                              className="w-full h-auto max-h-[205px] sm:max-h-[250px] lg:max-h-[260px] xl:max-h-[340px] 2xl:max-h-[400px] object-contain"
                               unoptimized
                             />
                           </div>
                         </div>
                       ) : product.webImage ? (
                         /* Case 3: Pure Web App Showcase (Centered Browser Mockup) */
-                        <div className="relative w-[92%] sm:w-[88%] mx-auto flex items-center">
-                          <div className="w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10">
-                            <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
-                              <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
-                              <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
-                              <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
-                              <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[200px]">
-                                {product.webUrl?.replace(/^https?:\/\//, "")}
-                              </span>
-                            </div>
+                        <div className="relative w-full sm:w-[94%] lg:w-[92%] sm:lg:w-[88%] mx-auto flex items-center pt-2 sm:pt-4 lg:pt-0">
+                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
+                            {!product.hasCustomBrowserFrame && (
+                              <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                                <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                                <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                                <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                                <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[280px] sm:max-w-[340px]">
+                                  {product.webUrl?.replace(/^https?:\/\//, "")}
+                                </span>
+                              </div>
+                            )}
                             <div
                               style={{ aspectRatio: product.webImageAspectRatio || "16/9" }}
-                              className="bg-white dark:bg-zinc-900 relative w-full overflow-hidden flex items-start justify-center"
+                              className={`${product.hasCustomBrowserFrame ? 'rounded-2xl' : 'bg-white dark:bg-zinc-900'} relative w-full overflow-hidden flex items-start justify-center`}
                             >
                               <Image
                                 src={product.webImage}
