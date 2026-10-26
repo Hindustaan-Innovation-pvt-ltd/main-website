@@ -15,6 +15,7 @@ interface ProductItemData {
   descriptionClassName?: string;
   highlights: string[];
   logo: string;
+  darkLogo?: string;
   internalRoute: string;
   // Web Platform
   webTitle?: string;
@@ -27,6 +28,7 @@ interface ProductItemData {
   webUrl?: string;
   webWidthClass?: string;
   webOffsetClass?: string;
+  webImageClass?: string;
   containerMaxWidthClass?: string;
   dualPhonesPositionClass?: string;
   // Mobile / Secondary Platform
@@ -147,6 +149,10 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/bhukkadh",
     webTitle: "Bhukkadh Web",
     webSubtitle: "Food Delivery Platform",
+    webImage: "/Bhukkadh Food Delivery Hero Banner.png",
+    webImageWidth: 1505,
+    webImageHeight: 1045,
+    webImageAspectRatio: "1505 / 1045",
     webUrl: "https://bhukkadh.hindustaan.in/",
     mobileTitle: "Bhukkadh App",
     mobileSubtitle: "Food Delivery App",
@@ -204,10 +210,11 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/ghumakkadh",
     webTitle: "Ghumakkadh Web",
     webSubtitle: "Ride Hailing & Delivery",
-    webImage: "/Ghumakkadh Night Ride Hero.png",
-    webImageWidth: 1503,
+    webImage: "/Ride Smarter with Ghumakkadh.png",
+    webImageWidth: 1504,
     webImageHeight: 1046,
-    webImageAspectRatio: "1503 / 1046",
+    webImageAspectRatio: "1504 / 1046",
+    webOffsetClass: "-translate-y-2.5 sm:-translate-y-4 lg:translate-y-0",
     webUrl: "https://ghumakkadh.hindustaan.in/",
     mobileTitle: "Ghumakkadh App",
     mobileSubtitle: "Passenger & Parcel Booking",
@@ -244,10 +251,11 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/truckbharat",
     webTitle: "TruckBharat Web",
     webSubtitle: "Digital Freight Platform",
-    webImage: "/trucksite.png",
-    webImageWidth: 1600,
-    webImageHeight: 1073,
-    webImageAspectRatio: "1600 / 1073",
+    webImage: "/TruckBharat Freight Marketplace Banner.png",
+    webImageWidth: 1532,
+    webImageHeight: 1027,
+    webImageAspectRatio: "1532 / 1027",
+    webOffsetClass: "-translate-y-3 sm:-translate-y-5 lg:-translate-y-7",
     webUrl: "https://truckbharat.hindustaan.tech/",
     mobileTitle: "TruckBharat App",
     mobileSubtitle: "Driver & Shipper App",
@@ -278,27 +286,24 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/onstay",
     webTitle: "Onstay Web",
     webSubtitle: "Hospitality Platform",
-    webImage: "/OnStay Tropical Getaway Banner.png",
+    webImage: "/OnStay_ Find Your Perfect Stay.png",
     webImageWidth: 1504,
     webImageHeight: 1046,
-    webImageAspectRatio: "16 / 10.5",
+    webImageAspectRatio: "1504 / 1046",
     webWidthClass: "w-[64%] sm:w-[62%] lg:w-[63%] xl:w-[64%]",
     webOffsetClass: "-translate-y-4 sm:-translate-y-6 lg:-translate-y-8 xl:-translate-y-10",
     containerMaxWidthClass: "max-w-[460px] sm:max-w-[580px] lg:max-w-[720px] xl:max-w-[790px] 2xl:max-w-[860px]",
-    dualPhonesPositionClass: "right-0 sm:right-1 xl:right-2",
+    dualPhonesPositionClass: "right-1 sm:right-2 lg:right-0 xl:right-2",
     webUrl: "https://onstay.hindustaan.tech/",
     mobileTitle: "Onstay App",
     mobileSubtitle: "Guest & Room Booking",
     mobileImage: "/OnStay_Mockup.png",
     mobileUrl: "https://play.google.com/store/apps/details?id=com.onstay",
-    appStoreUrl: "https://apps.apple.com/us/app/onstay/id6807047989",
     secondaryMobileTitle: "Onstay Partner",
     secondaryMobileSubtitle: "Hotel & Host Dashboard",
     secondaryMobileImage: "/onstay_partner.png",
     secondaryMobileOffsetClass: "translate-y-4 sm:translate-y-6 xl:translate-y-8",
     secondaryMobileUrl: "https://play.google.com/store/apps/details?id=com.onstay",
-    secondaryAppStoreUrl: "https://apps.apple.com/us/app/onstay-partner/id6807047989",
-    secondaryAppStoreTitle: "Partner App Store",
   },
   {
     id: "hindustaan-mart",
@@ -393,11 +398,42 @@ const productsData: ProductItemData[] = [
     webImageAspectRatio: "1448 / 1086",
     webUrl: "https://vidyum.hindustaan.in/",
   },
+  {
+    id: "hindustaan-crm",
+    name: "Hindustaan CRM",
+    tagline: "Enterprise CRM, Lead Management & Workflow Automation",
+    category: "Enterprise Suite",
+    description: (
+      <>
+        The internal operations portal for{" "}
+        <a
+          href="https://panel.hindustaan.in/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+        >
+          Hindustaan Innovations
+        </a>{" "}
+        functions as an Enterprise Workspace OS that centralizes sprint and task governance, real-time workforce management, and executive analytics into a single secured platform protected by single sign-on.
+      </>
+    ),
+    highlights: ["Lead & Sales Pipeline", "Workflow Automation", "Analytics & Reporting"],
+    logo: "/favicon.svg",
+    darkLogo: "/logo.png",
+    internalRoute: "/products/hindustaan-crm",
+    webTitle: "Hindustaan CRM Suite",
+    webSubtitle: "Enterprise CRM Platform",
+    webImage: "/hindustaan_crm.png",
+    webImageWidth: 1504,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1504 / 1046",
+    webUrl: "https://panel.hindustaan.in/",
+  },
 ];
 
 
 // Pinned Stacking Card Component
-// As user scrolls down, current product screen stays pinned while incoming product rises from bottom and places itself on top
+// At any time, strictly one card is active. Inactive cards (past or future) are completely hidden (opacity 0, pointer-events none).
 function ProductStackSlide({
   children,
   index,
@@ -411,19 +447,19 @@ function ProductStackSlide({
   scrollYProgress: MotionValue<number>;
   isDesktop: boolean;
 }) {
-  const transitions = total - 1; // 8 transitions for 9 products
-  const segment = 1 / transitions;
+  const step = 1 / total;
 
-  // Incoming transition interval for this product (index > 0)
-  const enterStart = index === 0 ? 0 : (index - 1) * segment;
-  const enterEnd = index === 0 ? 0 : (index - 1) * segment + segment * 0.85;
+  // Key milestones for this card's lifecycle
+  const enterStart = index === 0 ? 0 : (index - 1) * step + step * 0.35;
+  const enterEnd = index === 0 ? 0 : index * step;
+  const enterMid = enterStart + (enterEnd - enterStart) * 0.3;
 
-  // Outgoing / covered transition interval when next product places on top of this one
-  const exitStart = index * segment;
-  const exitEnd = index * segment + segment * 0.85;
+  const exitStart = index * step + step * 0.35;
+  const exitEnd = (index + 1) * step;
 
-  // Y Transform: Product 0 is already in place.
-  // Subsequent products rise up from below (100% -> 0%) and settle directly on top
+  // Y Transform:
+  // Product 0 is pinned at 0%
+  // Subsequent products rise smoothly from 100% to 0% during their enter interval
   const y = useTransform(
     scrollYProgress,
     index === 0 ? [0, 1] : [enterStart, enterEnd],
@@ -431,46 +467,57 @@ function ProductStackSlide({
     { clamp: true }
   );
 
-  // Subtle depth scale when the NEXT product slides on top
+  // Scale: stays 1.0 while active, subtle 0.96 tuck as the next card covers it
   const scale = useTransform(
     scrollYProgress,
-    index === total - 1 ? [0, 1] : [exitStart, exitEnd],
-    index === total - 1 ? [1, 1] : [1, 0.95],
+    index === total - 1 ? [0, 1] : [0, exitStart, exitEnd, 1],
+    index === total - 1 ? [1, 1] : [1, 1, 0.96, 0.96],
     { clamp: true }
   );
 
-  // Subtle dimming when covered
+  // Opacity: ONLY visible during its active window!
+  // Before enter: strictly 0 (no peeking from bottom)
+  // After exit: strictly 0 (no lingering behind)
   const opacity = useTransform(
     scrollYProgress,
-    index === total - 1 ? [0, 1] : [exitStart, exitEnd],
-    index === total - 1 ? [1, 1] : [1, 0.7],
+    index === 0
+      ? [0, exitStart, exitEnd, 1]
+      : index === total - 1
+        ? [0, enterStart, enterMid, 1]
+        : [0, enterStart, enterMid, exitStart, exitEnd, 1],
+    index === 0
+      ? [1, 1, 0, 0]
+      : index === total - 1
+        ? [0, 0, 1, 1]
+        : [0, 0, 1, 1, 0, 0],
     { clamp: true }
   );
+
+  const pointerEvents = useTransform(opacity, (val) => (val > 0.05 ? "auto" : "none"));
 
   return (
     <motion.div
       style={
         isDesktop
           ? {
-              y,
-              scale,
-              opacity,
-              zIndex: 10 + index,
-            }
+            y,
+            scale,
+            opacity,
+            pointerEvents,
+            zIndex: 10 + index,
+          }
           : undefined
       }
-      className={`w-full ${
-        isDesktop
+      className={`w-full ${isDesktop
           ? "lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center"
           : "relative mb-6 sm:mb-8 lg:mb-0"
-      }`}
+        }`}
     >
       <div
-        className={`w-full ${
-          isDesktop
-            ? "h-full max-h-[480px] xl:max-h-[520px] 2xl:max-h-[600px]"
+        className={`w-full ${isDesktop
+            ? "h-[560px] xl:h-[620px] 2xl:h-[680px]"
             : "h-auto"
-        } bg-white dark:bg-[#0c0c0e] border border-zinc-200/80 dark:border-white/10 rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem] p-4 sm:p-5 lg:p-5 xl:p-6 shadow-2xl shadow-zinc-900/15 dark:shadow-black/80 flex flex-col justify-center overflow-hidden`}
+          } bg-white dark:bg-[#0c0c0e] border border-zinc-200/80 dark:border-white/10 rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem] p-4 sm:p-5 lg:p-5 xl:p-6 shadow-2xl shadow-zinc-900/15 dark:shadow-black/80 flex flex-col justify-center overflow-hidden`}
       >
         {children}
       </div>
@@ -498,31 +545,30 @@ export function ProductSection() {
   });
 
   return (
-    <section className="pb-16 pt-2 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
+    <section className="pb-16 pt-0 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       {/* 
-        On Desktop (lg+): Container is tall (680vh), inner container is sticky.
+        On Desktop (lg+): Container is tall (760vh), inner container is sticky.
         Current product stays pinned while next product scrolls up and places itself directly on top!
         On Mobile: Standard natural scrolling flow.
       */}
       <div
         ref={containerRef}
-        style={isDesktop ? { height: "680vh" } : undefined}
+        style={isDesktop ? { height: "760vh" } : undefined}
         className="relative w-full"
       >
         <div
           className={
             isDesktop
-              ? "sticky top-20 xl:top-24 w-full h-[calc(100vh-6.5rem)] flex items-center justify-center overflow-hidden max-w-[1500px] mx-auto px-4 sm:px-6 md:px-10 py-1"
-              : "w-full max-w-[1500px] mx-auto px-3.5 sm:px-6 md:px-10"
+              ? "sticky top-20 xl:top-24 w-full h-[calc(100vh-6.5rem)] flex items-start justify-center overflow-hidden max-w-[1800px] mx-auto px-3 sm:px-8 md:px-12 pt-2 sm:pt-4 lg:pt-5"
+              : "w-full max-w-[1800px] mx-auto px-3 sm:px-8 md:px-12"
           }
         >
           {/* Card Deck Wrapper sized cleanly to fit PC screens without clipping */}
           <div
-            className={`relative w-full ${
-              isDesktop
-                ? "h-full max-h-[480px] xl:max-h-[520px] 2xl:max-h-[600px] flex items-center justify-center"
+            className={`relative w-full ${isDesktop
+                ? "h-[560px] xl:h-[620px] 2xl:h-[680px] flex items-center justify-center overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem]"
                 : "space-y-6 sm:space-y-8 lg:space-y-0"
-            }`}
+              }`}
           >
             {productsData.map((product, index) => (
               <ProductStackSlide
@@ -554,100 +600,144 @@ export function ProductSection() {
                           </p>
                         </div>
                       </div>
+                    </div>
 
-                      {product.webUrl && (
+                    {/* Showcase: Web Mockup on the Left + All Three Mobiles on the Right */}
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-5 lg:gap-6 xl:gap-8 w-full pt-2 sm:pt-3 flex-1 min-h-0">
+                      {/* Left Side: Desktop Web Browser Mockup */}
+                      <div className="w-full lg:w-[42%] xl:w-[44%] shrink-0 flex flex-col justify-center">
                         <a
                           href={product.webUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 transition-colors cursor-pointer shadow-xs"
+                          className="w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80 overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-500 flex flex-col group/web cursor-pointer block"
                         >
-                          <Globe className="w-3.5 h-3.5" />
-                          <span>Website</span>
-                          <ArrowUpRight className="w-3 h-3 opacity-70" />
-                        </a>
-                      )}
-                    </div>
-
-                    {/* 3 Phone Mockups Showcase (Enlarged, same size and width, responsive on mobile & tablet) */}
-                    <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 w-full pt-2 sm:pt-3 flex-1 min-h-0 items-end justify-center">
-                      {product.appCards.map((card, cIdx) => (
-                        <div
-                          key={cIdx}
-                          className="flex flex-col items-center justify-end h-full w-full group/phone"
-                        >
-                          {/* Phone Mockup (Enlarged with identical width/height) */}
-                          <div className="relative w-full max-w-[105px] sm:max-w-[170px] md:max-w-[205px] lg:max-w-[215px] xl:max-w-[270px] 2xl:max-w-[305px] drop-shadow-[0_12px_22px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)] lg:drop-shadow-[0_22px_38px_rgba(0,0,0,0.38)] dark:drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)] sm:dark:drop-shadow-[0_24px_40px_rgba(0,0,0,0.9)] lg:dark:drop-shadow-[0_28px_48px_rgba(0,0,0,0.92)] group-hover/phone:-translate-y-2.5 transition-transform duration-500 flex justify-center mx-auto">
-                            {card.image && (
-                              <Image
-                                src={card.image}
-                                alt={card.title}
-                                width={776}
-                                height={1576}
-                                style={{ width: "100%", height: "auto" }}
-                                className="w-full h-auto max-h-[145px] sm:max-h-[195px] md:max-h-[225px] lg:max-h-[245px] xl:max-h-[305px] 2xl:max-h-[360px] object-contain"
-                                unoptimized
-                              />
-                            )}
+                          {/* Top Window Bar */}
+                          <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
+                            <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
+                            <div className="w-2 h-2 rounded-full bg-[#ffbd2e]"></div>
+                            <div className="w-2 h-2 rounded-full bg-[#27c93f]"></div>
+                            <span className="text-[9px] sm:text-[10px] text-zinc-400 dark:text-zinc-500 ml-2 font-mono truncate max-w-[220px]">
+                              {product.webUrl?.replace(/^https?:\/\//, "")}
+                            </span>
                           </div>
 
-                          {/* Info & Action Buttons underneath each phone */}
-                          <div className="w-full pt-1.5 sm:pt-2.5 lg:pt-3 flex flex-col items-center text-center shrink-0">
-                            <span className="text-[8px] sm:text-[10px] lg:text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-                              {card.badge}
-                            </span>
-                            <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10.5px] sm:text-xs lg:text-sm mt-0.5">
-                              {card.title}
-                            </h4>
-                            <p className="text-[9px] sm:text-[10.5px] lg:text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
-                              {card.subtitle}
-                            </p>
+                          {/* Browser Screenshot Content */}
+                          <div
+                            style={{ aspectRatio: product.webImageAspectRatio || "1505 / 1045" }}
+                            className="relative w-full overflow-hidden flex items-start justify-center bg-white dark:bg-zinc-900"
+                          >
+                            <Image
+                              src={product.webImage || "/Bhukkadh Food Delivery Hero Banner.png"}
+                              alt={`${product.name} Web Platform`}
+                              width={product.webImageWidth || 1505}
+                              height={product.webImageHeight || 1045}
+                              className="w-full h-full object-cover object-top"
+                              unoptimized
+                            />
+                          </div>
+                        </a>
+                      </div>
 
-                            {/* Store Buttons: Both Google Play and App Store side by side */}
-                            <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-1.5 lg:gap-2 pt-1.5 sm:pt-2">
-                              {card.playStoreUrl && (
-                                <a
-                                  href={card.playStoreUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-[9px] sm:text-[10px] lg:text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
-                                >
-                                  <GooglePlayIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                                  <span>Google Play</span>
-                                </a>
-                              )}
-                              {card.appStoreUrl && (
-                                <a
-                                  href={card.appStoreUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-[9px] sm:text-[10px] lg:text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
-                                >
-                                  <AppleIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                                  <span>App Store</span>
-                                </a>
+                      {/* Right Side (After Web Img): 3 Phone Mockups Showcase */}
+                      <div className="w-full lg:w-[58%] xl:w-[56%] grid grid-cols-3 gap-1.5 sm:gap-2.5 lg:gap-2.5 xl:gap-3.5 2xl:gap-4 items-end justify-center">
+                        {product.appCards.map((card, cIdx) => (
+                          <div
+                            key={cIdx}
+                            className="flex flex-col items-center justify-end h-full w-full group/phone"
+                          >
+                            {/* Phone Mockup */}
+                            <div className="relative w-full max-w-[150px] sm:max-w-[200px] md:max-w-[230px] lg:max-w-[215px] xl:max-w-[265px] 2xl:max-w-[305px] drop-shadow-[0_12px_22px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_18px_30px_rgba(0,0,0,0.35)] lg:drop-shadow-[0_20px_35px_rgba(0,0,0,0.38)] dark:drop-shadow-[0_16px_28px_rgba(0,0,0,0.85)] sm:dark:drop-shadow-[0_24px_40px_rgba(0,0,0,0.9)] lg:dark:drop-shadow-[0_26px_45px_rgba(0,0,0,0.92)] group-hover/phone:-translate-y-2.5 transition-transform duration-500 flex justify-center mx-auto">
+                              {card.image && (
+                                <Image
+                                  src={card.image}
+                                  alt={card.title}
+                                  width={776}
+                                  height={1576}
+                                  style={{ width: "100%", height: "auto" }}
+                                  className="w-full h-auto max-h-[220px] sm:max-h-[270px] md:max-h-[310px] lg:max-h-[320px] xl:max-h-[380px] 2xl:max-h-[440px] object-contain"
+                                  unoptimized
+                                />
                               )}
                             </div>
+
+                            {/* Info & Action Buttons underneath each phone */}
+                            <div className="w-full pt-1.5 sm:pt-2 flex flex-col items-center text-center shrink-0">
+                              <span className="text-[7.5px] sm:text-[9px] lg:text-[9.5px] xl:text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider line-clamp-1">
+                                {card.badge}
+                              </span>
+                              <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10px] sm:text-xs lg:text-[11.5px] xl:text-xs mt-0.5 line-clamp-1">
+                                {card.title}
+                              </h4>
+                              <p className="text-[8.5px] sm:text-[10px] lg:text-[9.5px] xl:text-[10.5px] text-zinc-500 dark:text-zinc-400 line-clamp-1 mt-0.5">
+                                {card.subtitle}
+                              </p>
+
+                              {/* Store Buttons: Both Google Play and App Store side by side */}
+                              <div className="flex flex-row flex-wrap items-center justify-center gap-1 sm:gap-1.5 pt-1 sm:pt-1.5">
+                                {card.playStoreUrl && (
+                                  <a
+                                    href={card.playStoreUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-0.5 sm:gap-1 px-1.5 py-0.5 sm:px-2 sm:py-0.5 lg:px-2 lg:py-0.5 rounded-full text-[8px] sm:text-[9px] lg:text-[9.5px] xl:text-[10px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
+                                  >
+                                    <GooglePlayIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                                    <span>Play Store</span>
+                                  </a>
+                                )}
+                                {card.appStoreUrl && (
+                                  <a
+                                    href={card.appStoreUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-0.5 sm:gap-1 px-1.5 py-0.5 sm:px-2 sm:py-0.5 lg:px-2 lg:py-0.5 rounded-full text-[8px] sm:text-[9px] lg:text-[9.5px] xl:text-[10px] font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors shadow-2xs cursor-pointer shrink-0"
+                                  >
+                                    <AppleIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                                    <span>App Store</span>
+                                  </a>
+                                )}
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8 w-full h-full items-center">
-                    
+
                     {/* LEFT SIDE: Product Information */}
                     <div className="lg:col-span-5 relative flex flex-col justify-between h-full">
                       <div>
                         {/* Brand Header */}
                         <div className="flex items-center gap-3 sm:gap-3.5">
-                          <Image
-                            src={product.logo}
-                            alt={`${product.name} Logo`}
-                            width={48}
-                            height={48}
-                            className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs"
-                          />
+                          {product.darkLogo ? (
+                            <>
+                              <Image
+                                src={product.logo}
+                                alt={`${product.name} Logo`}
+                                width={48}
+                                height={48}
+                                className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs dark:hidden"
+                              />
+                              <Image
+                                src={product.darkLogo}
+                                alt={`${product.name} Logo`}
+                                width={48}
+                                height={48}
+                                className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs hidden dark:block"
+                              />
+                            </>
+                          ) : (
+                            <Image
+                              src={product.logo}
+                              alt={`${product.name} Logo`}
+                              width={48}
+                              height={48}
+                              className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs"
+                            />
+                          )}
                           <h3 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-2xl sm:text-3xl xl:text-[2rem] tracking-tight leading-none">
                             {product.name}
                           </h3>
@@ -744,7 +834,7 @@ export function ProductSection() {
                     <div className="lg:col-span-7 relative flex items-center justify-center h-full group pt-3 sm:pt-5 lg:pt-0">
                       {product.webImage && product.mobileImage && product.secondaryMobileImage ? (
                         /* Case 1A: Desktop Browser Mockup + Dual Side-by-Side Mobile Apps (as per reference design) */
-                        <div className={`relative w-full ${product.containerMaxWidthClass || 'max-w-[440px] sm:max-w-[560px] lg:max-w-[690px] xl:max-w-[760px] 2xl:max-w-[820px]'} flex items-center justify-start pb-12 sm:pb-16 lg:pb-2 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0`}>
+                        <div className={`relative w-full ${product.containerMaxWidthClass || 'max-w-[440px] sm:max-w-[560px] lg:max-w-[690px] xl:max-w-[760px] 2xl:max-w-[820px]'} flex items-center justify-start min-h-[200px] sm:min-h-[260px] md:min-h-[285px] lg:min-h-0 pb-10 sm:pb-14 lg:pb-2 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0`}>
                           {/* Desktop Browser Mockup */}
                           <div className={`relative ${product.webWidthClass || 'w-[58%] sm:w-[56%] lg:w-[56%] xl:w-[58%]'} ${product.webOffsetClass || ''} shrink-0`}>
                             <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
@@ -777,9 +867,9 @@ export function ProductSection() {
                           </div>
 
                           {/* Dual Phones Side-by-Side (Overlapping the right of the desktop window) */}
-                          <div className={`absolute ${product.dualPhonesPositionClass || 'right-0 sm:right-1 xl:right-2'} -bottom-8 sm:-bottom-11 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5`}>
+                          <div className={`absolute ${product.dualPhonesPositionClass || 'right-1 sm:right-2 lg:right-0 xl:right-2'} -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5`}>
                             {/* Phone 1: Customer / Primary App */}
-                            <div className="w-[86px] sm:w-[118px] md:w-[134px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
+                            <div className="w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
                               <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
                                 <Image
                                   src={product.mobileImage}
@@ -787,14 +877,14 @@ export function ProductSection() {
                                   width={776}
                                   height={1576}
                                   style={{ width: "100%", height: "auto" }}
-                                  className="w-full h-auto max-h-[180px] sm:max-h-[230px] md:max-h-[255px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  className="w-full h-auto max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
                                   unoptimized
                                 />
                               </div>
                             </div>
 
                             {/* Phone 2: Partner / Driver / Host App */}
-                            <div className="w-[86px] sm:w-[118px] md:w-[134px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 delay-75 flex justify-center">
+                            <div className="w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 delay-75 flex justify-center">
                               <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
                                 <Image
                                   src={product.secondaryMobileImage}
@@ -802,7 +892,7 @@ export function ProductSection() {
                                   width={776}
                                   height={1576}
                                   style={{ width: "100%", height: "auto" }}
-                                  className="w-full h-auto max-h-[180px] sm:max-h-[230px] md:max-h-[255px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  className="w-full h-auto max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
                                   unoptimized
                                 />
                               </div>
@@ -811,9 +901,9 @@ export function ProductSection() {
                         </div>
                       ) : product.webImage && product.mobileImage ? (
                         /* Case 1: Standard Desktop Browser Mockup + Overlapping Mobile App */
-                        <div className="relative w-[82%] sm:w-[76%] lg:w-[72%] xl:w-[70%] -translate-x-[2%] sm:-translate-x-[4%] lg:-translate-x-[6%] sm:lg:-translate-x-[7%] flex items-center pb-8 sm:pb-10 lg:pb-0 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0">
+                        <div className="relative w-[82%] sm:w-[76%] lg:w-[72%] xl:w-[70%] -translate-x-[2%] sm:-translate-x-[4%] lg:-translate-x-[6%] sm:lg:-translate-x-[7%] flex items-center min-h-[175px] sm:min-h-[225px] md:min-h-[245px] lg:min-h-0 pb-8 sm:pb-12 lg:pb-0 pt-2 sm:pt-4 lg:pt-0 mx-auto lg:mx-0">
                           {/* Desktop Browser Mockup */}
-                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
+                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10 ${product.webOffsetClass || ''}`}>
                             {/* Browser Top Window Bar */}
                             {!product.hasCustomBrowserFrame && (
                               <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
@@ -836,14 +926,14 @@ export function ProductSection() {
                                 alt={`${product.name} Web`}
                                 width={product.webImageWidth || 1504}
                                 height={product.webImageHeight || 1046}
-                                className="w-full h-full object-cover object-top"
+                                className={`w-full h-full object-cover object-top ${product.webImageClass || ''}`}
                                 unoptimized
                               />
                             </div>
                           </div>
 
                           {/* Mobile App Mockup (Overlapping right & down) */}
-                          <div className="absolute -right-3 sm:-right-5 lg:-right-6 xl:-right-8 translate-x-1/2 -bottom-6 sm:-bottom-8 lg:-bottom-10 xl:-bottom-12 z-20 w-[44%] sm:w-[40%] lg:w-[46%] xl:w-[42%] md:w-[38%] max-w-[145px] sm:max-w-[175px] lg:max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px] group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center">
+                          <div className="absolute -right-3 sm:-right-5 lg:-right-6 xl:-right-8 translate-x-1/2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-12 z-20 w-[44%] sm:w-[40%] lg:w-[46%] xl:w-[42%] md:w-[38%] max-w-[145px] sm:max-w-[175px] lg:max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px] group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center">
                             <div className={`relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] ${product.mobileOffsetClass || ""}`}>
                               <Image
                                 src={product.mobileImage}
@@ -900,7 +990,7 @@ export function ProductSection() {
                       ) : product.webImage ? (
                         /* Case 3: Pure Web App Showcase (Centered Browser Mockup) */
                         <div className="relative w-full sm:w-[94%] lg:w-[92%] sm:lg:w-[88%] mx-auto flex items-center pt-2 sm:pt-4 lg:pt-0">
-                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10`}>
+                          <div className={`w-full rounded-2xl ${product.hasCustomBrowserFrame ? 'bg-transparent border-0' : 'bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/80'} overflow-hidden shadow-lg group-hover:-translate-y-1 transition-transform duration-500 flex flex-col z-10 ${product.webOffsetClass || ''}`}>
                             {!product.hasCustomBrowserFrame && (
                               <div className="h-5 sm:h-6 bg-zinc-200/70 dark:bg-zinc-800 flex items-center px-3 gap-1.5 border-b border-zinc-200 dark:border-zinc-700 shrink-0">
                                 <div className="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
@@ -920,7 +1010,7 @@ export function ProductSection() {
                                 alt={`${product.name} Web`}
                                 width={product.webImageWidth || 1504}
                                 height={product.webImageHeight || 1046}
-                                className="w-full h-full object-cover object-top"
+                                className={`w-full h-full object-cover object-top ${product.webImageClass || ''}`}
                                 unoptimized
                               />
                             </div>

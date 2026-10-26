@@ -11,7 +11,7 @@ interface ProductItem {
   name: string;
   category: string;
   shortTagline: string;
-  description: string;
+  description: React.ReactNode;
   logo: string;
   darkLogo?: string;
   websiteUrl: string;
@@ -91,7 +91,7 @@ const ourProducts: ProductItem[] = [
     logo: "/onstay-logo.png",
     websiteUrl: "https://onstay.hindustaan.tech/",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
-    appStoreUrl: "https://apps.apple.com/us/app/onstay/id6807047989",
+    appStoreUrl: "",
     internalRoute: "/products/onstay",
     isExternalWebsite: true,
   },
@@ -139,14 +139,27 @@ const ourProducts: ProductItem[] = [
     name: "Hindustaan CRM",
     category: "Enterprise Suite",
     shortTagline: "Tailored CRM & workflow automation systems",
-    description: "Tailor-made enterprise CRM systems, custom business suites, and automated workflow solutions built to scale modern businesses.",
+    description: (
+      <>
+        The internal operations portal for{" "}
+        <a
+          href="https://panel.hindustaan.in/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+        >
+          Hindustaan Innovations
+        </a>{" "}
+        functions as an Enterprise Workspace OS that centralizes sprint and task governance, real-time workforce management, and executive analytics into a single secured platform protected by single sign-on.
+      </>
+    ),
     logo: "/favicon.svg",
     darkLogo: "/logo.png",
-    websiteUrl: "/products",
+    websiteUrl: "https://panel.hindustaan.in/",
     playStoreUrl: "",
     appStoreUrl: "",
     internalRoute: "/products",
-    isExternalWebsite: false,
+    isExternalWebsite: true,
   },
   {
     id: "vidyum",
@@ -218,7 +231,7 @@ export function OurProductsSection() {
   }, [selectedProduct]);
 
   return (
-    <section className="pt-12 sm:pt-16 pb-10 sm:pb-14 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
+    <section className="pt-12 sm:pt-16 pb-8 sm:pb-10 lg:pb-12 bg-[#f5f5f5] dark:bg-[#09090b] transition-colors duration-200">
       <div className="max-w-[1800px] mx-auto px-3 sm:px-8 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 sm:mb-10 gap-4 sm:gap-6">
@@ -472,27 +485,7 @@ export function OurProductsSection() {
                       </div>
                     )}
                   </div>
-                ) : (
-                  <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-zinc-100/80 dark:bg-zinc-850/40 text-zinc-400 dark:text-zinc-500 border border-zinc-200/60 dark:border-white/5">
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-xl bg-zinc-200/70 dark:bg-zinc-800 flex items-center justify-center shrink-0 grayscale opacity-50">
-                        <GooglePlayIcon className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] sm:text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">
-                          Android App
-                        </div>
-                        <div className="text-sm sm:text-base font-bold text-zinc-600 dark:text-zinc-400 leading-tight">
-                          Google Play Store
-                        </div>
-                      </div>
-                    </div>
-
-                    <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
-                      Coming Soon
-                    </span>
-                  </div>
-                )}
+                ) : null}
 
                 {/* 2. Apple App Store */}
                 {selectedProduct.appStoreUrl ? (
@@ -550,27 +543,7 @@ export function OurProductsSection() {
                       </div>
                     )}
                   </div>
-                ) : (
-                  <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-zinc-100/80 dark:bg-zinc-850/40 text-zinc-400 dark:text-zinc-500 border border-zinc-200/60 dark:border-white/5">
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-xl bg-zinc-200/70 dark:bg-zinc-800 flex items-center justify-center shrink-0 grayscale opacity-50">
-                        <AppleIcon className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <div className="text-[10px] sm:text-[11px] text-zinc-400 font-semibold uppercase tracking-wider">
-                          iOS App
-                        </div>
-                        <div className="text-sm sm:text-base font-bold text-zinc-600 dark:text-zinc-400 leading-tight">
-                          Apple App Store
-                        </div>
-                      </div>
-                    </div>
-
-                    <span className="text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
-                      Coming Soon
-                    </span>
-                  </div>
-                )}
+                ) : null}
 
                 {/* 3. Official Website */}
                 {selectedProduct.isExternalWebsite ? (

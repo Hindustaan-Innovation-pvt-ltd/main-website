@@ -516,7 +516,7 @@
         "shortDescription": "A fast and reliable food delivery platform.",
         "description": "Bhukkadh is your go-to app for ordering delicious food from your favorite local restaurants with lightning fast delivery.",
         "fullDescription": "Bhukkadh connects food lovers with top-rated local restaurants. It features a seamless ordering process, live order tracking, and secure payments, ensuring your food reaches you hot and fresh. Operated by Hindustaan Innovations Private Limited, the platform serves as a complete hyperlocal food delivery ecosystem connecting hungry customers, culinary partners, and dedicated delivery riders across three specialized mobile apps.\n\nWhile the website serves as the central digital front door to onboard partners and introduce the brand, the complete dining experience comes to life on the Bhukkadh mobile app. There, foodies can unlock exclusive app-only deals, explore diverse menus from neighborhood favorites to fine dining, and enjoy lightning-fast checkout. At the same time, restaurant owners gain powerful tools to expand their reach and grow their daily order volume, while riders find flexible earning opportunities with reliable, on-time delivery support. Built for trust, speed, and safety, Bhukkadh brings community-driven flavors straight to your doorstep in just a few taps.",
-        "image": "/bhukkadh.png",
+        "image": "/Bhukkadh Food Delivery Hero Banner.png",
         "logo": "/new-bhukkadh-icon.png",
         "projectUrl": "#",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
@@ -554,7 +554,7 @@
         "shortDescription": "A comprehensive travel and tourism platform.",
         "description": "Ghumakkadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
         "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
-        "image": "/Ghumakkadh Night Ride Hero.png",
+        "image": "/Ride Smarter with Ghumakkadh.png",
         "logo": "/ghumakkadh_icon.png",
         "projectUrl": "https://ghumakkadh.hindustaan.in/",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
@@ -591,7 +591,7 @@
         "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
         "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
         "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
-        "image": "/trucksite.png",
+        "image": "/TruckBharat Freight Marketplace Banner.png",
         "logo": "/truckbharat-logo.png",
         "projectUrl": "https://truckbharat.hindustaan.tech",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
@@ -669,6 +669,74 @@
         "type": "our"
       },
       {
+        "id": "onstay",
+        "title": "Onstay",
+        "description": "OnStay ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.",
+        "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
+        "image": "/OnStay_ Find Your Perfect Stay.png",
+        "logo": "/onstay-logo.png",
+        "projectUrl": "https://onstay.hindustaan.tech/",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
+        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Onstay.",
+          "questions": [
+            {
+              "question": "What is Onstay?",
+              "answer": "Onstay is an all-in-one hospitality booking platform offering seamless reservations for premium hotels, hourly day-use rooms, and executive airport and city lounges."
+            },
+            {
+              "question": "Can I book rooms on an hourly basis?",
+              "answer": "Yes, Onstay features flexible hourly booking slots tailored for travelers with transit layovers, business travelers needing a quiet workspace, or short-stay visits."
+            },
+            {
+              "question": "How do lounge bookings work?",
+              "answer": "You can explore and book verified executive and airport lounges directly through Onstay, securing guaranteed entry, high-speed Wi-Fi, refreshments, and relaxation spaces without complex memberships."
+            },
+            {
+              "question": "Are bookings confirmed instantly?",
+              "answer": "Yes, all reservations made through Onstay are processed in real-time with instant digital vouchers and notifications."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Hotels & Stays Discovery",
+            "description": "Explore curated hotels, boutique stays, and luxury resorts with detailed photos, verified reviews, and transparent pricing.",
+            "icon": "Search"
+          },
+          {
+            "title": "Hourly Room Bookings",
+            "description": "Flexible short-duration day stays and transit room booking with customizable check-in hours.",
+            "icon": "CalendarCheck"
+          },
+          {
+            "title": "Executive Lounge Access",
+            "description": "Instant reservations for airport and business lounges featuring high-speed Wi-Fi, refreshments, and quiet suites.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Verified Listings & Best Price",
+            "description": "100% verified properties, authentic guest feedback, and price-matching guarantees with zero hidden costs.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Interactive Map & Proximity Sort",
+            "description": "Pinpoint stays near airports, train stations, business districts, and landmarks with live GPS guidance.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Instant & Secure Checkout",
+            "description": "Fast digital payments with UPI, cards, net banking, and pay-at-hotel options paired with instant e-vouchers.",
+            "icon": "CreditCard"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "hindustaan-mart",
         "title": "Hindustaan Mart",
         "shortDescription": "Indian e-commerce platform delivering lifestyle, fashion, tech, home, and fitness products.",
@@ -699,137 +767,6 @@
             "title": "Mobile Applications",
             "description": "Available on Play Store and App Store for on-the-go access.",
             "icon": "Zap"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "vidyum-school-erp",
-        "title": "Vidyum School ERP",
-        "shortDescription": "Complete digital transformation for educational institutions.",
-        "description": "Vidyum School ERP is a comprehensive, cloud-based management system designed to automate administrative tasks, streamline operations, and enhance the educational experience for students, teachers, and parents alike.",
-        "fullDescription": "Vidyum School ERP stands at the forefront of educational technology, providing a unified platform that bridges the gap between administration and learning. Our system is built on a scalable, secure architecture that handles everything from the first inquiry to the final graduation. With real-time data insights, automated workflows, and a user-friendly interface, Vidyum empowers schools to operate with unprecedented efficiency and precision. Whether it's managing complex fee structures, tracking school transport in real-time, or facilitating seamless parent-teacher communication, Vidyum is the ultimate partner for modern schools striving for excellence.",
-        "image": "/vidyum_dashboard.png",
-        "logo": "/vidyum.png",
-        "projectUrl": "https://vidyum.hindustaan.in",
-        "pricing": {
-          "pill": "PRICING",
-          "heading": "Choose your",
-          "headingItalic": "Plan",
-          "subheading": "Flexible pricing for institutions of all sizes.",
-          "plans": [
-            {
-              "name": "Starter",
-              "price": "10,000",
-              "description": "Perfect for small schools starting their digital journey.",
-              "features": [
-                "Basic Student Management",
-                "Attendance Tracking",
-                "Exam & Results",
-                "Basic Reports"
-              ]
-            },
-            {
-              "name": "Growth",
-              "price": "20,000",
-              "description": "Comprehensive tools for growing educational institutions.",
-              "features": [
-                "Everything in Starter",
-                "Fee Management",
-                "HR & Payroll",
-                "Library Management",
-                "Parent Dashboard"
-              ],
-              "isPopular": true
-            },
-            {
-              "name": "Enterprise",
-              "price": "35,000",
-              "description": "Full-scale solution for large campuses and chains.",
-              "features": [
-                "Everything in Growth",
-                "Transport Management",
-                "AI Analytics",
-                "Custom Integrations",
-                "24/7 Priority Support"
-              ]
-            }
-          ]
-        },
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about Vidyum.",
-          "questions": [
-            {
-              "question": "What is Vidyum School ERP?",
-              "answer": "Vidyum is a comprehensive, cloud-based school management system that automates all administrative and academic processes."
-            },
-            {
-              "question": "Is my school's data secure?",
-              "answer": "Yes, we use enterprise-grade encryption and secure cloud storage to ensure your data is always protected and backed up."
-            },
-            {
-              "question": "Can I upgrade my plan later?",
-              "answer": "Absolutely! You can upgrade your plan at any time as your institution's needs grow."
-            },
-            {
-              "question": "Do you provide on-site training?",
-              "answer": "Yes, we provide both online and on-site training for your staff to ensure a smooth transition to Vidyum."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Student Dashboard",
-            "description": "A centralized hub for students to access attendance, grades, assignments, and school announcements in real-time.",
-            "icon": "UserCircle"
-          },
-          {
-            "title": "Parents Dashboard",
-            "description": "Real-time updates for parents regarding their child's attendance, grades, fees, and school events.",
-            "icon": "Users"
-          },
-          {
-            "title": "Teacher & Staff Dashboard",
-            "description": "Personalized portal for teachers to manage student attendance, academic progress, and communication.",
-            "icon": "ClipboardList"
-          },
-          {
-            "title": "HR & Payroll",
-            "description": "Manage staff records, salaries, leaves, and performance tracking in one integrated system.",
-            "icon": "Wallet"
-          },
-          {
-            "title": "Attendance Module",
-            "description": "Streamline daily attendance tracking for students and staff with automated notifications and reports.",
-            "icon": "CalendarCheck"
-          },
-          {
-            "title": "Fees & Finance",
-            "description": "Simplify fee collection with online payment integration, automated invoicing, and detailed financial reporting.",
-            "icon": "CreditCard"
-          },
-          {
-            "title": "Examination System",
-            "description": "Automate result processing, generate customizable report cards, and track academic progress over time.",
-            "icon": "FileSpreadsheet"
-          },
-          {
-            "title": "Library Management",
-            "description": "Streamline book tracking, reservations, and inventory management with an automated digital catalog system.",
-            "icon": "Library"
-          },
-          {
-            "title": "Class & Academic Module",
-            "description": "Manage schedules, subject allocations, and lesson plans with ease, ensuring a smooth academic flow.",
-            "icon": "BookOpen"
-          },
-          {
-            "title": "Transport Management",
-            "description": "Ensure student safety with real-time vehicle tracking, route optimization, and automated transport fee alerts.",
-            "icon": "Bus"
           }
         ],
         "type": "our"
@@ -972,71 +909,132 @@
         "type": "our"
       },
       {
-        "id": "onstay",
-        "title": "Onstay",
-        "description": "OnStay ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.",
-        "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
-        "image": "/OnStay Tropical Getaway Banner.png",
-        "logo": "/onstay-logo.png",
-        "projectUrl": "https://onstay.hindustaan.tech/",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
-        "appStoreUrl": "https://apps.apple.com/us/app/onstay/id6807047989",
-        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
-        "partnerAppStoreUrl": "https://apps.apple.com/us/app/onstay-partner/id6807047989",
+        "id": "vidyum-school-erp",
+        "title": "Vidyum School ERP",
+        "shortDescription": "Complete digital transformation for educational institutions.",
+        "description": "Vidyum School ERP is a comprehensive, cloud-based management system designed to automate administrative tasks, streamline operations, and enhance the educational experience for students, teachers, and parents alike.",
+        "fullDescription": "Vidyum School ERP stands at the forefront of educational technology, providing a unified platform that bridges the gap between administration and learning. Our system is built on a scalable, secure architecture that handles everything from the first inquiry to the final graduation. With real-time data insights, automated workflows, and a user-friendly interface, Vidyum empowers schools to operate with unprecedented efficiency and precision. Whether it's managing complex fee structures, tracking school transport in real-time, or facilitating seamless parent-teacher communication, Vidyum is the ultimate partner for modern schools striving for excellence.",
+        "image": "/vidyum_dashboard.png",
+        "logo": "/vidyum.png",
+        "projectUrl": "https://vidyum.hindustaan.in",
+        "pricing": {
+          "pill": "PRICING",
+          "heading": "Choose your",
+          "headingItalic": "Plan",
+          "subheading": "Flexible pricing for institutions of all sizes.",
+          "plans": [
+            {
+              "name": "Starter",
+              "price": "10,000",
+              "description": "Perfect for small schools starting their digital journey.",
+              "features": [
+                "Basic Student Management",
+                "Attendance Tracking",
+                "Exam & Results",
+                "Basic Reports"
+              ]
+            },
+            {
+              "name": "Growth",
+              "price": "20,000",
+              "description": "Comprehensive tools for growing educational institutions.",
+              "features": [
+                "Everything in Starter",
+                "Fee Management",
+                "HR & Payroll",
+                "Library Management",
+                "Parent Dashboard"
+              ],
+              "isPopular": true
+            },
+            {
+              "name": "Enterprise",
+              "price": "35,000",
+              "description": "Full-scale solution for large campuses and chains.",
+              "features": [
+                "Everything in Growth",
+                "Transport Management",
+                "AI Analytics",
+                "Custom Integrations",
+                "24/7 Priority Support"
+              ]
+            }
+          ]
+        },
         "faq": {
           "pill": "FAQ",
           "heading": "Common",
           "headingItalic": "Questions",
-          "subheading": "Everything you need to know about Onstay.",
+          "subheading": "Everything you need to know about Vidyum.",
           "questions": [
             {
-              "question": "What is Onstay?",
-              "answer": "Onstay is an all-in-one hospitality booking platform offering seamless reservations for premium hotels, hourly day-use rooms, and executive airport and city lounges."
+              "question": "What is Vidyum School ERP?",
+              "answer": "Vidyum is a comprehensive, cloud-based school management system that automates all administrative and academic processes."
             },
             {
-              "question": "Can I book rooms on an hourly basis?",
-              "answer": "Yes, Onstay features flexible hourly booking slots tailored for travelers with transit layovers, business travelers needing a quiet workspace, or short-stay visits."
+              "question": "Is my school's data secure?",
+              "answer": "Yes, we use enterprise-grade encryption and secure cloud storage to ensure your data is always protected and backed up."
             },
             {
-              "question": "How do lounge bookings work?",
-              "answer": "You can explore and book verified executive and airport lounges directly through Onstay, securing guaranteed entry, high-speed Wi-Fi, refreshments, and relaxation spaces without complex memberships."
+              "question": "Can I upgrade my plan later?",
+              "answer": "Absolutely! You can upgrade your plan at any time as your institution's needs grow."
             },
             {
-              "question": "Are bookings confirmed instantly?",
-              "answer": "Yes, all reservations made through Onstay are processed in real-time with instant digital vouchers and notifications."
+              "question": "Do you provide on-site training?",
+              "answer": "Yes, we provide both online and on-site training for your staff to ensure a smooth transition to Vidyum."
             }
           ]
         },
         "modules": [
           {
-            "title": "Hotels & Stays Discovery",
-            "description": "Explore curated hotels, boutique stays, and luxury resorts with detailed photos, verified reviews, and transparent pricing.",
-            "icon": "Search"
+            "title": "Student Dashboard",
+            "description": "A centralized hub for students to access attendance, grades, assignments, and school announcements in real-time.",
+            "icon": "UserCircle"
           },
           {
-            "title": "Hourly Room Bookings",
-            "description": "Flexible short-duration day stays and transit room booking with customizable check-in hours.",
+            "title": "Parents Dashboard",
+            "description": "Real-time updates for parents regarding their child's attendance, grades, fees, and school events.",
+            "icon": "Users"
+          },
+          {
+            "title": "Teacher & Staff Dashboard",
+            "description": "Personalized portal for teachers to manage student attendance, academic progress, and communication.",
+            "icon": "ClipboardList"
+          },
+          {
+            "title": "HR & Payroll",
+            "description": "Manage staff records, salaries, leaves, and performance tracking in one integrated system.",
+            "icon": "Wallet"
+          },
+          {
+            "title": "Attendance Module",
+            "description": "Streamline daily attendance tracking for students and staff with automated notifications and reports.",
             "icon": "CalendarCheck"
           },
           {
-            "title": "Executive Lounge Access",
-            "description": "Instant reservations for airport and business lounges featuring high-speed Wi-Fi, refreshments, and quiet suites.",
-            "icon": "Zap"
-          },
-          {
-            "title": "Verified Listings & Best Price",
-            "description": "100% verified properties, authentic guest feedback, and price-matching guarantees with zero hidden costs.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Interactive Map & Proximity Sort",
-            "description": "Pinpoint stays near airports, train stations, business districts, and landmarks with live GPS guidance.",
-            "icon": "MapPin"
-          },
-          {
-            "title": "Instant & Secure Checkout",
-            "description": "Fast digital payments with UPI, cards, net banking, and pay-at-hotel options paired with instant e-vouchers.",
+            "title": "Fees & Finance",
+            "description": "Simplify fee collection with online payment integration, automated invoicing, and detailed financial reporting.",
             "icon": "CreditCard"
+          },
+          {
+            "title": "Examination System",
+            "description": "Automate result processing, generate customizable report cards, and track academic progress over time.",
+            "icon": "FileSpreadsheet"
+          },
+          {
+            "title": "Library Management",
+            "description": "Streamline book tracking, reservations, and inventory management with an automated digital catalog system.",
+            "icon": "Library"
+          },
+          {
+            "title": "Class & Academic Module",
+            "description": "Manage schedules, subject allocations, and lesson plans with ease, ensuring a smooth academic flow.",
+            "icon": "BookOpen"
+          },
+          {
+            "title": "Transport Management",
+            "description": "Ensure student safety with real-time vehicle tracking, route optimization, and automated transport fee alerts.",
+            "icon": "Bus"
           }
         ],
         "type": "our"
