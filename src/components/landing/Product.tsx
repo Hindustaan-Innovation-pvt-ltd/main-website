@@ -163,7 +163,7 @@ const productsData: ProductItemData[] = [
         title: "Bhukkadh Partner",
         subtitle: "Restaurant & Kitchen Dashboard",
         badge: "For Restaurants",
-        image: "/bhukkadh_partner_uniform.png",
+        image: "/bhukkadh_partner.png",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
         appStoreUrl: "https://apps.apple.com/us/app/bhukkadh-partner/id6802583437",
       },
@@ -179,7 +179,7 @@ const productsData: ProductItemData[] = [
         title: "Bhukkadh Rider",
         subtitle: "Delivery Partner & Flexible Earnings",
         badge: "For Delivery Riders",
-        image: "/bhukkadh_rider_uniform.png",
+        image: "/bhukkadh_rider.png",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
         appStoreUrl: "https://apps.apple.com/us/app/bhukkadh-rider/id6802623601",
       },
@@ -350,7 +350,7 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/miracal",
     webTitle: "Miracal Web",
     webSubtitle: "Instant Messaging Web",
-    webImage: "/Miracal Messaging App Hero Scene.png",
+    webImage: "/Miracal Connection Hero Banner.png",
     webImageWidth: 1504,
     webImageHeight: 1046,
     webImageAspectRatio: "1504 / 1046",
@@ -509,14 +509,14 @@ function ProductStackSlide({
           : undefined
       }
       className={`w-full ${isDesktop
-          ? "lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center"
-          : "relative mb-6 sm:mb-8 lg:mb-0"
+        ? "lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center"
+        : "relative mb-6 sm:mb-8 lg:mb-0"
         }`}
     >
       <div
         className={`w-full ${isDesktop
-            ? "h-[560px] xl:h-[620px] 2xl:h-[680px]"
-            : "h-auto"
+          ? "h-[560px] xl:h-[620px] 2xl:h-[680px]"
+          : "h-auto"
           } bg-white dark:bg-[#0c0c0e] border border-zinc-200/80 dark:border-white/10 rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem] p-4 sm:p-5 lg:p-5 xl:p-6 shadow-2xl shadow-zinc-900/15 dark:shadow-black/80 flex flex-col justify-center overflow-hidden`}
       >
         {children}
@@ -566,8 +566,8 @@ export function ProductSection() {
           {/* Card Deck Wrapper sized cleanly to fit PC screens without clipping */}
           <div
             className={`relative w-full ${isDesktop
-                ? "h-[560px] xl:h-[620px] 2xl:h-[680px] flex items-center justify-center overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem]"
-                : "space-y-6 sm:space-y-8 lg:space-y-0"
+              ? "h-[560px] xl:h-[620px] 2xl:h-[680px] flex items-center justify-center overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] lg:rounded-[2rem] xl:rounded-[2.5rem]"
+              : "space-y-6 sm:space-y-8 lg:space-y-0"
               }`}
           >
             {productsData.map((product, index) => (
