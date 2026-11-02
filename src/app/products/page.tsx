@@ -129,13 +129,13 @@ export default function SolutionsPage() {
               >
                 <Link href={`/products/${item.id}`} className="flex flex-col h-full w-full">
                 {/* Image Area */}
-                <div className="relative w-full h-[280px] overflow-hidden bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-100 dark:border-white/10 flex items-center justify-center p-6">
+                <div className="relative w-full h-[320px] sm:h-[340px] overflow-hidden bg-zinc-50 dark:bg-zinc-800/50 border-b border-zinc-100 dark:border-white/10 flex items-center justify-center p-4">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-contain transition-transform duration-700 p-6 group-hover:scale-105"
+                    className="object-contain transition-transform duration-700 p-2 group-hover:scale-105"
                   />
                   <div className="absolute bottom-4 left-4 z-20">
                     <div className="p-2 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-xs rounded-xl flex items-center justify-center">
