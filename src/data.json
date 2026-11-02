@@ -516,7 +516,7 @@
         "shortDescription": "A fast and reliable food delivery platform.",
         "description": "Bhukkadh is your go-to app for ordering delicious food from your favorite local restaurants with lightning fast delivery.",
         "fullDescription": "Bhukkadh connects food lovers with top-rated local restaurants. It features a seamless ordering process, live order tracking, and secure payments, ensuring your food reaches you hot and fresh. Operated by Hindustaan Innovations Private Limited, the platform serves as a complete hyperlocal food delivery ecosystem connecting hungry customers, culinary partners, and dedicated delivery riders across three specialized mobile apps.\n\nWhile the website serves as the central digital front door to onboard partners and introduce the brand, the complete dining experience comes to life on the Bhukkadh mobile app. There, foodies can unlock exclusive app-only deals, explore diverse menus from neighborhood favorites to fine dining, and enjoy lightning-fast checkout. At the same time, restaurant owners gain powerful tools to expand their reach and grow their daily order volume, while riders find flexible earning opportunities with reliable, on-time delivery support. Built for trust, speed, and safety, Bhukkadh brings community-driven flavors straight to your doorstep in just a few taps.",
-        "image": "/bhukkadh.png",
+        "image": "/Bhukkadh Food Delivery Hero Banner.png",
         "logo": "/new-bhukkadh-icon.png",
         "projectUrl": "#",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.bhukkhad",
@@ -554,11 +554,13 @@
         "shortDescription": "A comprehensive travel and tourism platform.",
         "description": "Ghumakkadh is a platform for travel planning, bookings, and discovering new destinations with ease.",
         "fullDescription": "Ghumakkadh is an Indian ride-hailing and parcel delivery platform operated by Hindustaan Innovations Private Limited, designed to provide convenient, reliable, and affordable solutions for everyday city commuting and local deliveries. The platform offers multiple ride options, including Bikes for quick and efficient travel through busy traffic, Autos for economical short-distance journeys, and AC Cabs for longer or more comfortable trips. In addition, Ghumakkadh Parcel enables users to send urgent documents, packages, gifts, and other items with live tracking for greater convenience and reliability. Ghumakkadh also supports a dedicated driver-partner network, allowing bike, auto, and cab owners to onboard easily, work with flexible hours, and access daily or instant payout options. The platform focuses on transparent and secure transportation by offering fare locking without surge pricing, OTP verification for every ride, and strictly onboarded and background-verified driver partners. With integrated live GPS tracking, passengers can monitor their journey in real time and share trip progress with others for added safety. Ghumakkadh operates through a dual-app ecosystem consisting of Ghumakkadh Ride for passengers and Ghumakkadh Drive for driver-partners, creating a connected platform that simplifies urban transportation, local parcel delivery, and driver-partner management.",
-        "image": "/ghumakkadh.png",
+        "image": "/Ride Smarter with Ghumakkadh.png",
         "logo": "/ghumakkadh_icon.png",
-        "projectUrl": "#",
+        "projectUrl": "https://ghumakkadh.hindustaan.in/",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
-        "riderAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
+        "appStoreUrl": "https://apps.apple.com/us/app/ghumakkadh/id6806542727",
+        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "partnerAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
         "modules": [
           {
             "title": "Travel Planning",
@@ -589,7 +591,7 @@
         "shortDescription": "India's next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers.",
         "description": "TruckBharat is an on-demand digital freight marketplace and fleet management ecosystem built for India's road logistics. Powered by Hindustaan Innovations Private Limited, TruckBharat bridges the gap between shippers, fleet owners, and truck drivers with transparent freight rates, verified fleets, real-time GPS tracking, and a powerful multilingual mobile experience across 11 Indian languages.",
         "fullDescription": "TruckBharat is India’s next-generation digital freight and logistics ecosystem, powered by Hindustaan Innovations Private Limited. Designed to transform India's unorganized road transport sector into a smart, transparent marketplace, TruckBharat seamlessly connects Shippers, Fleet Owners (Transporters), and Truck Drivers into one unified digital ecosystem.\n\nFrom instant truck booking across verified fleets (Open, Container, Trailer, Tipper) to transparent pricing without hidden charges, the platform streamlines end-to-end logistics. Fleet owners can manage their operations, eliminate empty return trips, and track digital ledgers via the Transporter Cockpit, while drivers benefit from real-time GPS navigation, 24/7 SOS helpline support, and a dedicated multilingual interface available in 11 Indian regional languages.",
-        "image": "/trucksite.png",
+        "image": "/TruckBharat Freight Marketplace Banner.png",
         "logo": "/truckbharat-logo.png",
         "projectUrl": "https://truckbharat.hindustaan.tech",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
@@ -667,6 +669,74 @@
         "type": "our"
       },
       {
+        "id": "onstay",
+        "title": "Onstay",
+        "description": "OnStay ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.",
+        "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
+        "image": "/OnStay_ Find Your Perfect Stay.png",
+        "logo": "/onstay-logo.png",
+        "projectUrl": "https://onstay.hindustaan.tech/",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
+        "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Onstay.",
+          "questions": [
+            {
+              "question": "What is Onstay?",
+              "answer": "Onstay is an all-in-one hospitality booking platform offering seamless reservations for premium hotels, hourly day-use rooms, and executive airport and city lounges."
+            },
+            {
+              "question": "Can I book rooms on an hourly basis?",
+              "answer": "Yes, Onstay features flexible hourly booking slots tailored for travelers with transit layovers, business travelers needing a quiet workspace, or short-stay visits."
+            },
+            {
+              "question": "How do lounge bookings work?",
+              "answer": "You can explore and book verified executive and airport lounges directly through Onstay, securing guaranteed entry, high-speed Wi-Fi, refreshments, and relaxation spaces without complex memberships."
+            },
+            {
+              "question": "Are bookings confirmed instantly?",
+              "answer": "Yes, all reservations made through Onstay are processed in real-time with instant digital vouchers and notifications."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Hotels & Stays Discovery",
+            "description": "Explore curated hotels, boutique stays, and luxury resorts with detailed photos, verified reviews, and transparent pricing.",
+            "icon": "Search"
+          },
+          {
+            "title": "Hourly Room Bookings",
+            "description": "Flexible short-duration day stays and transit room booking with customizable check-in hours.",
+            "icon": "CalendarCheck"
+          },
+          {
+            "title": "Executive Lounge Access",
+            "description": "Instant reservations for airport and business lounges featuring high-speed Wi-Fi, refreshments, and quiet suites.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Verified Listings & Best Price",
+            "description": "100% verified properties, authentic guest feedback, and price-matching guarantees with zero hidden costs.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Interactive Map & Proximity Sort",
+            "description": "Pinpoint stays near airports, train stations, business districts, and landmarks with live GPS guidance.",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Instant & Secure Checkout",
+            "description": "Fast digital payments with UPI, cards, net banking, and pay-at-hotel options paired with instant e-vouchers.",
+            "icon": "CreditCard"
+          }
+        ],
+        "type": "our"
+      },
+      {
         "id": "hindustaan-mart",
         "title": "Hindustaan Mart",
         "shortDescription": "Indian e-commerce platform delivering lifestyle, fashion, tech, home, and fitness products.",
@@ -697,6 +767,143 @@
             "title": "Mobile Applications",
             "description": "Available on Play Store and App Store for on-the-go access.",
             "icon": "Zap"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "miracal",
+        "title": "Miracal",
+        "shortDescription": "A next-generation instant messaging and calling app designed for fast, seamless, and secure connections.",
+        "description": "Miracal is a modern real-time messaging application inspired by the simplicity and power of WhatsApp, featuring instant chats, group conversations, media sharing, and high-definition voice and video calls.",
+        "fullDescription": "Miracal brings you closer to your friends, family, and the people who matter most. Operated by Hindustaan Innovations Private Limited, Miracal is an ultra-fast, secure instant messaging platform designed to make digital communication effortless, expressive, and completely private. Built with modern end-to-end encryption protocols, Miracal supports instant 1-on-1 chats, group messaging with advanced permissions, voice notes, expressive stickers, document sharing, and low-latency HD voice and video calling. With a familiar, intuitive design inspired by leading messaging apps like WhatsApp, Miracal ensures effortless onboarding and smooth cross-device synchronization between mobile and web platforms, empowering users to connect, collaborate, and share life's moments with peace of mind.",
+        "image": "/Miracal Connection Hero Banner.png",
+        "logo": "/miracal-brand.png",
+        "projectUrl": "https://miracal.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal",
+        "appStoreUrl": "#",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Miracal.",
+          "questions": [
+            {
+              "question": "What is Miracal?",
+              "answer": "Miracal is a modern instant messaging and calling application built for real-time communication, featuring 1-on-1 chats, group conversations, voice notes, media sharing, and HD voice and video calls."
+            },
+            {
+              "question": "Is Miracal similar to WhatsApp?",
+              "answer": "Yes, Miracal provides an intuitive and familiar messaging experience similar to WhatsApp, with seamless instant messaging, status updates, voice notes, stickers, and group chats."
+            },
+            {
+              "question": "Is my communication secure and encrypted?",
+              "answer": "Yes, Miracal uses robust end-to-end encryption to guarantee that only you and the person you are communicating with can read your messages or listen to your calls."
+            },
+            {
+              "question": "Can I use Miracal on multiple devices?",
+              "answer": "Yes, Miracal supports multi-platform access across mobile and web interfaces with real-time cloud synchronization."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Instant Messaging",
+            "description": "Lightning-fast text messaging with real-time delivery status, typing indicators, and read receipts.",
+            "icon": "MessageSquare"
+          },
+          {
+            "title": "HD Voice & Video Calls",
+            "description": "Crystal-clear, low-latency audio and video calling to stay connected with family, friends, and colleagues worldwide.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Media & File Sharing",
+            "description": "Send high-resolution photos, videos, voice recordings, documents, and interactive sticker packs without loss of quality.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Advanced privacy safeguards and cryptographic security ensuring your chats and calls stay completely confidential.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Interactive Groups & Communities",
+            "description": "Organize dedicated group chats with customizable admin roles, media galleries, and pinned announcements.",
+            "icon": "Users"
+          },
+          {
+            "title": "Cross-Device Synchronization",
+            "description": "Seamless real-time synchronization between mobile apps and web platforms with reliable cloud backup.",
+            "icon": "Layers"
+          }
+        ],
+        "type": "our"
+      },
+      {
+        "id": "miracal-business",
+        "title": "Miracal Business",
+        "shortDescription": "Enterprise-grade secure communication platform for teams — encrypted messaging, file sharing, and seamless collaboration.",
+        "description": "Miracal Business is an enterprise-ready secure communication platform empowering teams with end-to-end encrypted messaging, HD voice & video calls, file sharing, and powerful collaboration tools designed for modern businesses.",
+        "fullDescription": "Miracal Business takes the simplicity and power of Miracal and supercharges it for professional teams and enterprises. Built on the same rock-solid encryption foundation as Miracal, Miracal Business adds a layer of business-grade tools — dedicated team workspaces, role-based access controls, broadcast announcements, advanced file sharing, and admin dashboards — giving organizations complete control over their internal communications. Whether you're a startup coordinating across departments or a large enterprise managing thousands of employees, Miracal Business delivers a familiar, intuitive interface with the compliance, security, and scalability that businesses demand.",
+        "image": "/Miracal Business Team Hero.png",
+        "logo": "/miracal-brand.png",
+        "projectUrl": "https://miracalbussiness.hindustaan.tech",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal.business",
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about Miracal Business.",
+          "questions": [
+            {
+              "question": "What is Miracal Business?",
+              "answer": "Miracal Business is an enterprise communication platform providing secure team messaging, HD voice & video calls, file sharing, and collaboration tools built for organizations of all sizes."
+            },
+            {
+              "question": "How is Miracal Business different from Miracal?",
+              "answer": "While Miracal is designed for personal use, Miracal Business adds business-grade features such as team workspaces, admin controls, broadcast messaging, and compliance tools for professional environments."
+            },
+            {
+              "question": "Is communication on Miracal Business secure?",
+              "answer": "Yes, all messages and calls on Miracal Business are protected with end-to-end encryption, ensuring only authorized team members can access the content."
+            },
+            {
+              "question": "Can I manage my team's access and permissions?",
+              "answer": "Yes, Miracal Business provides role-based access controls and admin dashboards to manage team members, channels, and permissions with ease."
+            }
+          ]
+        },
+        "modules": [
+          {
+            "title": "Team Messaging",
+            "description": "Organized team channels and direct messages for fast, focused, and encrypted business communication.",
+            "icon": "MessageSquare"
+          },
+          {
+            "title": "HD Voice & Video Calls",
+            "description": "Crystal-clear audio and video conferencing for remote teams and client meetings with low latency.",
+            "icon": "Zap"
+          },
+          {
+            "title": "File & Media Sharing",
+            "description": "Share documents, images, videos, and files securely within your team with organized storage.",
+            "icon": "Sparkles"
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Enterprise-grade cryptographic security ensuring all business communications remain private and compliant.",
+            "icon": "Shield"
+          },
+          {
+            "title": "Admin Dashboard",
+            "description": "Powerful admin controls to manage team members, roles, channels, and organizational settings.",
+            "icon": "Users"
+          },
+          {
+            "title": "Cross-Device Sync",
+            "description": "Seamless real-time synchronization across mobile and desktop with reliable cloud backup for teams.",
+            "icon": "Layers"
           }
         ],
         "type": "our"
@@ -828,212 +1035,6 @@
             "title": "Transport Management",
             "description": "Ensure student safety with real-time vehicle tracking, route optimization, and automated transport fee alerts.",
             "icon": "Bus"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "miracal",
-        "title": "Miracal",
-        "shortDescription": "A next-generation instant messaging and calling app designed for fast, seamless, and secure connections.",
-        "description": "Miracal is a modern real-time messaging application inspired by the simplicity and power of WhatsApp, featuring instant chats, group conversations, media sharing, and high-definition voice and video calls.",
-        "fullDescription": "Miracal brings you closer to your friends, family, and the people who matter most. Operated by Hindustaan Innovations Private Limited, Miracal is an ultra-fast, secure instant messaging platform designed to make digital communication effortless, expressive, and completely private. Built with modern end-to-end encryption protocols, Miracal supports instant 1-on-1 chats, group messaging with advanced permissions, voice notes, expressive stickers, document sharing, and low-latency HD voice and video calling. With a familiar, intuitive design inspired by leading messaging apps like WhatsApp, Miracal ensures effortless onboarding and smooth cross-device synchronization between mobile and web platforms, empowering users to connect, collaborate, and share life's moments with peace of mind.",
-        "image": "/Miracal.png",
-        "logo": "/miracal-brand.png",
-        "projectUrl": "https://miracal.hindustaan.tech",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal",
-        "appStoreUrl": "#",
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about Miracal.",
-          "questions": [
-            {
-              "question": "What is Miracal?",
-              "answer": "Miracal is a modern instant messaging and calling application built for real-time communication, featuring 1-on-1 chats, group conversations, voice notes, media sharing, and HD voice and video calls."
-            },
-            {
-              "question": "Is Miracal similar to WhatsApp?",
-              "answer": "Yes, Miracal provides an intuitive and familiar messaging experience similar to WhatsApp, with seamless instant messaging, status updates, voice notes, stickers, and group chats."
-            },
-            {
-              "question": "Is my communication secure and encrypted?",
-              "answer": "Yes, Miracal uses robust end-to-end encryption to guarantee that only you and the person you are communicating with can read your messages or listen to your calls."
-            },
-            {
-              "question": "Can I use Miracal on multiple devices?",
-              "answer": "Yes, Miracal supports multi-platform access across mobile and web interfaces with real-time cloud synchronization."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Instant Messaging",
-            "description": "Lightning-fast text messaging with real-time delivery status, typing indicators, and read receipts.",
-            "icon": "MessageSquare"
-          },
-          {
-            "title": "HD Voice & Video Calls",
-            "description": "Crystal-clear, low-latency audio and video calling to stay connected with family, friends, and colleagues worldwide.",
-            "icon": "Zap"
-          },
-          {
-            "title": "Media & File Sharing",
-            "description": "Send high-resolution photos, videos, voice recordings, documents, and interactive sticker packs without loss of quality.",
-            "icon": "Sparkles"
-          },
-          {
-            "title": "End-to-End Encryption",
-            "description": "Advanced privacy safeguards and cryptographic security ensuring your chats and calls stay completely confidential.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Interactive Groups & Communities",
-            "description": "Organize dedicated group chats with customizable admin roles, media galleries, and pinned announcements.",
-            "icon": "Users"
-          },
-          {
-            "title": "Cross-Device Synchronization",
-            "description": "Seamless real-time synchronization between mobile apps and web platforms with reliable cloud backup.",
-            "icon": "Layers"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "miracal-business",
-        "title": "Miracal Business",
-        "shortDescription": "Enterprise-grade secure communication platform for teams — encrypted messaging, file sharing, and seamless collaboration.",
-        "description": "Miracal Business is an enterprise-ready secure communication platform empowering teams with end-to-end encrypted messaging, HD voice & video calls, file sharing, and powerful collaboration tools designed for modern businesses.",
-        "fullDescription": "Miracal Business takes the simplicity and power of Miracal and supercharges it for professional teams and enterprises. Built on the same rock-solid encryption foundation as Miracal, Miracal Business adds a layer of business-grade tools — dedicated team workspaces, role-based access controls, broadcast announcements, advanced file sharing, and admin dashboards — giving organizations complete control over their internal communications. Whether you're a startup coordinating across departments or a large enterprise managing thousands of employees, Miracal Business delivers a familiar, intuitive interface with the compliance, security, and scalability that businesses demand.",
-        "image": "/miracal_business.png",
-        "logo": "/miracal-brand.png",
-        "projectUrl": "https://miracalbussiness.hindustaan.tech",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.miracal.business",
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about Miracal Business.",
-          "questions": [
-            {
-              "question": "What is Miracal Business?",
-              "answer": "Miracal Business is an enterprise communication platform providing secure team messaging, HD voice & video calls, file sharing, and collaboration tools built for organizations of all sizes."
-            },
-            {
-              "question": "How is Miracal Business different from Miracal?",
-              "answer": "While Miracal is designed for personal use, Miracal Business adds business-grade features such as team workspaces, admin controls, broadcast messaging, and compliance tools for professional environments."
-            },
-            {
-              "question": "Is communication on Miracal Business secure?",
-              "answer": "Yes, all messages and calls on Miracal Business are protected with end-to-end encryption, ensuring only authorized team members can access the content."
-            },
-            {
-              "question": "Can I manage my team's access and permissions?",
-              "answer": "Yes, Miracal Business provides role-based access controls and admin dashboards to manage team members, channels, and permissions with ease."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Team Messaging",
-            "description": "Organized team channels and direct messages for fast, focused, and encrypted business communication.",
-            "icon": "MessageSquare"
-          },
-          {
-            "title": "HD Voice & Video Calls",
-            "description": "Crystal-clear audio and video conferencing for remote teams and client meetings with low latency.",
-            "icon": "Zap"
-          },
-          {
-            "title": "File & Media Sharing",
-            "description": "Share documents, images, videos, and files securely within your team with organized storage.",
-            "icon": "Sparkles"
-          },
-          {
-            "title": "End-to-End Encryption",
-            "description": "Enterprise-grade cryptographic security ensuring all business communications remain private and compliant.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Admin Dashboard",
-            "description": "Powerful admin controls to manage team members, roles, channels, and organizational settings.",
-            "icon": "Users"
-          },
-          {
-            "title": "Cross-Device Sync",
-            "description": "Seamless real-time synchronization across mobile and desktop with reliable cloud backup for teams.",
-            "icon": "Layers"
-          }
-        ],
-        "type": "our"
-      },
-      {
-        "id": "onstay",
-        "title": "Onstay",
-        "shortDescription": "All-in-one hotel, room, and lounge booking platform.",
-        "description": "Onstay is a smart hospitality booking platform for discovering and booking hotels, hourly rooms, luxury resorts, and executive lounges with instant confirmation.",
-        "fullDescription": "Onstay is an intelligent hospitality and stay-booking ecosystem powered by Hindustaan Innovations Private Limited. Designed to make travel and accommodations seamless, Onstay connects guests with top-rated hotels, hourly room stays, luxury resorts, and executive airport or city lounges with real-time room availability, upfront pricing, and verified guest reviews. Whether travelers need a quick hourly stay between flights, an executive lounge for productivity, or a full weekend resort getaway, Onstay delivers a clean, intuitive booking experience with zero hidden fees and instant digital confirmation.",
-        "image": "/onstay_home.png",
-        "logo": "/onstay-logo.png",
-        "projectUrl": "https://onstay.hindustaan.tech/",
-        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.onstay",
-        "appStoreUrl": "",
-        "faq": {
-          "pill": "FAQ",
-          "heading": "Common",
-          "headingItalic": "Questions",
-          "subheading": "Everything you need to know about Onstay.",
-          "questions": [
-            {
-              "question": "What is Onstay?",
-              "answer": "Onstay is an all-in-one hospitality booking platform offering seamless reservations for premium hotels, hourly day-use rooms, and executive airport and city lounges."
-            },
-            {
-              "question": "Can I book rooms on an hourly basis?",
-              "answer": "Yes, Onstay features flexible hourly booking slots tailored for travelers with transit layovers, business travelers needing a quiet workspace, or short-stay visits."
-            },
-            {
-              "question": "How do lounge bookings work?",
-              "answer": "You can explore and book verified executive and airport lounges directly through Onstay, securing guaranteed entry, high-speed Wi-Fi, refreshments, and relaxation spaces without complex memberships."
-            },
-            {
-              "question": "Are bookings confirmed instantly?",
-              "answer": "Yes, all reservations made through Onstay are processed in real-time with instant digital vouchers and notifications."
-            }
-          ]
-        },
-        "modules": [
-          {
-            "title": "Hotels & Stays Discovery",
-            "description": "Explore curated hotels, boutique stays, and luxury resorts with detailed photos, verified reviews, and transparent pricing.",
-            "icon": "Search"
-          },
-          {
-            "title": "Hourly Room Bookings",
-            "description": "Flexible short-duration day stays and transit room booking with customizable check-in hours.",
-            "icon": "CalendarCheck"
-          },
-          {
-            "title": "Executive Lounge Access",
-            "description": "Instant reservations for airport and business lounges featuring high-speed Wi-Fi, refreshments, and quiet suites.",
-            "icon": "Zap"
-          },
-          {
-            "title": "Verified Listings & Best Price",
-            "description": "100% verified properties, authentic guest feedback, and price-matching guarantees with zero hidden costs.",
-            "icon": "Shield"
-          },
-          {
-            "title": "Interactive Map & Proximity Sort",
-            "description": "Pinpoint stays near airports, train stations, business districts, and landmarks with live GPS guidance.",
-            "icon": "MapPin"
-          },
-          {
-            "title": "Instant & Secure Checkout",
-            "description": "Fast digital payments with UPI, cards, net banking, and pay-at-hotel options paired with instant e-vouchers.",
-            "icon": "CreditCard"
           }
         ],
         "type": "our"
