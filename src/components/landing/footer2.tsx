@@ -5,7 +5,7 @@ import { Video, MessageSquare, Send, Code2, Palette, Smartphone, Sparkles } from
 export default function Footer2() {
     return (
         <div className="w-full bg-[#f5f5f5] dark:bg-[#09090b] flex justify-center py-6 sm:py-10 px-3 sm:px-4 transition-colors duration-200">
-            <footer className="w-full max-w-[1800px] bg-[#0a0a0a] rounded-2xl sm:rounded-3xl p-3 sm:p-6 pb-8 sm:pb-8 flex flex-col border border-zinc-300/40 dark:border-white/10 shadow-2xl">
+            <footer className="w-full max-w-[1800px] bg-white dark:bg-[#0a0a0a] rounded-2xl sm:rounded-3xl p-3 sm:p-6 pb-8 sm:pb-8 flex flex-col border border-zinc-200 dark:border-white/10 shadow-xl dark:shadow-2xl transition-colors duration-200">
 
                 {/* Top Dark Grey Card */}
                 <div className="w-full bg-[#1c1c1c] rounded-2xl sm:rounded-[24px] p-5 sm:p-6 md:p-8 lg:p-14 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 lg:gap-12">
@@ -98,14 +98,14 @@ export default function Footer2() {
                     </div>
 
                     {/* Footer Links & Copyright */}
-                    <div className="flex flex-col md:flex-row justify-between items-center w-full mt-auto gap-5 md:gap-0 pt-6 sm:pt-8 border-t border-white/10">
-                        <div className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2.5 text-zinc-200 font-medium text-xs sm:text-sm md:text-[15px] text-center w-full md:w-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-center w-full mt-auto gap-5 md:gap-0 pt-6 sm:pt-8 border-t border-zinc-200 dark:border-white/10">
+                        <div className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2.5 text-zinc-600 dark:text-zinc-200 font-medium text-xs sm:text-sm md:text-[15px] text-center w-full md:w-auto">
                             <Link href="/about" className="hover:text-[#1ba453] transition-colors py-1">About Us</Link>
                             <Link href="/products" className="hover:text-[#1ba453] transition-colors py-1">Products</Link>
                             <Link href="/services" className="hover:text-[#1ba453] transition-colors py-1">Services</Link>
                             <Link href="/privacy-policy" className="hover:text-[#1ba453] transition-colors py-1">Privacy Policy</Link>
                         </div>
-                        <div className="text-zinc-500 text-xs sm:text-sm font-medium text-center md:text-right w-full md:w-auto leading-relaxed">
+                        <div className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm font-medium text-center md:text-right w-full md:w-auto leading-relaxed">
                             <span>© 2026 Hindustaan Innovations Private Limited.</span>
                             <span className="block sm:inline sm:ml-1">All rights reserved.</span>
                         </div>
