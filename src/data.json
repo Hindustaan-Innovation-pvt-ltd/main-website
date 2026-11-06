@@ -1058,6 +1058,65 @@
         "projectUrl": "https://ptcfurnitures.com/",
         "image": "/ptc_furniture.png",
         "fullDescription": "PTC Furnitures required a sophisticated online presence to showcase their premium collection of modern and classic furniture. We developed a robust e-commerce solution that emphasizes product visualization and categorization, allowing customers to easily find pieces that match their style. The platform features advanced search capabilities, detailed product pages with specifications, and an intuitive user journey from discovery to purchase. Built with modern web technologies, the site ensures fast loading times and a highly responsive design across all screen sizes."
+      },
+      {
+        "id": "ludofirst",
+        "type": "games",
+        "title": "LudoFirst",
+        "shortDescription": "Classic board game reimagined with real-time multiplayer, smart matchmaking, and sleek modern design.",
+        "description": "Bring your friends and family together with Ludo First. Enjoy the classic board game experience with a fresh, colorful look, seamless online multiplayer, private rooms, and competitive gameplay.",
+        "fullDescription": "LudoFirst brings the beloved classic board game into the digital era with high-performance real-time multiplayer, fair dice algorithms, and a vibrant, modern visual design. Developed by Hindustaan Innovations Private Limited, LudoFirst allows players to connect with friends and family across the globe or challenge players in competitive matches. Featuring private game rooms, smooth animations, and instant matchmaking, LudoFirst delivers nostalgic entertainment crafted for both mobile and desktop screens.",
+        "image": "/ludofirst_hero.png",
+        "logo": "/ludofirst_app_icon.png",
+        "projectUrl": "https://ludofirst.hindustaan.tech/",
+        "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ludofirst",
+        "appStoreUrl": "",
+        "modules": [
+          {
+            "title": "Real-Time Multiplayer",
+            "description": "Play with up to 4 players globally with low-latency synchronization and instant matchmaking.",
+            "icon": "Users"
+          },
+          {
+            "title": "Private Game Rooms",
+            "description": "Create custom lobbies and share invite codes to play with friends and family anywhere in the world.",
+            "icon": "MessageSquare"
+          },
+          {
+            "title": "Fair Dice Roll Engine",
+            "description": "Cryptographically verified random dice rolls ensure an honest, exciting, and competitive game.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Vibrant Modern UI",
+            "description": "3D-inspired boards, smooth token animations, and intuitive controls designed for fast-paced gameplay.",
+            "icon": "Sparkles"
+          }
+        ],
+        "faq": {
+          "pill": "FAQ",
+          "heading": "Common",
+          "headingItalic": "Questions",
+          "subheading": "Everything you need to know about LudoFirst.",
+          "questions": [
+            {
+              "question": "What is LudoFirst?",
+              "answer": "LudoFirst is an online multiplayer board game platform developed by Hindustaan Innovations, offering classic Ludo gameplay with modern visuals, seamless multiplayer, and private game rooms."
+            },
+            {
+              "question": "Can I play with my friends privately?",
+              "answer": "Yes, LudoFirst allows you to create private game rooms and invite your friends or family members using a simple room code."
+            },
+            {
+              "question": "Is LudoFirst free to play?",
+              "answer": "Yes, LudoFirst is completely free to play on mobile and web with no hidden charges."
+            },
+            {
+              "question": "Where can I play LudoFirst?",
+              "answer": "You can play LudoFirst directly in your browser or download the app at https://ludofirst.hindustaan.tech/."
+            }
+          ]
+        }
       }
     ]
   }

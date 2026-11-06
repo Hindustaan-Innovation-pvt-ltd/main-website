@@ -8,7 +8,8 @@ import {
   GraduationCap, 
   School, 
   ChevronRight,
-  Sparkles
+  Sparkles,
+  Gamepad2
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +39,7 @@ function Pill({ icon: Icon, label }: { icon: any; label: string }) {
 
 export default function SolutionsPage() {
   const { solutions } = data;
-  const [activeTab, setActiveTab] = useState<"our" | "client">("our");
+  const [activeTab, setActiveTab] = useState<"our" | "client" | "games">("our");
 
   const filteredItems = solutions.items.filter((item: any) => item.type === activeTab);
 
@@ -78,10 +79,10 @@ export default function SolutionsPage() {
 
         {/* Tabs */}
         <section className="px-6 mb-12 max-w-7xl mx-auto flex justify-center">
-          <div className="flex p-1.5 space-x-1 bg-zinc-200/50 dark:bg-zinc-800/60 border border-transparent dark:border-white/10 rounded-full w-full max-w-sm">
+          <div className="flex p-1.5 space-x-1 bg-zinc-200/50 dark:bg-zinc-800/60 border border-transparent dark:border-white/10 rounded-full w-full max-w-md">
             <button
               onClick={() => setActiveTab("our")}
-              className={`w-full rounded-full py-2.5 text-sm font-semibold transition-all duration-300 ${
+              className={`w-full rounded-full py-2.5 px-3 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
                 activeTab === "our"
                   ? "bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xs"
                   : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
@@ -91,13 +92,23 @@ export default function SolutionsPage() {
             </button>
             <button
               onClick={() => setActiveTab("client")}
-              className={`w-full rounded-full py-2.5 text-sm font-semibold transition-all duration-300 ${
+              className={`w-full rounded-full py-2.5 px-3 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
                 activeTab === "client"
                   ? "bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xs"
                   : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
               }`}
             >
               Client Projects
+            </button>
+            <button
+              onClick={() => setActiveTab("games")}
+              className={`w-full rounded-full py-2.5 px-3 text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
+                activeTab === "games"
+                  ? "bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xs"
+                  : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+              }`}
+            >
+              Games
             </button>
           </div>
         </section>
@@ -106,11 +117,18 @@ export default function SolutionsPage() {
         <section className="px-6 pb-32 max-w-7xl mx-auto">
           {filteredItems.length === 0 ? (
             <motion.div 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              className="text-center py-20 text-zinc-500 dark:text-zinc-400 font-medium"
+              initial={{ opacity: 0, y: 10 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              className="flex flex-col items-center justify-center py-20 text-center"
             >
-              Projects coming soon...
+              {activeTab === "games" && (
+                <div className="w-14 h-14 rounded-2xl bg-zinc-200/50 dark:bg-zinc-800/80 border border-zinc-300/50 dark:border-white/10 flex items-center justify-center mb-4 text-zinc-400 dark:text-zinc-500">
+                  <Gamepad2 className="w-7 h-7" />
+                </div>
+              )}
+              <p className="text-zinc-500 dark:text-zinc-400 font-medium text-base">
+                {activeTab === "games" ? "Games coming soon..." : "Projects coming soon..."}
+              </p>
             </motion.div>
           ) : (
             <motion.div 

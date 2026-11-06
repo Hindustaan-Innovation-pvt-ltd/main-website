@@ -439,6 +439,38 @@ const productsData: ProductItemData[] = [
     webImageAspectRatio: "1504 / 1046",
     webUrl: "https://panel.hindustaan.in/",
   },
+  {
+    id: "ludofirst",
+    name: "LudoFirst",
+    tagline: "Classic board game with modern real-time multiplayer",
+    taglineClassName: "text-xs sm:text-[13px] lg:text-[16px] font-bold font-sans",
+    category: "Gaming & Entertainment",
+    descriptionClassName: "text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]",
+    description: (
+      <span className="text-sm sm:text-[15px] lg:text-[16px] font-bold font-sans leading-relaxed text-left lg:text-justify [text-align-last:left]">
+        <a
+          href="https://ludofirst.hindustaan.tech/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#f6191c] dark:text-red-400 font-bold hover:underline"
+        >
+          LudoFirst
+        </a>
+        {", powered by Hindustaan Innovations Private Limited, brings friends and family together with a classic board game experience featuring a fresh, colorful look, seamless online multiplayer, private rooms, and competitive gameplay."}
+      </span>
+    ),
+    highlights: ["Real-Time Multiplayer", "Private Room Lobbies", "Fair Dice Engine"],
+    logo: "/ludofirst_app_icon.png",
+    internalRoute: "/products/ludofirst",
+    webTitle: "LudoFirst Web",
+    webSubtitle: "Multiplayer Board Game",
+    webImage: "/ludofirst_hero.png",
+    webImageWidth: 1024,
+    webImageHeight: 490,
+    webImageAspectRatio: "1024 / 490",
+    webUrl: "https://ludofirst.hindustaan.tech/",
+    mobileUrl: "https://play.google.com/store/apps/details?id=com.ludofirst",
+  },
 ];
 
 

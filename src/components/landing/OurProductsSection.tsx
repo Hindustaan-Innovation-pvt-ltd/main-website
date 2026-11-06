@@ -176,6 +176,19 @@ const ourProducts: ProductItem[] = [
     internalRoute: "/products/vidyum-school-erp",
     isExternalWebsite: true,
   },
+  {
+    id: "ludofirst",
+    name: "LudoFirst",
+    category: "Gaming & Entertainment",
+    shortTagline: "Classic board game with real-time multiplayer",
+    description: "Roll the dice, make your move, and win the game. Bring friends and family together with a fresh, colorful classic board game experience.",
+    logo: "/ludofirst_app_icon.png",
+    websiteUrl: "https://ludofirst.hindustaan.tech/",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ludofirst",
+    appStoreUrl: "",
+    internalRoute: "/products/ludofirst",
+    isExternalWebsite: true,
+  },
 ];
 
 function GooglePlayIcon({ className = "w-5 h-5" }: { className?: string }) {
