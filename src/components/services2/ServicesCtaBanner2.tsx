@@ -33,7 +33,7 @@ export function ServicesCtaBanner2() {
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight mb-3">
               {ctaBanner.heading}{" "}
-              <span className="text-[#1ba453]">
+              <span className="text-[#f6191c]">
                 {ctaBanner.headingItalic}
               </span>
             </h2>

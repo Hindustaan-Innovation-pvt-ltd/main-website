@@ -18,7 +18,7 @@ export default function FaqSection() {
                 </div>
 
                 <h2 className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 text-center max-w-4xl">
-                    {faq.heading} <span className="text-[#1ba453]">{faq.headingItalic}</span>
+                    {faq.heading} <span className="text-[#f6191c]">{faq.headingItalic}</span>
                 </h2>
                 <p className="text-base md:text-lg text-zinc-500 dark:text-zinc-400 mb-8 lg:mb-16 text-center max-w-2xl">{faq.subheading}</p>
             </div>

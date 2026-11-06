@@ -64,7 +64,7 @@ export function HeroSection2() {
             className="flex items-center gap-4"
           >
             <Link href="/contact">
-              <button className="flex items-center gap-2 pl-5 pr-2 py-2 bg-[#1ba453] hover:bg-[#158743] text-white rounded-[14px] font-medium transition-colors shadow-lg shadow-green-500/20 text-sm">
+              <button className="flex items-center gap-2 pl-5 pr-2 py-2 bg-[#f6191c] hover:bg-[#dc1417] text-white rounded-[14px] font-medium transition-colors shadow-lg shadow-red-500/20 text-sm cursor-pointer">
                 Get in Touch
                 <div className="flex items-center justify-center w-7 h-7 bg-white/20 rounded-[10px] ml-1">
                   <Plus className="w-4 h-4" />

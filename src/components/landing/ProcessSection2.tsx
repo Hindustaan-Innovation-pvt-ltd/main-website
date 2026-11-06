@@ -51,7 +51,7 @@ export function ProcessSection2() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
               A Structured Process<br />
-              Built To <span className="text-[#1ba453]">Ship</span> And <span className="text-[#1ba453]">Scale</span>
+              Built To <span className="text-[#f6191c]">Ship</span> And <span className="text-[#f6191c]">Scale</span>
             </motion.h2>
           </div>
           
@@ -103,7 +103,7 @@ function Step1Illustration() {
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[80%] bg-zinc-50 dark:bg-zinc-950/60 rounded-t-2xl border border-zinc-200 dark:border-white/10 border-b-0 shadow-sm flex flex-col p-2">
       {/* Browser Bar */}
       <div className="flex gap-1.5 px-2 py-2">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#1ba453]"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-[#f6191c]"></div>
         <div className="w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700"></div>
         <div className="w-12 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 ml-2"></div>
       </div>
@@ -111,7 +111,7 @@ function Step1Illustration() {
       {/* Video Call Area */}
       <div className="flex-1 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-100 dark:border-white/10 relative mt-2 flex flex-col items-center justify-center shadow-inner">
         {/* Main Avatar */}
-        <div className="relative w-24 h-24 rounded-full flex items-center justify-center mb-10 shadow-sm border border-zinc-200 dark:border-white/10 group-hover:border-transparent max-lg:group-data-[in-view=true]:border-transparent bg-zinc-100 dark:bg-zinc-800 group-hover:bg-[#1ba453] max-lg:group-data-[in-view=true]:bg-[#1ba453] group-hover:scale-110 max-lg:group-data-[in-view=true]:scale-110 transition-all duration-500 overflow-hidden">
+        <div className="relative w-24 h-24 rounded-full flex items-center justify-center mb-10 shadow-sm border border-zinc-200 dark:border-white/10 group-hover:border-transparent max-lg:group-data-[in-view=true]:border-transparent bg-zinc-100 dark:bg-zinc-800 group-hover:bg-[#f6191c] max-lg:group-data-[in-view=true]:bg-[#f6191c] group-hover:scale-110 max-lg:group-data-[in-view=true]:scale-110 transition-all duration-500 overflow-hidden">
           {/* Default State: CSS Person Shape */}
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-3 transition-all duration-500 opacity-100 group-hover:opacity-0 max-lg:group-data-[in-view=true]:opacity-0 group-hover:translate-y-4 max-lg:group-data-[in-view=true]:translate-y-4">
              {/* Head */}
@@ -122,7 +122,7 @@ function Step1Illustration() {
           {/* Hover State: Checkmark dropping from top */}
           <div className="absolute inset-0 flex items-center justify-center transition-all duration-500">
              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm opacity-0 -translate-y-12 group-hover:opacity-100 max-lg:group-data-[in-view=true]:opacity-100 group-hover:translate-y-0 max-lg:group-data-[in-view=true]:translate-y-0 transition-all duration-500 delay-75">
-                <Check className="w-5 h-5 text-[#1ba453] stroke-[3]" />
+                <Check className="w-5 h-5 text-[#f6191c] stroke-[3]" />
              </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ function Step1Illustration() {
         <div className="absolute bottom-4 bg-zinc-100 dark:bg-zinc-800 rounded-full px-4 py-2 flex gap-3 items-center shadow-sm border border-zinc-200 dark:border-white/10">
           <div className="w-5 h-5 rounded-full bg-zinc-300 dark:bg-zinc-600"></div>
           <div className="w-5 h-5 rounded-full bg-zinc-300 dark:bg-zinc-600"></div>
-          <div className="w-8 h-8 rounded-full bg-[#1ba453] flex items-center justify-center shadow-md">
+          <div className="w-8 h-8 rounded-full bg-[#f6191c] flex items-center justify-center shadow-md">
              <Phone className="w-4 h-4 text-white fill-white" />
           </div>
           <div className="w-5 h-5 rounded-full bg-zinc-300 dark:bg-zinc-600"></div>
@@ -161,11 +161,11 @@ function KanbanCard({ delay = 0 }: { delay?: number }) {
         style={{ transitionDelay: `${delay + 200}ms` }}
       >
          <div 
-           className="h-1.5 w-[90%] bg-zinc-200 dark:bg-zinc-700 rounded-full group-hover:bg-[#1ba453] max-lg:group-data-[in-view=true]:bg-[#1ba453] transition-colors duration-200"
+           className="h-1.5 w-[90%] bg-zinc-200 dark:bg-zinc-700 rounded-full group-hover:bg-[#f6191c] max-lg:group-data-[in-view=true]:bg-[#f6191c] transition-colors duration-200"
            style={{ transitionDelay: `${delay}ms` }}
          ></div>
          <div 
-           className="h-1.5 w-[70%] bg-zinc-200 dark:bg-zinc-700 rounded-full group-hover:bg-[#1ba453] max-lg:group-data-[in-view=true]:bg-[#1ba453] transition-colors duration-200"
+           className="h-1.5 w-[70%] bg-zinc-200 dark:bg-zinc-700 rounded-full group-hover:bg-[#f6191c] max-lg:group-data-[in-view=true]:bg-[#f6191c] transition-colors duration-200"
            style={{ transitionDelay: `${delay}ms` }}
          ></div>
       </div>
@@ -174,7 +174,7 @@ function KanbanCard({ delay = 0 }: { delay?: number }) {
         className="absolute inset-0 flex items-center justify-center transition-all duration-300 translate-x-8 opacity-0 group-hover:translate-x-0 max-lg:group-data-[in-view=true]:translate-x-0 group-hover:opacity-100 max-lg:group-data-[in-view=true]:opacity-100"
         style={{ transitionDelay: `${delay + 200}ms` }}
       >
-         <CheckCircle2 className="w-5 h-5 text-[#1ba453] fill-[#1ba453]/10" />
+         <CheckCircle2 className="w-5 h-5 text-[#f6191c] fill-[#f6191c]/10" />
       </div>
     </div>
   );
@@ -185,7 +185,7 @@ function Step2Illustration() {
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[85%] bg-zinc-50 dark:bg-zinc-950/60 rounded-t-2xl border border-zinc-200 dark:border-white/10 border-b-0 shadow-sm flex flex-col p-2">
       {/* Browser Bar */}
       <div className="flex gap-1.5 px-2 py-2">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#1ba453]"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-[#f6191c]"></div>
         <div className="w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700"></div>
         <div className="w-12 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 ml-2"></div>
       </div>
@@ -195,7 +195,7 @@ function Step2Illustration() {
         {/* Column 1 */}
         <div className="flex-1 flex flex-col gap-2.5">
            <div className="flex items-center gap-1.5 mb-0.5">
-             <div className="w-1.5 h-1.5 rounded-full bg-[#1ba453] transition-colors duration-500"></div>
+             <div className="w-1.5 h-1.5 rounded-full bg-[#f6191c] transition-colors duration-500"></div>
              <div className="h-1 w-10 bg-zinc-200 dark:bg-zinc-700 rounded-full transition-colors duration-500"></div>
            </div>
            <KanbanCard delay={0} />
@@ -207,7 +207,7 @@ function Step2Illustration() {
         <div className="flex-1 flex flex-col gap-2.5">
            <div className="flex items-center gap-1.5 mb-0.5">
              <div className="w-1.5 h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-700 transition-colors duration-500"></div>
-             <div className="h-1 w-12 bg-[#1ba453] rounded-full transition-colors duration-500"></div>
+             <div className="h-1 w-12 bg-[#f6191c] rounded-full transition-colors duration-500"></div>
            </div>
            <KanbanCard delay={50} />
            <KanbanCard delay={100} />
@@ -245,7 +245,7 @@ function Step3Illustration() {
              <div className="w-1/2 h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full mx-auto"></div>
              <div className="flex gap-2 mt-auto">
                <div className="flex-1 h-8 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded flex items-end p-1">
-                  <div className="w-full h-1.5 bg-[#1ba453] rounded-full"></div>
+                  <div className="w-full h-1.5 bg-[#f6191c] rounded-full"></div>
                </div>
                <div className="flex-1 h-8 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded"></div>
                <div className="flex-1 h-8 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded"></div>
@@ -257,7 +257,7 @@ function Step3Illustration() {
         <div className="absolute top-8 right-0 w-[40%] h-[35%] bg-zinc-50 dark:bg-zinc-800/90 rounded-xl border border-zinc-200 dark:border-white/10 shadow-md p-2 flex flex-col z-10">
            <div className="flex-1 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-white/5 rounded-lg mb-2"></div>
            <div className="w-3/4 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full mb-1.5"></div>
-           <div className="w-1/3 h-2 bg-[#1ba453] rounded-full"></div>
+           <div className="w-1/3 h-2 bg-[#f6191c] rounded-full"></div>
         </div>
 
         {/* Bottom Window */}

@@ -64,7 +64,7 @@ export default function SolutionsPage() {
               variants={fadeUp}
               className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white max-w-4xl leading-[1.15] md:leading-[1.1] mb-4 md:mb-6 px-2"
             >
-              {solutions.heading} <span className="text-[#1ba453]">{solutions.headingItalic}</span>
+              {solutions.heading} <span className="text-[#f6191c]">{solutions.headingItalic}</span>
             </motion.h1>
             
             <motion.p 

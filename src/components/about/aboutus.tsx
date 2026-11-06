@@ -85,7 +85,7 @@ function SectionHeader({
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.15] tracking-tight"
         >
           {heading}{" "}
-          <span className="text-[#1ba453]">{italic}</span>
+          <span className="text-[#f6191c]">{italic}</span>
         </motion.h2>
       </div>
       
@@ -128,7 +128,7 @@ function AboutHero() {
         >
           Built for India&apos;s
           <br />
-          Next-Gen <span className="text-[#1ba453]">Entrepreneurs.</span>
+          Next-Gen <span className="text-[#f6191c]">Entrepreneurs.</span>
         </motion.h1>
 
         {/* Subheading */}

@@ -93,7 +93,7 @@ export function ServicesSection3() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
-              What We <span className="text-[#1ba453]">Build</span>
+              What We <span className="text-[#f6191c]">Build</span>
             </motion.h2>
           </div>
           
@@ -121,12 +121,12 @@ export function ServicesSection3() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="bg-white dark:bg-zinc-900/90 rounded-2xl p-6 md:p-8 flex flex-col gap-4 border border-zinc-200/60 dark:border-white/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-full bg-zinc-50 dark:bg-zinc-800 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1ba453]/20 transition-all duration-300">
-                <service.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300 group-hover:text-[#1ba453] transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-full bg-zinc-50 dark:bg-zinc-800 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#f6191c]/20 transition-all duration-300">
+                <service.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300 group-hover:text-[#f6191c] transition-colors duration-300" />
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 tracking-tight group-hover:text-[#1ba453] transition-colors duration-300">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 tracking-tight group-hover:text-[#f6191c] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium">

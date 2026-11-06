@@ -383,7 +383,7 @@ function GroupSection({ group }: { group: Group }) {
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight">
               {group.heading}{" "}
-              <span className="text-[#1ba453]">{group.headingItalic}</span>
+              <span className="text-[#f6191c]">{group.headingItalic}</span>
             </h2>
           </motion.div>
 

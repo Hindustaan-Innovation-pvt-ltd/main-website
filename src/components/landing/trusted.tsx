@@ -51,7 +51,7 @@ export function TrustedSection() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
-              <span className="text-[#1ba453]">Trusted</span> by <span className="text-[#1ba453]">Teams</span> Building Meaningful Digital Products
+              <span className="text-[#f6191c]">Trusted</span> by <span className="text-[#f6191c]">Teams</span> Building Meaningful Digital Products
             </motion.h2>
           </div>
           

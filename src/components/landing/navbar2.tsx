@@ -27,7 +27,7 @@ export function Navbar2() {
           
           {/* Left Side Logo */}
           <Link href="/">
-            <div className="flex items-center bg-[#1ba453] rounded-xl md:rounded-[18px] p-1 cursor-pointer">
+            <div className="flex items-center bg-[#f6191c] rounded-xl md:rounded-[18px] p-1 cursor-pointer">
               <div className="flex items-center justify-center w-10 h-10 shrink-0">
                   <Image src="/logo.png" alt="Logo" width={24} height={24} style={{ width: "auto", height: "auto" }} className="object-contain md:ml-2" />
               </div>
@@ -52,7 +52,7 @@ export function Navbar2() {
               <Link
                 key={item}
                 href={item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`}
-                className="text-[15px] font-medium text-white/90 hover:text-[#1ba453] transition-colors"
+                className="text-[15px] font-medium text-white/90 hover:text-[#f6191c] transition-colors"
               >
                 {item}
               </Link>
@@ -117,7 +117,7 @@ export function Navbar2() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                  {/* Actual Logo */}
-                 <div className="flex items-center justify-center w-10 h-10 shrink-0 bg-[#1ba453] rounded-xl">
+                 <div className="flex items-center justify-center w-10 h-10 shrink-0 bg-[#f6191c] rounded-xl">
                    <Image src="/logo.png" alt="Logo" width={24} height={24} style={{ width: "auto", height: "auto" }} className="object-contain" />
                  </div>
                  <div className="flex flex-col justify-center leading-none gap-1 mt-1">
@@ -134,7 +134,7 @@ export function Navbar2() {
             <div className="flex flex-col gap-6 mt-12 flex-1 px-2">
                {links.map((item) => (
                   <Link key={item} href={item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`} onClick={() => setIsOpen(false)}>
-                     <span className="text-[22px] font-medium text-zinc-800 dark:text-zinc-200 hover:text-[#1ba453] dark:hover:text-[#1ba453] transition-colors">{item}</span>
+                     <span className="text-[22px] font-medium text-zinc-800 dark:text-zinc-200 hover:text-[#f6191c] dark:hover:text-[#f6191c] transition-colors">{item}</span>
                   </Link>
                ))}
             </div>

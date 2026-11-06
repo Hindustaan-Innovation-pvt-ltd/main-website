@@ -194,8 +194,8 @@ export default function Popups() {
                             
                             {/* Decorative background gradients */}
                             <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-zinc-50 dark:from-zinc-800/40 to-transparent pointer-events-none" />
-                            <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
-                            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#1ba453]/5 blur-[100px] rounded-full pointer-events-none" />
+                            <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#f6191c]/5 blur-[100px] rounded-full pointer-events-none" />
+                            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#f6191c]/5 blur-[100px] rounded-full pointer-events-none" />
 
                             <Button
                                 className="absolute top-4 right-4 sm:top-6 sm:right-6 text-zinc-400 hover:text-black dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full w-8 h-8 sm:w-10 sm:h-10 p-0 transition-all z-20"
@@ -215,7 +215,7 @@ export default function Popups() {
                                             transition={{ delay: 0.1 }}
                                             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs font-semibold text-zinc-800 dark:text-zinc-200 uppercase tracking-widest shadow-xs"
                                         >
-                                            <Sparkles className="w-3.5 h-3.5 text-[#1ba453]" />
+                                            <Sparkles className="w-3.5 h-3.5 text-[#f6191c]" />
                                             Limited Consultation
                                         </motion.div>
                                         
@@ -233,7 +233,7 @@ export default function Popups() {
                                     <div className="space-y-6">
                                         <div className="space-y-2 relative">
                                             <div className="relative group">
-                                                <div className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-[#1ba453] transition-colors duration-300">
+                                                <div className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-[#f6191c] transition-colors duration-300">
                                                     <Phone className="w-5 h-5 sm:w-[20px] sm:h-[20px]" />
                                                 </div>
                                                 <input
@@ -245,7 +245,7 @@ export default function Popups() {
                                                     placeholder="Your mobile number"
                                                     value={mobile}
                                                     onChange={(e) => setMobile(e.target.value)}
-                                                    className="w-full h-12 sm:h-14 md:h-16 pl-12 sm:pl-14 pr-6 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 outline-none transition-all duration-300 focus:border-[#1ba453]/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-[#1ba453]/10 text-base sm:text-lg shadow-xs"
+                                                    className="w-full h-12 sm:h-14 md:h-16 pl-12 sm:pl-14 pr-6 rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 outline-none transition-all duration-300 focus:border-[#f6191c]/30 focus:bg-white dark:focus:bg-zinc-800 focus:ring-4 focus:ring-[#f6191c]/10 text-base sm:text-lg shadow-xs"
                                                     required
                                                 />
                                             </div>
@@ -264,7 +264,7 @@ export default function Popups() {
                                         <div className="pt-4 space-y-5">
                                             <Button 
                                                 type="submit" 
-                                                className="w-full h-14 md:h-16 rounded-2xl bg-[#1ba453] text-white hover:bg-[#158743] active:scale-[0.98] transition-all duration-300 font-medium text-lg shadow-lg shadow-green-500/20 group flex items-center justify-center gap-3"
+                                                className="w-full h-14 md:h-16 rounded-2xl bg-[#f6191c] text-white hover:bg-[#dc1417] active:scale-[0.98] transition-all duration-300 font-medium text-lg shadow-lg shadow-red-500/20 group flex items-center justify-center gap-3"
                                             >
                                                 Get a Free Call
                                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />

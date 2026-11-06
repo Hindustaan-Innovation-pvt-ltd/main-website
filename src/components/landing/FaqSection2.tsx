@@ -27,7 +27,7 @@ export default function FaqSection2() {
                         </div>
                         {/* Title */}
                         <h2 className="text-4xl sm:text-5xl md:text-[64px] leading-[1.05] font-bold text-zinc-900 dark:text-white tracking-tight">
-                            Questions, <span className="text-[#1ba453]">Answered</span><br className="hidden sm:block" /> Before You Need to <span className="text-[#1ba453]">Ask</span>
+                            Questions, <span className="text-[#f6191c]">Answered</span><br className="hidden sm:block" /> Before You Need to <span className="text-[#f6191c]">Ask</span>
                         </h2>
                     </div>
 

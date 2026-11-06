@@ -32,7 +32,7 @@ export default function Footer2() {
                                     </div>
                                     {/* Icon 3 - Web & Mobile Apps */}
                                     <div
-                                        className="w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] md:w-[38px] md:h-[38px] rounded-lg md:rounded-[10px] bg-[#10b981] flex items-center justify-center shadow-sm text-white"
+                                        className="w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] md:w-[38px] md:h-[38px] rounded-lg md:rounded-[10px] bg-[#f6191c] flex items-center justify-center shadow-sm text-white"
                                         title="Web & Mobile Apps"
                                     >
                                         <Smartphone className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] md:w-[20px] md:h-[20px]" />
@@ -100,10 +100,10 @@ export default function Footer2() {
                     {/* Footer Links & Copyright */}
                     <div className="flex flex-col md:flex-row justify-between items-center w-full mt-auto gap-5 md:gap-0 pt-6 sm:pt-8 border-t border-zinc-200 dark:border-white/10">
                         <div className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2.5 text-zinc-600 dark:text-zinc-200 font-medium text-xs sm:text-sm md:text-[15px] text-center w-full md:w-auto">
-                            <Link href="/about" className="hover:text-[#1ba453] transition-colors py-1">About Us</Link>
-                            <Link href="/products" className="hover:text-[#1ba453] transition-colors py-1">Products</Link>
-                            <Link href="/services" className="hover:text-[#1ba453] transition-colors py-1">Services</Link>
-                            <Link href="/privacy-policy" className="hover:text-[#1ba453] transition-colors py-1">Privacy Policy</Link>
+                            <Link href="/about" className="hover:text-[#f6191c] transition-colors py-1">About Us</Link>
+                            <Link href="/products" className="hover:text-[#f6191c] transition-colors py-1">Products</Link>
+                            <Link href="/services" className="hover:text-[#f6191c] transition-colors py-1">Services</Link>
+                            <Link href="/privacy-policy" className="hover:text-[#f6191c] transition-colors py-1">Privacy Policy</Link>
                         </div>
                         <div className="text-zinc-500 dark:text-zinc-400 text-xs sm:text-sm font-medium text-center md:text-right w-full md:w-auto leading-relaxed">
                             <span>© 2026 Hindustaan Innovations Private Limited.</span>

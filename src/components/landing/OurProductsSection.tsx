@@ -13,6 +13,7 @@ interface ProductItem {
   shortTagline: string;
   description: React.ReactNode;
   logo: string;
+  logoClassName?: string;
   darkLogo?: string;
   websiteUrl: string;
   playStoreUrl?: string;
@@ -32,7 +33,7 @@ const ourProducts: ProductItem[] = [
     category: "Hyperlocal Services",
     shortTagline: "Geospatial home services & verified local professionals",
     description: "India's fastest geospatial home services connection platform bridging verified professionals with local households in real-time.",
-    logo: "/karmanisht-logo.png",
+    logo: "/Frame 241.png",
     websiteUrl: "https://www.karmanisht.com",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.karmanisht",
     appStoreUrl: "https://apps.apple.com/us/app/karmanisht/id6781247473",
@@ -62,7 +63,7 @@ const ourProducts: ProductItem[] = [
     category: "Rides & Logistics",
     shortTagline: "City rides, auto, cab & parcel delivery",
     description: "Indian ride-hailing and parcel delivery platform offering convenient bike, auto, and cab commuting with real-time GPS tracking.",
-    logo: "/ghumakkadh_icon.png",
+    logo: "/Ghum — Red & White Logo.png",
     websiteUrl: "https://ghumakkadh.hindustaan.in/",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.ghumakkadh",
     appStoreUrl: "https://apps.apple.com/us/app/ghumakkadh/id6806542727",
@@ -75,7 +76,8 @@ const ourProducts: ProductItem[] = [
     category: "Digital Freight",
     shortTagline: "Smart freight marketplace across 11 languages",
     description: "Next-gen digital freight & logistics ecosystem connecting Shippers, Transporters, and Drivers with verified fleets and live GPS tracking.",
-    logo: "/truckbharat-logo.png",
+    logo: "/Frame 240.png",
+    logoClassName: "scale-115",
     websiteUrl: "https://truckbharat.hindustaan.tech",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.truckbharat",
     appStoreUrl: "",
@@ -88,7 +90,7 @@ const ourProducts: ProductItem[] = [
     category: "Hotel & Lounge Booking",
     shortTagline: "Hotels, rooms & lounge booking platform",
     description: "OnStay ensures peace of mind for guests through essential guarantees like free 15-minute room holds, instant UPI confirmations, flexible pay-at-hotel options, verified couple-friendly spaces, and transparent cancellation terms. Each stay guarantees core comforts including high-speed Wi-Fi, working air conditioning, sanitized washrooms, fresh linens, and round-the-clock front desk support, giving travelers an authentic, stress-free hospitality experience.",
-    logo: "/onstay-logo.png",
+    logo: "/OnStay — Editable Logo.png",
     websiteUrl: "https://onstay.hindustaan.tech/",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.onstay",
     appStoreUrl: "",
@@ -101,7 +103,7 @@ const ourProducts: ProductItem[] = [
     category: "E-Commerce",
     shortTagline: "Multi-vendor digital commerce marketplace",
     description: "A comprehensive multi-vendor marketplace platform connecting buyers and sellers across a robust digital commerce ecosystem.",
-    logo: "/Hindustaan_mart_logo.jpeg",
+    logo: "/Hindustaan Mart Shopping Cart Logo.png",
     websiteUrl: "https://allindiahub.com",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.hindustaanmart",
     appStoreUrl: "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
@@ -114,7 +116,7 @@ const ourProducts: ProductItem[] = [
     category: "Instant Messaging",
     shortTagline: "Secure end-to-end encrypted messaging & calls",
     description: "Next-generation secure instant messaging and calling app connecting friends, families, and communities with end-to-end encryption.",
-    logo: "/miracal-brand.png",
+    logo: "/Red Abstract Connected Emblem.png",
     websiteUrl: "https://miracal.hindustaan.tech",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.miracal",
     appStoreUrl: "",
@@ -127,7 +129,7 @@ const ourProducts: ProductItem[] = [
     category: "Business Messaging",
     shortTagline: "Enterprise team collaboration & workspaces",
     description: "Enterprise-grade secure communication platform empowering teams with encrypted messaging, file sharing, and seamless collaboration tools.",
-    logo: "/miracal-brand.png",
+    logo: "/Red Abstract Connected Emblem.png",
     websiteUrl: "https://miracalbussiness.hindustaan.tech",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.miracal.business",
     appStoreUrl: "",
@@ -146,15 +148,15 @@ const ourProducts: ProductItem[] = [
           href="https://panel.hindustaan.in/login"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+          className="text-red-600 dark:text-red-400 font-semibold hover:underline"
         >
           Hindustaan Innovations
         </a>{" "}
         functions as an Enterprise Workspace OS that centralizes sprint and task governance, real-time workforce management, and executive analytics into a single secured platform protected by single sign-on.
       </>
     ),
-    logo: "/favicon.svg",
-    darkLogo: "/logo.png",
+    logo: "/apple-touch-icon.png",
+
     websiteUrl: "https://panel.hindustaan.in/",
     playStoreUrl: "",
     appStoreUrl: "",
@@ -252,7 +254,7 @@ export function OurProductsSection() {
               transition={{ delay: 0.1 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white leading-[1.15] sm:leading-[1.1] tracking-tight"
             >
-              Software Products Built For <span className="text-[#1ba453]">Real Impact</span>
+              Software Products Built For <span className="text-[#f6191c]">Real Impact</span>
             </motion.h2>
           </div>
 
@@ -290,7 +292,7 @@ export function OurProductsSection() {
               transition={{ duration: 0.3, delay: index * 0.04 }}
               whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
-              className="group relative flex flex-col items-center justify-between p-2.5 sm:p-4 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 hover:border-[#1ba453]/60 dark:hover:border-[#1ba453]/60 hover:shadow-lg dark:hover:shadow-black/50 transition-all duration-300 text-left w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1ba453]/50 min-h-[148px] sm:min-h-[155px]"
+              className="group relative flex flex-col items-center justify-between p-2.5 sm:p-4 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200/80 dark:border-white/10 hover:border-[#f6191c]/60 dark:hover:border-[#f6191c]/60 hover:shadow-lg dark:hover:shadow-black/50 transition-all duration-300 text-left w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f6191c]/50 min-h-[148px] sm:min-h-[155px]"
             >
               {/* Product App Icon container */}
               <div className="relative w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 rounded-2xl bg-zinc-50 dark:bg-zinc-800/90 border border-zinc-100 dark:border-zinc-700/60 p-1.5 sm:p-2 flex items-center justify-center shadow-2xs group-hover:scale-105 group-hover:shadow-md transition-all duration-300">
@@ -301,14 +303,14 @@ export function OurProductsSection() {
                       alt={product.name}
                       width={72}
                       height={72}
-                      className="w-full h-full object-contain rounded-xl dark:hidden"
+                      className={`w-full h-full object-contain rounded-xl dark:hidden ${product.logoClassName || ""}`}
                     />
                     <Image
                       src={product.darkLogo}
                       alt={product.name}
                       width={72}
                       height={72}
-                      className="w-full h-full object-contain rounded-xl hidden dark:block"
+                      className={`w-full h-full object-contain rounded-xl hidden dark:block ${product.logoClassName || ""}`}
                     />
                   </>
                 ) : (
@@ -317,14 +319,14 @@ export function OurProductsSection() {
                     alt={product.name}
                     width={72}
                     height={72}
-                    className="w-full h-full object-contain rounded-xl"
+                    className={`w-full h-full object-contain rounded-xl ${product.logoClassName || ""}`}
                   />
                 )}
               </div>
 
               {/* Title & Category */}
               <div className="w-full text-center mt-2.5">
-                <h3 className="text-xs sm:text-[13px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#1ba453] dark:group-hover:text-[#1ba453] transition-colors truncate tracking-tight">
+                <h3 className="text-xs sm:text-[13px] font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[#f6191c] dark:group-hover:text-[#f6191c] transition-colors truncate tracking-tight">
                   {product.name}
                 </h3>
                 <p className="text-[10px] sm:text-[11px] text-zinc-500 dark:text-zinc-400 font-medium truncate mt-0.5">
@@ -362,7 +364,7 @@ export function OurProductsSection() {
             >
               {/* Modal Top Header with Close Button */}
               <div className="flex items-center justify-between px-6 pt-5 pb-2">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-red-500/10 text-red-700 dark:text-red-400 border border-red-500/20">
                   <Sparkles className="w-3 h-3" />
                   Product Platforms
                 </span>
@@ -388,14 +390,14 @@ export function OurProductsSection() {
                           alt={selectedProduct.name}
                           width={64}
                           height={64}
-                          className="w-full h-full object-contain rounded-lg dark:hidden"
+                          className={`w-full h-full object-contain rounded-lg dark:hidden ${selectedProduct.logoClassName || ""}`}
                         />
                         <Image
                           src={selectedProduct.darkLogo}
                           alt={selectedProduct.name}
                           width={64}
                           height={64}
-                          className="w-full h-full object-contain rounded-lg hidden dark:block"
+                          className={`w-full h-full object-contain rounded-lg hidden dark:block ${selectedProduct.logoClassName || ""}`}
                         />
                       </>
                     ) : (
@@ -404,7 +406,7 @@ export function OurProductsSection() {
                         alt={selectedProduct.name}
                         width={64}
                         height={64}
-                        className="w-full h-full object-contain rounded-lg"
+                        className={`w-full h-full object-contain rounded-lg ${selectedProduct.logoClassName || ""}`}
                       />
                     )}
                   </div>
@@ -452,7 +454,7 @@ export function OurProductsSection() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 group-hover:translate-x-0.5 transition-transform">
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-red-400 group-hover:translate-x-0.5 transition-transform">
                         <span>Install</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </div>
@@ -467,7 +469,7 @@ export function OurProductsSection() {
                             href={selectedProduct.partnerPlayStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                            className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1"
                           >
                             Partner App <ExternalLink className="w-2.5 h-2.5" />
                           </a>
@@ -477,7 +479,7 @@ export function OurProductsSection() {
                             href={selectedProduct.riderPlayStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                            className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1"
                           >
                             Rider App <ExternalLink className="w-2.5 h-2.5" />
                           </a>
@@ -510,7 +512,7 @@ export function OurProductsSection() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 group-hover:translate-x-0.5 transition-transform">
+                      <div className="flex items-center gap-1.5 text-xs font-semibold text-red-400 group-hover:translate-x-0.5 transition-transform">
                         <span>Install</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </div>
@@ -525,7 +527,7 @@ export function OurProductsSection() {
                             href={selectedProduct.partnerAppStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                            className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1"
                           >
                             Partner App <ExternalLink className="w-2.5 h-2.5" />
                           </a>
@@ -535,7 +537,7 @@ export function OurProductsSection() {
                             href={selectedProduct.riderAppStoreUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                            className="text-[11px] font-semibold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1"
                           >
                             Rider App <ExternalLink className="w-2.5 h-2.5" />
                           </a>
@@ -551,14 +553,14 @@ export function OurProductsSection() {
                     href={selectedProduct.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100/80 dark:bg-[#1ba453]/15 dark:hover:bg-[#1ba453]/25 text-zinc-900 dark:text-white border border-emerald-500/30 dark:border-[#1ba453]/30 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
+                    className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-red-50 hover:bg-red-100/80 dark:bg-[#f6191c]/15 dark:hover:bg-[#f6191c]/25 text-zinc-900 dark:text-white border border-red-500/30 dark:border-[#f6191c]/30 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
                   >
                     <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-[#1ba453] dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-red-500/20 text-[#f6191c] dark:text-red-400 flex items-center justify-center shrink-0">
                         <Globe className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="text-[10px] sm:text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider">
+                        <div className="text-[10px] sm:text-[11px] text-red-700 dark:text-red-400 font-semibold uppercase tracking-wider">
                           Web Platform
                         </div>
                         <div className="text-sm sm:text-base font-bold leading-tight">
@@ -567,7 +569,7 @@ export function OurProductsSection() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#1ba453] dark:text-emerald-400 group-hover:translate-x-0.5 transition-transform">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#f6191c] dark:text-red-400 group-hover:translate-x-0.5 transition-transform">
                       <span>Launch</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </div>
@@ -576,14 +578,14 @@ export function OurProductsSection() {
                   <Link
                     href={selectedProduct.websiteUrl}
                     onClick={() => setSelectedProduct(null)}
-                    className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100/80 dark:bg-[#1ba453]/15 dark:hover:bg-[#1ba453]/25 text-zinc-900 dark:text-white border border-emerald-500/30 dark:border-[#1ba453]/30 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
+                    className="group flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-red-50 hover:bg-red-100/80 dark:bg-[#f6191c]/15 dark:hover:bg-[#f6191c]/25 text-zinc-900 dark:text-white border border-red-500/30 dark:border-[#f6191c]/30 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
                   >
                     <div className="flex items-center gap-3.5">
-                      <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-[#1ba453] dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-red-500/20 text-[#f6191c] dark:text-red-400 flex items-center justify-center shrink-0">
                         <Globe className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="text-[10px] sm:text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold uppercase tracking-wider">
+                        <div className="text-[10px] sm:text-[11px] text-red-700 dark:text-red-400 font-semibold uppercase tracking-wider">
                           Web Platform
                         </div>
                         <div className="text-sm sm:text-base font-bold leading-tight">
@@ -592,7 +594,7 @@ export function OurProductsSection() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#1ba453] dark:text-emerald-400 group-hover:translate-x-0.5 transition-transform">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#f6191c] dark:text-red-400 group-hover:translate-x-0.5 transition-transform">
                       <span>Explore</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>

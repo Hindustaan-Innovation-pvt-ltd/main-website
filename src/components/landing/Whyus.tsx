@@ -26,7 +26,7 @@ export function WhyUsSection() {
               className="text-4xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
             >
               Design Decisions Grounded<br />
-              In <span className="text-[#1ba453]">Business</span> Impact
+              In <span className="text-[#f6191c]">Business</span> Impact
             </motion.h2>
           </div>
           
@@ -229,11 +229,11 @@ function DesignDirectlyIllustration() {
             
             {/* Animated Green Line Area */}
             <div className="flex flex-col items-center gap-2 mt-4">
-               <div className="relative h-2 bg-[#1ba453] rounded-full transition-all duration-700 w-10 group-hover:w-28 max-lg:group-data-[in-view=true]:w-28 self-center">
+               <div className="relative h-2 bg-[#f6191c] rounded-full transition-all duration-700 w-10 group-hover:w-28 max-lg:group-data-[in-view=true]:w-28 self-center">
                   {/* You Cursor */}
                   <div className="absolute top-0 left-0 transition-all duration-700 -translate-y-4 -translate-x-2 group-hover:-translate-y-6 max-lg:group-data-[in-view=true]:-translate-y-6 group-hover:-translate-x-6 max-lg:group-data-[in-view=true]:-translate-x-6 z-20">
                      <div className="relative">
-                       <div className="bg-[#1ba453] text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap absolute bottom-4 left-1 z-10">
+                       <div className="bg-[#f6191c] text-white text-[9px] font-bold px-2 py-0.5 rounded shadow-lg whitespace-nowrap absolute bottom-4 left-1 z-10">
                          You
                        </div>
                        <svg width="15" height="15" viewBox="0 0 24 24" fill="#ff5a1f" stroke="white" strokeWidth="2" className="absolute top-0 left-0 z-20 drop-shadow-md">
@@ -294,7 +294,7 @@ fill="currentColor" viewBox="0 0 24 24" >
             </div>
 
             {/* Figma - Starts Row 3, Col 3 -> Moves to Col 4 (+1 col) */}
-            <div className="col-start-3 row-start-3 bg-[#1ba453] rounded-[1.25rem] sm:rounded-[1.5rem] flex items-center justify-center shadow-[0_8px_20px_rgba(27,164,83,0.3)] border border-[#3ceb7f]/40 transition-transform duration-700 ease-in-out group-hover:translate-x-[calc(100%+0.75rem)] max-lg:group-data-[in-view=true]:translate-x-[calc(100%+0.75rem)] sm:group-hover:translate-x-[calc(100%+1rem)] sm:max-lg:group-data-[in-view=true]:translate-x-[calc(100%+1rem)]">
+            <div className="col-start-3 row-start-3 bg-[#f6191c] rounded-[1.25rem] sm:rounded-[1.5rem] flex items-center justify-center shadow-[0_8px_20px_rgba(246,25,28,0.3)] border border-[#ff4d4f]/40 transition-transform duration-700 ease-in-out group-hover:translate-x-[calc(100%+0.75rem)] max-lg:group-data-[in-view=true]:translate-x-[calc(100%+0.75rem)] sm:group-hover:translate-x-[calc(100%+1rem)] sm:max-lg:group-data-[in-view=true]:translate-x-[calc(100%+1rem)]">
                <svg viewBox="0 0 38 57" fill="none" className="w-8 h-8 sm:w-10 sm:h-10 text-white">
                  <path d="M19 28.5c5.247 0 9.5-4.253 9.5-9.5S24.247 9.5 19 9.5H9.5v19H19zM9.5 28.5a9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0-19zm9.5 0c5.247 0 9.5 4.253 9.5 9.5S24.247 47.5 19 47.5v-19z" fill="currentColor"/>
                </svg>
@@ -373,8 +373,8 @@ function NodeIllustration({ label, bottomLabel = false }: { label: string, botto
        </div>
 
        {/* Center Pill */}
-       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center p-1.5 rounded-full bg-[#1ba453]/20 border border-[#1ba453] shadow-lg transition-transform duration-500 hover:scale-105">
-         <div className="bg-[#1ba453] text-white text-[13px] font-bold px-5 py-2 rounded-full">
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center p-1.5 rounded-full bg-[#f6191c]/20 border border-[#f6191c] shadow-lg transition-transform duration-500 hover:scale-105">
+         <div className="bg-[#f6191c] text-white text-[13px] font-bold px-5 py-2 rounded-full">
            {label}
          </div>
        </div>
@@ -398,14 +398,14 @@ function ProjectUpdatesIllustration() {
        
        {/* Left Line */}
        <div className="absolute top-[15%] left-[10%] w-[30%] h-[40%] border-l border-b border-zinc-200 dark:border-zinc-700 rounded-bl-3xl transition-colors duration-500 group-hover:border-zinc-300 dark:group-hover:border-zinc-600 max-lg:group-data-[in-view=true]:border-zinc-300 z-0">
-         <div className="absolute top-0 left-0 w-1.5 h-1.5 bg-zinc-300 dark:bg-zinc-600 rounded-full -translate-x-[3px] -translate-y-[3px] transition-all duration-200 delay-0 group-hover:delay-[400ms] max-lg:group-data-[in-view=true]:delay-[400ms] group-hover:bg-[#1ba453] max-lg:group-data-[in-view=true]:bg-[#1ba453] group-hover:scale-150 max-lg:group-data-[in-view=true]:scale-150 z-10" />
+         <div className="absolute top-0 left-0 w-1.5 h-1.5 bg-zinc-300 dark:bg-zinc-600 rounded-full -translate-x-[3px] -translate-y-[3px] transition-all duration-200 delay-0 group-hover:delay-[400ms] max-lg:group-data-[in-view=true]:delay-[400ms] group-hover:bg-[#f6191c] max-lg:group-data-[in-view=true]:bg-[#f6191c] group-hover:scale-150 max-lg:group-data-[in-view=true]:scale-150 z-10" />
          {/* Animated Dash */}
          <div className="dash-transition absolute left-0 w-[3px] h-3 bg-zinc-600 dark:bg-zinc-300 rounded-full -translate-x-[1.5px] -translate-y-1/2 top-[80%] group-hover:top-0 max-lg:group-data-[in-view=true]:top-0 opacity-100 group-hover:opacity-0 max-lg:group-data-[in-view=true]:opacity-0" />
        </div>
        
        {/* Right Line */}
        <div className="absolute top-[50%] right-[10%] w-[30%] h-[40%] border-r border-t border-zinc-200 dark:border-zinc-700 rounded-tr-3xl transition-colors duration-500 group-hover:border-zinc-300 dark:group-hover:border-zinc-600 max-lg:group-data-[in-view=true]:border-zinc-300 z-0">
-         <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-zinc-300 dark:bg-zinc-600 rounded-full translate-x-[3px] translate-y-[3px] transition-all duration-200 delay-0 group-hover:delay-[400ms] max-lg:group-data-[in-view=true]:delay-[400ms] group-hover:bg-[#1ba453] max-lg:group-data-[in-view=true]:bg-[#1ba453] group-hover:scale-150 max-lg:group-data-[in-view=true]:scale-150 z-10" />
+         <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-zinc-300 dark:bg-zinc-600 rounded-full translate-x-[3px] translate-y-[3px] transition-all duration-200 delay-0 group-hover:delay-[400ms] max-lg:group-data-[in-view=true]:delay-[400ms] group-hover:bg-[#f6191c] max-lg:group-data-[in-view=true]:bg-[#f6191c] group-hover:scale-150 max-lg:group-data-[in-view=true]:scale-150 z-10" />
          {/* Animated Dash */}
          <div className="dash-transition absolute right-0 w-[3px] h-3 bg-zinc-600 dark:bg-zinc-300 rounded-full translate-x-[1.5px] -translate-y-1/2 top-[20%] group-hover:top-[100%] max-lg:group-data-[in-view=true]:top-[100%] opacity-100 group-hover:opacity-0 max-lg:group-data-[in-view=true]:opacity-0" />
        </div>
@@ -460,11 +460,11 @@ function ProjectUpdatesIllustration() {
        {/* Center Rings & Pill */}
        <div className="relative flex items-center justify-center w-full h-full z-20 pointer-events-none">
          {/* Outer Ring */}
-         <div className="absolute w-[220px] h-[80px] sm:w-[240px] sm:h-[90px] rounded-[50px] border border-[#1ba453]/30 bg-[#1ba453]/5 flex items-center justify-center transition-all duration-700 group-hover:scale-[1.03] max-lg:group-data-[in-view=true]:scale-[1.03] group-hover:bg-[#1ba453]/10 max-lg:group-data-[in-view=true]:bg-[#1ba453]/10">
+         <div className="absolute w-[220px] h-[80px] sm:w-[240px] sm:h-[90px] rounded-[50px] border border-[#f6191c]/30 bg-[#f6191c]/5 flex items-center justify-center transition-all duration-700 group-hover:scale-[1.03] max-lg:group-data-[in-view=true]:scale-[1.03] group-hover:bg-[#f6191c]/10 max-lg:group-data-[in-view=true]:bg-[#f6191c]/10">
             {/* Inner Ring */}
-            <div className="w-[170px] h-[55px] sm:w-[190px] sm:h-[65px] rounded-[35px] border border-[#1ba453]/50 bg-[#1ba453]/10 flex items-center justify-center transition-all duration-700 group-hover:scale-[1.03] max-lg:group-data-[in-view=true]:scale-[1.03] group-hover:bg-[#1ba453]/20 max-lg:group-data-[in-view=true]:bg-[#1ba453]/20">
+            <div className="w-[170px] h-[55px] sm:w-[190px] sm:h-[65px] rounded-[35px] border border-[#f6191c]/50 bg-[#f6191c]/10 flex items-center justify-center transition-all duration-700 group-hover:scale-[1.03] max-lg:group-data-[in-view=true]:scale-[1.03] group-hover:bg-[#f6191c]/20 max-lg:group-data-[in-view=true]:bg-[#f6191c]/20">
                {/* Button */}
-               <div className="bg-[#1ba453] text-white text-[11px] sm:text-xs font-bold px-5 py-2 rounded-full shadow-md transition-transform duration-500 group-hover:scale-[1.02] max-lg:group-data-[in-view=true]:scale-[1.02]">
+               <div className="bg-[#f6191c] text-white text-[11px] sm:text-xs font-bold px-5 py-2 rounded-full shadow-md transition-transform duration-500 group-hover:scale-[1.02] max-lg:group-data-[in-view=true]:scale-[1.02]">
                   Project Updates
                </div>
             </div>
@@ -513,13 +513,13 @@ function ExecutionIllustration() {
          <div className="flex-1 p-5 relative bg-white dark:bg-zinc-900">
             <div className="w-[50%] h-2 bg-zinc-100 dark:bg-zinc-800 rounded-full mb-3"></div>
             {/* Green Selected Bar */}
-            <div className="relative w-[35%] h-3 bg-[#1ba453] rounded-full mb-3 transition-all duration-500 group-hover:w-[40%] max-lg:group-data-[in-view=true]:w-[40%]">
+            <div className="relative w-[35%] h-3 bg-[#f6191c] rounded-full mb-3 transition-all duration-500 group-hover:w-[40%] max-lg:group-data-[in-view=true]:w-[40%]">
                {/* Designer Cursor */}
                <div className="absolute -top-6 -left-3 z-30 flex flex-col items-start drop-shadow-md transition-all duration-500 group-hover:translate-x-3 max-lg:group-data-[in-view=true]:translate-x-3">
-                  <div className="bg-[#1ba453] text-white text-[7px] font-bold px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap mb-0 ml-1">
+                  <div className="bg-[#f6191c] text-white text-[7px] font-bold px-1.5 py-0.5 rounded shadow-sm whitespace-nowrap mb-0 ml-1">
                     Designer
                   </div>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#1ba453" stroke="white" strokeWidth="2" className="ml-2.5 -mt-0.5">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#f6191c" stroke="white" strokeWidth="2" className="ml-2.5 -mt-0.5">
                     <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
                   </svg>
                </div>
@@ -656,9 +656,9 @@ function ProjectsIllustration() {
 
        {/* Bottom Pill (Nested Rings) */}
        <div className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-         <div className="flex items-center justify-center p-2.5 sm:p-3 rounded-[2rem] bg-[#1ba453]/10 border border-[#1ba453]/20 transition-transform duration-500 hover:scale-[1.03] cursor-pointer shadow-sm">
-            <div className="flex items-center justify-center p-2 sm:p-2.5 rounded-[1.5rem] bg-[#1ba453]/20 border border-[#1ba453]/30 shadow-sm transition-transform duration-500 hover:scale-[1.02]">
-               <div className="bg-[#1ba453] text-white text-[13px] font-bold px-6 py-2 rounded-full shadow-md">
+         <div className="flex items-center justify-center p-2.5 sm:p-3 rounded-[2rem] bg-[#f6191c]/10 border border-[#f6191c]/20 transition-transform duration-500 hover:scale-[1.03] cursor-pointer shadow-sm">
+            <div className="flex items-center justify-center p-2 sm:p-2.5 rounded-[1.5rem] bg-[#f6191c]/20 border border-[#f6191c]/30 shadow-sm transition-transform duration-500 hover:scale-[1.02]">
+               <div className="bg-[#f6191c] text-white text-[13px] font-bold px-6 py-2 rounded-full shadow-md">
                   50+ Projects
                </div>
             </div>
@@ -725,7 +725,7 @@ function NoCodeIllustration() {
        {/* 4. Contact Node (Animated) */}
        <div className="absolute z-20 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] 
                        top-[95%] left-[45%] group-hover:top-[73.3%] max-lg:group-data-[in-view=true]:top-[73.3%] group-hover:left-[30%] max-lg:group-data-[in-view=true]:left-[30%] -translate-x-1/2 -translate-y-1/2">
-          <div className="bg-[#1ba453] group-hover:bg-[#1c1c1c] dark:group-hover:bg-zinc-800 max-lg:group-data-[in-view=true]:bg-[#1c1c1c] dark:max-lg:group-data-[in-view=true]:bg-zinc-800 transition-colors duration-700 text-white text-sm font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full flex items-center gap-2.5 shadow-xl border border-transparent dark:border-white/10">
+          <div className="bg-[#f6191c] group-hover:bg-[#1c1c1c] dark:group-hover:bg-zinc-800 max-lg:group-data-[in-view=true]:bg-[#1c1c1c] dark:max-lg:group-data-[in-view=true]:bg-zinc-800 transition-colors duration-700 text-white text-sm font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full flex items-center gap-2.5 shadow-xl border border-transparent dark:border-white/10">
              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="4" />
                 <line x1="8" y1="9" x2="16" y2="9" />

@@ -77,7 +77,7 @@ export function BlogHero() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight mb-4 md:mb-6 px-2 text-center"
           >
             {hero.heading}{" "}
-            <span className="text-[#1ba453]">
+            <span className="text-[#f6191c]">
               {hero.headingItalic}
             </span>
           </motion.h1>

@@ -15,6 +15,7 @@ interface ProductItemData {
   descriptionClassName?: string;
   highlights: string[];
   logo: string;
+  logoClassName?: string;
   darkLogo?: string;
   internalRoute: string;
   // Web Platform
@@ -36,6 +37,8 @@ interface ProductItemData {
   mobileSubtitle?: string;
   mobileImage?: string;
   mobileOffsetClass?: string;
+  mobileMaxHeightClass?: string;
+  mobileWidthClass?: string;
   secondaryMobileTitle?: string;
   secondaryMobileSubtitle?: string;
   secondaryMobileImage?: string;
@@ -115,7 +118,7 @@ const productsData: ProductItemData[] = [
           href="https://www.karmanisht.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#1ba453] dark:text-emerald-400 font-bold hover:underline"
+          className="text-[#f6191c] dark:text-red-400 font-bold hover:underline"
         >
           Karmanisht
         </a>
@@ -123,7 +126,7 @@ const productsData: ProductItemData[] = [
       </span>
     ),
     highlights: ["Live Geospatial GPS", "100% Aadhaar Verified", "Zero Hidden Charges"],
-    logo: "/karmanisht-logo.png",
+    logo: "/Frame 241.png",
     internalRoute: "/products/karmanisht",
     webTitle: "Karmanisht Web",
     webSubtitle: "Services Marketplace",
@@ -206,15 +209,21 @@ const productsData: ProductItemData[] = [
       </span>
     ),
     highlights: ["Bikes, Autos & Cabs", "Parcel Delivery", "Fare Lock Guarantee"],
-    logo: "/ghumakkadh_icon.png",
+    logo: "/Ghum — Red & White Logo.png",
     internalRoute: "/products/ghumakkadh",
     webTitle: "Ghumakkadh Web",
     webSubtitle: "Ride Hailing & Delivery",
-    webImage: "/Ride Smarter with Ghumakkadh.png",
-    webImageWidth: 1504,
+    webImage: "/Ghumakkadh Night Ride Hero.png",
+    webImageWidth: 1750,
     webImageHeight: 1046,
-    webImageAspectRatio: "1504 / 1046",
+    webImageAspectRatio: "1750 / 1046",
+    webWidthClass: "w-[72%] sm:w-[70%] lg:w-[72%] xl:w-[72%]",
     webOffsetClass: "-translate-y-2.5 sm:-translate-y-4 lg:translate-y-0",
+    containerMaxWidthClass: "max-w-[500px] sm:max-w-[640px] lg:max-w-[800px] xl:max-w-[900px] 2xl:max-w-[980px]",
+    dualPhonesPositionClass: "right-0 sm:right-1 lg:translate-x-3 xl:translate-x-6 2xl:translate-x-8 -bottom-3 sm:-bottom-4 lg:-bottom-5 xl:-bottom-7 2xl:-bottom-8",
+    mobileMaxHeightClass: "max-h-[160px] sm:max-h-[200px] md:max-h-[230px] lg:max-h-[265px] xl:max-h-[305px] 2xl:max-h-[345px]",
+    mobileWidthClass: "w-[82px] min-[380px]:w-[88px] sm:w-[115px] md:w-[132px] lg:w-[150px] xl:w-[172px] 2xl:w-[195px]",
+    webImageClass: "object-contain",
     webUrl: "https://ghumakkadh.hindustaan.in/",
     mobileTitle: "Ghumakkadh App",
     mobileSubtitle: "Passenger & Parcel Booking",
@@ -247,7 +256,8 @@ const productsData: ProductItemData[] = [
       </>
     ),
     highlights: ["Verified Fleets", "Zero Empty Returns", "11 Indian Languages"],
-    logo: "/truckbharat-logo.png",
+    logo: "/Frame 240.png",
+    logoClassName: "scale-115",
     internalRoute: "/products/truckbharat",
     webTitle: "TruckBharat Web",
     webSubtitle: "Digital Freight Platform",
@@ -274,7 +284,7 @@ const productsData: ProductItemData[] = [
           href="https://onstay.hindustaan.tech/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-0.5"
+          className="text-red-600 dark:text-red-400 font-semibold hover:underline inline-flex items-center gap-0.5"
         >
           OnStay
         </a>{" "}
@@ -282,7 +292,7 @@ const productsData: ProductItemData[] = [
       </>
     ),
     highlights: ["Curated Hotels & Stays", "Hourly Room Bookings", "Executive Lounge Access"],
-    logo: "/onstay-logo.png",
+    logo: "/OnStay — Editable Logo.png",
     internalRoute: "/products/onstay",
     webTitle: "Onstay Web",
     webSubtitle: "Hospitality Platform",
@@ -293,7 +303,7 @@ const productsData: ProductItemData[] = [
     webWidthClass: "w-[64%] sm:w-[62%] lg:w-[63%] xl:w-[64%]",
     webOffsetClass: "-translate-y-4 sm:-translate-y-6 lg:-translate-y-8 xl:-translate-y-10",
     containerMaxWidthClass: "max-w-[460px] sm:max-w-[580px] lg:max-w-[720px] xl:max-w-[790px] 2xl:max-w-[860px]",
-    dualPhonesPositionClass: "right-1 sm:right-2 lg:right-0 xl:right-2",
+    dualPhonesPositionClass: "right-1 sm:right-2 lg:right-0 xl:right-2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24",
     webUrl: "https://onstay.hindustaan.tech/",
     mobileTitle: "Onstay App",
     mobileSubtitle: "Guest & Room Booking",
@@ -316,7 +326,7 @@ const productsData: ProductItemData[] = [
           href="https://www.hindustaanmart.in/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+          className="text-red-600 dark:text-red-400 font-semibold hover:underline"
         >
           Hindustaan Mart
         </a>
@@ -324,7 +334,7 @@ const productsData: ProductItemData[] = [
       </>
     ),
     highlights: ["Multi-Vendor Marketplace", "Secure UPI & Cards", "Nationwide Logistics"],
-    logo: "/Hindustaan_mart_logo.jpeg",
+    logo: "/Hindustaan Mart Shopping Cart Logo.png",
     internalRoute: "/products/hindustaan-mart",
     webTitle: "Hindustaan Mart Web",
     webSubtitle: "E-Commerce Platform",
@@ -346,7 +356,7 @@ const productsData: ProductItemData[] = [
     category: "Instant Messaging",
     description: "Ultra-fast, end-to-end encrypted messaging featuring 1-on-1 chats, group conversations, media sharing, and low-latency HD voice and video calls.",
     highlights: ["End-to-End Encryption", "HD Voice & Video Calls", "Cross-Device Sync"],
-    logo: "/miracal-brand.png",
+    logo: "/Red Abstract Connected Emblem.png",
     internalRoute: "/products/miracal",
     webTitle: "Miracal Web",
     webSubtitle: "Instant Messaging Web",
@@ -367,7 +377,7 @@ const productsData: ProductItemData[] = [
     category: "Business Collaboration",
     description: "Enterprise communication platform empowering teams with dedicated workspaces, encrypted chats, role-based admin controls, and seamless file sharing.",
     highlights: ["Team Workspaces", "Role-Based Permissions", "Enterprise Security"],
-    logo: "/miracal-brand.png",
+    logo: "/Red Abstract Connected Emblem.png",
     internalRoute: "/products/miracal-business",
     webTitle: "Miracal Business Web",
     webSubtitle: "Business Platform",
@@ -418,8 +428,8 @@ const productsData: ProductItemData[] = [
       </>
     ),
     highlights: ["Lead & Sales Pipeline", "Workflow Automation", "Analytics & Reporting"],
-    logo: "/favicon.svg",
-    darkLogo: "/logo.png",
+    logo: "/apple-touch-icon.png",
+
     internalRoute: "/products/hindustaan-crm",
     webTitle: "Hindustaan CRM Suite",
     webSubtitle: "Enterprise CRM Platform",
@@ -663,7 +673,7 @@ export function ProductSection() {
 
                             {/* Info & Action Buttons underneath each phone */}
                             <div className="w-full pt-1.5 sm:pt-2 flex flex-col items-center text-center shrink-0">
-                              <span className="text-[7.5px] sm:text-[9px] lg:text-[9.5px] xl:text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider line-clamp-1">
+                              <span className="text-[7.5px] sm:text-[9px] lg:text-[9.5px] xl:text-[10px] font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider line-clamp-1">
                                 {card.badge}
                               </span>
                               <h4 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-[10px] sm:text-xs lg:text-[11.5px] xl:text-xs mt-0.5 line-clamp-1">
@@ -719,14 +729,14 @@ export function ProductSection() {
                                 alt={`${product.name} Logo`}
                                 width={48}
                                 height={48}
-                                className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs dark:hidden"
+                                className={`w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs dark:hidden ${product.logoClassName || ""}`}
                               />
                               <Image
                                 src={product.darkLogo}
                                 alt={`${product.name} Logo`}
                                 width={48}
                                 height={48}
-                                className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs hidden dark:block"
+                                className={`w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs hidden dark:block ${product.logoClassName || ""}`}
                               />
                             </>
                           ) : (
@@ -735,7 +745,7 @@ export function ProductSection() {
                               alt={`${product.name} Logo`}
                               width={48}
                               height={48}
-                              className="w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs"
+                              className={`w-10 h-10 sm:w-11 sm:h-11 xl:w-12 xl:h-12 object-contain rounded-2xl shrink-0 shadow-xs ${product.logoClassName || ""}`}
                             />
                           )}
                           <h3 className="font-extrabold text-zinc-900 dark:text-zinc-100 text-2xl sm:text-3xl xl:text-[2rem] tracking-tight leading-none">
@@ -859,7 +869,7 @@ export function ProductSection() {
                                   alt={`${product.name} Web`}
                                   width={product.webImageWidth || 1504}
                                   height={product.webImageHeight || 1046}
-                                  className="w-full h-full object-cover object-top"
+                                  className={`w-full h-full ${product.webImageClass || 'object-contain'}`}
                                   unoptimized
                                 />
                               </div>
@@ -867,9 +877,9 @@ export function ProductSection() {
                           </div>
 
                           {/* Dual Phones Side-by-Side (Overlapping the right of the desktop window) */}
-                          <div className={`absolute ${product.dualPhonesPositionClass || 'right-1 sm:right-2 lg:right-0 xl:right-2'} -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24 z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5`}>
+                          <div className={`absolute ${product.dualPhonesPositionClass || 'right-1 sm:right-2 lg:right-0 xl:right-2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24'} z-20 flex items-end gap-1.5 sm:gap-2.5 xl:gap-3.5`}>
                             {/* Phone 1: Customer / Primary App */}
-                            <div className="w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center">
+                            <div className={`${product.mobileWidthClass || 'w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px]'} shrink-0 group-hover:-translate-y-2 transition-transform duration-500 flex justify-center`}>
                               <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
                                 <Image
                                   src={product.mobileImage}
@@ -877,14 +887,14 @@ export function ProductSection() {
                                   width={776}
                                   height={1576}
                                   style={{ width: "100%", height: "auto" }}
-                                  className="w-full h-auto max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  className={`w-full h-auto ${product.mobileMaxHeightClass || 'max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px]'} object-contain`}
                                   unoptimized
                                 />
                               </div>
                             </div>
 
                             {/* Phone 2: Partner / Driver / Host App */}
-                            <div className="w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px] shrink-0 group-hover:-translate-y-2 transition-transform duration-500 delay-75 flex justify-center">
+                            <div className={`${product.mobileWidthClass || 'w-[80px] min-[380px]:w-[86px] sm:w-[114px] md:w-[130px] lg:w-[148px] xl:w-[170px] 2xl:w-[195px]'} shrink-0 group-hover:-translate-y-2 transition-transform duration-500 delay-75 flex justify-center ${product.secondaryMobileOffsetClass || ''}`}>
                               <div className="relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)]">
                                 <Image
                                   src={product.secondaryMobileImage}
@@ -892,7 +902,7 @@ export function ProductSection() {
                                   width={776}
                                   height={1576}
                                   style={{ width: "100%", height: "auto" }}
-                                  className="w-full h-auto max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px] object-contain"
+                                  className={`w-full h-auto ${product.mobileMaxHeightClass || 'max-h-[175px] sm:max-h-[225px] md:max-h-[250px] lg:max-h-[275px] xl:max-h-[315px] 2xl:max-h-[375px]'} object-contain`}
                                   unoptimized
                                 />
                               </div>

@@ -283,7 +283,7 @@ function DepartmentSection({ dept }: { dept: Department }) {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white leading-[1.1] tracking-tight"
           >
-            {dept.heading} <span className="text-[#1ba453]">{dept.headingItalic}</span>
+            {dept.heading} <span className="text-[#f6191c]">{dept.headingItalic}</span>
           </motion.h2>
         </div>
         
