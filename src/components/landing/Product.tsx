@@ -122,7 +122,7 @@ const productsData: ProductItemData[] = [
         >
           Karmanisht
         </a>
-        {", powered by Hindustaan Innovations Private Limited, is a hyperlocal home and utility services marketplace connecting households with Aadhaar-verified professionals across 50+ categories, including electricians, plumbers, carpenters, appliance technicians, deep cleaning, pest control, and home salon services. Users can discover nearby experts based on distance, verified ratings, and experience, while enjoying transparent pricing and a subscription-free booking experience. Service providers retain their full earnings, set their own service areas, and receive secure escrow-based payouts once customers confirm job satisfaction. Karmanisht makes finding trusted professionals and managing everyday home service needs simple, safe, and reliable."}
+        {", powered by Hindustaan Innovations Private Limited, is a hyperlocal home services marketplace connecting households with Aadhaar-verified professionals across 50+ categories, including cleaning, plumbing, electrical, repairs, pest control, and salon services. Discover trusted experts based on distance, ratings, and experience, with transparent pricing, no subscriptions, and secure payments. Karmanisht makes everyday home services simple, safe, and hassle-free."}
       </span>
     ),
     highlights: ["Live Geospatial GPS", "100% Aadhaar Verified", "Zero Hidden Charges"],
@@ -209,7 +209,7 @@ const productsData: ProductItemData[] = [
       </span>
     ),
     highlights: ["Bikes, Autos & Cabs", "Parcel Delivery", "Fare Lock Guarantee"],
-    logo: "/Ghum — Red & White Logo.png",
+    logo: "/ghumakkadh-logo.png",
     internalRoute: "/products/ghumakkadh",
     webTitle: "Ghumakkadh Web",
     webSubtitle: "Ride Hailing & Delivery",
@@ -248,7 +248,7 @@ const productsData: ProductItemData[] = [
           href="https://truckbharat.hindustaan.tech/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0284c7] dark:text-sky-400 font-semibold hover:underline"
+          className="text-red-600 dark:text-red-400 font-semibold hover:underline"
         >
           TruckBharat
         </a>
@@ -261,7 +261,7 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/truckbharat",
     webTitle: "TruckBharat Web",
     webSubtitle: "Digital Freight Platform",
-    webImage: "/TruckBharat Freight Marketplace Banner.png",
+    webImage: "/TruckBharat_Freight_Marketplace_Banner_red.png",
     webImageWidth: 1532,
     webImageHeight: 1027,
     webImageAspectRatio: "1532 / 1027",
@@ -398,11 +398,11 @@ const productsData: ProductItemData[] = [
     category: "EdTech & ERP",
     description: "Automates school administration, fee collection, student attendance, examination results, and parent-teacher communication in one unified platform.",
     highlights: ["Student & Parent Portals", "Automated Fee Billing", "Live Transport Tracking"],
-    logo: "/vidyum.png",
+    logo: "/vidyum-logo-red.png",
     internalRoute: "/products/vidyum-school-erp",
     webTitle: "Vidyum Portal",
     webSubtitle: "EdTech Platform",
-    webImage: "/Vidyum_home.png",
+    webImage: "/Vidyum_home_red.png",
     webImageWidth: 1448,
     webImageHeight: 1086,
     webImageAspectRatio: "1448 / 1086",
@@ -420,7 +420,7 @@ const productsData: ProductItemData[] = [
           href="https://panel.hindustaan.in/login"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+          className="text-red-600 dark:text-red-400 font-semibold hover:underline"
         >
           Hindustaan Innovations
         </a>{" "}
@@ -433,7 +433,7 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/hindustaan-crm",
     webTitle: "Hindustaan CRM Suite",
     webSubtitle: "Enterprise CRM Platform",
-    webImage: "/hindustaan_crm.png",
+    webImage: "/hindustaan_crm_red.png",
     webImageWidth: 1504,
     webImageHeight: 1046,
     webImageAspectRatio: "1504 / 1046",
