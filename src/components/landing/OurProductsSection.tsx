@@ -104,7 +104,7 @@ const ourProducts: ProductItem[] = [
     shortTagline: "Multi-vendor digital commerce marketplace",
     description: "A comprehensive multi-vendor marketplace platform connecting buyers and sellers across a robust digital commerce ecosystem.",
     logo: "/Hindustaan Mart Shopping Cart Logo.png",
-    websiteUrl: "https://allindiahub.com",
+    websiteUrl: "https://www.hindustaanmart.in/",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.hindustaanmart",
     appStoreUrl: "https://apps.apple.com/us/app/hindustaan-mart/id6781711735",
     internalRoute: "/products/hindustaan-mart",
@@ -347,7 +347,7 @@ export function OurProductsSection() {
                 </p>
               </div>
 
-             
+
             </motion.button>
           ))}
         </div>
