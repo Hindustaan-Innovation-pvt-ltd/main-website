@@ -194,9 +194,9 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                 </Link>
               )}
 
-              {(solution as any).riderPlayStoreUrl && (
+              {((solution as any).masterPlayStoreUrl || (solution as any).riderPlayStoreUrl) && (
                 <Link
-                  href={(solution as any).riderPlayStoreUrl}
+                  href={(solution as any).masterPlayStoreUrl || (solution as any).riderPlayStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-black dark:bg-zinc-800 text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-zinc-800 dark:hover:bg-zinc-700 border border-transparent dark:border-white/10 transition-colors group shadow-md"
@@ -204,7 +204,7 @@ export default function SolutionDetailPage({ params }: { params: Promise<{ id: s
                   <svg className="w-4 h-4" viewBox="0 0 512 512" fill="currentColor">
                     <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
                   </svg>
-                  <span>{solution.title} Rider</span>
+                  <span>{solution.title} {(solution as any).masterPlayStoreUrl ? "Master" : "Rider"}</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               )}

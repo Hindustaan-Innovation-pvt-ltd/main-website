@@ -563,6 +563,10 @@
         "appStoreUrl": "https://apps.apple.com/us/app/ghumakkadh/id6806542727",
         "partnerPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
         "partnerAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
+        "masterPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "masterAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
+        "riderPlayStoreUrl": "https://play.google.com/store/apps/details?id=com.ghumakkadh",
+        "riderAppStoreUrl": "https://apps.apple.com/us/app/ghumakkadh-rider/id6807047989",
         "modules": [
           {
             "title": "Travel Planning",
