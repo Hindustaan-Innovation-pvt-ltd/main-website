@@ -46,7 +46,7 @@ const ourProducts: ProductItem[] = [
     category: "Food Delivery",
     shortTagline: "Hyperlocal on-demand culinary ordering",
     description: "Hyperlocal on-demand food delivery ecosystem connecting hungry foodies, local culinary partners, and dedicated delivery riders.",
-    logo: "/new-bhukkadh-icon.png",
+    logo: "/bhukkadh_new.png",
     websiteUrl: "https://bhukkadh.hindustaan.in/",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkhad",
     partnerPlayStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",

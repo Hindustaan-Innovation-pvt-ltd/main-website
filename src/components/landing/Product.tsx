@@ -148,11 +148,11 @@ const productsData: ProductItemData[] = [
     category: "Food Delivery",
     description: "",
     highlights: ["Fast Doorstep Delivery", "Real-Time Tracking", "Secure Payments"],
-    logo: "/new-bhukkadh-icon.png",
+    logo: "/bhukkadh_new.png",
     internalRoute: "/products/bhukkadh",
     webTitle: "Bhukkadh Web",
     webSubtitle: "Food Delivery Platform",
-    webImage: "/Bhukkadh Food Delivery Hero Banner.png",
+    webImage: "/Bhukkadh_Food_Delivery_Hero_Banner_red.png",
     webImageWidth: 1505,
     webImageHeight: 1045,
     webImageAspectRatio: "1505 / 1045",
@@ -166,7 +166,7 @@ const productsData: ProductItemData[] = [
         title: "Bhukkadh Partner",
         subtitle: "Restaurant & Kitchen Dashboard",
         badge: "For Restaurants",
-        image: "/bhukkadh_partner.png",
+        image: "/bhukkadh_partner_red.png",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.restaurant",
         appStoreUrl: "https://apps.apple.com/us/app/bhukkadh-partner/id6802583437",
       },
@@ -174,15 +174,15 @@ const productsData: ProductItemData[] = [
         title: "Bhukkadh",
         subtitle: "Order Food & Real-Time Tracking",
         badge: "For Foodies",
-        image: "/bhukkadh_customer_uniform.png",
+        image: "/bhukkadh_customer_uniform_red.png",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkhad",
         appStoreUrl: "https://apps.apple.com/us/app/bhukkadh/id6803089673",
       },
       {
-        title: "Bhukkadh Rider",
+        title: "Bhukkadh Master",
         subtitle: "Delivery Partner & Flexible Earnings",
-        badge: "For Delivery Riders",
-        image: "/bhukkadh_rider.png",
+        badge: "For Delivery Masters",
+        image: "/bhukkadh_master_red.png",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.bhukkadh.rider",
         appStoreUrl: "https://apps.apple.com/us/app/bhukkadh-rider/id6802623601",
       },
@@ -670,7 +670,7 @@ export function ProductSection() {
                             className="relative w-full overflow-hidden flex items-start justify-center bg-white dark:bg-zinc-900"
                           >
                             <Image
-                              src={product.webImage || "/Bhukkadh Food Delivery Hero Banner.png"}
+                              src={product.webImage || "/Bhukkadh_Food_Delivery_Hero_Banner_red.png"}
                               alt={`${product.name} Web Platform`}
                               width={product.webImageWidth || 1505}
                               height={product.webImageHeight || 1045}
