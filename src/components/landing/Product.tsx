@@ -45,6 +45,7 @@ interface ProductItemData {
   secondaryMobileOffsetClass?: string;
   secondaryMobileUrl?: string;
   mobileUrl?: string;
+  playStoreUrl?: string;
   appStoreUrl?: string;
   appStoreTitle?: string;
   secondaryAppStoreUrl?: string;
@@ -271,7 +272,7 @@ const productsData: ProductItemData[] = [
     mobileSubtitle: "Driver & Shipper App",
     mobileImage: "/truckbharat_phone.png",
     mobileUrl: "https://play.google.com/store/apps/details?id=com.truckbharat",
-    appStoreUrl: "https://apps.apple.com/us/app/truckbharat/id6807047989",
+    appStoreUrl: "https://apps.apple.com/in/app/truckbharat/id6827501828",
   },
   {
     id: "onstay",
@@ -464,12 +465,20 @@ const productsData: ProductItemData[] = [
     internalRoute: "/products/ludofirst",
     webTitle: "LudoFirst Web",
     webSubtitle: "Multiplayer Board Game",
-    webImage: "/ludofirst_hero.png",
-    webImageWidth: 1024,
-    webImageHeight: 490,
-    webImageAspectRatio: "1024 / 490",
+    webImage: "/LudoFirst_ Roll, Move, Win.png",
+    webImageWidth: 1504,
+    webImageHeight: 1046,
+    webImageAspectRatio: "1504 / 1046",
     webUrl: "https://ludofirst.hindustaan.tech/",
+    mobileTitle: "LudoFirst App",
+    mobileSubtitle: "Real-Time Multiplayer Game",
+    mobileImage: "/Glossy Ludo Game iPhone Mockup.png",
+    mobileWidthClass: "w-[48%] sm:w-[44%] lg:w-[50%] xl:w-[46%] md:w-[42%] max-w-[160px] sm:max-w-[195px] lg:max-w-[235px] xl:max-w-[270px] 2xl:max-w-[310px]",
+    mobileMaxHeightClass: "max-h-[205px] sm:max-h-[250px] lg:max-h-[270px] xl:max-h-[345px] 2xl:max-h-[420px]",
+    mobileOffsetClass: "-translate-y-2 sm:-translate-y-3 lg:-translate-y-5 xl:-translate-y-6",
     mobileUrl: "https://play.google.com/store/apps/details?id=com.ludofirst",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ludofirst",
+    appStoreUrl: "https://apps.apple.com/in/app/ludo-first/id6830511590",
   },
 ];
 
@@ -823,9 +832,9 @@ export function ProductSection() {
                                 <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 opacity-70" />
                               </a>
                             )}
-                            {product.mobileUrl && (
+                            {(product.playStoreUrl || product.mobileUrl) && (
                               <a
-                                href={product.mobileUrl}
+                                href={product.playStoreUrl || product.mobileUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-4.5 py-1.5 sm:py-2 lg:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-zinc-100 text-zinc-800 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700 transition-colors cursor-pointer"
@@ -975,14 +984,14 @@ export function ProductSection() {
                           </div>
 
                           {/* Mobile App Mockup (Overlapping right & down) */}
-                          <div className="absolute -right-3 sm:-right-5 lg:-right-6 xl:-right-8 translate-x-1/2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-12 z-20 w-[44%] sm:w-[40%] lg:w-[46%] xl:w-[42%] md:w-[38%] max-w-[145px] sm:max-w-[175px] lg:max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px] group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center">
+                          <div className={`absolute -right-3 sm:-right-5 lg:-right-6 xl:-right-8 translate-x-1/2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-12 z-20 ${product.mobileWidthClass || 'w-[44%] sm:w-[40%] lg:w-[46%] xl:w-[42%] md:w-[38%] max-w-[145px] sm:max-w-[175px] lg:max-w-[210px] xl:max-w-[240px] 2xl:max-w-[275px]'} group-hover:-translate-y-2.5 transition-transform duration-500 flex justify-center`}>
                             <div className={`relative w-full flex justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] dark:drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] ${product.mobileOffsetClass || ""}`}>
                               <Image
                                 src={product.mobileImage}
                                 alt={`${product.name} App`}
                                 width={400}
                                 height={800}
-                                className="w-full h-auto max-h-[185px] sm:max-h-[225px] lg:max-h-[240px] xl:max-h-[305px] 2xl:max-h-[375px] object-contain"
+                                className={`w-full h-auto ${product.mobileMaxHeightClass || 'max-h-[185px] sm:max-h-[225px] lg:max-h-[240px] xl:max-h-[305px] 2xl:max-h-[375px]'} object-contain`}
                                 unoptimized
                               />
                             </div>

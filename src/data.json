@@ -601,7 +601,7 @@
         "logo": "/Frame 240.png",
         "projectUrl": "https://truckbharat.hindustaan.tech",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.truckbharat",
-        "appStoreUrl": "https://apps.apple.com/us/app/truckbharat/id6807047989",
+        "appStoreUrl": "https://apps.apple.com/in/app/truckbharat/id6827501828",
         "faq": {
           "pill": "FAQ",
           "heading": "Common",
@@ -1072,11 +1072,12 @@
         "shortDescription": "Classic board game reimagined with real-time multiplayer, smart matchmaking, and sleek modern design.",
         "description": "Bring your friends and family together with Ludo First. Enjoy the classic board game experience with a fresh, colorful look, seamless online multiplayer, private rooms, and competitive gameplay.",
         "fullDescription": "LudoFirst brings the beloved classic board game into the digital era with high-performance real-time multiplayer, fair dice algorithms, and a vibrant, modern visual design. Developed by Hindustaan Innovations Private Limited, LudoFirst allows players to connect with friends and family across the globe or challenge players in competitive matches. Featuring private game rooms, smooth animations, and instant matchmaking, LudoFirst delivers nostalgic entertainment crafted for both mobile and desktop screens.",
-        "image": "/ludofirst_hero.png",
+        "image": "/LudoFirst_ Roll, Move, Win.png",
+        "mobileImage": "/Glossy Ludo Game iPhone Mockup.png",
         "logo": "/ludofirst_app_icon.png",
         "projectUrl": "https://ludofirst.hindustaan.tech/",
         "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ludofirst",
-        "appStoreUrl": "",
+        "appStoreUrl": "https://apps.apple.com/in/app/ludo-first/id6830511590",
         "modules": [
           {
             "title": "Real-Time Multiplayer",
