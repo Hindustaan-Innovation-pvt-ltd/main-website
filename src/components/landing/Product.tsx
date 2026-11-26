@@ -246,7 +246,7 @@ const productsData: ProductItemData[] = [
     description: (
       <>
         <a
-          href="https://truckbharat.hindustaan.tech/"
+          href="https://truckbharat.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-red-600 dark:text-red-400 font-semibold hover:underline"
@@ -267,7 +267,7 @@ const productsData: ProductItemData[] = [
     webImageHeight: 1027,
     webImageAspectRatio: "1532 / 1027",
     webOffsetClass: "-translate-y-3 sm:-translate-y-5 lg:-translate-y-7",
-    webUrl: "https://truckbharat.hindustaan.tech/",
+    webUrl: "https://truckbharat.com/",
     mobileTitle: "TruckBharat App",
     mobileSubtitle: "Driver & Shipper App",
     mobileImage: "/truckbharat_phone.png",
@@ -282,7 +282,7 @@ const productsData: ProductItemData[] = [
     description: (
       <>
         <a
-          href="https://onstay.hindustaan.tech/"
+          href="https://onstayroom.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-red-600 dark:text-red-400 font-semibold hover:underline inline-flex items-center gap-0.5"
@@ -305,7 +305,7 @@ const productsData: ProductItemData[] = [
     webOffsetClass: "-translate-y-4 sm:-translate-y-6 lg:-translate-y-8 xl:-translate-y-10",
     containerMaxWidthClass: "max-w-[460px] sm:max-w-[580px] lg:max-w-[720px] xl:max-w-[790px] 2xl:max-w-[860px]",
     dualPhonesPositionClass: "right-1 sm:right-2 lg:right-0 xl:right-2 -bottom-2 sm:-bottom-3 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-24",
-    webUrl: "https://onstay.hindustaan.tech/",
+    webUrl: "https://onstayroom.com/",
     mobileTitle: "Onstay App",
     mobileSubtitle: "Guest & Room Booking",
     mobileImage: "/OnStay_Mockup.png",
